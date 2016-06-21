@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".model.ExpresionOral">
+    tools:context=".view.ExpresionOral">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -95,7 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cvExpresionOral"
-        tools:context=".model.Gramatica">
+        tools:context=".view.Gramatica">
 
 
         <LinearLayout

@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".view.Gramatica">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cvImage1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textAlignment="center"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="10dp"
+        card_view:cardUseCompatPadding="true">
+
+
+
+        <ViewFlipper
+            android:id="@+id/viewflipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/rlPelota">
+
+                <ImageView
+                    android:id="@+id/ivPelota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book"
+                    />
+
+                <TableLayout
+                    android:id="@+id/tbPelota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swPelota"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center">
+
+                    </TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/imageView1"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="SI"
+                                android:id="@+id/SiPelota"/>
+
+                            <RadioButton
+                                android:layout_width="91dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="NO"
+                                android:id="@+id/NoPelota"/>
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvPelota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="30dp"/>
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/rlPelotas"
+                >
+
+
+                <ImageView
+                    android:id="@+id/ivPelotas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    android:src="@mipmap/book"
+                    />
+
+                <TableLayout
+                    android:id="@+id/tlPelotas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swPelotas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center">
+
+                    </TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="SI"
+                                android:id="@+id/SiPelotas"/>
+
+                            <RadioButton
+                                android:layout_width="91dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="NO"
+                                android:id="@+id/NoPelotas"/>
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvPelotas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="30dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/ivLapices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    android:src="@mipmap/book" />
+
+                <TableLayout
+                    android:id="@+id/tlLapices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swLapices"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center">
+
+                    </TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="SI"
+                                android:id="@+id/SiLapices"/>
+
+                            <RadioButton
+                                android:layout_width="91dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="NO"
+                                android:id="@+id/NoLapices"/>
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvLapices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="30dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/ivLapiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    android:src="@mipmap/book" />
+
+                <TableLayout
+                    android:id="@+id/tlLapiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swLapiz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center">
+
+                    </TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/rgLapiz"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="SI"
+                                android:id="@+id/SiLapiz"/>
+
+                            <RadioButton
+                                android:layout_width="91dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="NO"
+                                android:id="@+id/NoLapiz"/>
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvLapiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="30dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/ivAbuelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    android:src="@mipmap/book" />
+
+                <TableLayout
+                    android:id="@+id/tlAbuelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swAbuelo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center">
+
+                    </TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/rgAbuelo"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="SI"
+                                android:id="@+id/SiAbuelo"/>
+
+                            <RadioButton
+                                android:layout_width="91dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="NO"
+                                android:id="@+id/NoAbuelo"/>
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvAbuelo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="30dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/ivMaestra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    android:src="@mipmap/book" />
+
+                <TableLayout
+                    android:id="@+id/tlMaestra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swMaestra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center">
+
+                    </TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="SI"
+                                android:id="@+id/SiMaestra"/>
+
+                            <RadioButton
+                                android:layout_width="91dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="NO"
+                                android:id="@+id/NoMaestra"/>
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvMaestra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="30dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/ivDoctora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    android:src="@mipmap/book" />
+
+                <TableLayout
+                    android:id="@+id/tlDoctora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swDoctora"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center">
+
+                    </TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="SI"
+                                android:id="@+id/SiDoctora"/>
+
+                            <RadioButton
+                                android:layout_width="91dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="NO"
+                                android:id="@+id/NoDoctora"/>
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvDoctora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="30dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/ivChef"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp"
+                    android:src="@mipmap/book" />
+
+                <TableLayout
+                    android:id="@+id/tlChef"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swChef"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center">
+
+                    </TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="SI"
+                                android:id="@+id/SiChef"/>
+
+                            <RadioButton
+                                android:layout_width="91dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="NO"
+                                android:id="@+id/NoChef"/>
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvChef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="30dp" />
+
+            </RelativeLayout>
+
+        </ViewFlipper>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

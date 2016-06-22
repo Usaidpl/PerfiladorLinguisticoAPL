@@ -3,36 +3,29 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_iniciar_evaluacion"
             android:icon="@mipmap/ic_iniciar_evaluacion"
             android:title="Iniciar Evaluacion" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_entrevistas_pendientes"
             android:icon="@mipmap/ic_entrevista"
-            android:title="Entrevista" />
+            android:title="Entrevistas Pendientes" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_guia_evaluador"
             android:icon="@mipmap/ic_series"
-            android:title="Series de Evaluación" />
+            android:title="Guia de Evaluador" />
         <item
-            android:id="@+id/nav_pruebasdos"
+            android:id="@+id/nav_resultados_por_aula"
             android:icon="@mipmap/ic_guia"
-            android:title="Guía" />
-        <item
-            android:id="@+id/nav_pruebas"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Pruebas" />
+            android:title="Resultados por Aula" />
+
 
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="Opciones" />
-            <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_creditos"
                 android:icon="@mipmap/ic_creditos"
                 android:title="Creditos" />
         </menu>

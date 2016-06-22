@@ -1,6 +1,5 @@
 package gt.lea.usaid.perfiladorlinguistico;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -13,11 +12,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import gt.lea.usaid.perfiladorlinguistico.view.Pruebas;
+import gt.lea.usaid.perfiladorlinguistico.controller.Creditos;
+import gt.lea.usaid.perfiladorlinguistico.controller.EntrevistasPendientes;
+import gt.lea.usaid.perfiladorlinguistico.controller.GuiaEvaluacion;
+import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
+import gt.lea.usaid.perfiladorlinguistico.controller.ResultadosAula;
 import gt.lea.usaid.perfiladorlinguistico.controller.Series;
 
 public class NavigationMenu extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, Series.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, Series.OnFragmentInteractionListener, EntrevistasPendientes.OnFragmentInteractionListener, GuiaEvaluacion.OnFragmentInteractionListener, IniciarEvaluacion.OnFragmentInteractionListener, ResultadosAula.OnFragmentInteractionListener, Creditos.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,19 +51,14 @@ public class NavigationMenu extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -71,29 +69,31 @@ public class NavigationMenu extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         boolean FragmentTransaction = false;
         Fragment fragment = null;
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }else if (id == R.id.nav_pruebas) {
-            Intent pruebas = new Intent(getApplication(), Pruebas.class);
-            startActivity(pruebas);
-        }else if (id == R.id.nav_pruebasdos) {
+        if (id == R.id.nav_iniciar_evaluacion) {
+            fragment = new IniciarEvaluacion();
+            FragmentTransaction = true;
+        } else if (id == R.id.nav_entrevistas_pendientes) {
+            fragment = new EntrevistasPendientes();
+            FragmentTransaction = true;
+        } else if (id == R.id.nav_guia_evaluador) {
             fragment = new Series();
             FragmentTransaction = true;
 
+        } else if (id == R.id.nav_resultados_por_aula) {
+            fragment = new ResultadosAula();
+            FragmentTransaction = true;
+
+        }else if (id == R.id.nav_creditos) {
+            fragment = new Creditos();
+            FragmentTransaction = true;
+            /*
+            Intent pruebas = new Intent(getApplication(), Pruebas.class);
+            startActivity(pruebas);*/
         }
 
         if (FragmentTransaction) {
@@ -109,6 +109,7 @@ public class NavigationMenu extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
     @Override
     public void onFragmentInteraction(Uri uri) {
 

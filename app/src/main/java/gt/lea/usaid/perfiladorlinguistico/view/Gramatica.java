@@ -243,7 +243,7 @@ public class Gramatica extends Activity implements View.OnClickListener, OnIniti
             if(SwAbuelo.isChecked())
                 tvAbuelo.setText("Abuelo");
             else
-                tvAbuelo.setText(" ");
+                tvAbuelo.setText("Esta es una Abuela, \nsi fuera hombre ¿cómo se diría?");
         }
         private void maestra(){
             if(SwMaestra.isChecked())

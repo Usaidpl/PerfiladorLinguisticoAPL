@@ -119,4 +119,9 @@ public class ExpresionOral extends Activity  {
             return false;
         }
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 }

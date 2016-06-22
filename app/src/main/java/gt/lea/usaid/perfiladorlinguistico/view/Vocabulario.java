@@ -354,4 +354,9 @@ public class Vocabulario extends Activity implements View.OnClickListener, OnIni
 
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 }

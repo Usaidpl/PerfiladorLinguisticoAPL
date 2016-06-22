@@ -124,8 +124,8 @@ public class SonidosEspecificos extends Activity implements View.OnClickListener
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent pruebas = new Intent(getApplication(), Gramatica.class);
-                startActivity(pruebas);
+                Intent gramatica1 = new Intent(getApplication(), Gramatica.class);
+                startActivity(gramatica1);
                 break;
             case R.id.NoPerro:
                 vf.showNext();
@@ -134,8 +134,8 @@ public class SonidosEspecificos extends Activity implements View.OnClickListener
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
-                Intent pruebas2 = new Intent(getApplication(), Gramatica.class);
-                startActivity(pruebas2);
+                Intent gramatica2 = new Intent(getApplication(), Gramatica.class);
+                startActivity(gramatica2);
                 break;
             default:
                 break;
@@ -351,5 +351,10 @@ public class SonidosEspecificos extends Activity implements View.OnClickListener
             im.setImageDrawable(getResources().getDrawable(drawables[position]));
             return im;
         }
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 }

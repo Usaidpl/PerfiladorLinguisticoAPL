@@ -115,8 +115,8 @@ public class Gramatica extends Activity implements View.OnClickListener, OnIniti
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent pruebas = new Intent(getApplication(), ExpresionOral.class);
-                startActivity(pruebas);
+                Intent expresionoral = new Intent(getApplication(), ExpresionOral.class);
+                startActivity(expresionoral);
                 break;
             case R.id.NoChef:
                 vf.showNext();
@@ -125,8 +125,8 @@ public class Gramatica extends Activity implements View.OnClickListener, OnIniti
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
-                Intent pruebas2 = new Intent(getApplication(), ExpresionOral.class);
-                startActivity(pruebas2);
+                Intent expresionoral2 = new Intent(getApplication(), ExpresionOral.class);
+                startActivity(expresionoral2);
                 break;
             default:
                 break;
@@ -313,6 +313,11 @@ public class Gramatica extends Activity implements View.OnClickListener, OnIniti
             return im;
         }
 
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 
 }

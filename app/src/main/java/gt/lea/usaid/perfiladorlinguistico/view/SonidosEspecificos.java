@@ -124,6 +124,8 @@ public class SonidosEspecificos extends Activity implements View.OnClickListener
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
+                Intent pruebas = new Intent(getApplication(), Gramatica.class);
+                startActivity(pruebas);
                 break;
             case R.id.NoPerro:
                 vf.showNext();
@@ -132,6 +134,8 @@ public class SonidosEspecificos extends Activity implements View.OnClickListener
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
+                Intent pruebas2 = new Intent(getApplication(), Gramatica.class);
+                startActivity(pruebas2);
                 break;
             default:
                 break;

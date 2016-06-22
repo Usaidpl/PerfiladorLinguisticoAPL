@@ -211,6 +211,8 @@ public class Vocabulario extends Activity implements View.OnClickListener, OnIni
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
+                Intent pruebas2 = new Intent(getApplication(), SonidosEspecificos.class);
+                startActivity(pruebas2);
                 break;
             case R.id.NoManzana:
                 vf.showNext();
@@ -218,6 +220,8 @@ public class Vocabulario extends Activity implements View.OnClickListener, OnIni
                         Toast.makeText(getApplicationContext(),
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
                 toast1.show();
+                Intent pruebas = new Intent(getApplication(), SonidosEspecificos.class);
+                startActivity(pruebas);
                 break;
             default:
                 break;

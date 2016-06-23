@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PerfiladorLinguistico</string>
+    <string name="app_name">Perfilador Linguistico</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -517,6 +517,11 @@
     <string name="nooooo">no</string>
     <string name="come_back">Regresando al Menu!</string>
     <string name="que_es_esta_imagen_esp">¿Digame que es?</string>
-    <string name="tvabuelo">Esta es una Abuela, \nsi fuera hombre ¿cómo se diría?</string>
+    <string name="tvabuelo">Esta es una Abuela, si fuera hombre ¿cómo se diría?</string>
+    <string name="tvmaestra">Este es un maestro, si fuera mujer ¿cómo se diría?</string>
+    <string name="tvdoctora">Este es una doctor, si fuera mujer ¿cómo se diría?</string>
+    <string name="tvcocinera">Este es un cocinero, si fuera mujer ¿cómo se diría?</string>
+    <string name="no">NO</string>
+    <string name="si">SI</string>
 
 </resources>

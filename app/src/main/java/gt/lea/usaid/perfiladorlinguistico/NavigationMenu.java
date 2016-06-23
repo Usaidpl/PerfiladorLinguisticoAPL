@@ -20,7 +20,7 @@ import gt.lea.usaid.perfiladorlinguistico.controller.ResultadosAula;
 import gt.lea.usaid.perfiladorlinguistico.controller.Series;
 
 public class NavigationMenu extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, Series.OnFragmentInteractionListener, EntrevistasPendientes.OnFragmentInteractionListener, GuiaEvaluacion.OnFragmentInteractionListener, IniciarEvaluacion.OnFragmentInteractionListener, ResultadosAula.OnFragmentInteractionListener, Creditos.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, Series.OnFragmentInteractionListener, EntrevistasPendientes.OnFragmentInteractionListener, GuiaEvaluacion.OnFragmentInteractionListener, IniciarEvaluacion.OnFragmentInteractionListener, ResultadosAula.OnFragmentInteractionListener, Creditos.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +81,7 @@ public class NavigationMenu extends AppCompatActivity
             fragment = new EntrevistasPendientes();
             FragmentTransaction = true;
         } else if (id == R.id.nav_guia_evaluador) {
-            fragment = new Series();
+            fragment = new GuiaEvaluacion();
             FragmentTransaction = true;
 
         } else if (id == R.id.nav_resultados_por_aula) {

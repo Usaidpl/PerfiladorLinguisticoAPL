@@ -19,15 +19,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.Pruebas"
+            android:name=".view.espanol.Pruebas"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".view.Gramatica"></activity>
-        <activity android:name=".view.ExpresionOral"></activity>
-        <activity android:name=".view.Vocabulario"></activity>
-        <activity android:name=".view.SonidosEspecificos"></activity>
-        <activity android:name=".view.Comprende"></activity>
-        <activity android:name=".view.Interpreta"></activity>
-        <activity android:name=".view.Precicion"></activity>
+        <activity android:name=".view.espanol.Gramatica"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.espanol.ExpresionOral"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.espanol.Vocabulario"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.espanol.SonidosEspecificos"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.espanol.Comprende"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.espanol.Interpreta"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.espanol.Precicion"
+            android:screenOrientation="landscape"/>
 
     </application>
 

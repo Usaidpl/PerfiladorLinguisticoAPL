@@ -11,13 +11,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.view.Comprende;
-import gt.lea.usaid.perfiladorlinguistico.view.ExpresionOral;
-import gt.lea.usaid.perfiladorlinguistico.view.Gramatica;
-import gt.lea.usaid.perfiladorlinguistico.view.Interpreta;
-import gt.lea.usaid.perfiladorlinguistico.view.Precicion;
-import gt.lea.usaid.perfiladorlinguistico.view.SonidosEspecificos;
-import gt.lea.usaid.perfiladorlinguistico.view.Vocabulario;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Comprende;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Gramatica;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interpreta;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Precicion;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.SonidosEspecificos;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 
 /**
  * Created by Roberto on 19/06/2016.

@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.view;
+package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;

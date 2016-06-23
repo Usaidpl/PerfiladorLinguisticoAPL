@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.view;
+package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
 /**
  * Created by Roberto on 19/06/2016.
@@ -243,25 +243,25 @@ public class Gramatica extends Activity implements View.OnClickListener, OnIniti
             if(SwAbuelo.isChecked())
                 tvAbuelo.setText("Abuelo");
             else
-                tvAbuelo.setText("Esta es una Abuela, \nsi fuera hombre ¿cómo se diría?");
+                tvAbuelo.setText("Esta es una Abuela, si fuera hombre ¿cómo se diría?");
         }
         private void maestra(){
             if(SwMaestra.isChecked())
                 tvMaestra.setText("Maestra");
             else
-                tvMaestra.setText(" ");
+                tvMaestra.setText("Este es un maestro, si fuera una mujer ¿cómo se diría?");
         }
         private void doctora(){
             if(SwDoctora.isChecked())
                 tvDoctora.setText("Doctora");
             else
-                tvDoctora.setText(" ");
+                tvDoctora.setText("Este es un doctor, si fuera mujer ¿cómo se diría?");
         }
         private void chef(){
             if(SwChef.isChecked())
-                tvChef.setText("Chef / Cocinera");
+                tvChef.setText("Cociera / Chef");
             else
-                tvChef.setText(" ");
+                tvChef.setText("Este es un cocinero, si fuera mujer ¿cómo se diría?");
         }
 
 

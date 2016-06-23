@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/frameLayout4"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <ImageView
+                    android:id="@+id/guia_comprension_oral"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book" />
+
+                <TextView
+                    android:id="@+id/guia_comprension_oral2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="#AA000000"
+                    android:text="Comprensión Oral"
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="25dp" />
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/frameLayout"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_above="@+id/frameLayout7"
+                android:layout_marginLeft="47dp"
+                android:layout_marginStart="47dp"
+                android:layout_toEndOf="@+id/frameLayout4"
+                android:layout_toRightOf="@+id/frameLayout4">
+
+                <ImageView
+                    android:id="@+id/guia_expresion_oral"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book" />
+
+                <TextView
+                    android:id="@+id/guia_expresion_oral2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="#AA000000"
+                    android:text="Expresión Oral"
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="25dp" />
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/frameLayout5"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_above="@+id/frameLayout7"
+                android:layout_marginLeft="55dp"
+                android:layout_marginStart="55dp"
+                android:layout_toEndOf="@+id/frameLayout"
+                android:layout_toRightOf="@+id/frameLayout">
+
+                <ImageView
+                    android:id="@+id/guia_gramatica"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book" />
+
+                <TextView
+                    android:id="@+id/guia_gramatica2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="#AA000000"
+                    android:text="Gramática"
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="25dp" />
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/frameLayout2"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/frameLayout5"
+                android:layout_alignStart="@+id/frameLayout5">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="#AA000000"
+                    android:text="Sonidos Específicos"
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="25dp" />
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/frameLayout7"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/frameLayout4"
+                android:layout_marginTop="59dp">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="#AA000000"
+                    android:text="Interpretación Oral"
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="25dp" />
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/frameLayout6"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="511dp">
+
+                <ImageView
+                    android:id="@+id/guia_interpretacion_oral"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book" />
+
+                <TextView
+                    android:id="@+id/guia_interpretacion_oral2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="#AA000000"
+                    android:text="Vocabulario"
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="25dp" />
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/frameLayout3"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/frameLayout"
+                android:layout_alignStart="@+id/frameLayout">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="#AA000000"
+                    android:text="Precisión Oral"
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="25dp" />
+            </FrameLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+

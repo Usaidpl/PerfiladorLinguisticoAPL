@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".view.Gramatica">
+    tools:context=".view.espanol.Gramatica">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -97,14 +97,14 @@
                                 android:layout_width="81dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI"
+                                android:text="@string/si"
                                 android:id="@+id/SiPelota"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO"
+                                android:text="@string/no"
                                 android:id="@+id/NoPelota"/>
 
                         </RadioGroup>
@@ -178,14 +178,14 @@
                                 android:layout_width="81dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI"
+                                android:text="@string/si"
                                 android:id="@+id/SiPelotas"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO"
+                                android:text="@string/no"
                                 android:id="@+id/NoPelotas"/>
 
                         </RadioGroup>
@@ -253,14 +253,14 @@
                                 android:layout_width="81dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI"
+                                android:text="@string/si"
                                 android:id="@+id/SiLapices"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO"
+                                android:text="@string/no"
                                 android:id="@+id/NoLapices"/>
 
                         </RadioGroup>
@@ -329,14 +329,14 @@
                                 android:layout_width="81dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI"
+                                android:text="@string/si"
                                 android:id="@+id/SiLapiz"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO"
+                                android:text="@string/no"
                                 android:id="@+id/NoLapiz"/>
 
                         </RadioGroup>
@@ -406,14 +406,14 @@
                                 android:layout_width="81dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI"
+                                android:text="@string/si"
                                 android:id="@+id/SiAbuelo"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO"
+                                android:text="@string/no"
                                 android:id="@+id/NoAbuelo"/>
 
                         </RadioGroup>
@@ -482,14 +482,14 @@
                                 android:layout_width="81dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI"
+                                android:text="@string/si"
                                 android:id="@+id/SiMaestra"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO"
+                                android:text="@string/no"
                                 android:id="@+id/NoMaestra"/>
 
                         </RadioGroup>
@@ -503,7 +503,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_column="0"
                     android:layout_gravity="center"
-                    android:text=""
+                    android:text="@string/tvmaestra"
                     android:textSize="30dp" />
 
             </RelativeLayout>
@@ -558,14 +558,14 @@
                                 android:layout_width="81dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI"
+                                android:text="@string/Si"
                                 android:id="@+id/SiDoctora"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO"
+                                android:text="@string/no"
                                 android:id="@+id/NoDoctora"/>
 
                         </RadioGroup>
@@ -579,7 +579,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_column="0"
                     android:layout_gravity="center"
-                    android:text=""
+                    android:text="@string/tvdoctora"
                     android:textSize="30dp" />
 
             </RelativeLayout>
@@ -634,14 +634,14 @@
                                 android:layout_width="81dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI"
+                                android:text="@string/si"
                                 android:id="@+id/SiChef"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO"
+                                android:text="@string/no"
                                 android:id="@+id/NoChef"/>
 
                         </RadioGroup>
@@ -655,7 +655,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_column="0"
                     android:layout_gravity="center"
-                    android:text=""
+                    android:text="@string/tvcocinera"
                     android:textSize="30dp" />
 
             </RelativeLayout>

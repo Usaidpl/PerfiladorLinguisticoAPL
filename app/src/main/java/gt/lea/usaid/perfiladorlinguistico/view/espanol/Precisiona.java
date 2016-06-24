@@ -15,6 +15,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
 
 /**
  * Created by Bryan on 20/06/16.
+ *
  */
 public class Precisiona extends FlipperActivity implements OnInitializeComponent {
 

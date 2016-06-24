@@ -11,6 +11,12 @@
     <string name="vocabulario">Vocabulario</string>
     <string name="expresionoral">Expresion Oral</string>
     <string name="guia_comprension_oral">Guia Comprension Oral</string>
+    <string name="guia_expresion_oral">Guia Expresion Oral</string>
+    <string name="guia_gramatica">Guia Gramatica</string>
+    <string name="guia_interaccion_oral">Guia Interaccion Oral</string>
+    <string name="guia_precicion_oral">Guia Precision Oral</string>
+    <string name="guia_sonidos_especificos">Guia Sonidos Especificos</string>
+    <string name="guia_vocabulario">Guia Vocabulario</string>
     <!-- TODO: STRINGS USAID 2016 MAM, KICHE Y ESPAÑOL -->
     //SERIE KICHE - ESPANOL
     //SERIE A

@@ -35,7 +35,6 @@ public class GuiaEvaluacion extends android.support.v4.app.Fragment implements V
         sonidosespecificos =(ImageView) vista.findViewById(R.id.guia_sonidosespeficicos);
         vocabulario =(ImageView) vista.findViewById(R.id.guia_vocabulario);
 
-
         comprencionoral.setOnClickListener(this);
         expresionral.setOnClickListener(this);
         gramatica.setOnClickListener(this);

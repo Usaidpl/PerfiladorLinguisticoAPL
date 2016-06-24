@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".NavigationMenu"
-            android:label=  "@string/app_name"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,36 +20,29 @@
         </activity>
         <activity
             android:name=".view.espanol.Pruebas"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".view.espanol.Gramatica"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.espanol.ExpresionOral"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.espanol.Vocabulario"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.espanol.SonidosEspecificos"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.espanol.Comprende"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.espanol.Interpreta"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.espanol.Precicion"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.guias.GuiaComprensionOral"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.guias.GuiaExpresionOral"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.guias.GuiaGramatica"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.guias.GuiaInteraccionOral"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.guias.GuiaPrecisionOral"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.guias.GuiaSonidosEspecificos"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.guias.GuiaVocabulario"
-            android:screenOrientation="landscape"/>
-
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.espanol.Gramatica"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.espanol.ExpresionOral"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.espanol.Vocabulario"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.espanol.SonidosEspecificos"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.espanol.Comprende"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.espanol.Interpreta"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.guias.GuiaComprensionOral"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.espanol.Presiciona"></activity>
     </application>
 
 </manifest>

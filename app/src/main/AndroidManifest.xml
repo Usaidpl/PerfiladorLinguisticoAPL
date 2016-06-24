@@ -40,9 +40,6 @@
             android:name=".view.espanol.Interpreta"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.Precicion"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".view.guias.GuiaComprensionOral"
             android:screenOrientation="landscape" />
         <activity android:name=".view.espanol.Presiciona"></activity>

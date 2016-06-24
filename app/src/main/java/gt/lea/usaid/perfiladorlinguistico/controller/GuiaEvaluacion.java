@@ -13,7 +13,6 @@ import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Comprende;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interpreta;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Precicion;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.SonidosEspecificos;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaComprensionOral;

@@ -9,6 +9,7 @@
     <string name="gramatica">Gramatica</string>
     <string name="sonidos_especificos">Sonidos Especificos</string>
     <string name="vocabulario">Vocabulario</string>
+    <string name="creditos">Creditos</string>
     <string name="expresionoral">Expresion Oral</string>
     <string name="guia_comprension_oral">Guia Comprension Oral</string>
     <string name="guia_expresion_oral">Guia Expresion Oral</string>
@@ -530,5 +531,6 @@
     <string name="tvcocinera">Este es un cocinero, si fuera mujer ¿cómo se diría?</string>
     <string name="no">NO</string>
     <string name="si">SI</string>
+    <string name="CreditoLema">Credito</string>
 
 </resources>

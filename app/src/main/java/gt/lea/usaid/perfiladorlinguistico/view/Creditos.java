@@ -57,9 +57,6 @@ public class Creditos extends Activity implements View.OnClickListener, AdapterV
         rvDevs.setAdapter(new CreditosAdapter(this, developers));
 
 
-        rvAsesores.setHasFixedSize(true);
-        rvAsesores.setLayoutManager(new GridLayoutManager(this, 3));
-        rvAsesores.setAdapter(new CreditosAdapter(this, asesores));
 
         rvInstructores.setHasFixedSize(true);
         rvInstructores.setLayoutManager(new GridLayoutManager(this, 3));

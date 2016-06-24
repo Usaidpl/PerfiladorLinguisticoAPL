@@ -35,6 +35,8 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".view.espanol.Precicion"
             android:screenOrientation="landscape"/>
+        <activity android:name=".view.guias.GuiaComprensionOral"
+            android:screenOrientation="landscape"/>
 
     </application>
 

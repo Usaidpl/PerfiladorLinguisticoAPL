@@ -259,7 +259,7 @@ public class Gramatica extends Activity implements View.OnClickListener, OnIniti
         }
         private void chef(){
             if(SwChef.isChecked())
-                tvChef.setText("Cociera / Chef");
+                tvChef.setText("Cociera / ");
             else
                 tvChef.setText("Este es un cocinero, si fuera mujer ¿cómo se diría?");
         }

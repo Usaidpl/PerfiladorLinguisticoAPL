@@ -107,7 +107,7 @@
                 android:layout_alignStart="@+id/frameLayout5">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/guia_sonidosespeficicos"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
@@ -163,14 +163,14 @@
                 android:layout_marginTop="511dp">
 
                 <ImageView
-                    android:id="@+id/guia_interpretacion_oral"
+                    android:id="@+id/guia_vocabulario"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/book" />
 
                 <TextView
-                    android:id="@+id/guia_interpretacion_oral2"
+                    android:id="@+id/guia_vocabulario2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom"
@@ -190,7 +190,7 @@
                 android:layout_alignStart="@+id/frameLayout">
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/guia_precicion_oral"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"

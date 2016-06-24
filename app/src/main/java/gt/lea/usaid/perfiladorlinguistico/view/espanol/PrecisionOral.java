@@ -17,7 +17,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
  * Created by Bryan on 20/06/16.
  *
  */
-public class Precisiona extends FlipperActivity implements OnInitializeComponent {
+public class PrecisionOral extends FlipperActivity implements OnInitializeComponent {
 
     private static final int TOTAL_SERIE = 18;
     private int pregunta = 0;
@@ -33,7 +33,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
 
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
-        flipper = getFlipper(R.id.flipperP);
+        flipper = getFlipper(R.id.viewflipper);
         int vector[] = matriz[pregunta], imagen;
         for(int v = 0; v < vector.length; v ++){
             imagen = vector[v];
@@ -66,7 +66,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                 /*
                  *db.insert(resultado);
                  */
-                setNextContext(Precisiona.this, Gramatica.class);
+                setNextContext(PrecisionOral.this, Gramatica.class);
             }
             else{
                 resultado += this.selectImageView(v);

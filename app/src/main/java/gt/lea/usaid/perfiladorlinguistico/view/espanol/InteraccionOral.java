@@ -13,13 +13,13 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
 /**
  * Created by Bryan on 20/06/16.
  */
-public class Comprende  extends FlipperActivity implements OnInitializeComponent, View.OnClickListener{
+public class InteraccionOral extends FlipperActivity implements OnInitializeComponent, View.OnClickListener  {
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.comprende);
+        setContentView(R.layout.interpreta);
         setOnInit(null);
     }
 
@@ -30,8 +30,8 @@ public class Comprende  extends FlipperActivity implements OnInitializeComponent
         addId(respuesta5, R.id.rbResp5);
         addId(respuesta7, R.id.rbResp7);
         addId(respuesta9, R.id.rbResp9);
-//        respuesta9.setOnClickListener(this);
-        //      respuesta10.setOnClickListener(this);
+        respuesta9.setOnClickListener(this);
+        respuesta10.setOnClickListener(this);
     }
 
     protected void addId(RadioButton rb, @IdRes int id_radio){
@@ -53,16 +53,34 @@ public class Comprende  extends FlipperActivity implements OnInitializeComponent
     }
 
     private void descition(float resultado){
-        if(resultado >= (Verifica.TOTAL_SERIE/50) + 1){
-            setNextContext(this, Interpreta.class);
-            //Clase de conexion a base de datos
-            //db.insert(resultado);
+        if(resultado >= (100/50) + 1){
+            setNextContext(this, InteraccionOral.class);
+            /*Clase de conexion a base de datos
+            private  String idioma = db.select("ENTREVISTA");
+            DataBase db = new DataBase();
+            db.insert(resultado);
+            float result_comprentions = Float.parseFloat(db.select(TABLE_COMPRENTIONS)),
+                result_interactue = Float.parseFloat(db.select(TABLE_INTERACTUA)),
+                result = 0;
+
+            result = (result_comprentions + result_interactue) / 2;
+
+            if(result <= (TOTAL_SERIE / 50) +1)
+                setNextContext(this, Precition.class);
+            else {
+                if(idioma.contentEquals(KICHE))
+                    setNextContext(this, PrecitionKiche.class);
+                else if(idioma.contentEquals(MAN)
+                    setNextContext(this. PrecitionMan.class);
+            }
+            */
         }
         else{
-            setNextContext(this, Interpreta.class);
+            setNextContext(this, InteraccionOral.class);
             //Clase de conexion a base de datos
             //db.insert(resultado);
         }
-
     }
+
+
 }

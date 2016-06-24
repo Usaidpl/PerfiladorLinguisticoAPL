@@ -34,15 +34,26 @@
             android:name=".view.espanol.SonidosEspecificos"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.Comprende"
+            android:name=".view.espanol.ComprensionOral"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.Interpreta"
+            android:name=".view.espanol.InteraccionOral"
             android:screenOrientation="landscape" />
         <activity
             android:name=".view.guias.GuiaComprensionOral"
             android:screenOrientation="landscape" />
-        <activity android:name=".view.espanol.Presiciona"></activity>
+        <activity android:name=".view.guias.GuiaExpresionOral"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.guias.GuiaGramatica"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.guias.GuiaInteraccionOral"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.guias.GuiaPrecisionOral"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.guias.GuiaSonidosEspecificos"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.guias.GuiaVocabulario"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

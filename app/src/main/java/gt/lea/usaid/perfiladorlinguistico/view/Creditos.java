@@ -49,7 +49,7 @@ public class Creditos extends Activity implements View.OnClickListener, AdapterV
 
 
         RecyclerView rvDevs = (RecyclerView) findViewById(R.id.gvDevs);
-        RecyclerView rvAsesores = (RecyclerView) findViewById(R.id.rvAsesores);
+
         RecyclerView rvInstructores = (RecyclerView) findViewById(R.id.rvInstructores);
 
         //rvDevs.setHasFixedSize(true);

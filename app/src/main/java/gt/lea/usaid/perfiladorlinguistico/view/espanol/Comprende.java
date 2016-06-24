@@ -31,7 +31,7 @@ public class Comprende  extends FlipperActivity implements OnInitializeComponent
         addId(respuesta7, R.id.rbResp7);
         addId(respuesta9, R.id.rbResp9);
 //        respuesta9.setOnClickListener(this);
-  //      respuesta10.setOnClickListener(this);
+        //      respuesta10.setOnClickListener(this);
     }
 
     protected void addId(RadioButton rb, @IdRes int id_radio){

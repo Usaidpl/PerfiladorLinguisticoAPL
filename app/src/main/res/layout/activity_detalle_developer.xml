@@ -58,8 +58,7 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@mipmap/ic_web_black_48dp" />
+                    android:layout_height="match_parent" />
 
                 <TextView
 
@@ -81,8 +80,7 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@mipmap/ic_email_black_48dp" />
+                    android:layout_height="match_parent" />
 
                 <TextView
 
@@ -104,8 +102,7 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@mipmap/ic_call_black_48dp" />
+                    android:layout_height="match_parent"/>
 
                 <TextView
                     android:id="@+id/tvTelefonoDev"
@@ -126,8 +123,7 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@mipmap/twitter_45" />
+                    android:layout_height="match_parent" />
 
                 <TextView
 

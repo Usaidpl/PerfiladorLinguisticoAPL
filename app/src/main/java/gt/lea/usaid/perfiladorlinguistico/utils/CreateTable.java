@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.utils.interfaces;
+package gt.lea.usaid.perfiladorlinguistico.utils;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,13 +16,22 @@ public class CreateTable {
     private ArrayList<String> valor = new ArrayList();
     private String nombre_tabla;
 
+    public CreateTable(String nombre_tabla){
+        this.nombre_tabla = nombre_tabla;
+    }
+
     public CreateTable(String nombre_tabla, ArrayList<String> valor){
         this.nombre_tabla = nombre_tabla;
         this.valor = valor;
     }
 
-    private  String camp(String llave_primaria,String type_data){
-        String resultado = llave_primaria + " " + "PRIMARY KEY AUTOINCREMENT";
+    public void add(String campo){
+        valor.add(campo);
+    }
+
+    public String camp(String llave_primaria,String type_data){
+        String resultado = "CREATE TABLE " + nombre_tabla + "(";
+        resultado +=   " " + "PRIMARY KEY AUTOINCREMENT";
         if(valor != null || valor.size()  > 0 ){
             for(int v = 0; v < valor.size(); v ++){
                 if((v + 1) != valor.size()){
@@ -31,6 +40,7 @@ public class CreateTable {
                     resultado += "'" + valor.get(v) + "'";
             }
         }
+        resultado += ")";
         return resultado;
     }
 
@@ -40,6 +50,6 @@ public class CreateTable {
         public static final int RESULTADO_FINAL = 0;
     }
 
-    //public  String CREATE_TABLE = "CREATE TABLE " + nombre_tabla + "(" + camp() +;
+
 
 }

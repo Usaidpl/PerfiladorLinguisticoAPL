@@ -1,5 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -12,7 +13,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import gt.lea.usaid.perfiladorlinguistico.controller.Creditos;
 import gt.lea.usaid.perfiladorlinguistico.controller.EntrevistasPendientes;
 import gt.lea.usaid.perfiladorlinguistico.controller.GuiaEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
@@ -20,7 +20,7 @@ import gt.lea.usaid.perfiladorlinguistico.controller.ResultadosAula;
 import gt.lea.usaid.perfiladorlinguistico.controller.Series;
 
 public class NavigationMenu extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, Series.OnFragmentInteractionListener, EntrevistasPendientes.OnFragmentInteractionListener, GuiaEvaluacion.OnFragmentInteractionListener, IniciarEvaluacion.OnFragmentInteractionListener, ResultadosAula.OnFragmentInteractionListener, Creditos.OnFragmentInteractionListener{
+        implements NavigationView.OnNavigationItemSelectedListener, Series.OnFragmentInteractionListener, EntrevistasPendientes.OnFragmentInteractionListener, GuiaEvaluacion.OnFragmentInteractionListener, IniciarEvaluacion.OnFragmentInteractionListener, ResultadosAula.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,12 +88,14 @@ public class NavigationMenu extends AppCompatActivity
             fragment = new ResultadosAula();
             FragmentTransaction = true;
 
-        }else if (id == R.id.nav_creditos) {
-            fragment = new Creditos();
+        }else if (id ==  R.id.nav_creditos) {
+            /*fragment = new Creditos();
             FragmentTransaction = true;
-            /*
-            Intent pruebas = new Intent(getApplication(), Pruebas.class);
-            startActivity(pruebas);*/
+
+            intent = new Intent(getActivity(), Creditos.class);
+            getActivity().startActivity(intent);*/
+            Intent creditos = new Intent(getApplicationContext(), gt.lea.usaid.perfiladorlinguistico.view.Creditos.class);
+            startActivity(creditos);
         }
 
         if (FragmentTransaction) {

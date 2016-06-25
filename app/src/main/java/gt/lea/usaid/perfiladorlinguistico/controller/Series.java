@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.ComprensionOral;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Comprende;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Gramatica;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.InteraccionOral;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.SonidosEspecificos;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaPrecisionOral;
@@ -81,7 +81,7 @@ public class Series extends Fragment implements View.OnClickListener {
                 getActivity().startActivity(intent);
                 break;
             case R.id.btnComprende:
-                intent = new Intent(getActivity(), ComprensionOral.class);
+                intent = new Intent(getActivity(), Comprende.class);
                 startActivity(intent);
                 break;
             case R.id.btnExpresionOral:
@@ -89,7 +89,7 @@ public class Series extends Fragment implements View.OnClickListener {
                 startActivity(intent);
                 break;
             case R.id.btnInterpreta:
-                intent = new Intent(getActivity(), InteraccionOral.class);
+                intent = new Intent(getActivity(), Interactua.class);
                 startActivity(intent);
                 break;
             case R.id.btnPrecicion:

@@ -34,10 +34,10 @@
             android:name=".view.espanol.SonidosEspecificos"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.ComprensionOral"
+            android:name=".view.espanol.Comprende"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.InteraccionOral"
+            android:name=".view.espanol.Interactua"
             android:screenOrientation="landscape" />
         <activity
             android:name=".view.guias.GuiaComprensionOral"

@@ -17,7 +17,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
  * Created by Bryan on 20/06/16.
  *
  */
-public class PrecisionOral extends FlipperActivity implements OnInitializeComponent {
+public class Precisiona extends FlipperActivity implements OnInitializeComponent {
 
     private static final int TOTAL_SERIE = 18;
     private int pregunta = 0;
@@ -66,7 +66,7 @@ public class PrecisionOral extends FlipperActivity implements OnInitializeCompon
                 /*
                  *db.insert(resultado);
                  */
-                setNextContext(PrecisionOral.this, Gramatica.class);
+                setNextContext(Precisiona.this, Gramatica.class);
             }
             else{
                 resultado += this.selectImageView(v);

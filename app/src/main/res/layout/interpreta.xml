@@ -4,6 +4,6 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".view.espanol.InteraccionOral">
+    tools:context=".view.espanol.Interactua">
 
 </LinearLayout>

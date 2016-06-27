@@ -89,11 +89,6 @@ public class NavigationMenu extends AppCompatActivity
             FragmentTransaction = true;
 
         }else if (id ==  R.id.nav_creditos) {
-            /*fragment = new Creditos();
-            FragmentTransaction = true;
-
-            intent = new Intent(getActivity(), Creditos.class);
-            getActivity().startActivity(intent);*/
             Intent creditos = new Intent(getApplicationContext(), gt.lea.usaid.perfiladorlinguistico.view.Creditos.class);
             startActivity(creditos);
         }

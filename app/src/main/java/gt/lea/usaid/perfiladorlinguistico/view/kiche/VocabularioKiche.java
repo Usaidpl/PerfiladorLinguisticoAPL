@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.view.espanol;
+package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
 import android.app.Activity;
 import android.content.Context;
@@ -23,7 +23,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
 /**
  * Created by Roberto on 20/06/2016.
  */
-public class Vocabulario extends Activity implements View.OnClickListener, OnInitializeComponent {
+public class VocabularioKiche extends Activity implements View.OnClickListener, OnInitializeComponent {
     private ViewFlipper vf;
     private TextView tvCasa, tvCama, tvAvion, tvSilla, tvConejo, tvCaballo, tvZanahoria, tvGuisquil, tvGallo, tvManzana;
     private RadioButton SiCasa, NoCasa, SiCama, NoCama, SiAvion, NoAvion, SiSilla, NoSilla, SiConejo, NoConejo, SiCaballo, NoCaballo, SiZanahoria, NoZanahoria, SiGuisquil, NoGuisquil, SiGallo, NoGallo, SiManzana, NoManzana;
@@ -188,7 +188,7 @@ public class Vocabulario extends Activity implements View.OnClickListener, OnIni
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent pruebas2 = new Intent(getApplication(), SonidosEspecificos.class);
+                Intent pruebas2 = new Intent(getApplication(), SonidosEspecificosKiche.class);
                 startActivity(pruebas2);
                 break;
             case R.id.NoManzana:
@@ -197,7 +197,7 @@ public class Vocabulario extends Activity implements View.OnClickListener, OnIni
                         Toast.makeText(getApplicationContext(),
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
                 toast1.show();
-                Intent pruebas = new Intent(getApplication(), SonidosEspecificos.class);
+                Intent pruebas = new Intent(getApplication(), SonidosEspecificosKiche.class);
                 startActivity(pruebas);
                 break;
             default:

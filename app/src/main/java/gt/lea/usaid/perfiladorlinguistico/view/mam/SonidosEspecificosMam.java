@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.view.espanol;
+package gt.lea.usaid.perfiladorlinguistico.view.mam;
 
 import android.app.Activity;
 import android.content.Context;
@@ -23,7 +23,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
 /**
  * Created by Roberto on 20/06/2016.
  */
-public class SonidosEspecificos extends Activity implements View.OnClickListener, OnInitializeComponent {
+public class SonidosEspecificosMam extends Activity implements View.OnClickListener, OnInitializeComponent {
 
     private ViewFlipper vf;
     private TextView tvPelota, tvBota, tvNaranja, tvElote, tvMachete, tvMoto, tvHelado, tvTelefono, tvGallina, tvPerro;
@@ -103,7 +103,7 @@ public class SonidosEspecificos extends Activity implements View.OnClickListener
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent gramatica1 = new Intent(getApplication(), Gramatica.class);
+                Intent gramatica1 = new Intent(getApplication(), GramaticaMam.class);
                 startActivity(gramatica1);
                 break;
             case R.id.NoPerro:
@@ -113,7 +113,7 @@ public class SonidosEspecificos extends Activity implements View.OnClickListener
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
-                Intent gramatica2 = new Intent(getApplication(), Gramatica.class);
+                Intent gramatica2 = new Intent(getApplication(), GramaticaMam.class);
                 startActivity(gramatica2);
                 break;
             default:

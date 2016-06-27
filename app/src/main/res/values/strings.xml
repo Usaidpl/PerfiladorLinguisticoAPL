@@ -188,7 +188,7 @@
     <string name="Pre3_EspQui_SerE_II">Baje su mano.</string>
     <string name="Pre4_EspQui_SerE_II">Párese</string>
     <string name="Pre5_EspQui_SerE_II">Dé una vuelta.</string>
-    <string name="VocabularioPrecicion_Esp_SerE">III.	SERIE. VOCABULARION (PRECISIÓN)</string>
+    <string name="VocabularioPrecicion_Esp_SerE">III SERIE VOCABULARIO (PRECISIÓN)</string>
     <string name="Pre1_EspQui_SerE_III">Pato</string>
     <string name="Pre2_EspQui_SerE_III">Gato</string>
     <string name="Pre3_EspQui_SerE_III">Vaca</string>
@@ -207,7 +207,7 @@
     <string name="Pre16_EspQui_SerE_III">Peine</string>
     <string name="Pre17_EspQui_SerE_III">Libro</string>
     <string name="Pre18_EspQui_SerE_III">Bicicleta</string>
-    <string name="VocabularioProduccion_Esp_SerE">IV.	SERIE. VOCABULARIO (PRODUCCIÓN)</string>
+    <string name="VocabularioProduccion_Esp_SerE">IV SERIE. VOCABULARIO (PRODUCCIÓN)</string>
     <string name="Pre1_EspQui_SerE_IV">Casa</string>
     <string name="Pre2_EspQui_SerE_IV">Casa</string>
     <string name="Pre3_EspQui_SerE_IV">Avión</string>
@@ -531,7 +531,20 @@
     <string name="tvcocinera">Este es un cocinero, si fuera mujer ¿cómo se diría?</string>
     <string name="no">NO</string>
     <string name="si">SI</string>
-    <string name="CreditoLema">Credito</string>
+    <string name="CreditoLema">Creditos</string>
     <string name="perfil_linguistico_de_estudiantes_de_primaria_y_primer_grado_de_primaria">PERFIL LINGUISTICO DE ESTUDIANTES \nDE PRIMARIA Y PRIMER GRADO DE \nPRIMARIA</string>
+    <string name="le_mostrare_algunos_dibujos">Instrucciones\nLe voy a mostrar algunos dibujos: dígame que es cada uno de ello.</string>
+    <string name="imagen_1_10_vobaulario_produccion">Imagen 1 / 10</string>
+    <string name="imagen_2_10_vobaulario_produccion">Imagen 2 / 10</string>
+    <string name="imagen_3_10_vobaulario_produccion">Imagen 3 / 10</string>
+    <string name="imagen_4_10_vobaulario_produccion">Imagen 4 / 10</string>
+    <string name="imagen_5_10_vobaulario_produccion">Imagen 5 / 10</string>
+    <string name="imagen_6_10_vobaulario_produccion">Imagen 6 / 10</string>
+    <string name="imagen_7_10_vobaulario_produccion">Imagen 7 / 10</string>
+    <string name="imagen_8_10_vobaulario_produccion">Imagen 8 / 10</string>
+    <string name="imagen_9_10_vobaulario_produccion">Imagen 9 / 10</string>
+    <string name="imagen_10_10_vobaulario_produccion">Imagen 10 / 10</string>
+
+
 
 </resources>

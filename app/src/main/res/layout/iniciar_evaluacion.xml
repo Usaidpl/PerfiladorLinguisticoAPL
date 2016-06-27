@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:text="@string/perfil_linguistico_de_estudiantes_de_primaria_y_primer_grado_de_primaria"
         android:textAlignment="center"
-        android:textSize="@dimen/_15sdp" />
+        android:textSize="15dp" />
 
 
         <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"

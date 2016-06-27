@@ -58,7 +58,7 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         Intent intent = null;
         switch (v.getId()) {
             case R.id.ivMamEva:
-                intent = new Intent(getActivity(), gt.lea.usaid.perfiladorlinguistico.view.espanol.SonidosEspecificos.class);
+                intent = new Intent(getActivity(), gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario.class);
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivKicheEva:

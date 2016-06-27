@@ -7,7 +7,6 @@ import android.widget.RadioButton;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
-import gt.lea.usaid.perfiladorlinguistico.utils.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 /**
@@ -23,6 +22,16 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
         setOnInit(null);
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    @Override
+    public void setOnInit(@IdRes int[][] matriz) {
+
+    }
+/*
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
         addId(respuesta1, R.id.rbResp1);
@@ -65,4 +74,5 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
         }
 
     }
+    */
 }

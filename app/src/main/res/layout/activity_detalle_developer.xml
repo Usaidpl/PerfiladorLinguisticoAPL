@@ -7,15 +7,17 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".view.DetalleDeveloper">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="400sp">
 
             <ImageView
                 android:id="@+id/ivDev"
@@ -58,7 +60,8 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_web_black_48dp"/>
 
                 <TextView
 
@@ -80,7 +83,8 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_email_black_48dp"/>
 
                 <TextView
 
@@ -102,7 +106,8 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_call_black_48dp"/>
 
                 <TextView
                     android:id="@+id/tvTelefonoDev"
@@ -123,7 +128,8 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/twitter_45"/>
 
                 <TextView
 
@@ -140,5 +146,5 @@
         </LinearLayout>
     </LinearLayout>
 
-
+</ScrollView>
 </android.support.design.widget.CoordinatorLayout>

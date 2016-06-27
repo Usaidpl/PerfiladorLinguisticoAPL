@@ -57,6 +57,7 @@
         <activity android:name=".view.Creditos"/>
         <activity android:name=".view.DetalleDeveloper"
             android:screenOrientation="landscape"/>
+
     </application>
 
 </manifest>

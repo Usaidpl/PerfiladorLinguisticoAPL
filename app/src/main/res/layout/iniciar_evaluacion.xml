@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/perfil_linguistico_de_estudiantes_de_primaria_y_primer_grado_de_primaria"
+        android:textAlignment="center"
+        android:textSize="@dimen/_15sdp" />
+
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/flMam"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:layout_alignTop="@+id/flKicheEva"
+            android:layout_toRightOf="@+id/flKicheEva"
+            android:layout_toEndOf="@+id/flKicheEva"
+            android:layout_marginLeft="227dp"
+            android:layout_marginStart="227dp">
+
+            <ImageView
+                android:id="@+id/ivMamEva"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/book" />
+
+            <TextView
+                android:id="@+id/tvMamEva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:background="#AA000000"
+                android:text="Evaluación Kiche"
+                android:textAlignment="center"
+                android:textColor="#ffffffff"
+                android:textSize="25dp" />
+        </FrameLayout>
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/flKicheEva"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="113dp"
+        android:layout_marginStart="113dp">
+
+        <ImageView
+            android:id="@+id/ivKicheEva"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/book" />
+
+        <TextView
+            android:id="@+id/tvKicheEva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:background="#AA000000"
+            android:text="Evaluación Mam"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:textSize="25dp" />
+    </FrameLayout>
+</RelativeLayout>

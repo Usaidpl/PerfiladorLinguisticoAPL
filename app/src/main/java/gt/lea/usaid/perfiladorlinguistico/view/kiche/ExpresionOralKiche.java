@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.view.espanol;
+package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,7 +15,7 @@ import gt.lea.usaid.perfiladorlinguistico.R;
 /**
  * Created by Roberto on 19/06/2016.
  */
-public class ExpresionOral extends Activity  {
+public class ExpresionOralKiche extends Activity  {
 
 
     private static final int SWIPE_MIN_DISTANCE = 120;

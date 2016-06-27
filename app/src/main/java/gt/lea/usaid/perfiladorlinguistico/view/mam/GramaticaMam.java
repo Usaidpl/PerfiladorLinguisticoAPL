@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.view.espanol;
+package gt.lea.usaid.perfiladorlinguistico.view.mam;
 
 /**
  * Created by Roberto on 19/06/2016.
@@ -24,7 +24,7 @@ import android.widget.ViewFlipper;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
-public class Gramatica extends Activity implements View.OnClickListener, OnInitializeComponent {
+public class GramaticaMam extends Activity implements View.OnClickListener, OnInitializeComponent {
 
     private ViewFlipper vf;
     private TextView tvPelota, tvPelotas, tvLapices, tvLapiz, tvAbuelo, tvMaestra, tvDoctora, tvChef;
@@ -94,7 +94,7 @@ public class Gramatica extends Activity implements View.OnClickListener, OnIniti
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent expresionoral = new Intent(getApplication(), ExpresionOral.class);
+                Intent expresionoral = new Intent(getApplication(), ExpresionOralMam.class);
                 startActivity(expresionoral);
                 break;
             case R.id.NoChef:
@@ -104,7 +104,7 @@ public class Gramatica extends Activity implements View.OnClickListener, OnIniti
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
-                Intent expresionoral2 = new Intent(getApplication(), ExpresionOral.class);
+                Intent expresionoral2 = new Intent(getApplication(), ExpresionOralMam.class);
                 startActivity(expresionoral2);
                 break;
             default:

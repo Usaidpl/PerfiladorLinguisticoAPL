@@ -207,7 +207,7 @@
     <string name="Pre16_EspQui_SerE_III">Peine</string>
     <string name="Pre17_EspQui_SerE_III">Libro</string>
     <string name="Pre18_EspQui_SerE_III">Bicicleta</string>
-    <string name="VocabularioProduccion_Esp_SerE">IV SERIE. VOCABULARIO (PRODUCCIÓN)</string>
+    <string name="VocabularioProduccion_Esp_SerE">IV VOCABULARIO (PRODUCCIÓN)</string>
     <string name="Pre1_EspQui_SerE_IV">Casa</string>
     <string name="Pre2_EspQui_SerE_IV">Casa</string>
     <string name="Pre3_EspQui_SerE_IV">Avión</string>
@@ -218,7 +218,7 @@
     <string name="Pre8_EspQui_SerE_IV">Güisquil</string>
     <string name="Pre9_EspQui_SerE_IV">Gallo</string>
     <string name="Pre10_EspQui_SerE_IV">manzana</string>
-    <string name="SonidosEspecificos_Esp_SerE">V.	SERIE. SONIDOS ESPECÍFICOS DEL IDIOMA</string>
+    <string name="SonidosEspecificos_Esp_SerE">V SONIDOS ESPECÍFICOS DEL IDIOMA</string>
     <string name="VocalesFinales_EspQui_SerE_V">Vocales finales \n(a, e, o)</string>
     <string name="Pre1_EspQui_SerE_V">Pelota</string>
     <string name="Pre2_EspQui_SerE_V">Bota</string>
@@ -230,7 +230,7 @@
     <string name="Pre8_EspQui_SerE_V">Teléfono</string>
     <string name="Pre9_EspQui_SerE_V">Gallina</string>
     <string name="Pre10_EspQui_SerE_V">Perro</string>
-    <string name="GramaticaIdioma_Esp_SerE">VI.	SERIE GRAMÁTICA DEL IDIOMA </string>
+    <string name="GramaticaIdioma_Esp_SerE">VI GRAMÁTICA DEL IDIOMA </string>
     <string name="SingularPlurar_Esp_SerE_VI">Número \n(singular o plural)</string>
     <string name="Pre1_EspQui_SerE_VI">Pelota</string>
     <string name="Pre2_EspQui_SerE_VI">Pelotas</string>
@@ -240,7 +240,7 @@
     <string name="Pre6_EspQui_SerE_VI">Maestra</string>
     <string name="Pre7_EspQui_SerE_VI">Doctorara</string>
     <string name="Pre8_EspQui_SerE_VI">Cocinero / chef</string>
-    <string name="Expresionoral_Esp_SerE">VII.	SERIE. EXPRESIÓN ORAL</string>
+    <string name="Expresionoral_Esp_SerE">VII SERIE EXPRESIÓN ORAL</string>
     <string name="Aspectos_Esp_SerE_VII">Aspectos a considerar en la descripción de la secuencia.</string>
     <string name="Pre1_EspQui_SerE_VII">Pronuncia correctamente las palabras que utiliza.</string>
     <string name="Pre2_EspQui_SerE_VII">Se mantiene en el tema de la conversación.</string>
@@ -524,7 +524,8 @@
     <string name="are_jun_ti_t">Are jun ti´t \n ¿Su ub´ixik we k´o upki?</string>
     <string name="nooooo">no</string>
     <string name="come_back">Regresando al Menu!</string>
-    <string name="que_es_esta_imagen_esp">¿Digame que es?</string>
+    <string name="que_es_esta_imagen_esp">Instrucciones:\nSe le mostraran diez imágenes y debe pronunciar que es cada una de ellas</string>
+    <string name="que_es_esta_imagen_gramatica">Instrucciones:\nSe le mostraran ocho imágenes y deberá pronunciar cada una de ellas.</string>
     <string name="tvabuelo">Esta es una Abuela, si fuera hombre ¿cómo se diría?</string>
     <string name="tvmaestra">Este es un maestro, si fuera mujer ¿cómo se diría?</string>
     <string name="tvdoctora">Este es una doctor, si fuera mujer ¿cómo se diría?</string>
@@ -533,7 +534,7 @@
     <string name="si">SI</string>
     <string name="CreditoLema">Creditos</string>
     <string name="perfil_linguistico_de_estudiantes_de_primaria_y_primer_grado_de_primaria">PERFIL LINGUISTICO DE ESTUDIANTES \nDE PRIMARIA Y PRIMER GRADO DE \nPRIMARIA</string>
-    <string name="le_mostrare_algunos_dibujos">Instrucciones\nLe voy a mostrar algunos dibujos: dígame que es cada uno de ello.</string>
+    <string name="le_mostrare_algunos_dibujos">Instrucciones:\nSe le mostraran diez imágenes y pronuncie el nombre de cada una de ellas.</string>
     <string name="imagen_1_10_vobaulario_produccion">Imagen 1 / 10</string>
     <string name="imagen_2_10_vobaulario_produccion">Imagen 2 / 10</string>
     <string name="imagen_3_10_vobaulario_produccion">Imagen 3 / 10</string>
@@ -544,7 +545,7 @@
     <string name="imagen_8_10_vobaulario_produccion">Imagen 8 / 10</string>
     <string name="imagen_9_10_vobaulario_produccion">Imagen 9 / 10</string>
     <string name="imagen_10_10_vobaulario_produccion">Imagen 10 / 10</string>
-
+    <string name="instruccExpresioOral">En esta serie se evaluara si el/la estudiante describe correctamente una historia por cada imagen.</string>
 
 
 </resources>

@@ -12,12 +12,15 @@
         android:layout_height="wrap_content"
         android:text="@string/GramaticaIdioma_Esp_SerE"
         android:textSize="20dp"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:id="@+id/title_gramatica"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="@string/que_es_esta_imagen_esp"/>
+        android:textSize="@dimen/_12sdp"
+        android:padding="@dimen/_11sdp"
+        android:text="@string/que_es_esta_imagen_esp"
+        android:id="@+id/tvInstruccGramatica"/>
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvImage1"

@@ -23,8 +23,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="@string/que_es_esta_imagen_esp"/>
+        android:textSize="@dimen/_12sdp"
+        android:padding="@dimen/_11sdp"
+        android:text="@string/que_es_esta_imagen_esp"
+        android:id="@+id/tvInstruccSonidosEsp"/>
+
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvImage1"
         android:layout_width="match_parent"

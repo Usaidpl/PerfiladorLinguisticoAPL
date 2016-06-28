@@ -13,6 +13,13 @@
     android:text="@string/Expresionoral_Esp_SerE"
     android:textSize="20dp"
     android:textAlignment="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/instruccExpresioOral"
+        android:id="@+id/instruExpresioOral"
+        android:textSize="@dimen/_12sdp"
+        android:padding="@dimen/_11sdp"/>
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvExpresionOral"

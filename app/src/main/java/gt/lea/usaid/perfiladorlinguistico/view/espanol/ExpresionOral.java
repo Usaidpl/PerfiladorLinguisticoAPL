@@ -8,6 +8,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
@@ -17,7 +18,7 @@ import gt.lea.usaid.perfiladorlinguistico.R;
  */
 public class ExpresionOral extends Activity  {
 
-
+    private TextView instruExpresioOral;
     private static final int SWIPE_MIN_DISTANCE = 120;
     private static final int SWIPE_THRESHOLD_VELOCITY = 200;
     private ViewFlipper viewflipper;

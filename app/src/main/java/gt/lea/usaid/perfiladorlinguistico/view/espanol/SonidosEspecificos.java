@@ -26,7 +26,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
 public class SonidosEspecificos extends Activity implements View.OnClickListener, OnInitializeComponent {
 
     private ViewFlipper vf;
-    private TextView tvPelota, tvBota, tvNaranja, tvElote, tvMachete, tvMoto, tvHelado, tvTelefono, tvGallina, tvPerro;
+    private TextView tvInstruccSonidosEsp, tvPelota, tvBota, tvNaranja, tvElote, tvMachete, tvMoto, tvHelado, tvTelefono, tvGallina, tvPerro;
     private RadioButton SiPelota, NoPelota, SiBota, NoBota, SiNaranja, NoNaranja, SiElote, NoElote, SiMachete, NoMachete, SiMoto, NoMoto, SiHelado, NoHelado, SiTelefono, NoTelefono, SiGallina, NoGallina, SiPerro, NoPerro;
     private Switch swPelota, swBota, swNaranja, swElote, swMachete, swMoto, swHelado, swTelefono, swGallina, swPerro;
     private int[] dr = {R.mipmap.book};
@@ -44,9 +44,11 @@ public class SonidosEspecificos extends Activity implements View.OnClickListener
         switch (v.getId()) {
             case R.id.SiPelota2:
                 vf.showNext();
+                tvInstruccSonidosEsp.setText("");
                 break;
             case R.id.NoPelota2:
                 vf.showNext();
+                tvInstruccSonidosEsp.setText("");
                 break;
             case R.id.SiBota:
                 vf.showNext();
@@ -174,7 +176,7 @@ public class SonidosEspecificos extends Activity implements View.OnClickListener
         tvGallina = (TextView) findViewById(R.id.tvGallina);
         swPerro = (Switch) findViewById(R.id.swPerro);
         tvPerro = (TextView) findViewById(R.id.tvPerro);
-
+        tvInstruccSonidosEsp = (TextView) findViewById(R.id.tvInstruccSonidosEsp);
         SiPelota.setOnClickListener(this);
         NoPelota.setOnClickListener(this);
         SiBota.setOnClickListener(this);

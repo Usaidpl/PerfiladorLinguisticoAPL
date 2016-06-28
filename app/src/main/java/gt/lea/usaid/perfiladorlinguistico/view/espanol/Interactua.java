@@ -7,6 +7,7 @@ import android.widget.RadioButton;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
+import gt.lea.usaid.perfiladorlinguistico.utils.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 /**
@@ -19,26 +20,22 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interpreta);
+        //int[][] ids_interpreta = {{R.id.rbRespuesta1, R.id.rbRespuesta2, }};
         setOnInit(null);
     }
 
     @Override
-    public void onClick(View v) {
-
-    }
-
-    @Override
     public void setOnInit(@IdRes int[][] matriz) {
-
-    }
-/*
-    @Override
-    public void setOnInit(@IdRes int[][] matriz) {
-        addId(respuesta1, R.id.rbResp1);
-        addId(respuesta3, R.id.rbResp3);
-        addId(respuesta5, R.id.rbResp5);
-        addId(respuesta7, R.id.rbResp7);
-        addId(respuesta9, R.id.rbResp9);
+        addId(respuesta1, R.id.rbRespuesta1);
+        addId(respuesta2, R.id.rbRespuesta2);
+        addId(respuesta3, R.id.rbRespuesta3);
+        addId(respuesta4, R.id.rbRespuesta4);
+        addId(respuesta5, R.id.rbRespuesta5);
+        addId(respuesta6,R.id.rbRespuesta6);
+        addId(respuesta7, R.id.rbRespuesta7);
+        addId(respuesta8, R.id.rbRespuesta8);
+        addId(respuesta9, R.id.rbRespuesta9);
+        addId(respuesta10, R.id.rbRespuesta10);
         respuesta9.setOnClickListener(this);
         respuesta10.setOnClickListener(this);
     }
@@ -56,13 +53,14 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
         try {
             float resultado = vr.getResultado();
             descition(resultado);
+            setNextContext(Interactua.this, Comprende.class);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     private void descition(float resultado){
-        if(resultado >= (100/50) + 1){
+        if(resultado >= (100/50) + 1) {
             setNextContext(this, Interactua.class);
             /*Clase de conexion a base de datos
             private  String idioma = db.select("ENTREVISTA");
@@ -92,4 +90,6 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
     }
 
 */
+        }
+    }
 }

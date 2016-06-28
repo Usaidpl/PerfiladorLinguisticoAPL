@@ -28,16 +28,19 @@
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:src="@mipmap/ic_launcher"
+
                     android:id="@+id/ivPoll"/>
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
-                    android:id="@+id/ivPat"/>
+                    android:id="@+id/ivPat"
+                    android:src="@mipmap/ic_launcher"/>
 
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
-                    android:id="@+id/ivPav"/>
+                    android:id="@+id/ivPav"
+                    android:src="@mipmap/ic_launcher"/>
             </LinearLayout>
 
         </LinearLayout>

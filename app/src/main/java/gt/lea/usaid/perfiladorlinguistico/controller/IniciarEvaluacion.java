@@ -10,7 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Comprende;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
 
 /**
  * Created by Roberto on 21/06/16.
@@ -62,7 +64,8 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivKicheEva:
-                intent = new Intent(getActivity(), ExpresionOral.class);
+                //intent = new Intent(getActivity(), ExpresionOral.class);
+                intent = new Intent(getContext(), Comprende.class);
                 startActivity(intent);
                 break;
         }

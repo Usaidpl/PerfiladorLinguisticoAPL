@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Comprende;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Gramatica;
@@ -22,7 +23,7 @@ import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaPrecisionOral;
 /**
  * Created by Roberto on 19/06/2016.
  */
-public class Series extends Fragment implements View.OnClickListener {
+public class Series extends Fragment implements View.OnClickListener, OnStartNextContext {
     private Button gramatica, expresionoral, vocabulario, sonidosespecificos, comprende, interpreta, precicion;
     private OnFragmentInteractionListener mListener;
 
@@ -107,9 +108,17 @@ public class Series extends Fragment implements View.OnClickListener {
         }
     }
 
+    @Override
+    public void setNextContext(Context context, Class<?> next_context) {
+        Intent i = new Intent(context,next_context);
+        startActivity(i);
+    }
+
     public interface OnFragmentInteractionListener {
 
         void onFragmentInteraction(Uri uri);
     }
+
+
 
 }

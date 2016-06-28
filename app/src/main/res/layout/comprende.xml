@@ -252,7 +252,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="no"
-                                android:id="@+id/rbRespuesta120"/>
+                                android:id="@+id/rbRespuesta20"/>
                         </RadioGroup>
                     </LinearLayout>
                 </LinearLayout>

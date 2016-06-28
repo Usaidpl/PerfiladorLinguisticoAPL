@@ -43,10 +43,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                 addId(image2, imagen);
             else if(image2 != null && image3 == null)
                 addId(image3, imagen);
-            // OnClickImage ci = new ();
-            //image.setOnClickListener(new OnClickImage(){});
-            //image2.setOnClickListener(new OnClickImage());
-            //image3.setOnClickListener(new OnClickImage());
+
             image.setOnClickListener(click);
             image2.setOnClickListener(click);
             image3.setOnClickListener(click);
@@ -62,6 +59,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
         int resultado = 0;
         @Override
         public void onClick(View v) {
+            setNextContext(Precisiona.this, ExpresionOral.class);
             if(pregunta == TOTAL_SERIE){
                 /*
                  *db.insert(resultado);

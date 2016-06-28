@@ -23,7 +23,8 @@ public class FlipperActivity extends Activity implements OnStartNextContext {
     }
 
     protected  ViewFlipper getFlipper(@IdRes int flipperId){
-        return getFlipper(flipperId);
+        flipper = (ViewFlipper) findViewById(flipperId);
+        return flipper;
     }
 
     @Override

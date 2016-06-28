@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ViewFlipper
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/flipper">
-
+        <!-- uno -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -18,32 +19,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pato"
-                android:textSize="96dp"/>
+                android:textSize="96dp"
+                android:gravity="center"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center">
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:src="@mipmap/ic_launcher"
-
                     android:id="@+id/ivPoll"/>
+                <Space
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent" />
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivPat"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:src="@mipmap/pato"/>
+                <Space
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent" />
 
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivPav"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:src="@mipmap/pavo"/>
             </LinearLayout>
 
         </LinearLayout>
+        <!-- fin uno -->
     </ViewFlipper>
 
 </LinearLayout>

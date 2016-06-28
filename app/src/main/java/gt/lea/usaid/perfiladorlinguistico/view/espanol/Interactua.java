@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
@@ -20,22 +21,23 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interpreta);
-        //int[][] ids_interpreta = {{R.id.rbRespuesta1, R.id.rbRespuesta2, }};
         setOnInit(null);
     }
 
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
-        addId(respuesta1, R.id.rbRespuesta1);
-        addId(respuesta2, R.id.rbRespuesta2);
-        addId(respuesta3, R.id.rbRespuesta3);
-        addId(respuesta4, R.id.rbRespuesta4);
-        addId(respuesta5, R.id.rbRespuesta5);
-        addId(respuesta6,R.id.rbRespuesta6);
-        addId(respuesta7, R.id.rbRespuesta7);
-        addId(respuesta8, R.id.rbRespuesta8);
-        addId(respuesta9, R.id.rbRespuesta9);
-        addId(respuesta10, R.id.rbRespuesta10);
+
+        respuesta1 = (RadioButton) findViewById(R.id.rbRespuesta1);
+        respuesta2 = (RadioButton) findViewById(R.id.rbRespuesta2);
+        respuesta3 = (RadioButton) findViewById(R.id.rbRespuesta3);
+        respuesta4 = (RadioButton) findViewById(R.id.rbRespuesta4);
+        respuesta5 = (RadioButton) findViewById(R.id.rbRespuesta5);
+        respuesta6 = (RadioButton) findViewById(R.id.rbRespuesta6);
+        respuesta7 = (RadioButton) findViewById(R.id.rbRespuesta7);
+        respuesta8 = (RadioButton) findViewById(R.id.rbRespuesta8);
+        respuesta9 = (RadioButton) findViewById(R.id.rbRespuesta9);
+        respuesta10 = (RadioButton) findViewById(R.id.rbRespuesta10);
+
         respuesta9.setOnClickListener(this);
         respuesta10.setOnClickListener(this);
     }
@@ -55,41 +57,21 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
             descition(resultado);
             setNextContext(Interactua.this, Comprende.class);
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 
     private void descition(float resultado){
         if(resultado >= (100/50) + 1) {
             setNextContext(this, Interactua.class);
-            /*Clase de conexion a base de datos
-            private  String idioma = db.select("ENTREVISTA");
-            DataBase db = new DataBase();
-            db.insert(resultado);
-            float result_comprentions = Float.parseFloat(db.select(TABLE_COMPRENTIONS)),
-                result_interactue = Float.parseFloat(db.select(TABLE_INTERACTUA)),
-                result = 0;
 
-            result = (result_comprentions + result_interactue) / 2;
-
-            if(result <= (TOTAL_SERIE / 50) +1)
-                setNextContext(this, Precition.class);
-            else {
-                if(idioma.contentEquals(KICHE))
-                    setNextContext(this, PrecitionKiche.class);
-                else if(idioma.contentEquals(MAN)
-                    setNextContext(this. PrecitionMan.class);
-            }
-
-        }
-        else{
-            setNextContext(this, Interactua.class);
-            //Clase de conexion a base de datos
-            //db.insert(resultado);
         }
     }
 
-*/
-        }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 }

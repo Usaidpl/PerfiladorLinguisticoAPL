@@ -40,7 +40,8 @@ public class CreateTable {
                     resultado += "'" + valor.get(v) + "'";
             }
         }
-        resultado += ")";
+        resultado += ");";
+        //resultado = "CREATE TABLE + nombre_tabla + "(" + llave_primaria + cantidad_campos + ");";
         return resultado;
     }
 

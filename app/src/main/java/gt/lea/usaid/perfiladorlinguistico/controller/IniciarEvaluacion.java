@@ -65,7 +65,8 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
                 break;
             case R.id.ivKicheEva:
                 //intent = new Intent(getActivity(), ExpresionOral.class);
-                intent = new Intent(getContext(), Comprende.class);
+
+                intent = new Intent(getActivity(), Interactua.class);
                 startActivity(intent);
                 break;
         }

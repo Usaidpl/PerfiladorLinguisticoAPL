@@ -5,6 +5,7 @@ import android.support.annotation.IdRes;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
@@ -14,7 +15,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
 /**
  * Created by Bryan on 20/06/16.
  */
-public class Comprende extends FlipperActivity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class Comprende extends FlipperActivity implements OnInitializeComponent, View.OnClickListener{
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
 
     @Override
@@ -24,30 +25,21 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
         setOnInit(null);
     }
 
-
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
-        addId(respuesta1, R.id.rbRespuesta11);
-        addId(respuesta2, R.id.rbRespuesta12);
-        addId(respuesta3, R.id.rbRespuesta13);
-        addId(respuesta4, R.id.rbRespuesta14);
-        addId(respuesta5, R.id.rbRespuesta15);
-        addId(respuesta6,R.id.rbRespuesta16);
-        addId(respuesta7, R.id.rbRespuesta17);
-        addId(respuesta8, R.id.rbRespuesta18);
-       // addId(respuesta9, R.id.rbRespuesta19);
-        //addId(respuesta10, R.id.rbRespuesta20);
-        //respuesta9.setOnClickListener(this);
-        //respuesta10.setOnClickListener(this);
+        respuesta1 =(RadioButton) findViewById(R.id.rbRespuesta11);
+        respuesta2 = (RadioButton) findViewById(R.id.rbRespuesta12);
+        respuesta3 =(RadioButton) findViewById(R.id.rbRespuesta13);
+        respuesta4 = (RadioButton) findViewById(R.id.rbRespuesta14);
+        respuesta5 =(RadioButton) findViewById(R.id.rbRespuesta15);
+        respuesta6 = (RadioButton) findViewById(R.id.rbRespuesta16);
+        respuesta7 =(RadioButton) findViewById(R.id.rbRespuesta17);
+        respuesta8 = (RadioButton) findViewById(R.id.rbRespuesta18);
         respuesta9 =(RadioButton) findViewById(R.id.rbRespuesta19);
         respuesta10 = (RadioButton) findViewById(R.id.rbRespuesta20);
-        respuesta9.setOnCheckedChangeListener(this);
 
-        respuesta10.setOnCheckedChangeListener(this);
-    }
-
-    protected void addId(RadioButton rb, @IdRes int id_radio){
-        rb = (RadioButton) findViewById(id_radio);
+        respuesta9.setOnClickListener(this);
+        respuesta10.setOnClickListener(this);
     }
 
     @Override
@@ -59,28 +51,25 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
         try {
             float resultado = vr.getResultado();
             descition(resultado);
-            setNextContext(Comprende.this, Interactua.class);
+            setNextContext(Comprende.this, Precisiona.class);
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 
     private void descition(float resultado){
         if(resultado >= (Verifica.TOTAL_SERIE/50) + 1){
-            setNextContext(this, Interactua.class);
-            //Clase de conexion a base de datos
-            //db.insert(resultado);
+            setNextContext(Comprende.this, Precisiona.class);
         }
         else{
             setNextContext(this, Interactua.class);
-            //Clase de conexion a base de datos
-            //db.insert(resultado);
         }
-
     }
 
     @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        onClick(null);
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 }

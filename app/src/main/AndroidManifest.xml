@@ -49,6 +49,9 @@
             android:name=".view.espanol.Interactua"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".view.espanol.Precisiona"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".view.guias.GuiaComprensionOral"
             android:screenOrientation="landscape" />
         <activity android:name=".view.guias.GuiaExpresionOral"

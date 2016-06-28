@@ -67,7 +67,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/colorAccent"
                 android:text="Desarrolladores"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="@dimen/_20sdp" />
@@ -78,6 +78,11 @@
                 android:layout_height="match_parent" />
 
 
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvAsesores"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
             <TextView
                 android:layout_width="match_parent"

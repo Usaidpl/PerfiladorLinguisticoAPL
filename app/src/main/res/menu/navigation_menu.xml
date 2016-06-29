@@ -4,6 +4,17 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Enviar Información"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/opc2"
+        android:orderInCategory="100"
+        android:title="Sincronizar"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/opc3"
+        android:orderInCategory="100"
+        android:title="Creditos"
         app:showAsAction="never" />
 </menu>

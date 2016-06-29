@@ -208,7 +208,32 @@
                     android:textColor="#ffffffff"
                     android:textSize="25dp" />
             </FrameLayout>
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/guia_navegacion"
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/frameLayout6"
+                android:layout_alignStart="@+id/frameLayout6">
 
+                <ImageView
+                    android:id="@+id/guia_navegacion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book" />
+
+                <TextView
+                    android:id="@+id/guia_navegacion3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="#AA000000"
+                    android:text="Navegación Aplicación"
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="25dp" />
+            </FrameLayout>
         </RelativeLayout>
     </ScrollView>
 

@@ -41,7 +41,7 @@ public class NavigationMenu extends AppCompatActivity
 
         Fragment fragment = null;
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragment = new IniciarEvaluacion();
+        fragment = new GuiaEvaluacion();
         fragmentManager.beginTransaction().replace(R.id.content_navigation_menu, fragment).commit();
     }
 

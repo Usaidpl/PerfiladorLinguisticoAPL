@@ -4,7 +4,6 @@ package gt.lea.usaid.perfiladorlinguistico.utils;
 
 import android.database.sqlite.SQLiteDatabase;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -17,7 +16,7 @@ public class GeneradorSQL {
 
     public GeneradorSQL(String nombreTabla){
         tabla = nombreTabla;
-        new CreateTable(nombreTabla);
+        //new CreateTable(nombreTabla);
     }
 
     public void addValue(String value){

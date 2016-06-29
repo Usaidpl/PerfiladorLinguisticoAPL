@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PerfiladorLinguisticoUSAID.iml" filepath="$PROJECT_DIR$/PerfiladorLinguisticoUSAID.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PerfiladorLinguistico8.iml" filepath="$PROJECT_DIR$/PerfiladorLinguistico8.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

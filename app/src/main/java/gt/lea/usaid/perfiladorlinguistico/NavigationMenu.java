@@ -19,6 +19,9 @@ import gt.lea.usaid.perfiladorlinguistico.controller.GuiaEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.ResultadosAula;
 import gt.lea.usaid.perfiladorlinguistico.controller.Series;
+import gt.lea.usaid.perfiladorlinguistico.view.Creditos;
+import gt.lea.usaid.perfiladorlinguistico.view.EnviarInformacion;
+import gt.lea.usaid.perfiladorlinguistico.view.Sincronizar;
 
 public class NavigationMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, Series.OnFragmentInteractionListener, EntrevistasPendientes.OnFragmentInteractionListener, GuiaEvaluacion.OnFragmentInteractionListener, IniciarEvaluacion.OnFragmentInteractionListener, ResultadosAula.OnFragmentInteractionListener{
@@ -65,8 +68,18 @@ public class NavigationMenu extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
+        if (id == R.id.enviar_informacion) {
+            Intent intent = new Intent(this, EnviarInformacion.class);
+            startActivity(intent);
             return true;
+        }
+        if (id == R.id.sincronizar){
+            Intent intent = new Intent(this, Sincronizar.class);
+            startActivity(intent);
+        }
+        if (id == R.id.creditos){
+            Intent intent = new Intent(this, Creditos.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

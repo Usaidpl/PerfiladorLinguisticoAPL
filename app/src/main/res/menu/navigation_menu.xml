@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/enviar_informacion"
         android:orderInCategory="100"
         android:title="Enviar Información"
         app:showAsAction="never"
         />
     <item
-        android:id="@+id/opc2"
+        android:id="@+id/sincronizar"
         android:orderInCategory="100"
         android:title="Sincronizar"
         app:showAsAction="never" />
     <item
-        android:id="@+id/opc3"
+        android:id="@+id/creditos"
         android:orderInCategory="100"
         android:title="Creditos"
         app:showAsAction="never" />

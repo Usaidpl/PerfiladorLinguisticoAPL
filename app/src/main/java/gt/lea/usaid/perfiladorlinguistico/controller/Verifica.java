@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.utils;
+package gt.lea.usaid.perfiladorlinguistico.controller;
 
 /**
  * Created by Bryan on 14/06/16.
@@ -8,15 +8,18 @@ public class Verifica {
     private boolean[] array_true, array_false;
     public static final int TOTAL_SERIE = 100;
     public static final int PREGUNTA = 5;
+    private String tabla = "";
 
-    public Verifica(boolean[] arreglo_verdadero, boolean[] arreglo_falso){
+    public Verifica(boolean[] arreglo_verdadero, boolean[] arreglo_falso, String nombre_tabla){
         array_true = arreglo_verdadero;
         array_false = arreglo_falso;
+        tabla = nombre_tabla;
     }
 
-    public Verifica(boolean[][] arreglo){
+    public Verifica(boolean[][] arreglo, String nombre_tabla){
         array_true = arreglo[0];
         array_false = arreglo[1];
+        tabla = nombre_tabla;
     }
 
     public float getResultado()throws Exception{
@@ -46,14 +49,20 @@ public class Verifica {
     }
 
     private int resultado(boolean[] arreglo){
-        int resultado = 0;
+        int resultado = 0, insert;
+        //DataBase db = new DataBase(tabla);
         boolean select = false;
         for(int s = 0; s  < arreglo.length; s ++){
             select = arreglo[s];
-            if(select == true)
+            if(select == true){
+                insert = 1;
                 resultado ++;
-            else
+            }
+            else{
+                insert = 0;
                 resultado += 0;
+            }
+            //db.execute("INSERT INTO " + tabla + "(" + insert + ");");
         }
         return resultado;
     }

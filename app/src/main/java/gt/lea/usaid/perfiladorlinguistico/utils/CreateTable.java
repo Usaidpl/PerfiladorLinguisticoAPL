@@ -55,8 +55,6 @@ public class CreateTable {
 
     }
 
-
-
     public class SQL {
 
         private String key;

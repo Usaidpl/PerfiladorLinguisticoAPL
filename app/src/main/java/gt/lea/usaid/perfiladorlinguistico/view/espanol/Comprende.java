@@ -3,13 +3,12 @@ package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
-import gt.lea.usaid.perfiladorlinguistico.utils.Verifica;
+import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 /**
@@ -37,7 +36,6 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
         respuesta8 = (RadioButton) findViewById(R.id.rbRespuesta18);
         respuesta9 =(RadioButton) findViewById(R.id.rbRespuesta19);
         respuesta10 = (RadioButton) findViewById(R.id.rbRespuesta20);
-
         respuesta9.setOnClickListener(this);
         respuesta10.setOnClickListener(this);
     }
@@ -47,7 +45,7 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
         boolean[][] radios_selected = {
                 {respuesta1.isChecked(),respuesta3.isChecked(), respuesta5.isChecked(), respuesta7.isChecked(), respuesta9.isChecked()},
                 {respuesta2.isChecked(),respuesta4.isChecked(), respuesta6.isChecked(), respuesta8.isChecked(), respuesta10.isChecked()}};
-        Verifica vr = new Verifica(radios_selected);
+        Verifica vr = new Verifica(radios_selected, null);
         try {
             float resultado = vr.getResultado();
             descition(resultado);

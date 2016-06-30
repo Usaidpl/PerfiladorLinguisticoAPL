@@ -18,6 +18,8 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
     private static final String NOMBRE_TABLA = "interaccion";
+    private static final String NOMBRE_TABLA_KICKE = "interaccion_kiche";
+    private static final String NOMBRE_TABLA_MAN = "interaccion_man";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,6 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
 
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
-
         respuesta1 = (RadioButton) findViewById(R.id.rbRespuesta1);
         respuesta2 = (RadioButton) findViewById(R.id.rbRespuesta2);
         respuesta3 = (RadioButton) findViewById(R.id.rbRespuesta3);

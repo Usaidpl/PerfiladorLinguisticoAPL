@@ -9,18 +9,26 @@ import android.widget.Toast;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
+import gt.lea.usaid.perfiladorlinguistico.utils.ConectaInternet;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 /**
  * Created by Bryan on 20/06/16.
  */
 public class Comprende extends FlipperActivity implements OnInitializeComponent, View.OnClickListener{
+
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
+    private static final String NOMBRE_TABLA = "comprencion";
+    private static final String NOMBRE_TABLA_KICHE = "compresion_kiche";
+    private static final String NOMBRE_TABLA_MAN = "compresion_man";
+    //private ConectaInternet ci = new ConectaInternet(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.comprende);
+        if(ConectaInternet.conectoInternet(this))
+            //API_USAID
         setOnInit(null);
     }
 

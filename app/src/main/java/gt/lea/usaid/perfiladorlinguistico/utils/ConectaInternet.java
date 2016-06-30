@@ -5,6 +5,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkRequest;
 
+
+
 /**
  * Created by programadormd on 06-29-16.
  */
@@ -20,100 +22,64 @@ public class ConectaInternet {
     public static final String CONECTADO_MOVIL = "CONECTADO A DATOS MOVILES";
 
     private static android.content.Context context;
-    private static NetworkInfo ni = null;
 
-    public ConectaInternet(android.content.Context context){
-        this.context = context;
+    public ConectaInternet(android.content.Context activity){
+        context = activity;
     }
 
-    public String tipoConexion() throws ErrorInternet{
-        String tipo_conexion = null;
-        if(conectoWifi() == true && conectoDatos() == true)
-            tipo_conexion = CONECTADO_INTERNET;//"CONECTADO";
-        else if(conectoWifi() == true && conectoDatos() == false)
-            tipo_conexion = CONECTADO_WIFI;//"WIFI";
-        else if(conectoWifi() == false && conectoDatos() == true)
-            tipo_conexion = CONECTADO_MOVIL;//"MOBILE";
+    public static boolean conectado(android.content.Context activity){
+        ConectaInternet.context = activity;
+        if(conectadoWifi() == true ||conectadoDatos() == true)
+            return true;
         else{
-            //tipo_conexion == ERR;//"Error"
-            if(ni.isAvailable() && conectoWifi() == false)
-                throw new ErrorInternet("Error: Verifique si su WIFI esta ensendido:");
-            else if(tipo_conexion.isEmpty() && conectoDatos() == false)
-                throw new ErrorInternet("Erro: Sus saldo es insuficiente o no esta conectado los dato");
-
+            return false;
         }
-
-        return tipo_conexion;
     }
 
-    public int tipoConetion(){
-        int tipo_conexion = 0;
-        if(conectoWifi() == true && conectoDatos() == true)
-            tipo_conexion = CONECTADO;
-        else if(conectoWifi() == true && conectoDatos() == false)
-            tipo_conexion = WIFI;
-        else if(conectoWifi() == false && conectoDatos() == true)
-            tipo_conexion = DATOS;
+    public int conectado(){
+        int resultado = 0;
+        if((conectadoWifi() && conectadoDatos()) == true)
+            resultado = CONECTADO;
+        else if(conectadoWifi())
+            resultado = WIFI;
+        else if(conectadoDatos())
+            resultado = DATOS;
         else
-            tipo_conexion = ERROR;
-        return tipo_conexion;
+            resultado = ERROR;
+        return  resultado;
     }
 
-    public static boolean conectoInternet(android.content.Context context){
-        boolean c = false;
-        ConectaInternet.context = context;
-        if(conectoWifi() == true && conectoDatos() == true)
-            c = true;
-        else if(conectoWifi() == true && conectoDatos() == false)
-            c = true;
-        else if(conectoWifi() == false && conectoDatos() == true)
-            c = true;
-        else
-            c = false;
-        return c;
+    private static boolean conectadoWifi() {
+        return typeToConnection(WIFI);
     }
 
-    private static boolean conectoDatos() {
-        return conecta(DATOS);
+    private static boolean conectadoDatos() {
+        return typeToConnection(DATOS);
     }
 
-    private static boolean conectoWifi() {
-        return conecta(WIFI);
-    }
-
-    private static boolean conecta(int tipo_conexion) {
-        boolean estado = false;
+    private static boolean typeToConnection(int type_network){
+        boolean type = false;
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         if(cm != null){
             NetworkInfo ni = null;
-            //NetworkRequest nr = null
-            switch (tipo_conexion){
+            ni = cm.getActiveNetworkInfo();
+            switch (type_network){
                 case WIFI:
-                    ni = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-                    break;
+                    ni = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI); break;
                 case DATOS:
-                    ni = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-                    break;
+                    ni = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE); break;
             }
             if(ni != null){
-                if(ni.isConnected())
-                    estado = true;
-            }else{
-                estado = false;
+                if(ni.isConnected() && ni.isAvailable())
+                    return  true;
+                else if(ni.isConnectedOrConnecting())
+                    return false;
             }
         }
-        return estado;
+        return false;
     }
 
-    public class ErrorInternet extends Exception{
-        public ErrorInternet(String error){
-            super(error);
-        }
 
-        public String mensaje(String s){
-            return getMessage();
-        }
-    }
 
     /*
     getReason() // Reportara la razón de un intento de establecer la conectividad falló, si hay alguno disponible

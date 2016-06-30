@@ -1,7 +1,9 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -9,9 +11,11 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.DialogoAlerta;
 
 /**
  * Created by Roberto on 19/06/2016.
@@ -33,10 +37,10 @@ public class ExpresionOral extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.expresion_oral);
 
-
         mContext = this;
         preguntas = findViewById(R.id.seccion_preguntas);
         viewflipper = (ViewFlipper) this.findViewById(R.id.viewflipper);
+
         viewflipper.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(final View view, final MotionEvent event) {
@@ -101,4 +105,5 @@ public class ExpresionOral extends Activity  {
         super.onPause();
         finish();
     }
+
 }

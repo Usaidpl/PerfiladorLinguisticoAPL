@@ -9,6 +9,8 @@ import android.widget.Toast;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
+import gt.lea.usaid.perfiladorlinguistico.utils.ConectaInternet;
+import gt.lea.usaid.perfiladorlinguistico.utils.DialogoAlerta;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 /**
@@ -25,8 +27,40 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interpreta);
-        setOnInit(null);
+        DialogoAlerta d = new DialogoAlerta(this);
+        d.alertDialog("Bienvenido","desea proceguir",false);
+       setOnInit(null);
     }
+    private void msg(String s){
+        Toast.makeText(this, s ,Toast.LENGTH_SHORT).show();
+    }
+
+    private void conect(){
+        ConectaInternet ci = new ConectaInternet(this);
+        int result = ci.conectado();
+        boolean resultBool = ConectaInternet.conectado(this);
+
+        switch (result){
+            case ConectaInternet.CONECTADO:
+                msg("Conectado");
+                break;
+            case ConectaInternet.WIFI:
+                msg("Wifi");
+                break;
+            case ConectaInternet.DATOS:
+                msg("Dato");
+                break;
+            case ConectaInternet.ERROR:
+                msg("Error");
+                break;
+        }
+
+        if(ConectaInternet.conectado(this) == true){
+            msg("Conectado");
+        }else
+            msg("no conectado");
+    }
+
 
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
@@ -60,7 +94,6 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
             descition(resultado);
             setNextContext(Interactua.this, Comprende.class);
         } catch (Exception e) {
-            //e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }

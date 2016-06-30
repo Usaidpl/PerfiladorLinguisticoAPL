@@ -21,14 +21,12 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
     private static final String NOMBRE_TABLA = "comprencion";
     private static final String NOMBRE_TABLA_KICHE = "compresion_kiche";
     private static final String NOMBRE_TABLA_MAN = "compresion_man";
-    //private ConectaInternet ci = new ConectaInternet(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.comprende);
-        if(ConectaInternet.conectoInternet(this))
-            //API_USAID
+
         setOnInit(null);
     }
 

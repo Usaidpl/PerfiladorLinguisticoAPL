@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.DialogoAlerta;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Comprende;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
@@ -39,6 +40,7 @@ public class Series extends Fragment implements View.OnClickListener, OnStartNex
         comprende = (Button) vista.findViewById(R.id.btnComprende);
         interpreta = (Button) vista.findViewById(R.id.btnInterpreta);
         precicion = (Button) vista.findViewById(R.id.btnPrecicion);
+
 
         gramatica.setOnClickListener(this);
         expresionoral.setOnClickListener(this);

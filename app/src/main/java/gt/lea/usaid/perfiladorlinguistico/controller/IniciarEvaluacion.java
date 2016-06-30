@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.model.Vocabulario;
+import gt.lea.usaid.perfiladorlinguistico.utils.DialogoAlerta;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Comprende;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
@@ -26,7 +28,7 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         View vista = inflater.inflate(R.layout.iniciar_evaluacion, container, false);
         ivMamEva =(ImageView) vista.findViewById(R.id.ivMamEva);
         ivKicheEva =(ImageView) vista.findViewById(R.id.ivKicheEva);
-
+        //DialogoAlerta.alertDialog("Hola", "Desea Continuar", false,this);
         ivMamEva.setOnClickListener(this);
         ivKicheEva.setOnClickListener(this);
         return vista;
@@ -64,7 +66,7 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivKicheEva:
-                //intent = new Intent(getActivity(), ExpresionOral.class);
+                intent = new Intent(getActivity(), ExpresionOral.class);
 
                 intent = new Intent(getActivity(), Interactua.class);
                 startActivity(intent);

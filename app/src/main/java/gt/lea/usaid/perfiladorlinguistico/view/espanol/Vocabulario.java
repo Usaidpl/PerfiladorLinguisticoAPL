@@ -18,6 +18,7 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.DialogoAlerta;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 /**
@@ -34,7 +35,9 @@ public class Vocabulario extends Activity implements View.OnClickListener, OnIni
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vocabulario);
+
         setOnInit(null);
+        DialogoAlerta.alertDialog("Hola", "Desea Continuar", false, this);
     }
 
     private CompoundButton.OnCheckedChangeListener list = new CompoundButton.OnCheckedChangeListener() {

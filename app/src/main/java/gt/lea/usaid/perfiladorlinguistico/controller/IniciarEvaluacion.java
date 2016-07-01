@@ -10,17 +10,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.model.Vocabulario;
-import gt.lea.usaid.perfiladorlinguistico.utils.DialogoAlerta;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Comprende;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 
 /**
  * Created by Roberto on 21/06/16.
  */
 public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener  {
-    private ImageView ivMamEva, ivKicheEva;
+    private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
     private OnFragmentInteractionListener mListener;
 
     @Override
@@ -28,9 +26,11 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         View vista = inflater.inflate(R.layout.iniciar_evaluacion, container, false);
         ivMamEva =(ImageView) vista.findViewById(R.id.ivMamEva);
         ivKicheEva =(ImageView) vista.findViewById(R.id.ivKicheEva);
+        ivEspanolEva = (ImageView) vista.findViewById(R.id.ivEspanolEva);
         //DialogoAlerta.alertDialog("Hola", "Desea Continuar", false,this);
         ivMamEva.setOnClickListener(this);
         ivKicheEva.setOnClickListener(this);
+        ivEspanolEva.setOnClickListener(this);
         return vista;
     }
 
@@ -62,14 +62,16 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         Intent intent = null;
         switch (v.getId()) {
             case R.id.ivMamEva:
-                intent = new Intent(getActivity(), gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario.class);
+                intent = new Intent(getActivity(), Vocabulario.class);
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivKicheEva:
-                intent = new Intent(getActivity(), ExpresionOral.class);
-
+                intent = new Intent(getActivity(), Comprende.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.ivEspanolEva:
                 intent = new Intent(getActivity(), Interactua.class);
-                startActivity(intent);
+                getActivity().startActivity(intent);
                 break;
         }
     }

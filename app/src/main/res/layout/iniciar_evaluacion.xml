@@ -9,18 +9,15 @@
         android:layout_height="wrap_content"
         android:text="@string/perfil_linguistico_de_estudiantes_de_primaria_y_primer_grado_de_primaria"
         android:textAlignment="center"
-        android:textSize="15dp" />
+        android:textSize="@dimen/_15sdp" />
 
 
         <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/flMam"
+            android:id="@+id/flMamEva"
             android:layout_width="350dp"
             android:layout_height="250dp"
             android:layout_alignTop="@+id/flKicheEva"
-            android:layout_toRightOf="@+id/flKicheEva"
-            android:layout_toEndOf="@+id/flKicheEva"
-            android:layout_marginLeft="227dp"
-            android:layout_marginStart="227dp">
+            android:layout_centerHorizontal="true">
 
             <ImageView
                 android:id="@+id/ivMamEva"
@@ -46,11 +43,11 @@
         android:id="@+id/flKicheEva"
         android:layout_width="350dp"
         android:layout_height="250dp"
+        android:layout_marginLeft="79dp"
+        android:layout_marginStart="79dp"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="113dp"
-        android:layout_marginStart="113dp">
+        android:layout_alignParentStart="true">
 
         <ImageView
             android:id="@+id/ivKicheEva"
@@ -66,6 +63,35 @@
             android:layout_gravity="right|bottom"
             android:background="#AA000000"
             android:text="Evaluación Mam"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:textSize="25dp" />
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/flEspanolEva"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_alignTop="@+id/flMamEva"
+        android:layout_toRightOf="@+id/flMamEva"
+        android:layout_toEndOf="@+id/flMamEva">
+
+        <ImageView
+            android:id="@+id/ivEspanolEva"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/book" />
+
+        <TextView
+            android:id="@+id/tvEspanolEva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:background="#AA000000"
+            android:text="Evaluación Español"
             android:textAlignment="center"
             android:textColor="#ffffffff"
             android:textSize="25dp" />

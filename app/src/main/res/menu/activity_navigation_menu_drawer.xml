@@ -5,7 +5,7 @@
         <item
             android:id="@+id/nav_iniciar_evaluacion"
             android:icon="@mipmap/ic_iniciar_evaluacion"
-            android:title="Iniciar Evaluacion" />
+            android:title="Iniciar Evaluación" />
         <item
             android:id="@+id/nav_entrevistas_pendientes"
             android:icon="@mipmap/ic_entrevista"
@@ -22,7 +22,7 @@
 
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Comunicate">
         <menu>
             <item
                 android:id="@+id/nav_creditos"

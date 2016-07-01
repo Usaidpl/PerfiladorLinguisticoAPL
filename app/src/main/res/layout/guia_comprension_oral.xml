@@ -14,6 +14,7 @@
         android:minHeight="?attr/actionBarSize">
 
     </android.support.v7.widget.Toolbar>
+
     <TabHost
         android:id="@+id/tabHost"
         android:layout_width="match_parent"
@@ -41,10 +42,74 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TextView
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cvExpresionOral"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Pruebas uno" />
+                        android:layout_height="400dp"
+                        android:layout_alignParentTop="true"
+                        android:textAlignment="center"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="10dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <ViewFlipper
+                            android:id="@+id/viewflipper"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_margin="6dp">
+
+
+                            <RelativeLayout
+                                android:id="@+id/Image1"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:id="@+id/imaExppresionOral"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="400dp"
+                                    android:padding="25dp"
+                                    android:src="@mipmap/book" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/Image2"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:id="@+id/imaExppresionOra2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="400dp"
+                                    android:padding="25dp"
+                                    android:src="@mipmap/ic_back" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/Image3"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:id="@+id/imaExppresionOral3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="400dp"
+                                    android:padding="25dp"
+                                    android:src="@mipmap/book" />
+
+                            </RelativeLayout>
+
+                        </ViewFlipper>
+                    </android.support.v7.widget.CardView>
 
                 </RelativeLayout>
 

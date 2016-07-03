@@ -27,13 +27,13 @@ public class GuiaEvaluacion extends android.support.v4.app.Fragment implements V
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.guia_evaluacion, container, false);
-        comprencionoral =(ImageView) vista.findViewById(R.id.guia_comprension_oral);
-        expresionral =(ImageView) vista.findViewById(R.id.guia_expresion_oral);
-        gramatica =(ImageView) vista.findViewById(R.id.guia_gramatica);
-        interpretacionoral =(ImageView) vista.findViewById(R.id.guia_interaccion_oral);
-        precicionoral =(ImageView) vista.findViewById(R.id.guia_precicion_oral);
-        sonidosespecificos =(ImageView) vista.findViewById(R.id.guia_sonidosespeficicos);
-        vocabulario =(ImageView) vista.findViewById(R.id.guia_vocabulario);
+        comprencionoral =(ImageView) vista.findViewById(R.id.guia_interaccion_oral_oral);
+        expresionral =(ImageView) vista.findViewById(R.id.guia_compresion_oral);
+        gramatica =(ImageView) vista.findViewById(R.id.guia_vocabulario_precision);
+        interpretacionoral =(ImageView) vista.findViewById(R.id.guia_vocabulario);
+        precicionoral =(ImageView) vista.findViewById(R.id.guia_sonidos_especificos);
+        sonidosespecificos =(ImageView) vista.findViewById(R.id.guia_gramatica);
+        vocabulario =(ImageView) vista.findViewById(R.id.guia_expresion_oral);
 
 
         comprencionoral.setOnClickListener(this);
@@ -73,32 +73,32 @@ public class GuiaEvaluacion extends android.support.v4.app.Fragment implements V
     public void onClick(View v) {
         Intent intent = null;
         switch (v.getId()) {
-            case R.id.guia_comprension_oral:
-                intent = new Intent(getActivity(), GuiaComprensionOral.class);
+            case R.id.guia_interaccion_oral_oral:
+                intent = new Intent(getActivity(), GuiaInteraccionOral.class);
                 getActivity().startActivity(intent);
                 break;
-            case R.id.guia_expresion_oral:
-                intent = new Intent(getActivity(), GuiaExpresionOral.class);
+            case R.id.guia_compresion_oral:
+                intent = new Intent(getActivity(), GuiaComprensionOral.class);
+                startActivity(intent);
+                break;
+            case R.id.guia_vocabulario_precision:
+                intent = new Intent(getActivity(), GuiaPrecisionOral.class);
+                startActivity(intent);
+                break;
+            case R.id.guia_vocabulario:
+                intent = new Intent(getActivity(), GuiaVocabulario.class);
+                startActivity(intent);
+                break;
+            case R.id.guia_sonidos_especificos:
+                intent = new Intent(getActivity(), GuiaSonidosEspecificos.class);
                 startActivity(intent);
                 break;
             case R.id.guia_gramatica:
                 intent = new Intent(getActivity(), GuiaGramatica.class);
                 startActivity(intent);
                 break;
-            case R.id.guia_interaccion_oral:
-                intent = new Intent(getActivity(), GuiaInteraccionOral.class);
-                startActivity(intent);
-                break;
-            case R.id.guia_precicion_oral:
-                intent = new Intent(getActivity(), GuiaPrecisionOral.class);
-                startActivity(intent);
-                break;
-            case R.id.guia_sonidosespeficicos:
-                intent = new Intent(getActivity(), GuiaSonidosEspecificos.class);
-                startActivity(intent);
-                break;
-            case R.id.guia_vocabulario:
-                intent = new Intent(getActivity(), GuiaVocabulario.class);
+            case R.id.guia_expresion_oral:
+                intent = new Intent(getActivity(), GuiaExpresionOral.class);
                 startActivity(intent);
                 break;
         }

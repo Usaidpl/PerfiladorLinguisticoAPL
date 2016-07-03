@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TabHost;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
@@ -15,15 +17,23 @@ import gt.lea.usaid.perfiladorlinguistico.R;
  * Created by Roberto on 23/06/2016.
  */
 public class GuiaSonidosEspecificos extends Activity {
-    TabHost tabHost;
+    private TabHost tabHost;
+    private ViewFlipper vfGuiaEsp, vfGuiaMam, vfGuiaKiche;
+    private float lastX;
     Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guia_sonidos_especificos);
+        vfGuiaEsp = (ViewFlipper) findViewById(R.id.vfGuiaSonidosEspecificos);
+        vfGuiaMam = (ViewFlipper) findViewById(R.id.vfGuiaSonidosEspecificosMam);
+        vfGuiaKiche = (ViewFlipper) findViewById(R.id.vfGuiaSonidosEspecificosKiche);
+
         initToolBar();
-        TabHost host = (TabHost)findViewById(R.id.tabHost);
+        TabHost host = (TabHost) findViewById(R.id.tabHost);
         host.setup();
+
 
         //Tab 1
         TabHost.TabSpec spec = host.newTabSpec("Tab One");
@@ -43,6 +53,7 @@ public class GuiaSonidosEspecificos extends Activity {
         spec.setIndicator("Kiche");
         host.addTab(spec);
 
+
     }
 
     private void initToolBar() {
@@ -50,13 +61,13 @@ public class GuiaSonidosEspecificos extends Activity {
         toolbar.setTitle(R.string.guia_sonidos_especificos);
         //setSupportActionBar(toolbar);
 
-        toolbar.setNavigationIcon(R.mipmap.ic_back);
+        toolbar.setNavigationIcon(R.mipmap.back3);
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(GuiaSonidosEspecificos.this, "Regresando al Menu!", Toast.LENGTH_SHORT).show();
-                        Intent navigation_menu = new Intent(getApplication(),NavigationMenu.class );
+                        Intent navigation_menu = new Intent(getApplication(), NavigationMenu.class);
                         startActivity(navigation_menu);
 
                     }
@@ -69,5 +80,61 @@ public class GuiaSonidosEspecificos extends Activity {
         super.onPause();
         finish();
     }
-}
 
+    public boolean onTouchEvent(MotionEvent touchevent) {
+        switch (touchevent.getAction()) {
+
+            case MotionEvent.ACTION_DOWN:
+                lastX = touchevent.getX();
+                break;
+            case MotionEvent.ACTION_UP:
+                float currentX = touchevent.getX();
+
+                if (lastX < currentX) {
+
+                    if (vfGuiaEsp.getDisplayedChild() == 0)
+                        break;
+                    if (vfGuiaMam.getDisplayedChild() == 0)
+                        break;
+                    if (vfGuiaKiche.getDisplayedChild() == 0)
+                        break;
+
+                    vfGuiaEsp.setInAnimation(this, R.anim.slide_in_from_left);
+                    vfGuiaMam.setInAnimation(this, R.anim.slide_in_from_left);
+                    vfGuiaKiche.setInAnimation(this, R.anim.slide_in_from_left);
+
+                    vfGuiaEsp.setOutAnimation(this, R.anim.slide_out_to_right);
+                    vfGuiaMam.setOutAnimation(this, R.anim.slide_out_to_right);
+                    vfGuiaKiche.setOutAnimation(this, R.anim.slide_out_to_right);
+
+                    vfGuiaEsp.showNext();
+                    vfGuiaMam.showNext();
+                    vfGuiaKiche.showNext();
+                }
+
+                if (lastX > currentX) {
+
+                    if (vfGuiaEsp.getDisplayedChild() == 1)
+                        break;
+                    if (vfGuiaMam.getDisplayedChild() == 1)
+                        break;
+                    if (vfGuiaKiche.getDisplayedChild() == 1)
+                        break;
+
+                    vfGuiaEsp.setInAnimation(this, R.anim.slide_in_from_right);
+                    vfGuiaMam.setInAnimation(this, R.anim.slide_in_from_right);
+                    vfGuiaKiche.setInAnimation(this, R.anim.slide_in_from_right);
+
+                    vfGuiaEsp.setOutAnimation(this, R.anim.slide_out_to_left);
+                    vfGuiaMam.setOutAnimation(this, R.anim.slide_out_to_left);
+                    vfGuiaKiche.setOutAnimation(this, R.anim.slide_out_to_left);
+
+                    vfGuiaEsp.showPrevious();
+                    vfGuiaMam.showPrevious();
+                    vfGuiaKiche.showPrevious();
+                }
+                break;
+        }
+        return false;
+    }
+}

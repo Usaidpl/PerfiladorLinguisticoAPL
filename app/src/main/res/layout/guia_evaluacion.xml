@@ -22,19 +22,19 @@
                 android:layout_alignParentTop="true">
 
                 <ImageView
-                    android:id="@+id/guia_comprension_oral"
+                    android:id="@+id/guia_interaccion_oral_oral"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/book" />
 
                 <TextView
-                    android:id="@+id/guia_comprension_oral2"
+                    android:id="@+id/guia_interaccion_oral_oral2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom"
                     android:background="#AA000000"
-                    android:text="Comprensión Oral"
+                    android:text="Interacción Oral"
                     android:textAlignment="center"
                     android:textColor="#ffffffff"
                     android:textSize="25dp" />
@@ -51,19 +51,19 @@
                 android:layout_toRightOf="@+id/frameLayout4">
 
                 <ImageView
-                    android:id="@+id/guia_expresion_oral"
+                    android:id="@+id/guia_compresion_oral"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/book" />
 
                 <TextView
-                    android:id="@+id/guia_expresion_oral2"
+                    android:id="@+id/guia_compresion_oral2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom"
                     android:background="#AA000000"
-                    android:text="Expresión Oral"
+                    android:text="Comprensión Oral"
                     android:textAlignment="center"
                     android:textColor="#ffffffff"
                     android:textSize="25dp" />
@@ -80,19 +80,19 @@
                 android:layout_toRightOf="@+id/frameLayout">
 
                 <ImageView
-                    android:id="@+id/guia_gramatica"
+                    android:id="@+id/guia_vocabulario_precision"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/book" />
 
                 <TextView
-                    android:id="@+id/guia_gramatica2"
+                    android:id="@+id/guia_vocabulario_precision2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom"
                     android:background="#AA000000"
-                    android:text="Gramática"
+                    android:text="Vocabulario Precisión"
                     android:textAlignment="center"
                     android:textColor="#ffffffff"
                     android:textSize="25dp" />
@@ -107,19 +107,19 @@
                 android:layout_toStartOf="@+id/frameLayout6">
 
                 <ImageView
-                    android:id="@+id/guia_sonidosespeficicos"
+                    android:id="@+id/guia_expresion_oral"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/book" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/guia_expresion_oral2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom"
                     android:background="#AA000000"
-                    android:text="Sonidos Específicos"
+                    android:text="Expresion Oral"
                     android:textAlignment="center"
                     android:textColor="#ffffffff"
                     android:textSize="25dp" />
@@ -135,19 +135,19 @@
                 android:layout_marginTop="59dp">
 
                 <ImageView
-                    android:id="@+id/guia_interaccion_oral"
+                    android:id="@+id/guia_sonidos_especificos"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/book" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/guia_sonidos_especificos2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom"
                     android:background="#AA000000"
-                    android:text="Interpretación Oral"
+                    android:text="Sonidos Específicos"
                     android:textAlignment="center"
                     android:textColor="#ffffffff"
                     android:textSize="25dp" />
@@ -176,7 +176,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom"
                     android:background="#AA000000"
-                    android:text="Vocabulario"
+                    android:text="Vocabulario Producción"
                     android:textAlignment="center"
                     android:textColor="#ffffffff"
                     android:textSize="25dp" />
@@ -191,19 +191,19 @@
                 android:layout_toStartOf="@+id/frameLayout5">
 
                 <ImageView
-                    android:id="@+id/guia_precicion_oral"
+                    android:id="@+id/guia_gramatica"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/book" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/guia_gramatica2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom"
                     android:background="#AA000000"
-                    android:text="Precisión Oral"
+                    android:text="Gramática"
                     android:textAlignment="center"
                     android:textColor="#ffffffff"
                     android:textSize="25dp" />

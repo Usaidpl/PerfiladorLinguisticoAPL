@@ -41,10 +41,293 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TextView
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cvExpresionOral"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Pruebas uno" />
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:textAlignment="center"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="10dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <ViewFlipper
+                            android:id="@+id/vfGuiaGramatica"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_margin="6dp">
+
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramatica"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/inst_guia_gramatica"
+                                    android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_01_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramatica02"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/este_es_un_cocinero"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_02_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramatica03"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/este_es_un_doctor_se_ale_al_doctor"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_03_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramatica04"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/este_es_un_maestro"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_04_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramatica05"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/esta_es_una_abuela"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_05_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramatica06"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/inst_guia_gramatica2"
+                                    android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_06_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramatica07"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lápiz"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_07_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramatica08"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/l_pices"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_08_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramatica09"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pelotas"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_09_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramatica10"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pelota"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_10_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+
+
+                        </ViewFlipper>
+                    </android.support.v7.widget.CardView>
 
                 </RelativeLayout>
 
@@ -54,10 +337,293 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cvExpresionOralMam"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Pruebas dos" />
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:textAlignment="center"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="10dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <ViewFlipper
+                            android:id="@+id/vfGuiaGramaticaMam"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_margin="6dp">
+
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaMam"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/inst_guia_gramatica_mam"
+                                    android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_01_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaMam02"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/ti_tb_i_lu_nmanb_aj_nqa_xu_j_qya_ti_tb_i_nrespuesta_txub_aj"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_02_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaMam03"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/ti_tb_i_lu_nrit_kne_l_nqa_at_tal_ti_tb_i_nrespuesta_ttxu_rit_kne_l"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_03_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaMam04"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/ti_tb_i_lu_nek_ik_nqa_npaqin_ti_tb_i_nrespuesta_ttxu_ek_ttxu_ik"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_04_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaMam05"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/ti_tb_i_lu_ntx_ya_n_nqa_at_tal_ti_tbi_respuesta_ttxu_tx_ya_n"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_05_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaMam06"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/inst_guia_gramatica_mam2"
+                                    android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_06_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaMam07"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/qe_wix_ox_wix_oxe_wix"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_07_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaMam08"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/wix"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_08_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaMam09"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/qe_ox_kyaj_i_x"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_09_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaMam10"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/i_x"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_10_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+
+
+                        </ViewFlipper>
+                    </android.support.v7.widget.CardView>
 
                 </RelativeLayout>
 
@@ -68,10 +634,293 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cvExpresionOralKiche"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Pruebas tres" />
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:textAlignment="center"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="10dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <ViewFlipper
+                            android:id="@+id/vfGuiaGramaticaKiche"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_margin="6dp">
+
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaKiche"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/inst_guia_gramatica_kiche_singular_plural"
+                                    android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_01_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaKiche02"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pendiente"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_02_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaKiche03"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Are jun ti't.\n¿Si ib'ixik we k'o upwi?\nRespuesta: mam / tat"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_03_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaKiche04"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/are_jun_chichu_n_su_ub_ixik_we_k_o_rismachi_nrespuesta_tat_achi"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_04_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaKiche05"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/are_jun_ala_n_su_ub_ixik_we_k_o_ruq_nrespuesta_ali"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_05_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaKiche06"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/inst_guia_gramatica_masculino_femenino"
+                                    android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_06_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaKiche07"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/taq_me_s"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_07_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaKiche08"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/mes"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_08_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaKiche09"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/taq_xajab"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_09_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/rlGuiaGramaticaKiche10"
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/xajab"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/book" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_10_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                            </RelativeLayout>
+
+
+                        </ViewFlipper>
+                    </android.support.v7.widget.CardView>
 
                 </RelativeLayout>
             </FrameLayout>

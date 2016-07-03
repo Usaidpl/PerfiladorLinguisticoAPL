@@ -240,7 +240,7 @@
     <string name="Pre6_EspQui_SerE_VI">Maestra</string>
     <string name="Pre7_EspQui_SerE_VI">Doctorara</string>
     <string name="Pre8_EspQui_SerE_VI">Cocinero / chef</string>
-    <string name="Expresionoral_Esp_SerE">VII SERIE EXPRESIÓN ORAL</string>
+    <string name="Expresionoral_Esp_SerE">\nVII SERIE EXPRESIÓN ORAL\n</string>
     <string name="Aspectos_Esp_SerE_VII">Aspectos a considerar en la descripción de la secuencia.</string>
     <string name="Pre1_EspQui_SerE_VII">Pronuncia correctamente las palabras que utiliza.</string>
     <string name="Pre2_EspQui_SerE_VII">Se mantiene en el tema de la conversación.</string>
@@ -743,5 +743,15 @@
     <string name="are_jun_chichu_n_su_ub_ixik_we_k_o_rismachi_nrespuesta_tat_achi">Are jun chichu\'.\n¿Su ub\'ixik we k\'o rismachi?\nRespuesta: tat / achi</string>
     <string name="inst_guia_expresion_oral_kiche">VII. CHOLAJ. UCH\'AB\'EXIK / EXPRESIÓN ORAL\n\nUb\'eyal / Instrucciones\n1. B\'ij la / Diga: Kawok jun tzijob\'elil, che uwokik katerenej jujun taq ub\'eyal kb\'ix chawe\'.\n2. Ta la che chub\'ij / Pida que le diga: Jachike kawilo k\'o chikijujunal le wachib\'al kak\'ut chawach. Señale uno a uno los dibujos y motivelo a que los describa, por ejemplo: Pa le nab\'e ek\'o keb\'alaj taq alitom kuk\' oxib\' ak\'alab\' alab\'om kaketz\'ab\'ej kik, junn ukojom ch\'ech\' pa\'ub\'oq\'och. ek\'o chikixo\'l taq che\'.\n3. B\'ij la / Diga: Kiwok jun tzijob\'elil chirij taq le wachib\'il, at kamaj ub\'ixik, le are kutz\'aqatisaj.\n Señale el primer dibujo y diga: Su xk\'ulmatajik. Pida que siga y motívelo a continuar con la historia.\n4. K\'utu la le rox wachib\'al / Señale la tercra ilustración, diga: Ri uk\'isb\'alil. Motive al estudiante a finalizar la historia.\n5. Juch\'u la chi uwach le wuj le xutzalij ub\'ixik le ajtijoxel. / Marque en la hoja de respuestas según como el/la estudiante se haya expresado.\n\nJastaq / Aspectos\n1. Utz ub\'ixil taq le tzij kukojo.\nPronuncia correctamente las palabras que utiliza.\n2. Kuk\'ex taj uk\'ux ri kutzijoj.\nSe mantiene en el tema de la conversación.\n3. Kuchol ronojel ri uno\'j are katzijonik.\nOrganiza secuencialmente sus ideas al expresarse.\n4. Kach\'ob\'otajik ri utzojob\'al.\nSe expresa con claridad en la conversación.</string>
     <string name="inst_guia_expresion_oral_kiche_finales">K\'isb\'al taq ub\'eyal / Instrucciones finales\nB\'ij la / Diga: Xujto\'tajik, maltox.\n\nWe xetax ri ajtijoxel pa kaxlan tzij tzalij pa uk\'olib\'al, we maja\' chtaj la.\n Si ya evaluó al estudiante en idioma español, condúzcalo a su lugar, de lo contrario evalúelo en ese idioma.</string>
+    <string name="inst_eva_expresion_oral">Instrucciones\nSe creará una historia por cada dibujo.</string>
+    <string name="qu_ve_en_cada_una_de_los_dibujos">¿Qué ve en cada una de los dibujos?</string>
+    <string name="aspecto_a_evaluar">Aspecto a evaluar</string>
+    <string name="para_terminar">Para terminar...</string>
+    <string name="despu_s_paso_que">Después paso que...</string>
+    <string name="en_un_lugar_de">En un lugar de...</string>
+    <string name="pronuncia_correctamente_las_palabras_que_utiliza">Pronuncia correctamente las palabras que utiliza.</string>
+    <string name="se_mantiene_en_el_tema_de_conversaci_n">Se mantiene en el tema de conversación.</string>
+    <string name="organiza_secuencialmente_sus_ideas_al_expresarse">Organiza secuencialmente sus ideas al expresarse.</string>
+    <string name="se_expresa_con_claridad_en_la_conversaci_n">Se expresa con claridad en la conversación.</string>
 
 </resources>

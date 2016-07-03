@@ -45,7 +45,7 @@
                     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/cvExpresionOral"
                         android:layout_width="match_parent"
-                        android:layout_height="400dp"
+                        android:layout_height="match_parent"
                         android:layout_alignParentTop="true"
                         android:textAlignment="center"
                         card_view:cardBackgroundColor="@android:color/white"
@@ -54,60 +54,30 @@
                         card_view:cardUseCompatPadding="true">
 
                         <ViewFlipper
-                            android:id="@+id/viewflipper"
+                            android:id="@+id/vfGuiaComprensionOral"
                             android:layout_width="match_parent"
                             android:layout_height="400dp"
                             android:layout_margin="6dp">
 
-
-                            <RelativeLayout
-                                android:id="@+id/Image1"
+                            <ScrollView
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
-                                android:orientation="horizontal">
+                                android:layout_height="match_parent">
 
 
-                                <ImageView
-                                    android:id="@+id/imaExppresionOral"
+                                <RelativeLayout
+                                    android:id="@+id/rlGuiaComprensionOral"
                                     android:layout_width="match_parent"
                                     android:layout_height="400dp"
-                                    android:padding="25dp"
-                                    android:src="@mipmap/book" />
+                                    android:orientation="vertical">
 
-                            </RelativeLayout>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="@string/inst_guia_comprension_oral"
+                                        android:textSize="@dimen/_11sdp" />
 
-                            <RelativeLayout
-                                android:id="@+id/Image2"
-                                android:layout_width="match_parent"
-                                android:layout_height="400dp"
-                                android:orientation="horizontal">
-
-
-                                <ImageView
-                                    android:id="@+id/imaExppresionOra2"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="400dp"
-                                    android:padding="25dp"
-                                    android:src="@mipmap/ic_back" />
-
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:id="@+id/Image3"
-                                android:layout_width="match_parent"
-                                android:layout_height="400dp"
-                                android:orientation="horizontal">
-
-
-                                <ImageView
-                                    android:id="@+id/imaExppresionOral3"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="400dp"
-                                    android:padding="25dp"
-                                    android:src="@mipmap/book" />
-
-                            </RelativeLayout>
-
+                                </RelativeLayout>
+                            </ScrollView>
                         </ViewFlipper>
                     </android.support.v7.widget.CardView>
 
@@ -119,10 +89,44 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cvExpresionOralMam"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Pruebas dos" />
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:textAlignment="center"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="10dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <ViewFlipper
+                            android:id="@+id/vfGuiaComprensionOralMam"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="6dp">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/rlGuiaComprensionOralMam"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="@string/inst_guia_comprension_oral_mam"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                </RelativeLayout>
+                            </ScrollView>
+                        </ViewFlipper>
+                    </android.support.v7.widget.CardView>
 
                 </RelativeLayout>
 
@@ -130,13 +134,47 @@
                 <RelativeLayout
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cvExpresionOralKiche"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Pruebas tres" />
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:textAlignment="center"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="10dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <ViewFlipper
+                            android:id="@+id/vfGuiaComprensionOralKiche"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="6dp">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/rlGuiaComprensionOralKiche"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="@string/inst_guia_comprension_oral_kiche"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                </RelativeLayout>
+                            </ScrollView>
+                        </ViewFlipper>
+                    </android.support.v7.widget.CardView>
 
                 </RelativeLayout>
             </FrameLayout>

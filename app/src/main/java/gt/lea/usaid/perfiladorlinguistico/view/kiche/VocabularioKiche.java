@@ -18,17 +18,29 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.DialogoAlerta;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.SonidosEspecificos;
 
 /**
  * Created by Roberto on 20/06/2016.
  */
 public class VocabularioKiche extends Activity implements View.OnClickListener, OnInitializeComponent {
     private ViewFlipper vf;
-    private TextView tvCasa, tvCama, tvAvion, tvSilla, tvConejo, tvCaballo, tvZanahoria, tvGuisquil, tvGallo, tvManzana;
+    private TextView tvInstruccVocalario,tvCasa, tvCama, tvAvion, tvSilla, tvConejo, tvCaballo, tvZanahoria, tvGuisquil, tvGallo, tvManzana;
     private RadioButton SiCasa, NoCasa, SiCama, NoCama, SiAvion, NoAvion, SiSilla, NoSilla, SiConejo, NoConejo, SiCaballo, NoCaballo, SiZanahoria, NoZanahoria, SiGuisquil, NoGuisquil, SiGallo, NoGallo, SiManzana, NoManzana;
     private Switch swCasa, swCama, swAvion, swSilla, swConejo, swCaballo, swZanahoria, swGuisquil, swGallo, swManzana;
     private int[] dr = {R.mipmap.book};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.vocabulario_kiche);
+
+        setOnInit(null);
+        DialogoAlerta.alertDialog("Hola", "Desea Continuar", false, this);
+    }
+
     private CompoundButton.OnCheckedChangeListener list = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -56,6 +68,7 @@ public class VocabularioKiche extends Activity implements View.OnClickListener, 
                 tvCama.setText("Cama");
             else
                 tvCama.setText(" ");
+
         }
 
         private void avion() {
@@ -113,25 +126,18 @@ public class VocabularioKiche extends Activity implements View.OnClickListener, 
             else
                 tvManzana.setText(" ");
         }
-
-
     };
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.vocabulario);
-        setOnInit(null);
-    }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.SiCasa:
                 vf.showNext();
+                tvInstruccVocalario.setText("");
                 break;
             case R.id.NoCasa:
                 vf.showNext();
+                tvInstruccVocalario.setText("");
                 break;
             case R.id.SiCama:
                 vf.showNext();
@@ -188,7 +194,7 @@ public class VocabularioKiche extends Activity implements View.OnClickListener, 
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent pruebas2 = new Intent(getApplication(), SonidosEspecificosKiche.class);
+                Intent pruebas2 = new Intent(getApplication(), SonidosEspecificos.class);
                 startActivity(pruebas2);
                 break;
             case R.id.NoManzana:
@@ -197,7 +203,7 @@ public class VocabularioKiche extends Activity implements View.OnClickListener, 
                         Toast.makeText(getApplicationContext(),
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
                 toast1.show();
-                Intent pruebas = new Intent(getApplication(), SonidosEspecificosKiche.class);
+                Intent pruebas = new Intent(getApplication(), SonidosEspecificos.class);
                 startActivity(pruebas);
                 break;
             default:
@@ -257,6 +263,7 @@ public class VocabularioKiche extends Activity implements View.OnClickListener, 
         tvGallo = (TextView) findViewById(R.id.tvGallo);
         swManzana = (Switch) findViewById(R.id.swManzana);
         tvManzana = (TextView) findViewById(R.id.tvManzana);
+        tvInstruccVocalario = (TextView) findViewById(R.id.tvInstruccVocalario);
 
         SiCasa.setOnClickListener(this);
         NoCasa.setOnClickListener(this);

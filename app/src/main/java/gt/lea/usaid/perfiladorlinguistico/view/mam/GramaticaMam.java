@@ -23,11 +23,12 @@ import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 
 public class GramaticaMam extends Activity implements View.OnClickListener, OnInitializeComponent {
 
     private ViewFlipper vf;
-    private TextView tvPelota, tvPelotas, tvLapices, tvLapiz, tvAbuelo, tvMaestra, tvDoctora, tvChef;
+    private TextView title_gramatica, tvInstruccGramatica, tvPelota, tvPelotas, tvLapices, tvLapiz, tvAbuelo, tvMaestra, tvDoctora, tvChef;
     private RadioButton SiPelota, NoPelota, SiPelotas, NoPelotas, SiLapices, NoLapices, SiLapiz, NoLapiz, SiAbuelo, NoAbuelo, SiMaestra, NoMaestra, SiDoctora, NoDoctora, SiChef, NoChef;
     private Switch SwPelota, SwPelotas, SwLapiz, SwLapices, SwAbuelo, SwMaestra, SwDoctora, SwChef;
     private int[] dr = {R.mipmap.book};
@@ -35,7 +36,7 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gramatica);
+        setContentView(R.layout.gramatica_mam);
 
         setOnInit(null);
 
@@ -47,9 +48,11 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
         switch (v.getId()) {
             case R.id.SiPelota:
                 vf.showNext();
+                tvInstruccGramatica.setText("");
                 break;
             case R.id.NoPelota:
                 vf.showNext();
+                tvInstruccGramatica.setText("");
                 break;
             case R.id.SiPelotas:
                 vf.showNext();
@@ -65,15 +68,21 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
                 break;
             case R.id.SiLapiz:
                 vf.showNext();
+                title_gramatica.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
+                tvInstruccGramatica.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
                 break;
             case R.id.NoLapiz:
                 vf.showNext();
+                title_gramatica.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
+                tvInstruccGramatica.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
                 break;
             case R.id.SiAbuelo:
                 vf.showNext();
+                tvInstruccGramatica.setText("");
                 break;
             case R.id.NoAbuelo:
                 vf.showNext();
+                tvInstruccGramatica.setText("");
                 break;
             case R.id.SiMaestra:
                 vf.showNext();
@@ -94,7 +103,7 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent expresionoral = new Intent(getApplication(), ExpresionOralMam.class);
+                Intent expresionoral = new Intent(getApplication(), ExpresionOral.class);
                 startActivity(expresionoral);
                 break;
             case R.id.NoChef:
@@ -104,7 +113,7 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
-                Intent expresionoral2 = new Intent(getApplication(), ExpresionOralMam.class);
+                Intent expresionoral2 = new Intent(getApplication(), ExpresionOral.class);
                 startActivity(expresionoral2);
                 break;
             default:
@@ -159,6 +168,8 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
         tvDoctora = (TextView) findViewById(R.id.tvDoctora);
         SwChef = (Switch) findViewById(R.id.swChef);
         tvChef = (TextView) findViewById(R.id.tvChef);
+        tvInstruccGramatica = (TextView) findViewById(R.id.tvInstruccGramatica);
+        title_gramatica = (TextView) findViewById(R.id.title_gramatica);
 
         SiPelota.setOnClickListener(this);
         NoPelota.setOnClickListener(this);

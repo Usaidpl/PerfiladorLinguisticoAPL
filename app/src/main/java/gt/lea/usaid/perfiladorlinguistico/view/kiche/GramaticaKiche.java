@@ -23,19 +23,20 @@ import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 
-public class GramaticaKiche extends Activity implements View.OnClickListener, OnInitializeComponent {
+public class GramaticaKiche  extends Activity implements View.OnClickListener, OnInitializeComponent {
 
     private ViewFlipper vf;
-    private TextView tvPelota, tvPelotas, tvLapices, tvLapiz, tvAbuelo, tvMaestra, tvDoctora, tvChef;
-    private RadioButton SiPelota, NoPelota, SiPelotas, NoPelotas, SiLapices, NoLapices, SiLapiz, NoLapiz, SiAbuelo, NoAbuelo, SiMaestra, NoMaestra, SiDoctora, NoDoctora, SiChef, NoChef;
-    private Switch SwPelota, SwPelotas, SwLapiz, SwLapices, SwAbuelo, SwMaestra, SwDoctora, SwChef;
+    private TextView title_gramatica, tvInstruccGramatica, tvCasa, tvCama, tvAvion, tvSilla, tvConejo, tvCaballo, tvZanahoria, tvGuisquil;
+    private RadioButton SiCasa, NoCasa, SiCama, NoCama, SiAvion, NoAvion, SiSilla, NoSilla, SiConejo, NoConejo, SiCaballo, NoCaballo, SiZanahoria, NoZanahoria, SiGuisquil, NoGuisquil;
+    private Switch SwCasa, SwCama, SwAvion, SwSilla, SwConejo, SwCaballo, SwZanahoria, SwGuisquil;
     private int[] dr = {R.mipmap.book};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gramatica);
+        setContentView(R.layout.gramatica_kiche);
 
         setOnInit(null);
 
@@ -45,66 +46,74 @@ public class GramaticaKiche extends Activity implements View.OnClickListener, On
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.SiPelota:
+            case R.id.SiCasa:
+                vf.showNext();
+                tvInstruccGramatica.setText("");
+                break;
+            case R.id.NoCasa:
+                vf.showNext();
+                tvInstruccGramatica.setText("");
+                break;
+            case R.id.SiCama:
                 vf.showNext();
                 break;
-            case R.id.NoPelota:
+            case R.id.NoCama:
                 vf.showNext();
                 break;
-            case R.id.SiPelotas:
+            case R.id.SiAvion:
                 vf.showNext();
                 break;
-            case R.id.NoPelotas:
+            case R.id.NoAvion:
                 vf.showNext();
                 break;
-            case R.id.SiLapices:
+            case R.id.SiSilla:
+                vf.showNext();
+                title_gramatica.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
+                tvInstruccGramatica.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
+                break;
+            case R.id.NoSilla:
+                vf.showNext();
+                title_gramatica.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
+                tvInstruccGramatica.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
+                break;
+            case R.id.SiConejo:
+                vf.showNext();
+                tvInstruccGramatica.setText("");
+                break;
+            case R.id.NoConejo:
+                vf.showNext();
+                tvInstruccGramatica.setText("");
+                break;
+            case R.id.SiCaballo:
                 vf.showNext();
                 break;
-            case R.id.NoLapices:
+            case R.id.NoCaballo:
                 vf.showNext();
                 break;
-            case R.id.SiLapiz:
+            case R.id.SiZanahoria:
                 vf.showNext();
                 break;
-            case R.id.NoLapiz:
+            case R.id.NoZanahoria:
                 vf.showNext();
                 break;
-            case R.id.SiAbuelo:
-                vf.showNext();
-                break;
-            case R.id.NoAbuelo:
-                vf.showNext();
-                break;
-            case R.id.SiMaestra:
-                vf.showNext();
-                break;
-            case R.id.NoMaestra:
-                vf.showNext();
-                break;
-            case R.id.SiDoctora:
-                vf.showNext();
-                break;
-            case R.id.NoDoctora:
-                vf.showNext();
-                break;
-            case R.id.SiChef:
+            case R.id.SiGuisquil:
                 vf.showNext();
                 Toast toast0 =
                         Toast.makeText(getApplicationContext(),
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent expresionoral = new Intent(getApplication(), ExpresionOralKiche.class);
+                Intent expresionoral = new Intent(getApplication(), ExpresionOral.class);
                 startActivity(expresionoral);
                 break;
-            case R.id.NoChef:
+            case R.id.NoGuisquil:
                 vf.showNext();
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
-                Intent expresionoral2 = new Intent(getApplication(), ExpresionOralKiche.class);
+                Intent expresionoral2 = new Intent(getApplication(), ExpresionOral.class);
                 startActivity(expresionoral2);
                 break;
             default:
@@ -126,143 +135,145 @@ public class GramaticaKiche extends Activity implements View.OnClickListener, On
         }
 
 
-        SiPelota = (RadioButton) findViewById(R.id.SiPelota);
-        NoPelota = (RadioButton) findViewById(R.id.NoPelota);
-        SiPelotas = (RadioButton) findViewById(R.id.SiPelotas);
-        NoPelotas = (RadioButton) findViewById(R.id.NoPelotas);
-        SiLapices = (RadioButton) findViewById(R.id.SiLapices);
-        NoLapices = (RadioButton) findViewById(R.id.NoLapices);
-        SiLapiz = (RadioButton) findViewById(R.id.SiLapiz);
-        NoLapiz = (RadioButton) findViewById(R.id.NoLapiz);
-        SiAbuelo = (RadioButton) findViewById(R.id.SiAbuelo);
-        NoAbuelo = (RadioButton) findViewById(R.id.NoAbuelo);
-        SiMaestra = (RadioButton) findViewById(R.id.SiMaestra);
-        NoMaestra = (RadioButton) findViewById(R.id.NoMaestra);
-        SiDoctora = (RadioButton) findViewById(R.id.SiDoctora);
-        NoDoctora = (RadioButton) findViewById(R.id.NoDoctora);
-        SiChef = (RadioButton) findViewById(R.id.SiChef);
-        NoChef = (RadioButton) findViewById(R.id.NoChef);
+        SiCasa = (RadioButton) findViewById(R.id.SiCasa);
+        NoCasa = (RadioButton) findViewById(R.id.NoCasa);
+        SiCama = (RadioButton) findViewById(R.id.SiCama);
+        NoCama = (RadioButton) findViewById(R.id.NoCama);
+        SiAvion = (RadioButton) findViewById(R.id.SiAvion);
+        NoAvion = (RadioButton) findViewById(R.id.NoAvion);
+        SiSilla = (RadioButton) findViewById(R.id.SiSilla);
+        NoSilla = (RadioButton) findViewById(R.id.NoSilla);
+        SiConejo = (RadioButton) findViewById(R.id.SiConejo);
+        NoConejo = (RadioButton) findViewById(R.id.NoConejo);
+        SiCaballo = (RadioButton) findViewById(R.id.SiCaballo);
+        NoCaballo = (RadioButton) findViewById(R.id.NoCaballo);
+        SiZanahoria = (RadioButton) findViewById(R.id.SiZanahoria);
+        NoZanahoria = (RadioButton) findViewById(R.id.NoZanahoria);
+        SiGuisquil = (RadioButton) findViewById(R.id.SiGuisquil);
+        NoGuisquil = (RadioButton) findViewById(R.id.NoGuisquil);
 
-        SwPelota = (Switch) findViewById(R.id.swPelota);
-        tvPelota = (TextView) findViewById(R.id.tvPelota);
-        SwPelotas = (Switch) findViewById(R.id.swPelotas);
-        tvPelotas = (TextView) findViewById(R.id.tvPelotas);
-        SwLapices = (Switch) findViewById(R.id.swLapices);
-        tvLapices = (TextView) findViewById(R.id.tvLapices);
-        SwLapiz = (Switch) findViewById(R.id.swLapiz);
-        tvLapiz = (TextView) findViewById(R.id.tvLapiz);
-        SwAbuelo = (Switch) findViewById(R.id.swAbuelo);
-        tvAbuelo = (TextView) findViewById(R.id.tvAbuelo);
-        SwMaestra = (Switch) findViewById(R.id.swMaestra);
-        tvMaestra = (TextView) findViewById(R.id.tvMaestra);
-        SwDoctora = (Switch) findViewById(R.id.swDoctora);
-        tvDoctora = (TextView) findViewById(R.id.tvDoctora);
-        SwChef = (Switch) findViewById(R.id.swChef);
-        tvChef = (TextView) findViewById(R.id.tvChef);
+        SwCasa = (Switch) findViewById(R.id.swCasa);
+        tvCasa = (TextView) findViewById(R.id.tvCasa);
+        SwCama = (Switch) findViewById(R.id.swCama);
+        tvCama = (TextView) findViewById(R.id.tvCama);
+        SwSilla = (Switch) findViewById(R.id.swSilla);
+        tvAvion = (TextView) findViewById(R.id.tvAvion);
+        SwAvion = (Switch) findViewById(R.id.swAvion);
+        tvSilla = (TextView) findViewById(R.id.tvSilla);
+        SwConejo = (Switch) findViewById(R.id.swConejo);
+        tvConejo = (TextView) findViewById(R.id.tvConejo);
+        SwCaballo = (Switch) findViewById(R.id.swCaballo);
+        tvCaballo = (TextView) findViewById(R.id.tvCaballo);
+        SwZanahoria = (Switch) findViewById(R.id.swZanahoria);
+        tvZanahoria = (TextView) findViewById(R.id.tvZanahoria);
+        SwGuisquil = (Switch) findViewById(R.id.swGuisquil);
+        tvGuisquil = (TextView) findViewById(R.id.tvGuisquil);
+        tvInstruccGramatica = (TextView) findViewById(R.id.tvInstruccGramaticaKiche);
+        title_gramatica = (TextView) findViewById(R.id.title_gramatica_kiche);
 
-        SiPelota.setOnClickListener(this);
-        NoPelota.setOnClickListener(this);
-        SiPelotas.setOnClickListener(this);
-        NoPelotas.setOnClickListener(this);
-        SiLapices.setOnClickListener(this);
-        NoLapices.setOnClickListener(this);
-        SiLapiz.setOnClickListener(this);
-        NoLapiz.setOnClickListener(this);
-        SiAbuelo.setOnClickListener(this);
-        NoAbuelo.setOnClickListener(this);
-        SiMaestra.setOnClickListener(this);
-        NoMaestra.setOnClickListener(this);
-        SiDoctora.setOnClickListener(this);
-        NoDoctora.setOnClickListener(this);
-        SiChef.setOnClickListener(this);
-        NoChef.setOnClickListener(this);
+        SiCasa.setOnClickListener(this);
+        NoCasa.setOnClickListener(this);
+        SiCama.setOnClickListener(this);
+        NoCama.setOnClickListener(this);
+        SiAvion.setOnClickListener(this);
+        NoAvion.setOnClickListener(this);
+        SiSilla.setOnClickListener(this);
+        NoSilla.setOnClickListener(this);
+        SiConejo.setOnClickListener(this);
+        NoConejo.setOnClickListener(this);
+        SiCaballo.setOnClickListener(this);
+        NoCaballo.setOnClickListener(this);
+        SiZanahoria.setOnClickListener(this);
+        NoZanahoria.setOnClickListener(this);
+        SiGuisquil.setOnClickListener(this);
+        NoGuisquil.setOnClickListener(this);
         swPrincipal();
     }
 
     private CompoundButton.OnCheckedChangeListener list = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            pelota();
-            pelotas();
-            lapices();
-            lapiz();
-            abuelo();
-            maestra();
-            doctora();
-            chef();
+            casa();
+            cama();
+            avion();
+            silla();
+            conejo();
+            caballo();
+            zanahoria();
+            guisquil();
 
 
         }
 
-        private void pelota() {
-            if (SwPelota.isChecked())
-                tvPelota.setText("Pelota");
+        private void casa() {
+            if (SwCasa.isChecked())
+                tvCasa.setText("Pelota");
             else
-                tvPelota.setText("");
+                tvCasa.setText("");
         }
 
-        private void pelotas() {
-            if (SwPelotas.isChecked())
-                tvPelotas.setText("Pelotas");
+        private void cama() {
+            if (SwCama.isChecked())
+                tvCama.setText("Pelotas");
             else
-                tvPelotas.setText(" ");
+                tvCama.setText(" ");
         }
 
-        private void lapices() {
-            if (SwLapices.isChecked())
-                tvLapices.setText("Lapices");
+        private void avion() {
+            if (SwSilla.isChecked())
+                tvAvion.setText("Lapices");
             else
-                tvLapices.setText(" ");
+                tvAvion.setText(" ");
         }
 
-        private void lapiz() {
-            if (SwLapiz.isChecked())
-                tvLapiz.setText("Lapiz");
+        private void silla() {
+            if (SwAvion.isChecked())
+                tvSilla.setText("Lapiz");
             else
-                tvLapiz.setText("");
+                tvSilla.setText("");
         }
 
-        private void abuelo() {
-            if (SwAbuelo.isChecked())
-                tvAbuelo.setText("Abuelo");
+        private void conejo() {
+            if (SwConejo.isChecked())
+                tvConejo.setText("Abuelo");
             else
-                tvAbuelo.setText("Esta es una Abuela, si fuera hombre ¿cómo se diría?");
+                tvConejo.setText("Esta es una Abuela, si fuera hombre ¿cómo se diría?");
         }
 
-        private void maestra() {
-            if (SwMaestra.isChecked())
-                tvMaestra.setText("Maestra");
+        private void caballo() {
+            if (SwCaballo.isChecked())
+                tvCaballo.setText("Maestra");
             else
-                tvMaestra.setText("Este es un maestro, si fuera una mujer ¿cómo se diría?");
+                tvCaballo.setText("Este es un maestro, si fuera una mujer ¿cómo se diría?");
         }
 
-        private void doctora() {
-            if (SwDoctora.isChecked())
-                tvDoctora.setText("Doctora");
+        private void zanahoria() {
+            if (SwZanahoria.isChecked())
+                tvZanahoria.setText("Doctora");
             else
-                tvDoctora.setText("Este es un doctor, si fuera mujer ¿cómo se diría?");
+                tvZanahoria.setText("Este es un doctor, si fuera mujer ¿cómo se diría?");
         }
 
-        private void chef() {
-            if (SwChef.isChecked())
-                tvChef.setText("Cociera / ");
+        private void guisquil() {
+            if (SwGuisquil.isChecked())
+                tvGuisquil.setText("Cociera / ");
             else
-                tvChef.setText("Este es un cocinero, si fuera mujer ¿cómo se diría?");
+                tvGuisquil.setText("Este es un cocinero, si fuera mujer ¿cómo se diría?");
         }
 
 
     };
 
     private void swPrincipal() {
-        SwLapices.setOnCheckedChangeListener(list);
-        SwPelota.setOnCheckedChangeListener(list);
-        SwPelotas.setOnCheckedChangeListener(list);
-        SwLapices.setOnCheckedChangeListener(list);
-        SwAbuelo.setOnCheckedChangeListener(list);
-        SwLapiz.setOnCheckedChangeListener(list);
-        SwMaestra.setOnCheckedChangeListener(list);
-        SwDoctora.setOnCheckedChangeListener(list);
-        SwChef.setOnCheckedChangeListener(list);
+        SwSilla.setOnCheckedChangeListener(list);
+        SwCasa.setOnCheckedChangeListener(list);
+        SwCama.setOnCheckedChangeListener(list);
+        SwSilla.setOnCheckedChangeListener(list);
+        SwConejo.setOnCheckedChangeListener(list);
+        SwAvion.setOnCheckedChangeListener(list);
+        SwCaballo.setOnCheckedChangeListener(list);
+        SwZanahoria.setOnCheckedChangeListener(list);
+        SwGuisquil.setOnCheckedChangeListener(list);
     }
 
 

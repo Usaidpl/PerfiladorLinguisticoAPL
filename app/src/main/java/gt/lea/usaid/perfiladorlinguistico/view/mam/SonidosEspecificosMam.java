@@ -19,6 +19,7 @@ import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Gramatica;
 
 /**
  * Created by Roberto on 20/06/2016.
@@ -26,7 +27,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
 public class SonidosEspecificosMam extends Activity implements View.OnClickListener, OnInitializeComponent {
 
     private ViewFlipper vf;
-    private TextView tvPelota, tvBota, tvNaranja, tvElote, tvMachete, tvMoto, tvHelado, tvTelefono, tvGallina, tvPerro;
+    private TextView tvInstruccSonidosEsp, tvPelota, tvBota, tvNaranja, tvElote, tvMachete, tvMoto, tvHelado, tvTelefono, tvGallina, tvPerro;
     private RadioButton SiPelota, NoPelota, SiBota, NoBota, SiNaranja, NoNaranja, SiElote, NoElote, SiMachete, NoMachete, SiMoto, NoMoto, SiHelado, NoHelado, SiTelefono, NoTelefono, SiGallina, NoGallina, SiPerro, NoPerro;
     private Switch swPelota, swBota, swNaranja, swElote, swMachete, swMoto, swHelado, swTelefono, swGallina, swPerro;
     private int[] dr = {R.mipmap.book};
@@ -34,7 +35,7 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sonidos_especificos);
+        setContentView(R.layout.sonidos_especificos_mam);
         setOnInit(null);
     }
 
@@ -44,9 +45,11 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.SiPelota2:
                 vf.showNext();
+                tvInstruccSonidosEsp.setText("");
                 break;
             case R.id.NoPelota2:
                 vf.showNext();
+                tvInstruccSonidosEsp.setText("");
                 break;
             case R.id.SiBota:
                 vf.showNext();
@@ -103,7 +106,7 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent gramatica1 = new Intent(getApplication(), GramaticaMam.class);
+                Intent gramatica1 = new Intent(getApplication(), Gramatica.class);
                 startActivity(gramatica1);
                 break;
             case R.id.NoPerro:
@@ -113,7 +116,7 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
-                Intent gramatica2 = new Intent(getApplication(), GramaticaMam.class);
+                Intent gramatica2 = new Intent(getApplication(), Gramatica.class);
                 startActivity(gramatica2);
                 break;
             default:
@@ -174,7 +177,7 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
         tvGallina = (TextView) findViewById(R.id.tvGallina);
         swPerro = (Switch) findViewById(R.id.swPerro);
         tvPerro = (TextView) findViewById(R.id.tvPerro);
-
+        tvInstruccSonidosEsp = (TextView) findViewById(R.id.tvInstruccSonidosEsp);
         SiPelota.setOnClickListener(this);
         NoPelota.setOnClickListener(this);
         SiBota.setOnClickListener(this);
@@ -197,6 +200,7 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
         NoPerro.setOnClickListener(this);
         swPrincipal();
     }
+
     private CompoundButton.OnCheckedChangeListener list = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -211,6 +215,7 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
             gallina();
             perro();
         }
+
         private void pelota() {
             if (swPelota.isChecked())
                 tvPelota.setText("Pelota");
@@ -331,6 +336,7 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
             return im;
         }
     }
+
     @Override
     protected void onPause() {
         super.onPause();

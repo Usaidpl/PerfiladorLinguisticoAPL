@@ -84,6 +84,18 @@
         <activity android:name=".view.EnviarInformacion" />
         <activity android:name=".view.Sincronizar" />
         <activity android:name=".Entrevistas"></activity>
+        <activity
+            android:name=".view.kiche.ExpresionOralKiche"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.mam.ExpresionOralMam"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.mam.GramaticaMam"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.kiche.GramaticaKiche"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

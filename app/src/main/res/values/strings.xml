@@ -108,7 +108,7 @@
     <string name="Pre4_EspQui_SerD_TabI">¿Jachike rikil utz kana’ utijik?</string>
     <string name="Pre5_EspQui_SerD_TabI">¿Jachike etz’anem utz kaqaj chawach?</string>
 
-    <string name="ComprensionOral_EspQui_SerD">II.	CHOLAJ. UCH’OB’IK TZIJOB’AL / COMPRENSIÓN ORAL</string>
+    <string name="expresion_oran_kiche">II.	CHOLAJ. UCH’OB’IK TZIJOB’AL / COMPRENSIÓN ORAL</string>
     <string name="Pre1_EspQui_SerD_TabII">Chachapa le atza’m.</string>
     <string name="Pre2_EspQui_SerD_TabII">Chayaka le aq’ab’.</string>
     <string name="Pre3_EspQui_SerD_TabII">Chaqasaj le aq’ab’.</string>
@@ -168,7 +168,7 @@
     <string name="Pre6_EspQui_SerD_VI">Tat / achi</string>
     <string name="Pre7_EspQui_SerD_VI">Mam / tat</string>
     <string name="Pre8_EspQui_SerD_VI">Ak’ / tux</string>
-    <string name="ExpresionOral_EspQui_SerD">VII.	CHOLAJ, UCH’AB’EXIK / EXPRESIÓN ORAL</string>
+
     <string name="Pre1_EspQui_SerD_VII">Renojel ri katerenej che utzijoxik ri cholajil. \n Aspectos a considerar en la descripción de la secuencia.</string>
     <string name="Pre2_EspQui_SerD_VII">Uz ub’ixik taq le tzik kukojo. \n Pronuncia correctamente las palabras que utiliza.</string>
     <string name="Pre3_EspQui_SerD_VII">Kuk’ex taj uk’ux’ ri kutzijoj. \n Se mantiene en el tema de la conversación.</string>
@@ -754,7 +754,8 @@
     <string name="inst_guia_expresion_oral_kiche_finales">K\'isb\'al taq ub\'eyal / Instrucciones finales\nB\'ij la / Diga: Xujto\'tajik, maltox.\n\nWe xetax ri ajtijoxel pa kaxlan tzij tzalij pa uk\'olib\'al, we maja\' chtaj la.\n Si ya evaluó al estudiante en idioma español, condúzcalo a su lugar, de lo contrario evalúelo en ese idioma.</string>
     <string name="inst_eva_expresion_oral">Instrucciones\nSe creará una historia por cada dibujo.</string>
     <string name="qu_ve_en_cada_una_de_los_dibujos">¿Qué ve en cada una de los dibujos?</string>
-    <string name="aspecto_a_evaluar">Aspecto a evaluar</string>
+    <string name="aspecto_a_evaluar">Aspectos a evaluar</string>
+    <string name="aspecto_a_evaluar_kiche">Jastaq / Aspectos</string>
     <string name="para_terminar">Para terminar...</string>
     <string name="despu_s_paso_que">Después paso que...</string>
     <string name="en_un_lugar_de">En un lugar de...</string>
@@ -762,5 +763,17 @@
     <string name="se_mantiene_en_el_tema_de_conversaci_n">Se mantiene en el tema de conversación.</string>
     <string name="organiza_secuencialmente_sus_ideas_al_expresarse">Organiza secuencialmente sus ideas al expresarse.</string>
     <string name="se_expresa_con_claridad_en_la_conversaci_n">Se expresa con claridad en la conversación.</string>
+    <string name="pronuncia_correctamente_las_palabras_que_utiliza_kiche">Utz ub’ixik taq le tzij kukojo.</string>
+    <string name="se_mantiene_en_el_tema_conversacion_kiche">Kuk’ex taj uk’ux ri kutzijoj.</string>
+    <string name="si_kiche">Je’ / Sí</string>
+    <string name="no_kiche">Je’ taj /No</string>
+    <string name="organiza_secuencialmente_sus_idea_al_expresarse_kiche">Kuchol ronojel ri uno’j are katzijonik.</string>
+    <string name="se_expresa_con_claridad_en_la_conversacion_kiche">Kach’ob’otajik ri utzijob’al</string>
+    <string name="pronuncia_correctamente_las_palabras_que_utiliza_mam">Tumel yolb’ente qyol mam</string>
+    <string name="si_mam">May / Sí</string>
+    <string name="no_mam">Mi’ / No</string>
+    <string name="se_mantiene_en_el_tema_de_conversaci_n_mam">Toj ttxolil tyol</string>
+    <string name="organiza_secuencialmente_sus_ideas_al_expresarse_mam">Nkub’ tnik’un txim tyol</string>
+    <string name="se_expresa_con_claridad_en_la_conversaci_n_mam">Chik’li tyol aj tyolin</string>
 
 </resources>

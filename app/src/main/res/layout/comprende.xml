@@ -16,7 +16,8 @@
                 android:text="II. Cholaj uch'ob'ik tzijob'al / Comprension Oral"
                 android:textSize="45dp"
                 android:textColor="@color/colorPrimaryDark"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:id="@+id/tvInstrucionComprension"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,7 +29,8 @@
                 android:layout_height="wrap_content"
                 android:text="Utz Tzalim tzij"
                 android:textSize="45dp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:id="@+id/tvRespuestaComprende"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,7 +64,8 @@
                         android:layout_width="850dp"
                         android:layout_height="wrap_content"
                         android:text="¿Jas ab'i' / su ri ab 'i'?"
-                        android:textSize="55dp"/>
+                        android:textSize="55dp"
+                        android:id="@+id/tvPreguntaUnoComprende"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

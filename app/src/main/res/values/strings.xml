@@ -97,7 +97,9 @@
     //SERIE D
     <string name="Tit_EspQui_SerD">D. RETAB’ALIL KICH’AB’AL K’ICHE’ KECH AJTIJOXELAB’\nEVALUACIÓN DIAGNÓSTICA DE ESTUDIANTES – K’ICHE’</string>
 
-    <string name="Ins_EspQui_SerD2">Chak’ama’ ub’eyal le kab’ix chawe kajuch’u kicholaj are kakojo ri kutzalij ub’ixik le ajtijoxel. /\nSiga las instrucciones que están en la guía de aplicación y marque en cada serie según sea la respuesta del estudiante.</string>
+    <string name="Ins_EspQui_SerD2">Chak’ama’ ub’eyal le kab’ix chawe kajuch’u kicholaj are kakojo ri kutzalij ub’ixik le ajtijoxel.
+        /\nSiga las instrucciones que están en la guía de aplicación y marque en cada serie según sea la respuesta del estudiante.
+    </string>
 
     <string name="RespuestaCorrecta_EspQui">Utz tzlim tzik \nRespuesta correcta</string>
     <string name="Pre1_EspQui_SerD_TabI">¿Jas ab’i’ / su ri ab’i’?</string>
@@ -105,12 +107,14 @@
     <string name="Pre3_EspQui_SerD_TabI">¿Jas / su ib’i ri anan?</string>
     <string name="Pre4_EspQui_SerD_TabI">¿Jachike rikil utz kana’ utijik?</string>
     <string name="Pre5_EspQui_SerD_TabI">¿Jachike etz’anem utz kaqaj chawach?</string>
+
     <string name="ComprensionOral_EspQui_SerD">II.	CHOLAJ. UCH’OB’IK TZIJOB’AL / COMPRENSIÓN ORAL</string>
     <string name="Pre1_EspQui_SerD_TabII">Chachapa le atza’m.</string>
     <string name="Pre2_EspQui_SerD_TabII">Chayaka le aq’ab’.</string>
     <string name="Pre3_EspQui_SerD_TabII">Chaqasaj le aq’ab’.</string>
     <string name="Pre4_EspQui_SerD_TabII">Chatwajiloq.</string>
     <string name="Pre5_EspQui_SerD_TabII">Chatsutin jumul.</string>
+
     <string name="VocabularioPrecision_EspQui_SerD">III.	CHOLAJ. TAQ TZIJ (K’YAQALIK) / VOCABULARION (PRECISIÓN)</string>
     <string name="Pre1_EspQui_SerD_TabIII">Tat</string>
     <string name="Pre2_EspQui_SerD_TabIII">Nan</string>
@@ -130,6 +134,7 @@
     <string name="Pre16_EspQui_SerD_TabIII">Uq</string>
     <string name="Pre17_EspQui_SerD_TabIII">Laq</string>
     <string name="Pre18_EspQui_SerD_TabIII">xot</string>
+
     <string name="VocabularioProduccion_EspQui_SerD">IV.	CHOLAJ. TAQ TZIJ (KUYA UB0IXIK) / VOCABULARIO (PRODUCCIÓN)</string>
     <string name="Pre1_EspQui_SerD_TabIV">Kar</string>
     <string name="Pre2_EspQui_SerD_TabIV">Ja</string>
@@ -351,6 +356,7 @@
     //SERIE D
     <string name="Tit_MamEsp_SerD">D. XJEB’IL KYE XNAQ’TZANJTZ KYE TNEJIIL KOL \nTOJ QYOL  MAM \nEVALUACIÓN DIAGNÓSTICA DE ESTUDIANTES – MAM</string>
     <string name="Inst_MamEsp_SerD">Tumel chikb’ab’il / instrucciones generales. \nQ’inxa tb’eyil tumel tqanil uj, sqitunka toj junjun k’loj yol a tzaq’web’il. \nSiga las instrucciones que están en la guía de aplicación y marque en cada serie según sea la respuesta del estudiante.</string>
+
     <string name="Ins_MamEsp_SerD_I">I. K’LOJ, LAJB’IL / INTERACCIÓN ORAL</string>
     <string name="RespCorr_MamEsp">Tzaq’web’il toj tumel \nRespuesta correcta</string>
     <string name="Si2_MamEsp">May / Si</string>
@@ -360,6 +366,7 @@
     <string name="Pre3_MamEsp_SerD_I">Ti tb’i ttxuya.</string>
     <string name="Pre4_MamEsp_SerD_I">Ti’xix twaya tajb’ila.</string>
     <string name="Pre5_MamEsp_SerD_I">Ti’xix tsaqchb’ila tajb’ila.</string>
+
     <string name="Ins_MamEsp_SerD_II">II. K’LOJ. NEL TNIK’TIJ YOLB’IL / COMPRENSIÓN ORAL.</string>
     <string name="Pre1_MamEsp_SerD_II">Yek’unxa ttxa’na.</string>
     <string name="Pre2_MamEsp_SerD_II">Q’inksa tq’aba.</string>

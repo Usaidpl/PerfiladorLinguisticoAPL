@@ -18,8 +18,9 @@ import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
  * Created by Roberto on 21/06/16.
  */
 public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener  {
-    private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
+     private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
     private OnFragmentInteractionListener mListener;
+    public static final String KEY_EVALUACION = "Evaluacion";
 
     @Override
     public View onCreateView(LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
@@ -60,24 +61,35 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
     @Override
     public void onClick(View v) {
         Intent intent = null;
+        Bundle b = new Bundle();
+        int evalua = 0;
         switch (v.getId()) {
             case R.id.ivMamEva:
                 intent = new Intent(getActivity(), ExpresionOral.class);
+               // b.putInt(KEY_EVALUACION, 0);
+                intent.putExtras(envia(0));
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivKicheEva:
-                intent = new Intent(getActivity(), Comprende.class);
+                intent = new Intent(getActivity(), Interactua.class);
+                intent.putExtras(envia(1));
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivEspanolEva:
                 intent = new Intent(getActivity(), Interactua.class);
+                intent.putExtras(envia(2));
                 getActivity().startActivity(intent);
                 break;
         }
     }
 
-    public interface OnFragmentInteractionListener {
+    private Bundle envia(int cantidad){
+        Bundle b= new Bundle();
+        b.putInt(KEY_EVALUACION , cantidad);
+        return b;
+    }
 
+    public interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);
     }
 

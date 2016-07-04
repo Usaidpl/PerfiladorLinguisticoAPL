@@ -85,6 +85,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
             switch (v.getId()){
                 case R.id.ivPat:
                     sub_result ++;
+
                     break;
                 case R.id.ivGat:
                          sub_result ++;

@@ -39,7 +39,8 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
                 R.string.Pre1_EspQui_SerD_TabI, R.string.Pre2_EspQui_SerD_TabI, R.string.Pre3_EspQui_SerD_TabI,
                 R.string.Pre4_EspQui_SerD_TabI, R.string.Pre5_EspQui_SerD_TabI},
                 //Segundo vector
-                {}};
+                //Agregar los string de cada idioma
+                {R.string.Ins_MamEsp_SerD_I}, {}};
         setTextCompoent(textos_idiomas);
     }
 

@@ -6,244 +6,338 @@
     android:orientation="vertical"
     tools:context=".view.espanol.ExpresionOral">
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Expresionoral_Esp_SerE"
         android:textAlignment="center"
-        android:textSize="20dp" />
+        android:textSize="@dimen/_13sdp" />
 
-    <TextView
-        android:id="@+id/instruExpresioOral"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/_11sdp"
-        android:text="@string/instruccExpresioOral"
-        android:textSize="@dimen/_12sdp" />
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cvExpresionOral"
+        android:id="@+id/cvEvaExpresionOral"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
+        android:layout_gravity="center"
         android:textAlignment="center"
-        card_view:cardBackgroundColor="@android:color/white"
-        card_view:cardCornerRadius="6dp"
-        card_view:cardElevation="10dp"
-        card_view:cardUseCompatPadding="true">
+        card_view:cardBackgroundColor="@android:color/white">
 
         <ViewFlipper
-            android:id="@+id/viewflipper"
+            android:id="@+id/vfEvaExpresionOral"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_margin="6dp">
+            android:layout_height="match_parent">
 
-
-            <RelativeLayout
-                android:id="@+id/Image1"
+            <LinearLayout
+                android:id="@+id/rlGuiaExpresionOral1"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inst_eva_expresion_oral"
+                    android:textSize="@dimen/_11sdp" />
 
+                <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/qu_ve_en_cada_una_de_los_dibujos"
+                   android:textAlignment="center"
+                   android:textSize="@dimen/_11sdp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/book"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rlGuiaExpresionOral2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aspecto_a_evaluar"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_15sdp" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pregunta1"
+                    android:layout_width="1000dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+                        <ImageView
+                            android:id="@+id/ivPregunta1"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@mipmap/book" />
+                        <TextView
+                            android:id="@+id/tvPregunta1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/ivPregunta1"
+                            android:text="@string/pronuncia_correctamente_las_palabras_que_utiliza"
+                            android:textSize="@dimen/_13sdp" />
+                        <TextView
+                            android:id="@+id/person_age2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvPregunta1"
+                            android:layout_toRightOf="@+id/ivPregunta1" />
+                        <RadioGroup
+                            android:layout_width="200dp"
+                            android:layout_height="90dp"
+                            android:orientation="horizontal"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true">
+                            <RadioButton
+                                android:layout_width="100dp"
+                                android:layout_height="90dp"
+                                android:text="SI"
+                                android:id="@+id/RespSiPregunta1"/>
+                            <RadioButton
+                                android:layout_width="100dp"
+                                android:layout_height="90dp"
+                                android:text="NO"
+                                android:id="@+id/RespNoPregunta1"/>
+                        </RadioGroup>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pregunta2"
+                    android:layout_width="1000dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+                        <ImageView
+                            android:id="@+id/ivPregunta2"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@mipmap/book" />
+                        <TextView
+                            android:id="@+id/tvPregunta2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/ivPregunta2"
+                            android:text="@string/se_mantiene_en_el_tema_de_conversaci_n"
+                            android:textSize="@dimen/_13sdp" />
+                        <TextView
+                            android:id="@+id/person_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvPregunta2"
+                            android:layout_toRightOf="@+id/ivPregunta2" />
+                        <RadioGroup
+                            android:layout_width="200dp"
+                            android:layout_height="90dp"
+                            android:orientation="horizontal"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true">
+                            <RadioButton
+                                android:layout_width="100dp"
+                                android:layout_height="90dp"
+                                android:text="SI"
+                                android:id="@+id/RespSiPregunta2"/>
+                            <RadioButton
+                                android:layout_width="100dp"
+                                android:layout_height="90dp"
+                                android:text="NO"
+                                android:id="@+id/RespNoPregunta2"/>
+                        </RadioGroup>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pregunta3"
+                    android:layout_width="1000dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+                        <ImageView
+                            android:id="@+id/ivPregunta3"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@mipmap/book" />
+                        <TextView
+                            android:id="@+id/tvPregunta3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/ivPregunta3"
+                            android:text="@string/organiza_secuencialmente_sus_ideas_al_expresarse"
+                            android:textSize="@dimen/_13sdp" />
+                        <TextView
+                            android:id="@+id/person_age3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvPregunta3"
+                            android:layout_toRightOf="@+id/ivPregunta3"/>
+                        <RadioGroup
+                            android:layout_width="200dp"
+                            android:layout_height="90dp"
+                            android:orientation="horizontal"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true">
+                            <RadioButton
+                                android:layout_width="100dp"
+                                android:layout_height="90dp"
+                                android:text="SI"
+                                android:id="@+id/RespSiPregunta3"/>
+                            <RadioButton
+                                android:layout_width="100dp"
+                                android:layout_height="90dp"
+                                android:text="NO"
+                                android:id="@+id/RespNoPregunta3"/>
+                        </RadioGroup>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/pregunta4"
+                    android:layout_width="1000dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+                        <ImageView
+                            android:id="@+id/ivPregunta4"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@mipmap/book" />
+                        <TextView
+                            android:id="@+id/tvPregunta4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/ivPregunta4"
+                            android:text="@string/se_expresa_con_claridad_en_la_conversaci_n"
+                            android:textSize="@dimen/_13sdp" />
+                        <TextView
+                            android:id="@+id/person_age4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvPregunta4"
+                            android:layout_toRightOf="@+id/ivPregunta4" />
+                        <RadioGroup
+                            android:layout_width="200dp"
+                            android:layout_height="90dp"
+                            android:orientation="horizontal"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true">
+                            <RadioButton
+                                android:layout_width="100dp"
+                                android:layout_height="90dp"
+                                android:text="SI"
+                                android:id="@+id/RespSiPregunta4"/>
+                            <RadioButton
+                                android:layout_width="100dp"
+                                android:layout_height="90dp"
+                                android:text="NO"
+                                android:id="@+id/RespNoPregunta4"/>
+                        </RadioGroup>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rlGuiaExpresionOral3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/para_terminar"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_11sdp" />
 
                 <ImageView
-                    android:id="@+id/imaExppresionOral"
+                    android:layout_width="1000dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="25dp"
+                    android:src="@mipmap/book" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rlGuiaExpresionOral4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/despu_s_paso_que"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_11sdp" />
+
+                <ImageView
+                    android:layout_width="1000dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="25dp"
+                    android:src="@mipmap/book" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rlGuiaExpresionOral5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/en_un_lugar_de"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_11sdp" />
+
+                <ImageView
+                    android:layout_width="1000dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
 
-            </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/Image2"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/imaExppresionOra2"
-                    android:layout_width="match_parent"
-                    android:layout_height="400dp"
-                    android:padding="25dp"
-                    android:src="@mipmap/ic_back" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/Image3"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/imaExppresionOral3"
-                    android:layout_width="match_parent"
-                    android:layout_height="400dp"
-                    android:padding="25dp"
-                    android:src="@mipmap/book" />
-
-            </RelativeLayout>
+            </LinearLayout>
 
         </ViewFlipper>
     </android.support.v7.widget.CardView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cvExpresionOral"
-        tools:context=".view.espanol.Gramatica">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:animateLayoutChanges="true"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/header1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_green_dark"
-                android:gravity="center_vertical"
-                android:minHeight="?android:attr/listPreferredItemHeight"
-                android:padding="15dp"
-                android:text="Preguntas"
-                android:textColor="@android:color/white" />
-
-            <LinearLayout
-                android:id="@+id/seccion_preguntas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/tbPreguntas"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:stretchColumns="1">
-
-                    <TableRow>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_column="1"
-                            android:text="@string/Pre2_EspQui_SerD_VII"
-                            android:textSize="30dp" />
-
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/card1"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Si" />
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="NO" />
-                        </RadioGroup>
-                    </TableRow>
-
-                    <TableRow>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_column="1"
-                            android:text="@string/Pre3_EspQui_SerD_VII"
-                            android:textSize="30dp" />
-
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/card1"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Si" />
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="NO" />
-                        </RadioGroup>
-                    </TableRow>
-
-                    <TableRow>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_column="1"
-                            android:text="@string/Pre4_EspQui_SerD_VII"
-                            android:textSize="30dp" />
-
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/card1"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Si" />
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="NO" />
-                        </RadioGroup>
-                    </TableRow>
-
-                    <TableRow>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_column="1"
-                            android:text="@string/Pre5_EspQui_SerD_VII"
-                            android:textSize="30dp" />
-
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/card1"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Si" />
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="NO" />
-                        </RadioGroup>
-                    </TableRow>
-
-                </TableLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
 </LinearLayout>

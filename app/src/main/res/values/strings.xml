@@ -97,7 +97,9 @@
     //SERIE D
     <string name="Tit_EspQui_SerD">D. RETAB’ALIL KICH’AB’AL K’ICHE’ KECH AJTIJOXELAB’\nEVALUACIÓN DIAGNÓSTICA DE ESTUDIANTES – K’ICHE’</string>
 
-    <string name="Ins_EspQui_SerD2">Chak’ama’ ub’eyal le kab’ix chawe kajuch’u kicholaj are kakojo ri kutzalij ub’ixik le ajtijoxel. /\nSiga las instrucciones que están en la guía de aplicación y marque en cada serie según sea la respuesta del estudiante.</string>
+    <string name="Ins_EspQui_SerD2">Chak’ama’ ub’eyal le kab’ix chawe kajuch’u kicholaj are kakojo ri kutzalij ub’ixik le ajtijoxel.
+        /\nSiga las instrucciones que están en la guía de aplicación y marque en cada serie según sea la respuesta del estudiante.
+    </string>
 
     <string name="RespuestaCorrecta_EspQui">Utz tzlim tzik \nRespuesta correcta</string>
     <string name="Pre1_EspQui_SerD_TabI">¿Jas ab’i’ / su ri ab’i’?</string>
@@ -105,12 +107,14 @@
     <string name="Pre3_EspQui_SerD_TabI">¿Jas / su ib’i ri anan?</string>
     <string name="Pre4_EspQui_SerD_TabI">¿Jachike rikil utz kana’ utijik?</string>
     <string name="Pre5_EspQui_SerD_TabI">¿Jachike etz’anem utz kaqaj chawach?</string>
+
     <string name="ComprensionOral_EspQui_SerD">II.	CHOLAJ. UCH’OB’IK TZIJOB’AL / COMPRENSIÓN ORAL</string>
     <string name="Pre1_EspQui_SerD_TabII">Chachapa le atza’m.</string>
     <string name="Pre2_EspQui_SerD_TabII">Chayaka le aq’ab’.</string>
     <string name="Pre3_EspQui_SerD_TabII">Chaqasaj le aq’ab’.</string>
     <string name="Pre4_EspQui_SerD_TabII">Chatwajiloq.</string>
     <string name="Pre5_EspQui_SerD_TabII">Chatsutin jumul.</string>
+
     <string name="VocabularioPrecision_EspQui_SerD">III.	CHOLAJ. TAQ TZIJ (K’YAQALIK) / VOCABULARION (PRECISIÓN)</string>
     <string name="Pre1_EspQui_SerD_TabIII">Tat</string>
     <string name="Pre2_EspQui_SerD_TabIII">Nan</string>
@@ -130,6 +134,7 @@
     <string name="Pre16_EspQui_SerD_TabIII">Uq</string>
     <string name="Pre17_EspQui_SerD_TabIII">Laq</string>
     <string name="Pre18_EspQui_SerD_TabIII">xot</string>
+
     <string name="VocabularioProduccion_EspQui_SerD">IV.	CHOLAJ. TAQ TZIJ (KUYA UB0IXIK) / VOCABULARIO (PRODUCCIÓN)</string>
     <string name="Pre1_EspQui_SerD_TabIV">Kar</string>
     <string name="Pre2_EspQui_SerD_TabIV">Ja</string>
@@ -240,7 +245,7 @@
     <string name="Pre6_EspQui_SerE_VI">Maestra</string>
     <string name="Pre7_EspQui_SerE_VI">Doctorara</string>
     <string name="Pre8_EspQui_SerE_VI">Cocinero / chef</string>
-    <string name="Expresionoral_Esp_SerE">VII SERIE EXPRESIÓN ORAL</string>
+    <string name="Expresionoral_Esp_SerE">\nVII SERIE EXPRESIÓN ORAL\n</string>
     <string name="Aspectos_Esp_SerE_VII">Aspectos a considerar en la descripción de la secuencia.</string>
     <string name="Pre1_EspQui_SerE_VII">Pronuncia correctamente las palabras que utiliza.</string>
     <string name="Pre2_EspQui_SerE_VII">Se mantiene en el tema de la conversación.</string>
@@ -351,6 +356,7 @@
     //SERIE D
     <string name="Tit_MamEsp_SerD">D. XJEB’IL KYE XNAQ’TZANJTZ KYE TNEJIIL KOL \nTOJ QYOL  MAM \nEVALUACIÓN DIAGNÓSTICA DE ESTUDIANTES – MAM</string>
     <string name="Inst_MamEsp_SerD">Tumel chikb’ab’il / instrucciones generales. \nQ’inxa tb’eyil tumel tqanil uj, sqitunka toj junjun k’loj yol a tzaq’web’il. \nSiga las instrucciones que están en la guía de aplicación y marque en cada serie según sea la respuesta del estudiante.</string>
+
     <string name="Ins_MamEsp_SerD_I">I. K’LOJ, LAJB’IL / INTERACCIÓN ORAL</string>
     <string name="RespCorr_MamEsp">Tzaq’web’il toj tumel \nRespuesta correcta</string>
     <string name="Si2_MamEsp">May / Si</string>
@@ -360,6 +366,7 @@
     <string name="Pre3_MamEsp_SerD_I">Ti tb’i ttxuya.</string>
     <string name="Pre4_MamEsp_SerD_I">Ti’xix twaya tajb’ila.</string>
     <string name="Pre5_MamEsp_SerD_I">Ti’xix tsaqchb’ila tajb’ila.</string>
+
     <string name="Ins_MamEsp_SerD_II">II. K’LOJ. NEL TNIK’TIJ YOLB’IL / COMPRENSIÓN ORAL.</string>
     <string name="Pre1_MamEsp_SerD_II">Yek’unxa ttxa’na.</string>
     <string name="Pre2_MamEsp_SerD_II">Q’inksa tq’aba.</string>
@@ -743,5 +750,15 @@
     <string name="are_jun_chichu_n_su_ub_ixik_we_k_o_rismachi_nrespuesta_tat_achi">Are jun chichu\'.\n¿Su ub\'ixik we k\'o rismachi?\nRespuesta: tat / achi</string>
     <string name="inst_guia_expresion_oral_kiche">VII. CHOLAJ. UCH\'AB\'EXIK / EXPRESIÓN ORAL\n\nUb\'eyal / Instrucciones\n1. B\'ij la / Diga: Kawok jun tzijob\'elil, che uwokik katerenej jujun taq ub\'eyal kb\'ix chawe\'.\n2. Ta la che chub\'ij / Pida que le diga: Jachike kawilo k\'o chikijujunal le wachib\'al kak\'ut chawach. Señale uno a uno los dibujos y motivelo a que los describa, por ejemplo: Pa le nab\'e ek\'o keb\'alaj taq alitom kuk\' oxib\' ak\'alab\' alab\'om kaketz\'ab\'ej kik, junn ukojom ch\'ech\' pa\'ub\'oq\'och. ek\'o chikixo\'l taq che\'.\n3. B\'ij la / Diga: Kiwok jun tzijob\'elil chirij taq le wachib\'il, at kamaj ub\'ixik, le are kutz\'aqatisaj.\n Señale el primer dibujo y diga: Su xk\'ulmatajik. Pida que siga y motívelo a continuar con la historia.\n4. K\'utu la le rox wachib\'al / Señale la tercra ilustración, diga: Ri uk\'isb\'alil. Motive al estudiante a finalizar la historia.\n5. Juch\'u la chi uwach le wuj le xutzalij ub\'ixik le ajtijoxel. / Marque en la hoja de respuestas según como el/la estudiante se haya expresado.\n\nJastaq / Aspectos\n1. Utz ub\'ixil taq le tzij kukojo.\nPronuncia correctamente las palabras que utiliza.\n2. Kuk\'ex taj uk\'ux ri kutzijoj.\nSe mantiene en el tema de la conversación.\n3. Kuchol ronojel ri uno\'j are katzijonik.\nOrganiza secuencialmente sus ideas al expresarse.\n4. Kach\'ob\'otajik ri utzojob\'al.\nSe expresa con claridad en la conversación.</string>
     <string name="inst_guia_expresion_oral_kiche_finales">K\'isb\'al taq ub\'eyal / Instrucciones finales\nB\'ij la / Diga: Xujto\'tajik, maltox.\n\nWe xetax ri ajtijoxel pa kaxlan tzij tzalij pa uk\'olib\'al, we maja\' chtaj la.\n Si ya evaluó al estudiante en idioma español, condúzcalo a su lugar, de lo contrario evalúelo en ese idioma.</string>
+    <string name="inst_eva_expresion_oral">Instrucciones\nSe creará una historia por cada dibujo.</string>
+    <string name="qu_ve_en_cada_una_de_los_dibujos">¿Qué ve en cada una de los dibujos?</string>
+    <string name="aspecto_a_evaluar">Aspecto a evaluar</string>
+    <string name="para_terminar">Para terminar...</string>
+    <string name="despu_s_paso_que">Después paso que...</string>
+    <string name="en_un_lugar_de">En un lugar de...</string>
+    <string name="pronuncia_correctamente_las_palabras_que_utiliza">Pronuncia correctamente las palabras que utiliza.</string>
+    <string name="se_mantiene_en_el_tema_de_conversaci_n">Se mantiene en el tema de conversación.</string>
+    <string name="organiza_secuencialmente_sus_ideas_al_expresarse">Organiza secuencialmente sus ideas al expresarse.</string>
+    <string name="se_expresa_con_claridad_en_la_conversaci_n">Se expresa con claridad en la conversación.</string>
 
 </resources>

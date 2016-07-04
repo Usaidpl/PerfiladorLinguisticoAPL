@@ -107,8 +107,8 @@ public class NavigationMenu extends AppCompatActivity
             fragment = new ResultadosAula();
             FragmentTransaction = true;
 
-        }else if (id ==  R.id.nav_creditos) {
-            Intent creditos = new Intent(getApplicationContext(), gt.lea.usaid.perfiladorlinguistico.view.Creditos.class);
+        }else if (id ==  R.id.nav_entrevista) {
+            Intent creditos = new Intent(getApplicationContext(), Entrevistas.class);
             startActivity(creditos);
         }
 

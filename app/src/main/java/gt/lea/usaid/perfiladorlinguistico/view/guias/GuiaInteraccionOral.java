@@ -26,8 +26,8 @@ public class GuiaInteraccionOral extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guia_interaccion_oral);
         vfGuiaEsp = (ViewFlipper) findViewById(R.id.vfGuiaInteraccionOral);
-        vfGuiaEsp = (ViewFlipper) findViewById(R.id.vfGuiaInteraccionOralMam);
-        vfGuiaEsp = (ViewFlipper) findViewById(R.id.vfGuiaInteraccionOralKiche);
+        vfGuiaMam = (ViewFlipper) findViewById(R.id.vfGuiaInteraccionOralMam);
+        vfGuiaKiche = (ViewFlipper) findViewById(R.id.vfGuiaInteraccionOralKiche);
 
         initToolBar();
         TabHost host = (TabHost) findViewById(R.id.tabHost);

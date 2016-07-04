@@ -1,109 +1,114 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.GestureDetector;
+import android.support.annotation.IdRes;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.TextView;
+import android.widget.RadioButton;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.utils.DialogoAlerta;
+import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
+import gt.lea.usaid.perfiladorlinguistico.controller.VerificaExpresion;
+import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 /**
  * Created by Roberto on 19/06/2016.
  */
-public class ExpresionOral extends Activity  {
-
-    private TextView instruExpresioOral;
-    private static final int SWIPE_MIN_DISTANCE = 120;
-    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
-    private ViewFlipper viewflipper;
-    private Animation.AnimationListener mAnimationListener;
-    private Context mContext;
-    private final GestureDetector detector = new GestureDetector(new SwipeGestureDetector());
-
-    private View preguntas;
+public class ExpresionOral extends FlipperActivity implements OnInitializeComponent, View.OnClickListener{
+    private RadioButton RespNoPregunta1, RespSiPregunta1, RespNoPregunta2, RespSiPregunta2, RespNoPregunta3, RespSiPregunta3, RespNoPregunta4, RespSiPregunta4;
+    private ViewFlipper vfEvaExpresionOral;
+    private float lastX;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.expresion_oral);
+        vfEvaExpresionOral = (ViewFlipper) findViewById(R.id.vfEvaExpresionOral);
+        setOnInit(null);
 
-        mContext = this;
-        preguntas = findViewById(R.id.seccion_preguntas);
-        viewflipper = (ViewFlipper) this.findViewById(R.id.viewflipper);
-
-        viewflipper.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(final View view, final MotionEvent event) {
-                detector.onTouchEvent(event);
-                return true;
-            }
-        });
-
-        View pregunta = findViewById(R.id.header1);
-
-        pregunta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (preguntas.getVisibility() == View.GONE) {
-                    preguntas.setVisibility(View.VISIBLE);
-                } else {
-                    preguntas.setVisibility(View.GONE);
-                }
-            }
-        });
-
-        mAnimationListener = new Animation.AnimationListener() {
-            public void onAnimationStart(Animation animation) {
-            }
-
-            public void onAnimationRepeat(Animation animation) {
-            }
-
-            public void onAnimationEnd(Animation animation) {
-            }
-        };
     }
 
+    public void setOnInit(@IdRes int[][] matriz) {
+        RespNoPregunta1 =(RadioButton) findViewById(R.id.RespNoPregunta1);
+        RespSiPregunta1 = (RadioButton) findViewById(R.id.RespSiPregunta1);
+        RespNoPregunta2 =(RadioButton) findViewById(R.id.RespNoPregunta2);
+        RespSiPregunta2 = (RadioButton) findViewById(R.id.RespSiPregunta2);
+        RespNoPregunta3 =(RadioButton) findViewById(R.id.RespNoPregunta3);
+        RespSiPregunta3 = (RadioButton) findViewById(R.id.RespSiPregunta3);
+        RespNoPregunta4 =(RadioButton) findViewById(R.id.RespNoPregunta4);
+        RespSiPregunta4 = (RadioButton) findViewById(R.id.RespSiPregunta4);
+        RespNoPregunta4.setOnClickListener(this);
+        RespSiPregunta4.setOnClickListener(this);
 
-
-    class SwipeGestureDetector extends GestureDetector.SimpleOnGestureListener {
-        @Override
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            try {
-                if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                    viewflipper.setInAnimation(AnimationUtils.loadAnimation(mContext, R.anim.left_in));
-                    viewflipper.setOutAnimation(AnimationUtils.loadAnimation(mContext, R.anim.left_out));
-                    viewflipper.getInAnimation().setAnimationListener(mAnimationListener);
-                    viewflipper.showNext();
-                    return true;
-                } else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                    viewflipper.setInAnimation(AnimationUtils.loadAnimation(mContext, R.anim.right_in));
-                    viewflipper.setOutAnimation(AnimationUtils.loadAnimation(mContext, R.anim.right_out));
-                    viewflipper.getInAnimation().setAnimationListener(mAnimationListener);
-                    viewflipper.showPrevious();
-                    return true;
-                }
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return false;
+    }
+    @Override
+    public void onClick(View v) {
+        boolean[][] radios_selected = {
+                {RespNoPregunta1.isChecked(),RespNoPregunta2.isChecked(), RespNoPregunta3.isChecked(), RespNoPregunta4.isChecked()},
+                {RespSiPregunta1.isChecked(),RespSiPregunta2.isChecked(), RespSiPregunta3.isChecked(), RespSiPregunta4.isChecked()}};
+        VerificaExpresion vr = new VerificaExpresion(radios_selected, null);
+        try {
+            float resultado = vr.getResultado();
+            descition(resultado);
+            setNextContext(ExpresionOral.this, NavigationMenu.class);
+        } catch (Exception e) {
+            //e.printStackTrace();
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
+    private void descition(float resultado){
+        if(resultado >= (100/40) + 1) {
+            setNextContext(ExpresionOral.this, NavigationMenu.class);
+        }
+        else{
+            setNextContext(this, Interactua.class);
+        }
+    }
+
+
     @Override
     protected void onPause() {
         super.onPause();
         finish();
     }
 
+    public boolean onTouchEvent(MotionEvent touchevent) {
+        switch (touchevent.getAction()) {
+
+            case MotionEvent.ACTION_DOWN:
+                lastX = touchevent.getX();
+                break;
+            case MotionEvent.ACTION_UP:
+                float currentX = touchevent.getX();
+
+                if (lastX < currentX) {
+
+                    if (vfEvaExpresionOral.getDisplayedChild() == 0)
+                        break;
+
+                    vfEvaExpresionOral.setInAnimation(this, R.anim.slide_in_from_left);
+
+                    vfEvaExpresionOral.setOutAnimation(this, R.anim.slide_out_to_right);
+
+                    vfEvaExpresionOral.showNext();
+                }
+
+                if (lastX > currentX) {
+
+                    if (vfEvaExpresionOral.getDisplayedChild() == 1)
+                        break;
+
+                    vfEvaExpresionOral.setInAnimation(this, R.anim.slide_in_from_right);
+                    vfEvaExpresionOral.setOutAnimation(this, R.anim.slide_out_to_left);
+
+                    vfEvaExpresionOral.showPrevious();
+                }
+                break;
+        }
+        return false;
+    }
 }

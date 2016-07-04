@@ -18,16 +18,17 @@
             android:id="@+id/nav_resultados_por_aula"
             android:icon="@mipmap/ic_guia"
             android:title="Resultados por Aula" />
+        <item
+            android:id="@+id/nav_entrevista"
+            android:icon="@mipmap/ic_entrevistas"
+            android:title="Entrevistas" />
 
 
     </group>
 
     <item android:title="Comunicate">
         <menu>
-            <item
-                android:id="@+id/nav_creditos"
-                android:icon="@mipmap/ic_creditos"
-                android:title="Creditos" />
+
         </menu>
     </item>
 

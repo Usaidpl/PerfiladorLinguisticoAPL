@@ -83,7 +83,7 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
                         R.string.Pre1_MamEsp_SerE_I, R.string.Pre2_MamEsp_SerE_I, R.string.Pre3_MamEsp_SerE_I,
                         R.string.Pre4_MamEsp_SerE_I, R.string.Pre5_MamEsp_SerE_I}};
 
-        setTextCompoent(textos_idiomas);
+        //setTextCompoent(textos_idiomas);
     }
 
     @Override
@@ -109,11 +109,11 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
         }
         intruduccion.setText(id_intro);
         respuesta_correcta.setText(id_intro);
-        tvPregunta1.setText(id_text1);
-        tvPregunta2.setText(id_text2);
-        tvPregunta3.setText(id_text3);
-        tvPregunta4.setText(id_text4);
-        tvPregunta5.setText(id_text5);
+//        tvPregunta1.setText(id_text1);
+  //      tvPregunta2.setText(id_text2);
+    //    tvPregunta3.setText(id_text3);
+      //  tvPregunta4.setText(id_text4);
+        //tvPregunta5.setText(id_text5);
     }
 
     @Override

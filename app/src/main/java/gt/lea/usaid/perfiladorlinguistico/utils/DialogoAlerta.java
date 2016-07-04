@@ -46,7 +46,7 @@ public class DialogoAlerta {
         d.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                confirm();
+               // confirm();
             }
         });
         d.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {

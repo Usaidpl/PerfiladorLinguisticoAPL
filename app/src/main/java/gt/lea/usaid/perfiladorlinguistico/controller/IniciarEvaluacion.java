@@ -65,7 +65,7 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         int evalua = 0;
         switch (v.getId()) {
             case R.id.ivMamEva:
-                intent = new Intent(getActivity(), ExpresionOral.class);
+                intent = new Intent(getActivity(), Interactua.class);
                // b.putInt(KEY_EVALUACION, 0);
                 intent.putExtras(envia(0));
                 getActivity().startActivity(intent);

@@ -31,27 +31,12 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.comprende);
-        Bundle b = getIntent().getExtras();
-        serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
-        int[][] textos_idiomas = {};
-        setTextCompoent(textos_idiomas);
         setOnInit(null);
     }
 
     @Override
-    public void setTextCompoent(int[][] textos_idiomas) {
-        int vector[] = null, texto = 0;
-        vector = textos_idiomas[serie];
-        for(int v = 0; v < vector.length; v++){
-            texto = vector[v];
-            intruduccion.setText(texto);
-            respuesta_correcta.setText(texto);
-            tvPregunta1.setText(texto);
-            tvPregunta2.setText(texto);
-            tvPregunta3.setText(texto);
-            tvPregunta4.setText(texto);
-            tvPregunta5.setText(texto);
-        }
+    public void setTextCompoent(@IdRes int[][] matriz_id_texto) {
+
     }
 
     @Override
@@ -109,4 +94,6 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
         super.onPause();
         finish();
     }
+
+
 }

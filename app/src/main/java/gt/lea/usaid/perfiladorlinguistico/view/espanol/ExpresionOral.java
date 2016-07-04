@@ -11,7 +11,7 @@ import android.widget.ViewFlipper;
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
-import gt.lea.usaid.perfiladorlinguistico.controller.VerificaExpresion;
+import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 /**
@@ -49,9 +49,9 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
         boolean[][] radios_selected = {
                 {RespNoPregunta1.isChecked(),RespNoPregunta2.isChecked(), RespNoPregunta3.isChecked(), RespNoPregunta4.isChecked()},
                 {RespSiPregunta1.isChecked(),RespSiPregunta2.isChecked(), RespSiPregunta3.isChecked(), RespSiPregunta4.isChecked()}};
-        VerificaExpresion vr = new VerificaExpresion(radios_selected, null);
+        Verifica vr = new Verifica(radios_selected, null);
         try {
-            float resultado = vr.getResultado();
+            float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
             descition(resultado);
             setNextContext(ExpresionOral.this, NavigationMenu.class);
         } catch (Exception e) {

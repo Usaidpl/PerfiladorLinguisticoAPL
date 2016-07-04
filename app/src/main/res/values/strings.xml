@@ -432,8 +432,10 @@
     <string name="Pre2_MamEsp_SerD_VII">Toj ttxolil tyol. \nSemantiene  en eltema de la conversación.</string>
     <string name="Pre3_MamEsp_SerD_VII">Nkub’ tnik’un txim tyol. \nOrganiza secuencialmente sus ideas al expresarse.</string>
     <string name="Pre4_MamEsp_SerD_VII">Chik’li tyol aj tyolin \nSe expresa en la claridad de la conversación.</string>
+
     <string name="Tit_MamEsp_SerE">E. EVALUACIÓN DIAGNOSTICA DE ESTUDIANTES \nESPAÑOL</string>
     <string name="Ins_MamEsp_SerE">Instrucciones generales: \nSiga las instrucciones que están en la guía de aplicación y marque en cada serie según sea la respuesta del estudiante.</string>
+
     <string name="Ins_MamEsp_SerE_I">I. SERIE. INTERACCION ORAL</string>
     <string name="RespuestaCorrecta_Esp">Respuesta correcta</string>
     <string name="Pre1_MamEsp_SerE_I">¿Cómo se llama?</string>

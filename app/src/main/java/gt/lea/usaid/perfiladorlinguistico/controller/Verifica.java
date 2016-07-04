@@ -7,7 +7,8 @@ public class Verifica {
 
     private boolean[] array_true, array_false;
     public static final int TOTAL_SERIE = 100;
-    public static final int PREGUNTA = 5;
+    //public static final int PREGUNTA = 5;
+    //public static final int PREGUNTA
     private String tabla = "";
 
     public Verifica(boolean[] arreglo_verdadero, boolean[] arreglo_falso, String nombre_tabla){
@@ -22,12 +23,26 @@ public class Verifica {
         tabla = nombre_tabla;
     }
 
+    //Last method
     public float getResultado()throws Exception{
         float resultado = 0, sub_resultado = 0;
         if(toCompara() == false)
             throw  new Exception("Error: todo debe tener una respuesta.");
         else{
-            sub_resultado = TOTAL_SERIE / PREGUNTA;
+            //replace PREGUNTA for address complet type Const.
+            sub_resultado = TOTAL_SERIE / Pregunta.Interactua.PREGUNTA;
+            sub_resultado = toVerificaRespuesta();
+        }
+        return resultado;
+    }
+
+    //New Method
+    public float getResultado(int cantidad_pregunta)throws Exception{
+        float resultado = 0, sub_resultado = 0;
+        if(toCompara(cantidad_pregunta) == false)
+            throw  new Exception("Error: todo debe tener una respuesta.");
+        else{
+            sub_resultado = TOTAL_SERIE / cantidad_pregunta;
             sub_resultado = toVerificaRespuesta();
         }
         return resultado;
@@ -42,10 +57,21 @@ public class Verifica {
         respuesta1 = resultado(array_true);
         respuesta2 = resultado(array_false);
         resultado = respuesta1 + respuesta2;
-        if(resultado == PREGUNTA)
+        if(resultado == Pregunta.Interactua.PREGUNTA)
             return true;
         else
         return false;
+    }
+
+    private boolean toCompara(int preguntas) {
+        int resultado = 0, respuesta1, respuesta2;
+        respuesta1 = resultado(array_true);
+        respuesta2 = resultado(array_false);
+        resultado = respuesta1 + respuesta2;
+        if(resultado == preguntas)
+            return true;
+        else
+            return false;
     }
 
     private int resultado(boolean[] arreglo){
@@ -65,5 +91,17 @@ public class Verifica {
             //db.execute("INSERT INTO " + tabla + "(" + insert + ");");
         }
         return resultado;
+    }
+
+    public static final class Pregunta{
+
+        public static final class Interactua{
+            public static final int PREGUNTA = 5;
+        }
+
+        public static final class Expresa{
+            public static final int PREGUNTA = 4;
+        }
+
     }
 }

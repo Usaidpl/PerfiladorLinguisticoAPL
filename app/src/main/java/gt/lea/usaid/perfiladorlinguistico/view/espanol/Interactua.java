@@ -33,14 +33,22 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
         setOnInit(null);
         Bundle b = getIntent().getExtras();
         serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
+
         int textos_idiomas[][] = {
-                //primer vector
+                //primer vector -- idioma Quiche
                 {R.string.Ins_EspQui_SerD2, R.string.RespuestaCorrecta_EspQui,
                 R.string.Pre1_EspQui_SerD_TabI, R.string.Pre2_EspQui_SerD_TabI, R.string.Pre3_EspQui_SerD_TabI,
                 R.string.Pre4_EspQui_SerD_TabI, R.string.Pre5_EspQui_SerD_TabI},
                 //Segundo vector
-                //Agregar los string de cada idioma
-                {R.string.Ins_MamEsp_SerD_I}, {}};
+                //Agregar los string de cada idioma -- Man
+                {R.string.Ins_MamEsp_SerD_I, R.string.RespCorr_MamEsp,
+                        R.string.Pre1_MamEsp_SerD_I, R.string.Pre2_MamEsp_SerD_I, R.string.Pre3_MamEsp_SerD_I,
+                        R.string.Pre4_MamEsp_SerD_I, R.string.Pre5_MamEsp_SerD_I},
+                //string de idioma español
+                {R.string.Ins_MamEsp_SerE_I, R.string.RespuestaCorrecta_Esp,
+                R.string.Pre1_MamEsp_SerE_I, R.string.Pre2_MamEsp_SerE_I, R.string.Pre3_MamEsp_SerE_I,
+                        R.string.Pre4_MamEsp_SerE_I, R.string.Pre5_MamEsp_SerE_I}};
+
         setTextCompoent(textos_idiomas);
     }
 

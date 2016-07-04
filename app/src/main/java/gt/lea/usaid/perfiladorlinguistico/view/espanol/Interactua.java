@@ -30,43 +30,11 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interpreta);
-        setOnInit(null);
         Bundle b = getIntent().getExtras();
         serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
-
-        int textos_idiomas[][] = {
-                //primer vector -- idioma Quiche
-                {R.string.Ins_EspQui_SerD2, R.string.RespuestaCorrecta_EspQui,
-                R.string.Pre1_EspQui_SerD_TabI, R.string.Pre2_EspQui_SerD_TabI, R.string.Pre3_EspQui_SerD_TabI,
-                R.string.Pre4_EspQui_SerD_TabI, R.string.Pre5_EspQui_SerD_TabI},
-                //Segundo vector
-                //Agregar los string de cada idioma -- Man
-                {R.string.Ins_MamEsp_SerD_I, R.string.RespCorr_MamEsp,
-                        R.string.Pre1_MamEsp_SerD_I, R.string.Pre2_MamEsp_SerD_I, R.string.Pre3_MamEsp_SerD_I,
-                        R.string.Pre4_MamEsp_SerD_I, R.string.Pre5_MamEsp_SerD_I},
-                //string de idioma español
-                {R.string.Ins_MamEsp_SerE_I, R.string.RespuestaCorrecta_Esp,
-                R.string.Pre1_MamEsp_SerE_I, R.string.Pre2_MamEsp_SerE_I, R.string.Pre3_MamEsp_SerE_I,
-                        R.string.Pre4_MamEsp_SerE_I, R.string.Pre5_MamEsp_SerE_I}};
-
-        setTextCompoent(textos_idiomas);
+        setOnInit(null);
     }
 
-    @Override
-    public void setTextCompoent(@IdRes int [][] textos){
-        int vector[] = null, texto = 0;
-        vector = textos[serie];
-        for(int v = 0; v < vector.length; v++){
-            texto = vector[v];
-            intruduccion.setText(texto);
-            respuesta_correcta.setText(texto);
-            tvPregunta1.setText(texto);
-            tvPregunta2.setText(texto);
-            tvPregunta3.setText(texto);
-            tvPregunta4.setText(texto);
-            tvPregunta5.setText(texto);
-        }
-    }
     private void msg(String s){
         Toast.makeText(this, s ,Toast.LENGTH_SHORT).show();
     }
@@ -93,9 +61,59 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
         tvPregunta4 = (TextView) findViewById(R.id.tvPreguntaCuatroInteractua);
         tvPregunta5 = (TextView) findViewById(R.id.tvPreguntaCincoInteractua);
 
+        textos();
 
         respuesta9.setOnClickListener(this);
         respuesta10.setOnClickListener(this);
+    }
+
+    private void textos(){
+        int textos_idiomas[][] = {
+                //-- idioma Quiche --
+                {R.string.Ins_EspQui_SerD2, R.string.RespuestaCorrecta_EspQui,
+                        R.string.Pre1_EspQui_SerD_TabI, R.string.Pre2_EspQui_SerD_TabI, R.string.Pre3_EspQui_SerD_TabI,
+                        R.string.Pre4_EspQui_SerD_TabI, R.string.Pre5_EspQui_SerD_TabI},
+                //Segundo vector
+                //-- idioma Man --
+                {R.string.Ins_MamEsp_SerD_I, R.string.RespCorr_MamEsp,
+                        R.string.Pre1_MamEsp_SerD_I, R.string.Pre2_MamEsp_SerD_I, R.string.Pre3_MamEsp_SerD_I,
+                        R.string.Pre4_MamEsp_SerD_I, R.string.Pre5_MamEsp_SerD_I},
+                //--idioma español --
+                {R.string.Ins_MamEsp_SerE_I, R.string.RespuestaCorrecta_Esp,
+                        R.string.Pre1_MamEsp_SerE_I, R.string.Pre2_MamEsp_SerE_I, R.string.Pre3_MamEsp_SerE_I,
+                        R.string.Pre4_MamEsp_SerE_I, R.string.Pre5_MamEsp_SerE_I}};
+
+        setTextCompoent(textos_idiomas);
+    }
+
+    @Override
+    public void setTextCompoent(@IdRes int [][] textos){
+        int vector[] = textos[serie], texto = 0;
+        int  id_intro = 0, id_resp = 0,id_text1 = 0, id_text2 = 0, id_text3 = 0, id_text4 = 0, id_text5 = 0;
+        for(int v = 0; v < vector.length; v++){
+            texto = vector[v];
+            if(id_intro == 0)
+                id_intro = texto;
+            else  if(id_intro > 0 && id_resp == 0)
+                id_resp = texto;
+            else  if(id_resp > 0 && id_text1 == 0)
+                id_text1 = texto;
+            else  if(id_text1 > 0 && id_text2 == 0)
+                id_text2 = texto;
+            else  if(id_text2 > 0 && id_text3 == 0)
+                id_text3 = texto;
+            else  if(id_text3 > 0 && id_text4 == 0)
+                id_text4 = texto;
+            else  if(id_text4 > 0 && id_text5 == 0)
+                id_text5 = texto;
+        }
+        intruduccion.setText(id_intro);
+        respuesta_correcta.setText(id_intro);
+        tvPregunta1.setText(id_text1);
+        tvPregunta2.setText(id_text2);
+        tvPregunta3.setText(id_text3);
+        tvPregunta4.setText(id_text4);
+        tvPregunta5.setText(id_text5);
     }
 
     @Override

@@ -19,7 +19,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
  */
 public class Precisiona extends FlipperActivity implements OnInitializeComponent {
 
-    private static final int TOTAL_SERIE = 18;
+    private static final int TOTAL_SERIE = 6;//18;
     private int pregunta = 0;
     private ImageView image, image2, image3;
     private ViewFlipper flipper;
@@ -28,7 +28,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.precisiona);
-        int[][] ids = {{R.id.ivPoll, R.id.ivPat, R.id.ivPav}};//,//{R.id.ivBonny, R.id.ivDog, R.id.ivGat},{},{}};
+        int[][] ids = {{R.id.ivPoll, R.id.ivPat, R.id.ivPav}};//,{R.id.ivBonny, R.id.ivDog, R.id.ivGat},{},{}};
         setOnInit(ids);
     }
 
@@ -53,21 +53,21 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
 
     }
 
-    //@DocumentAutor(autor = "Bryan", tipy_create = 'F')
+
     private View.OnClickListener click = new View.OnClickListener(){
         int resultado = 0;
         @Override
         public void onClick(View v) {
-            /*this.selectImageView(v);
+            this.selectImageView(v);
             setNextContext(Precisiona.this, ExpresionOral.class);
             if(pregunta == TOTAL_SERIE){
-
                 setNextContext(Precisiona.this, Gramatica.class);
             }
             else{
                 resultado += this.selectImageView(v);
                 pregunta ++;
-            }*/
+                flipper.showNext();
+            }
         selectImageView(v);
 
         }
@@ -77,16 +77,17 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
             switch (v.getId()){
                 case R.id.ivPat:
                     sub_result ++;
-                    // case R.id.ivGat:
-                    //     sub_result ++;
-                 /*   case R.id.ivVac:
-                 case R.id.ivThree:
+                case R.id.ivGat:
+                         sub_result ++;
+                case R.id.ivVac:
                     sub_result ++;
-                 case R.id.ivElot:
+                 case R.id.ivArb:
                     sub_result ++;
-                 case R.id.iv.banano:
+                 case R.id.ivElet:
                     sub_result ++;
-                 case R.id.ivBus:
+                 case R.id.ivBanano:
+                    sub_result ++;
+                 /*case R.id.ivBus:
                     sub_result ++;
                  case R.id.ivCar:
                     sub_result ++;
@@ -112,7 +113,6 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                     sub_result ++;*/
                 default:
                     sub_result += 0;
-
             }
 
             result = sub_result;

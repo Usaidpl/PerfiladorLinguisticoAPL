@@ -775,5 +775,8 @@
     <string name="se_mantiene_en_el_tema_de_conversaci_n_mam">Toj ttxolil tyol</string>
     <string name="organiza_secuencialmente_sus_ideas_al_expresarse_mam">Nkub’ tnik’un txim tyol</string>
     <string name="se_expresa_con_claridad_en_la_conversaci_n_mam">Chik’li tyol aj tyolin</string>
+    <string name="tvAli">ali</string>
+    <string name="tvTatAchi">Tat Achi</string>
+    <string name="tvMamTat">Mam / Tat</string>
 
 </resources>

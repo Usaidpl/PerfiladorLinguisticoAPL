@@ -13,14 +13,14 @@
         android:text="\nVI. CHOLAJ. UTZALAJ UKOJIK CH’AB’AL / GRAMÁTICA\nAli, ala. (jujunal, k’itaq) Número (singular o plural)"
         android:textSize="20dp"
         android:textAlignment="center"
-        android:id="@+id/title_gramatica_kiche"/>
+        android:id="@+id/title_gramatica_kiche_kiche"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/_12sdp"
         android:padding="@dimen/_11sdp"
         android:text="Se le enseñaran algunos dibujos, dígame qué es cada uno."
-        android:id="@+id/tvInstruccGramaticaKiche"/>
+        android:id="@+id/tvInstrGramaticaKicheKiche"/>
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvImage1"
@@ -207,14 +207,14 @@
 
 
                 <ImageView
-                    android:id="@+id/ivLapices"
+                    android:id="@+id/ivmes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
 
                 <TableLayout
-                    android:id="@+id/tlLapices"
+                    android:id="@+id/tlmes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -225,7 +225,7 @@
                     <TableRow>
 
                         <Switch
-                            android:id="@+id/swLapices"
+                            android:id="@+id/SwTaqMes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
@@ -250,21 +250,21 @@
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si"
-                                android:id="@+id/SiLapices"/>
+                                android:id="@+id/SiMes"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no"
-                                android:id="@+id/NoLapices"/>
+                                android:id="@+id/NoMes"/>
 
                         </RadioGroup>
                     </TableRow>
                 </TableLayout>
 
                 <TextView
-                    android:id="@+id/tvLapices"
+                    android:id="@+id/tvMes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -282,14 +282,14 @@
 
 
                 <ImageView
-                    android:id="@+id/ivLapiz"
+                    android:id="@+id/ivtaqmes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
 
                 <TableLayout
-                    android:id="@+id/tlLapiz"
+                    android:id="@+id/tltaqmes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -300,7 +300,7 @@
                     <TableRow>
 
                         <Switch
-                            android:id="@+id/swLapiz"
+                            android:id="@+id/SwMes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
@@ -318,7 +318,7 @@
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/rgLapiz"
+                            android:layout_alignBottom="@+id/rgtaqmes"
                             android:orientation="horizontal">
 
                             <RadioButton
@@ -326,21 +326,21 @@
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si"
-                                android:id="@+id/SiLapiz"/>
+                                android:id="@+id/SiTaqMes"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no"
-                                android:id="@+id/NoLapiz"/>
+                                android:id="@+id/NoTaqMes"/>
 
                         </RadioGroup>
                     </TableRow>
                 </TableLayout>
 
                 <TextView
-                    android:id="@+id/tvLapiz"
+                    android:id="@+id/tvTaqMes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -359,14 +359,14 @@
 
 
                 <ImageView
-                    android:id="@+id/ivAbuelo"
+                    android:id="@+id/ivali"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
 
                 <TableLayout
-                    android:id="@+id/tlAbuelo"
+                    android:id="@+id/tlali"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -377,7 +377,7 @@
                     <TableRow>
 
                         <Switch
-                            android:id="@+id/swAbuelo"
+                            android:id="@+id/SwAli"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
@@ -395,7 +395,7 @@
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/rgAbuelo"
+                            android:layout_alignBottom="@+id/rgali"
                             android:orientation="horizontal">
 
                             <RadioButton
@@ -403,27 +403,27 @@
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si"
-                                android:id="@+id/SiAbuelo"/>
+                                android:id="@+id/SiAli"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no"
-                                android:id="@+id/NoAbuelo"/>
+                                android:id="@+id/NoAli"/>
 
                         </RadioGroup>
                     </TableRow>
                 </TableLayout>
 
                 <TextView
-                    android:id="@+id/tvAbuelo"
+                    android:id="@+id/tvAli"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_column="0"
                     android:layout_gravity="center"
-                    android:text="@string/tvabuelo"
+                    android:text="@string/tvAli"
                     android:textSize="30dp" />
 
             </RelativeLayout>
@@ -436,14 +436,14 @@
 
 
                 <ImageView
-                    android:id="@+id/ivMaestra"
+                    android:id="@+id/ivtatachi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
 
                 <TableLayout
-                    android:id="@+id/tlMaestra"
+                    android:id="@+id/tltatachi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -454,7 +454,7 @@
                     <TableRow>
 
                         <Switch
-                            android:id="@+id/swMaestra"
+                            android:id="@+id/SwTatAchi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
@@ -479,27 +479,27 @@
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si"
-                                android:id="@+id/SiMaestra"/>
+                                android:id="@+id/SiTatAchi"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no"
-                                android:id="@+id/NoMaestra"/>
+                                android:id="@+id/NoTatAchi"/>
 
                         </RadioGroup>
                     </TableRow>
                 </TableLayout>
 
                 <TextView
-                    android:id="@+id/tvMaestra"
+                    android:id="@+id/tvTatAchi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_column="0"
                     android:layout_gravity="center"
-                    android:text="@string/tvmaestra"
+                    android:text="@string/tvTatAchi"
                     android:textSize="30dp" />
 
             </RelativeLayout>
@@ -512,14 +512,14 @@
 
 
                 <ImageView
-                    android:id="@+id/ivDoctora"
+                    android:id="@+id/ivmamtat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
 
                 <TableLayout
-                    android:id="@+id/tlDoctora"
+                    android:id="@+id/tlmamtat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -530,7 +530,7 @@
                     <TableRow>
 
                         <Switch
-                            android:id="@+id/swDoctora"
+                            android:id="@+id/SwMamTat"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
@@ -555,27 +555,27 @@
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/Si"
-                                android:id="@+id/SiDoctora"/>
+                                android:id="@+id/SiMamTat"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no"
-                                android:id="@+id/NoDoctora"/>
+                                android:id="@+id/NoMamTat"/>
 
                         </RadioGroup>
                     </TableRow>
                 </TableLayout>
 
                 <TextView
-                    android:id="@+id/tvDoctora"
+                    android:id="@+id/tvMamTat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_column="0"
                     android:layout_gravity="center"
-                    android:text="@string/tvdoctora"
+                    android:text="@string/tvMamTat"
                     android:textSize="30dp" />
 
             </RelativeLayout>
@@ -588,14 +588,14 @@
 
 
                 <ImageView
-                    android:id="@+id/ivChef"
+                    android:id="@+id/ivaktux"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
 
                 <TableLayout
-                    android:id="@+id/tlChef"
+                    android:id="@+id/tlaktux"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -606,7 +606,7 @@
                     <TableRow>
 
                         <Switch
-                            android:id="@+id/swChef"
+                            android:id="@+id/SwAkTux"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
@@ -631,21 +631,21 @@
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si"
-                                android:id="@+id/SiChef"/>
+                                android:id="@+id/SiAkTux"/>
 
                             <RadioButton
                                 android:layout_width="91dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no"
-                                android:id="@+id/NoChef"/>
+                                android:id="@+id/NoAkTux"/>
 
                         </RadioGroup>
                     </TableRow>
                 </TableLayout>
 
                 <TextView
-                    android:id="@+id/tvChef"
+                    android:id="@+id/tvAkTux"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"

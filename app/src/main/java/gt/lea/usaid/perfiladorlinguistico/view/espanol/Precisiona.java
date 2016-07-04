@@ -65,7 +65,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                 resultado += selectImageView(v);
                 String s = String.valueOf(resultado);
                 Toast.makeText(Precisiona.this,s,Toast.LENGTH_SHORT).show();
-                setNextContext(Precisiona.this, Gramatica.class);
+                setNextContext(Precisiona.this, Vocabulario.class);
             }
             else{
                 resultado += this.selectImageView(v);

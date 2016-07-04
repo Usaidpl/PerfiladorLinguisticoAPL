@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
@@ -16,7 +17,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
  */
 public class Precisiona extends FlipperActivity implements OnInitializeComponent {
 
-    private static final int TOTAL_SERIE = 6;//18;
+    private static final int TOTAL_SERIE = 5;//18;
     private int pregunta = 0;
     private ImageView image, image2, image3;
     private ViewFlipper flipper;
@@ -52,7 +53,6 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
         image.setOnClickListener(click);
         image2.setOnClickListener(click);
         image3.setOnClickListener(click);
-
     }
 
 
@@ -62,7 +62,11 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
         public void onClick(View v) {
             this.selectImageView(v);
             //setNextContext(Precisiona.this, ExpresionOral.class);
+
             if(pregunta == TOTAL_SERIE){
+                resultado += selectImageView(v);
+                String s = String.valueOf(resultado);
+                Toast.makeText(Precisiona.this,s,Toast.LENGTH_SHORT).show();
                 setNextContext(Precisiona.this, Gramatica.class);
             }
             else{
@@ -72,7 +76,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                 setOnInit(ids);
                 flipper.showNext();
             }
-        selectImageView(v);
+        //selectImageView(v);
 
         }
 
@@ -81,16 +85,22 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
             switch (v.getId()){
                 case R.id.ivPat:
                     sub_result ++;
+                    break;
                 case R.id.ivGat:
                          sub_result ++;
+                    break;
                 case R.id.ivVac:
                     sub_result ++;
+                    break;
                  case R.id.ivArb:
                     sub_result ++;
+                     break;
                  case R.id.ivElet:
                     sub_result ++;
+                     break;
                  case R.id.ivBanano:
                     sub_result ++;
+                     break;
                  /*case R.id.ivBus:
                     sub_result ++;
                  case R.id.ivCar:

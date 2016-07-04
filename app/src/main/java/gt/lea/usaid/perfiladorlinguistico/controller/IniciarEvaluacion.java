@@ -13,6 +13,7 @@ import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Comprende;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Precisiona;
 
 /**
  * Created by Roberto on 21/06/16.
@@ -65,7 +66,7 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         int evalua = 0;
         switch (v.getId()) {
             case R.id.ivMamEva:
-                intent = new Intent(getActivity(), Interactua.class);
+                intent = new Intent(getActivity(), Precisiona.class);
                // b.putInt(KEY_EVALUACION, 0);
                 intent.putExtras(envia(0));
                 getActivity().startActivity(intent);

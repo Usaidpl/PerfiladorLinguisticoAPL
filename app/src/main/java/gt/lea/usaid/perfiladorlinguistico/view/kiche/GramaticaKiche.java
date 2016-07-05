@@ -27,9 +27,9 @@ import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 
 public class GramaticaKiche  extends Activity implements View.OnClickListener, OnInitializeComponent {
     private ViewFlipper vf;
-    private TextView title_gramatica_kiche, tvInstrGramaticaKiche, tvPelota, tvPelotas, tvMes, tvTaqMes, tvAli, tvTatAchi, tvMamTat, tvAkTux;
-    private RadioButton SiPelota, NoPelota, SiPelotas, NoPelotas, SiMes, NoMes, SiTaqMes, NoTaqMes, SiAli, NoAli, SiTatAchi, NoTatAchi, SiMamTat, NoMamTat, SiAkTux, NoAkTux;
-    private Switch SwPelota, SwPelotas, SwMes, SwTaqMes, SwAli, SwTatAchi, SwMamTat, SwAkTux;
+    private TextView title_gramatica_kiche, tvInstrGramaticaKiche, tvXajab, tvTaqXajab, tvMes, tvTaqMes, tvAli, tvTatAchi, tvMamTat, tvAkTux;
+    private RadioButton SiXajab, NoXajab, SiTaqXajab, NoTaqXajab, SiMes, NoMes, SiTaqMes, NoTaqMes, SiAli, NoAli, SiTatAchi, NoTatAchi, SiMamTat, NoMamTat, SiAkTux, NoAkTux;
+    private Switch SwXajab, SwTaqXajab, SwMes, SwTaqMes, SwAli, SwTatAchi, SwMamTat, SwAkTux;
     private int[] dr = {R.mipmap.book};
 
     @Override
@@ -45,18 +45,18 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.SiPelota:
+            case R.id.SiXajab:
                 vf.showNext();
                 tvInstrGramaticaKiche.setText("");
                 break;
-            case R.id.NoPelota:
+            case R.id.NoXajab:
                 vf.showNext();
                 tvInstrGramaticaKiche.setText("");
                 break;
-            case R.id.SiPelotas:
+            case R.id.SiTaqXajab:
                 vf.showNext();
                 break;
-            case R.id.NoPelotas:
+            case R.id.NoTaqXajab:
                 vf.showNext();
                 break;
             case R.id.SiMes:
@@ -102,7 +102,7 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent expresionoral = new Intent(getApplication(), ExpresionOral.class);
+                Intent expresionoral = new Intent(getApplication(), ExpresionOralKiche.class);
                 startActivity(expresionoral);
                 break;
             case R.id.NoAkTux:
@@ -112,7 +112,7 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
-                Intent expresionoral2 = new Intent(getApplication(), ExpresionOral.class);
+                Intent expresionoral2 = new Intent(getApplication(), ExpresionOralKiche.class);
                 startActivity(expresionoral2);
                 break;
             default:
@@ -134,10 +134,10 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
         }
 
 
-        SiPelota = (RadioButton) findViewById(R.id.SiPelota);
-        NoPelota = (RadioButton) findViewById(R.id.NoPelota);
-        SiPelotas = (RadioButton) findViewById(R.id.SiPelotas);
-        NoPelotas = (RadioButton) findViewById(R.id.NoPelotas);
+        SiXajab = (RadioButton) findViewById(R.id.SiXajab);
+        NoXajab = (RadioButton) findViewById(R.id.NoXajab);
+        SiTaqXajab = (RadioButton) findViewById(R.id.SiTaqXajab);
+        NoTaqXajab = (RadioButton) findViewById(R.id.NoTaqXajab);
         SiMes = (RadioButton) findViewById(R.id.SiMes);
         NoMes = (RadioButton) findViewById(R.id.NoMes);
         SiTaqMes = (RadioButton) findViewById(R.id.SiTaqMes);
@@ -151,10 +151,10 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
         SiAkTux = (RadioButton) findViewById(R.id.SiAkTux);
         NoAkTux = (RadioButton) findViewById(R.id.NoAkTux);
 
-        SwPelota = (Switch) findViewById(R.id.swPelota);
-        tvPelota = (TextView) findViewById(R.id.tvPelota);
-        SwPelotas = (Switch) findViewById(R.id.swPelotas);
-        tvPelotas = (TextView) findViewById(R.id.tvPelotas);
+        SwXajab = (Switch) findViewById(R.id.swXajab);
+        tvXajab = (TextView) findViewById(R.id.tvXajab);
+        SwTaqXajab = (Switch) findViewById(R.id.swTaqXajab);
+        tvTaqXajab = (TextView) findViewById(R.id.tvTaqXajab);
         SwTaqMes = (Switch) findViewById(R.id.SwTaqMes);
         tvMes = (TextView) findViewById(R.id.tvMes);
         SwMes = (Switch) findViewById(R.id.SwMes);
@@ -170,10 +170,10 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
         tvInstrGramaticaKiche = (TextView) findViewById(R.id.tvInstrGramaticaKicheKiche);
         title_gramatica_kiche = (TextView) findViewById(R.id.title_gramatica);
 
-        SiPelota.setOnClickListener(this);
-        NoPelota.setOnClickListener(this);
-        SiPelotas.setOnClickListener(this);
-        NoPelotas.setOnClickListener(this);
+        SiXajab.setOnClickListener(this);
+        NoXajab.setOnClickListener(this);
+        SiTaqXajab.setOnClickListener(this);
+        NoTaqXajab.setOnClickListener(this);
         SiMes.setOnClickListener(this);
         NoMes.setOnClickListener(this);
         SiTaqMes.setOnClickListener(this);
@@ -192,8 +192,8 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
     private CompoundButton.OnCheckedChangeListener list = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            pelota();
-            pelotas();
+            Xajab();
+            TaqXajab();
             mes();
             taqmes();
             ali();
@@ -204,18 +204,18 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
 
         }
 
-        private void pelota() {
-            if (SwPelota.isChecked())
-                tvPelota.setText("Pelota");
+        private void Xajab() {
+            if (SwXajab.isChecked())
+                tvXajab.setText("Xajab");
             else
-                tvPelota.setText("");
+                tvXajab.setText("");
         }
 
-        private void pelotas() {
-            if (SwPelotas.isChecked())
-                tvPelotas.setText("Pelotas");
+        private void TaqXajab() {
+            if (SwTaqXajab.isChecked())
+                tvTaqXajab.setText("TaqXajab");
             else
-                tvPelotas.setText(" ");
+                tvTaqXajab.setText(" ");
         }
 
         private void mes() {
@@ -265,8 +265,8 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
 
     private void swPrincipal() {
         SwTaqMes.setOnCheckedChangeListener(list);
-        SwPelota.setOnCheckedChangeListener(list);
-        SwPelotas.setOnCheckedChangeListener(list);
+        SwXajab.setOnCheckedChangeListener(list);
+        SwTaqXajab.setOnCheckedChangeListener(list);
         SwTaqMes.setOnCheckedChangeListener(list);
         SwAli.setOnCheckedChangeListener(list);
         SwMes.setOnCheckedChangeListener(list);

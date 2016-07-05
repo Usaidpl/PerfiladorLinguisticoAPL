@@ -18,18 +18,16 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.utils.DialogoAlerta;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.SonidosEspecificos;
 
 /**
  * Created by Roberto on 20/06/2016.
  */
 public class VocabularioKiche extends Activity implements View.OnClickListener, OnInitializeComponent {
     private ViewFlipper vf;
-    private TextView tvInstruccVocalario,tvCasa, tvCama, tvAvion, tvSilla, tvConejo, tvCaballo, tvZanahoria, tvGuisquil, tvGallo, tvManzana;
-    private RadioButton SiCasa, NoCasa, SiCama, NoCama, SiAvion, NoAvion, SiSilla, NoSilla, SiConejo, NoConejo, SiCaballo, NoCaballo, SiZanahoria, NoZanahoria, SiGuisquil, NoGuisquil, SiGallo, NoGallo, SiManzana, NoManzana;
-    private Switch swCasa, swCama, swAvion, swSilla, swConejo, swCaballo, swZanahoria, swGuisquil, swGallo, swManzana;
+    private TextView tvInstruccVocalario,tvKar, tvJar, tvLej, tvKumatz, tvKej, tvKoy, tvTzi, tvKix, tvMukunKum, tvQatzuQanxul;
+    private RadioButton SiKar, NoKar, SiJar, NoJar, SiLej, NoLej, SiKumatz, NoKumatz, SiKej, NoKej, SiKoy, NoKoy, SiTzi, NoTzi, SiKix, NoKix, SiMukunKum, NoMukunKum, SiQatzuQanxul, NoQatzuQanxul;
+    private Switch swKar, swJar, swLej, swKumatz, swKej, swKoy, swTzi, swKix, swMukunKum, swQatzuQanxul;
     private int[] dr = {R.mipmap.book};
 
     @Override
@@ -38,172 +36,172 @@ public class VocabularioKiche extends Activity implements View.OnClickListener, 
         setContentView(R.layout.vocabulario_kiche);
 
         setOnInit(null);
-        DialogoAlerta.alertDialog("Hola", "Desea Continuar", false, this);
+        //DialogoAlerta.alertDialog("Hola", "Desea Continuar", false, this);
     }
 
     private CompoundButton.OnCheckedChangeListener list = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            casa();
-            cama();
-            avion();
-            silla();
-            conejo();
-            caballo();
-            zanahoria();
-            guisquil();
-            gallo();
-            manzana();
+            Kar();
+            Jar();
+            Lej();
+            Kumatz();
+            Kej();
+            Koy();
+            Tzi();
+            Kix();
+            MukunKum();
+            QatzuQanxul();
         }
 
-        private void casa() {
-            if (swCasa.isChecked())
-                tvCasa.setText("Casa");
+        private void Kar() {
+            if (swKar.isChecked())
+                tvKar.setText("Kar");
             else
-                tvCasa.setText("");
+                tvKar.setText("");
         }
 
-        private void cama() {
-            if (swCama.isChecked())
-                tvCama.setText("Cama");
+        private void Jar() {
+            if (swJar.isChecked())
+                tvJar.setText("Jar");
             else
-                tvCama.setText(" ");
+                tvJar.setText(" ");
 
         }
 
-        private void avion() {
-            if (swAvion.isChecked())
-                tvAvion.setText("Avion");
+        private void Lej() {
+            if (swLej.isChecked())
+                tvLej.setText("Lej");
             else
-                tvAvion.setText(" ");
+                tvLej.setText(" ");
         }
 
-        private void silla() {
-            if (swSilla.isChecked())
-                tvSilla.setText("Silla");
+        private void Kumatz() {
+            if (swKumatz.isChecked())
+                tvKumatz.setText("Kumatz");
             else
-                tvSilla.setText("");
+                tvKumatz.setText("");
         }
 
-        private void conejo() {
-            if (swConejo.isChecked())
-                tvConejo.setText("Conejo");
+        private void Kej() {
+            if (swKej.isChecked())
+                tvKej.setText("Kej");
             else
-                tvConejo.setText(" ");
+                tvKej.setText(" ");
         }
 
-        private void caballo() {
-            if (swCaballo.isChecked())
-                tvCaballo.setText("Caballo");
+        private void Koy() {
+            if (swKoy.isChecked())
+                tvKoy.setText("Koy");
             else
-                tvCaballo.setText(" ");
+                tvKoy.setText(" ");
         }
 
-        private void zanahoria() {
-            if (swZanahoria.isChecked())
-                tvZanahoria.setText("Zanahoria");
+        private void Tzi() {
+            if (swTzi.isChecked())
+                tvTzi.setText("Tzi");
             else
-                tvZanahoria.setText(" ");
+                tvTzi.setText(" ");
         }
 
-        private void guisquil() {
-            if (swGuisquil.isChecked())
-                tvGuisquil.setText("Guisquil");
+        private void Kix() {
+            if (swKix.isChecked())
+                tvKix.setText("Kix");
             else
-                tvGuisquil.setText(" ");
+                tvKix.setText(" ");
         }
 
-        private void gallo() {
-            if (swGallo.isChecked())
-                tvGallo.setText("Gallo");
+        private void MukunKum() {
+            if (swMukunKum.isChecked())
+                tvMukunKum.setText("MukunKum");
             else
-                tvGallo.setText(" ");
+                tvMukunKum.setText(" ");
         }
 
-        private void manzana() {
-            if (swManzana.isChecked())
-                tvManzana.setText("Manzana");
+        private void QatzuQanxul() {
+            if (swQatzuQanxul.isChecked())
+                tvQatzuQanxul.setText("QatzuQanxul");
             else
-                tvManzana.setText(" ");
+                tvQatzuQanxul.setText(" ");
         }
     };
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.SiCasa:
+            case R.id.SiKar:
                 vf.showNext();
                 tvInstruccVocalario.setText("");
                 break;
-            case R.id.NoCasa:
+            case R.id.NoKar:
                 vf.showNext();
                 tvInstruccVocalario.setText("");
                 break;
-            case R.id.SiCama:
+            case R.id.SiJar:
                 vf.showNext();
                 break;
-            case R.id.NoCama:
+            case R.id.NoJar:
                 vf.showNext();
                 break;
-            case R.id.SiAvion:
+            case R.id.SiLej:
                 vf.showNext();
                 break;
-            case R.id.NoAvion:
+            case R.id.NoLej:
                 vf.showNext();
                 break;
-            case R.id.SiSilla:
+            case R.id.SiKumatz:
                 vf.showNext();
                 break;
-            case R.id.NoSilla:
+            case R.id.NoKumatz:
                 vf.showNext();
                 break;
-            case R.id.SiConejo:
+            case R.id.SiKej:
                 vf.showNext();
                 break;
-            case R.id.NoConejo:
+            case R.id.NoKej:
                 vf.showNext();
                 break;
-            case R.id.SiCaballo:
+            case R.id.SiKoy:
                 vf.showNext();
                 break;
-            case R.id.NoCaballo:
+            case R.id.NoKoy:
                 vf.showNext();
                 break;
-            case R.id.SiZanahoria:
+            case R.id.SiTzi:
                 vf.showNext();
                 break;
-            case R.id.NoZanahoria:
+            case R.id.NoTzi:
                 vf.showNext();
                 break;
-            case R.id.SiGuisquil:
+            case R.id.SiKix:
                 vf.showNext();
                 break;
-            case R.id.NoGuisquil:
+            case R.id.NoKix:
                 vf.showNext();
                 break;
-            case R.id.SiGallo:
+            case R.id.SiMukunKum:
                 vf.showNext();
                 break;
-            case R.id.NoGallo:
+            case R.id.NoMukunKum:
                 vf.showNext();
                 break;
-            case R.id.SiManzana:
+            case R.id.SiQatzuQanxul:
                 vf.showNext();
                 Toast toast0 =
                         Toast.makeText(getApplicationContext(),
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent pruebas2 = new Intent(getApplication(), SonidosEspecificos.class);
+                Intent pruebas2 = new Intent(getApplication(), SonidosEspecificosKiche.class);
                 startActivity(pruebas2);
                 break;
-            case R.id.NoManzana:
+            case R.id.NoQatzuQanxul:
                 vf.showNext();
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
                 toast1.show();
-                Intent pruebas = new Intent(getApplication(), SonidosEspecificos.class);
+                Intent pruebas = new Intent(getApplication(), SonidosEspecificosKiche.class);
                 startActivity(pruebas);
                 break;
             default:
@@ -222,94 +220,96 @@ public class VocabularioKiche extends Activity implements View.OnClickListener, 
         for (int i = 0; i < dr.length; i++) {
             vf.addView(ad.getView(i, null, null));
         }
-        SiCasa = (RadioButton) findViewById(R.id.SiCasa);
-        NoCasa = (RadioButton) findViewById(R.id.NoCasa);
-        SiCama = (RadioButton) findViewById(R.id.SiCama);
-        NoCama = (RadioButton) findViewById(R.id.NoCama);
-        SiAvion = (RadioButton) findViewById(R.id.SiAvion);
-        NoAvion = (RadioButton) findViewById(R.id.NoAvion);
-        SiSilla = (RadioButton) findViewById(R.id.SiSilla);
-        NoSilla = (RadioButton) findViewById(R.id.NoSilla);
-        SiConejo = (RadioButton) findViewById(R.id.SiConejo);
-        NoConejo = (RadioButton) findViewById(R.id.NoConejo);
-        SiCaballo = (RadioButton) findViewById(R.id.SiCaballo);
-        NoCaballo = (RadioButton) findViewById(R.id.NoCaballo);
-        SiZanahoria = (RadioButton) findViewById(R.id.SiZanahoria);
-        NoZanahoria = (RadioButton) findViewById(R.id.NoZanahoria);
-        SiGuisquil = (RadioButton) findViewById(R.id.SiGuisquil);
-        NoGuisquil = (RadioButton) findViewById(R.id.NoGuisquil);
-        SiGallo = (RadioButton) findViewById(R.id.SiGallo);
-        NoGallo = (RadioButton) findViewById(R.id.NoGallo);
-        SiManzana = (RadioButton) findViewById(R.id.SiManzana);
-        NoManzana = (RadioButton) findViewById(R.id.NoManzana);
+        SiKar = (RadioButton) findViewById(R.id.SiKar);
+        NoKar = (RadioButton) findViewById(R.id.NoKar);
+        SiJar = (RadioButton) findViewById(R.id.SiJar);
+        NoJar = (RadioButton) findViewById(R.id.NoJar);
+        SiLej = (RadioButton) findViewById(R.id.SiLej);
+        NoLej = (RadioButton) findViewById(R.id.NoLej);
+        SiKumatz = (RadioButton) findViewById(R.id.SiKumatz);
+        NoKumatz = (RadioButton) findViewById(R.id.NoKumatz);
+        SiKej = (RadioButton) findViewById(R.id.SiKej);
+        NoKej = (RadioButton) findViewById(R.id.NoKej);
+        SiKoy = (RadioButton) findViewById(R.id.SiKoy);
+        NoKoy = (RadioButton) findViewById(R.id.NoKoy);
+        SiTzi = (RadioButton) findViewById(R.id.SiTzi);
+        NoTzi = (RadioButton) findViewById(R.id.NoTzi);
+        SiKix = (RadioButton) findViewById(R.id.SiKix);
+        NoKix = (RadioButton) findViewById(R.id.NoKix);
+        SiMukunKum = (RadioButton) findViewById(R.id.SiMukunKum);
+        NoMukunKum = (RadioButton) findViewById(R.id.NoMukunKum);
+        SiQatzuQanxul = (RadioButton) findViewById(R.id.SiQatzuQanxul);
+        NoQatzuQanxul = (RadioButton) findViewById(R.id.NoQatzuQanxul);
 
-        swCasa = (Switch) findViewById(R.id.swCasa);
-        tvCasa = (TextView) findViewById(R.id.tvCasa);
-        swCama = (Switch) findViewById(R.id.swCama);
-        tvCama = (TextView) findViewById(R.id.tvCama);
-        swAvion = (Switch) findViewById(R.id.swAvion);
-        tvAvion = (TextView) findViewById(R.id.tvAvion);
-        swSilla = (Switch) findViewById(R.id.swSilla);
-        tvSilla = (TextView) findViewById(R.id.tvSilla);
-        swConejo = (Switch) findViewById(R.id.swConejo);
-        tvConejo = (TextView) findViewById(R.id.tvConejo);
-        swCaballo = (Switch) findViewById(R.id.swCaballo);
-        tvCaballo = (TextView) findViewById(R.id.tvCaballo);
-        swZanahoria = (Switch) findViewById(R.id.swZanahoria);
-        tvZanahoria = (TextView) findViewById(R.id.tvZanahoria);
-        swGuisquil = (Switch) findViewById(R.id.swGuisquil);
-        tvGuisquil = (TextView) findViewById(R.id.tvGuisquil);
-        swGallo = (Switch) findViewById(R.id.swGallo);
-        tvGallo = (TextView) findViewById(R.id.tvGallo);
-        swManzana = (Switch) findViewById(R.id.swManzana);
-        tvManzana = (TextView) findViewById(R.id.tvManzana);
+        swKar = (Switch) findViewById(R.id.swKar);
+        tvKar = (TextView) findViewById(R.id.tvKar);
+        swJar = (Switch) findViewById(R.id.swJar);
+        tvJar = (TextView) findViewById(R.id.tvJar);
+        swLej = (Switch) findViewById(R.id.swLej);
+        tvLej = (TextView) findViewById(R.id.tvLej);
+        swKumatz = (Switch) findViewById(R.id.swKumatz);
+        tvKumatz = (TextView) findViewById(R.id.tvKumatz);
+        swKej = (Switch) findViewById(R.id.swKej);
+        tvKej = (TextView) findViewById(R.id.tvKej);
+        swKoy = (Switch) findViewById(R.id.swKoy);
+        tvKoy = (TextView) findViewById(R.id.tvKoy);
+        swTzi = (Switch) findViewById(R.id.swTzi);
+        tvTzi = (TextView) findViewById(R.id.tvTzi);
+        swKix = (Switch) findViewById(R.id.swKix);
+        tvKix = (TextView) findViewById(R.id.tvKix);
+        swMukunKum = (Switch) findViewById(R.id.swMukunKum);
+        tvMukunKum = (TextView) findViewById(R.id.tvMukunKum);
+        swQatzuQanxul = (Switch) findViewById(R.id.swQatzuQanxul);
+        tvQatzuQanxul = (TextView) findViewById(R.id.tvQatzuQanxul);
         tvInstruccVocalario = (TextView) findViewById(R.id.tvInstruccVocalario);
 
-        SiCasa.setOnClickListener(this);
-        NoCasa.setOnClickListener(this);
-        SiCama.setOnClickListener(this);
-        NoCama.setOnClickListener(this);
-        SiAvion.setOnClickListener(this);
-        NoAvion.setOnClickListener(this);
-        SiSilla.setOnClickListener(this);
-        NoSilla.setOnClickListener(this);
-        SiConejo.setOnClickListener(this);
-        NoConejo.setOnClickListener(this);
-        SiCaballo.setOnClickListener(this);
-        NoCaballo.setOnClickListener(this);
-        SiZanahoria.setOnClickListener(this);
-        NoZanahoria.setOnClickListener(this);
-        SiGuisquil.setOnClickListener(this);
-        NoGuisquil.setOnClickListener(this);
-        SiGallo.setOnClickListener(this);
-        NoGallo.setOnClickListener(this);
-        SiManzana.setOnClickListener(this);
-        NoManzana.setOnClickListener(this);
+        SiKar.setOnClickListener(this);
+        NoKar.setOnClickListener(this);
+        SiJar.setOnClickListener(this);
+        NoJar.setOnClickListener(this);
+        SiLej.setOnClickListener(this);
+        NoLej.setOnClickListener(this);
+        SiKumatz.setOnClickListener(this);
+        NoKumatz.setOnClickListener(this);
+        SiKej.setOnClickListener(this);
+        NoKej.setOnClickListener(this);
+        SiKoy.setOnClickListener(this);
+        NoKoy.setOnClickListener(this);
+        SiTzi.setOnClickListener(this);
+        NoTzi.setOnClickListener(this);
+        SiKix.setOnClickListener(this);
+        NoKix.setOnClickListener(this);
+        SiMukunKum.setOnClickListener(this);
+        NoMukunKum.setOnClickListener(this);
+        SiQatzuQanxul.setOnClickListener(this);
+        NoQatzuQanxul.setOnClickListener(this);
         swPrincipal();
     }
 
     private void swPrincipal() {
-        swCasa.setOnCheckedChangeListener(list);
-        swCama.setOnCheckedChangeListener(list);
-        swAvion.setOnCheckedChangeListener(list);
-        swSilla.setOnCheckedChangeListener(list);
-        swConejo.setOnCheckedChangeListener(list);
-        swCaballo.setOnCheckedChangeListener(list);
-        swZanahoria.setOnCheckedChangeListener(list);
-        swGuisquil.setOnCheckedChangeListener(list);
-        swGallo.setOnCheckedChangeListener(list);
-        swManzana.setOnCheckedChangeListener(list);
+        swKar.setOnCheckedChangeListener(list);
+        swJar.setOnCheckedChangeListener(list);
+        swLej.setOnCheckedChangeListener(list);
+        swKumatz.setOnCheckedChangeListener(list);
+        swKej.setOnCheckedChangeListener(list);
+        swKoy.setOnCheckedChangeListener(list);
+        swTzi.setOnCheckedChangeListener(list);
+        swKix.setOnCheckedChangeListener(list);
+        swMukunKum.setOnCheckedChangeListener(list);
+        swQatzuQanxul.setOnCheckedChangeListener(list);
 
     }
 
     class adapter extends BaseAdapter {
 
         int[] drawables = null;
+        int [] mipmap = null;
         private Context mcontext;
 
         public adapter(Context context, int[] draw) {
             mcontext = context;
             drawables = draw;
+            mipmap = mipmap;
         }
 
         @Override

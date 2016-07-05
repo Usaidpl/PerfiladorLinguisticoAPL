@@ -18,192 +18,190 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.utils.DialogoAlerta;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.SonidosEspecificos;
 
 /**
  * Created by Roberto on 20/06/2016.
  */
 public class VocabularioMam extends Activity implements View.OnClickListener, OnInitializeComponent {
     private ViewFlipper vf;
-    private TextView tvInstruccVocalario,tvCasa, tvCama, tvAvion, tvSilla, tvConejo, tvCaballo, tvZanahoria, tvGuisquil, tvGallo, tvManzana;
-    private RadioButton SiCasa, NoCasa, SiCama, NoCama, SiAvion, NoAvion, SiSilla, NoSilla, SiConejo, NoConejo, SiCaballo, NoCaballo, SiZanahoria, NoZanahoria, SiGuisquil, NoGuisquil, SiGallo, NoGallo, SiManzana, NoManzana;
-    private Switch swCasa, swCama, swAvion, swSilla, swConejo, swCaballo, swZanahoria, swGuisquil, swGallo, swManzana;
+    private TextView tvInstruccVocalario,tvJaA, tvWatbilKuxlil, tvXikXiky, tvChej, tvJosTpaqik, tvBixBich, tvKyix, tvWitz, tvBEe, tvMuj;
+    private RadioButton SiJaA, NoJaA, SiWatbilKuxlil, NoWatbilKuxlil, SiXikXiky, NoXikXiky, SiChej, NoChej, SiJosTpaqik, NoJosTpaqik, SiBixBich, NoBixBich, SiKyix, NoKyix, SiWitz, NoWitz, SiBEe, NoBEe, SiMuj, NoMuj;
+    private Switch swJaA, swWatbilKuxlil, swXikXiky, swChej, swJosTpaqik, swBixBich, swKyix, swWitz, swBEe, swMuj;
     private int[] dr = {R.mipmap.book};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vocabulario_mam);
-
+        //DialogoAlerta.alertDialog("Hola", "Desea Continuar", false, this);
         setOnInit(null);
-        DialogoAlerta.alertDialog("Hola", "Desea Continuar", false, this);
+
     }
 
     private CompoundButton.OnCheckedChangeListener list = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            casa();
-            cama();
-            avion();
-            silla();
-            conejo();
-            caballo();
-            zanahoria();
-            guisquil();
-            gallo();
-            manzana();
+            JaA();
+            WatbilKuxlil();
+            XikXiky();
+            Chej();
+            JosTpaqik();
+            BixBich();
+            Kyix();
+            Witz();
+            BEe();
+            Muj();
         }
 
-        private void casa() {
-            if (swCasa.isChecked())
-                tvCasa.setText("Casa");
+        private void JaA() {
+            if (swJaA.isChecked())
+                tvJaA.setText("JaA");
             else
-                tvCasa.setText("");
+                tvJaA.setText("");
         }
 
-        private void cama() {
-            if (swCama.isChecked())
-                tvCama.setText("Cama");
+        private void WatbilKuxlil() {
+            if (swWatbilKuxlil.isChecked())
+                tvWatbilKuxlil.setText("WatbilKuxlil");
             else
-                tvCama.setText(" ");
+                tvWatbilKuxlil.setText(" ");
 
         }
 
-        private void avion() {
-            if (swAvion.isChecked())
-                tvAvion.setText("Avion");
+        private void XikXiky() {
+            if (swXikXiky.isChecked())
+                tvXikXiky.setText("XikXiky");
             else
-                tvAvion.setText(" ");
+                tvXikXiky.setText(" ");
         }
 
-        private void silla() {
-            if (swSilla.isChecked())
-                tvSilla.setText("Silla");
+        private void Chej() {
+            if (swChej.isChecked())
+                tvChej.setText("Chej");
             else
-                tvSilla.setText("");
+                tvChej.setText("");
         }
 
-        private void conejo() {
-            if (swConejo.isChecked())
-                tvConejo.setText("Conejo");
+        private void JosTpaqik() {
+            if (swJosTpaqik.isChecked())
+                tvJosTpaqik.setText("JosTpaqik");
             else
-                tvConejo.setText(" ");
+                tvJosTpaqik.setText(" ");
         }
 
-        private void caballo() {
-            if (swCaballo.isChecked())
-                tvCaballo.setText("Caballo");
+        private void BixBich() {
+            if (swBixBich.isChecked())
+                tvBixBich.setText("BixBich");
             else
-                tvCaballo.setText(" ");
+                tvBixBich.setText(" ");
         }
 
-        private void zanahoria() {
-            if (swZanahoria.isChecked())
-                tvZanahoria.setText("Zanahoria");
+        private void Kyix() {
+            if (swKyix.isChecked())
+                tvKyix.setText("Kyix");
             else
-                tvZanahoria.setText(" ");
+                tvKyix.setText(" ");
         }
 
-        private void guisquil() {
-            if (swGuisquil.isChecked())
-                tvGuisquil.setText("Guisquil");
+        private void Witz() {
+            if (swWitz.isChecked())
+                tvWitz.setText("Witz");
             else
-                tvGuisquil.setText(" ");
+                tvWitz.setText(" ");
         }
 
-        private void gallo() {
-            if (swGallo.isChecked())
-                tvGallo.setText("Gallo");
+        private void BEe() {
+            if (swBEe.isChecked())
+                tvBEe.setText("BEe");
             else
-                tvGallo.setText(" ");
+                tvBEe.setText(" ");
         }
 
-        private void manzana() {
-            if (swManzana.isChecked())
-                tvManzana.setText("Manzana");
+        private void Muj() {
+            if (swMuj.isChecked())
+                tvMuj.setText("Muj");
             else
-                tvManzana.setText(" ");
+                tvMuj.setText(" ");
         }
     };
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.SiCasa:
+            case R.id.SiJaA:
                 vf.showNext();
                 tvInstruccVocalario.setText("");
                 break;
-            case R.id.NoCasa:
+            case R.id.NoJaA:
                 vf.showNext();
                 tvInstruccVocalario.setText("");
                 break;
-            case R.id.SiCama:
+            case R.id.SiWatbilKuxlil:
                 vf.showNext();
                 break;
-            case R.id.NoCama:
+            case R.id.NoWatbilKuxlil:
                 vf.showNext();
                 break;
-            case R.id.SiAvion:
+            case R.id.SiXikXiky:
                 vf.showNext();
                 break;
-            case R.id.NoAvion:
+            case R.id.NoXikXiky:
                 vf.showNext();
                 break;
-            case R.id.SiSilla:
+            case R.id.SiChej:
                 vf.showNext();
                 break;
-            case R.id.NoSilla:
+            case R.id.NoChej:
                 vf.showNext();
                 break;
-            case R.id.SiConejo:
+            case R.id.SiJosTpaqik:
                 vf.showNext();
                 break;
-            case R.id.NoConejo:
+            case R.id.NoJosTpaqik:
                 vf.showNext();
                 break;
-            case R.id.SiCaballo:
+            case R.id.SiBixBich:
                 vf.showNext();
                 break;
-            case R.id.NoCaballo:
+            case R.id.NoBixBich:
                 vf.showNext();
                 break;
-            case R.id.SiZanahoria:
+            case R.id.SiKyix:
                 vf.showNext();
                 break;
-            case R.id.NoZanahoria:
+            case R.id.NoKyix:
                 vf.showNext();
                 break;
-            case R.id.SiGuisquil:
+            case R.id.SiWitz:
                 vf.showNext();
                 break;
-            case R.id.NoGuisquil:
+            case R.id.NoWitz:
                 vf.showNext();
                 break;
-            case R.id.SiGallo:
+            case R.id.SiBEe:
                 vf.showNext();
                 break;
-            case R.id.NoGallo:
+            case R.id.NoBEe:
                 vf.showNext();
                 break;
-            case R.id.SiManzana:
+            case R.id.SiMuj:
                 vf.showNext();
                 Toast toast0 =
                         Toast.makeText(getApplicationContext(),
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent pruebas2 = new Intent(getApplication(), SonidosEspecificos.class);
+                Intent pruebas2 = new Intent(getApplication(), SonidosEspecificosMam.class);
                 startActivity(pruebas2);
                 break;
-            case R.id.NoManzana:
+            case R.id.NoMuj:
                 vf.showNext();
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
                 toast1.show();
-                Intent pruebas = new Intent(getApplication(), SonidosEspecificos.class);
+                Intent pruebas = new Intent(getApplication(), SonidosEspecificosMam.class);
                 startActivity(pruebas);
                 break;
             default:
@@ -222,83 +220,83 @@ public class VocabularioMam extends Activity implements View.OnClickListener, On
         for (int i = 0; i < dr.length; i++) {
             vf.addView(ad.getView(i, null, null));
         }
-        SiCasa = (RadioButton) findViewById(R.id.SiCasa);
-        NoCasa = (RadioButton) findViewById(R.id.NoCasa);
-        SiCama = (RadioButton) findViewById(R.id.SiCama);
-        NoCama = (RadioButton) findViewById(R.id.NoCama);
-        SiAvion = (RadioButton) findViewById(R.id.SiAvion);
-        NoAvion = (RadioButton) findViewById(R.id.NoAvion);
-        SiSilla = (RadioButton) findViewById(R.id.SiSilla);
-        NoSilla = (RadioButton) findViewById(R.id.NoSilla);
-        SiConejo = (RadioButton) findViewById(R.id.SiConejo);
-        NoConejo = (RadioButton) findViewById(R.id.NoConejo);
-        SiCaballo = (RadioButton) findViewById(R.id.SiCaballo);
-        NoCaballo = (RadioButton) findViewById(R.id.NoCaballo);
-        SiZanahoria = (RadioButton) findViewById(R.id.SiZanahoria);
-        NoZanahoria = (RadioButton) findViewById(R.id.NoZanahoria);
-        SiGuisquil = (RadioButton) findViewById(R.id.SiGuisquil);
-        NoGuisquil = (RadioButton) findViewById(R.id.NoGuisquil);
-        SiGallo = (RadioButton) findViewById(R.id.SiGallo);
-        NoGallo = (RadioButton) findViewById(R.id.NoGallo);
-        SiManzana = (RadioButton) findViewById(R.id.SiManzana);
-        NoManzana = (RadioButton) findViewById(R.id.NoManzana);
+        SiJaA = (RadioButton) findViewById(R.id.SiJaA);
+        NoJaA = (RadioButton) findViewById(R.id.NoJaA);
+        SiWatbilKuxlil = (RadioButton) findViewById(R.id.SiWatbilKuxlil);
+        NoWatbilKuxlil = (RadioButton) findViewById(R.id.NoWatbilKuxlil);
+        SiXikXiky = (RadioButton) findViewById(R.id.SiXikXiky);
+        NoXikXiky = (RadioButton) findViewById(R.id.NoXikXiky);
+        SiChej = (RadioButton) findViewById(R.id.SiChej);
+        NoChej = (RadioButton) findViewById(R.id.NoChej);
+        SiJosTpaqik = (RadioButton) findViewById(R.id.SiJosTpaqik);
+        NoJosTpaqik = (RadioButton) findViewById(R.id.NoJosTpaqik);
+        SiBixBich = (RadioButton) findViewById(R.id.SiBixBich);
+        NoBixBich = (RadioButton) findViewById(R.id.NoBixBich);
+        SiKyix = (RadioButton) findViewById(R.id.SiKyix);
+        NoKyix = (RadioButton) findViewById(R.id.NoKyix);
+        SiWitz = (RadioButton) findViewById(R.id.SiWitz);
+        NoWitz = (RadioButton) findViewById(R.id.NoWitz);
+        SiBEe = (RadioButton) findViewById(R.id.SiBEe);
+        NoBEe = (RadioButton) findViewById(R.id.NoBEe);
+        SiMuj = (RadioButton) findViewById(R.id.SiMuj);
+        NoMuj = (RadioButton) findViewById(R.id.NoMuj);
 
-        swCasa = (Switch) findViewById(R.id.swCasa);
-        tvCasa = (TextView) findViewById(R.id.tvCasa);
-        swCama = (Switch) findViewById(R.id.swCama);
-        tvCama = (TextView) findViewById(R.id.tvCama);
-        swAvion = (Switch) findViewById(R.id.swAvion);
-        tvAvion = (TextView) findViewById(R.id.tvAvion);
-        swSilla = (Switch) findViewById(R.id.swSilla);
-        tvSilla = (TextView) findViewById(R.id.tvSilla);
-        swConejo = (Switch) findViewById(R.id.swConejo);
-        tvConejo = (TextView) findViewById(R.id.tvConejo);
-        swCaballo = (Switch) findViewById(R.id.swCaballo);
-        tvCaballo = (TextView) findViewById(R.id.tvCaballo);
-        swZanahoria = (Switch) findViewById(R.id.swZanahoria);
-        tvZanahoria = (TextView) findViewById(R.id.tvZanahoria);
-        swGuisquil = (Switch) findViewById(R.id.swGuisquil);
-        tvGuisquil = (TextView) findViewById(R.id.tvGuisquil);
-        swGallo = (Switch) findViewById(R.id.swGallo);
-        tvGallo = (TextView) findViewById(R.id.tvGallo);
-        swManzana = (Switch) findViewById(R.id.swManzana);
-        tvManzana = (TextView) findViewById(R.id.tvManzana);
+        swJaA = (Switch) findViewById(R.id.swJaA);
+        tvJaA = (TextView) findViewById(R.id.tvJaA);
+        swWatbilKuxlil = (Switch) findViewById(R.id.swWatbilKuxlil);
+        tvWatbilKuxlil = (TextView) findViewById(R.id.tvWatbilKuxlil);
+        swXikXiky = (Switch) findViewById(R.id.swXikXiky);
+        tvXikXiky = (TextView) findViewById(R.id.tvXikXiky);
+        swChej = (Switch) findViewById(R.id.swChej);
+        tvChej = (TextView) findViewById(R.id.tvChej);
+        swJosTpaqik = (Switch) findViewById(R.id.swJosTpaqik);
+        tvJosTpaqik = (TextView) findViewById(R.id.tvJosTpaqik);
+        swBixBich = (Switch) findViewById(R.id.swBixBich);
+        tvBixBich = (TextView) findViewById(R.id.tvBixBich);
+        swKyix = (Switch) findViewById(R.id.swKyix);
+        tvKyix = (TextView) findViewById(R.id.tvKyix);
+        swWitz = (Switch) findViewById(R.id.swWitz);
+        tvWitz = (TextView) findViewById(R.id.tvWitz);
+        swBEe = (Switch) findViewById(R.id.swBEe);
+        tvBEe = (TextView) findViewById(R.id.tvBEe);
+        swMuj = (Switch) findViewById(R.id.swMuj);
+        tvMuj = (TextView) findViewById(R.id.tvMuj);
         tvInstruccVocalario = (TextView) findViewById(R.id.tvInstruccVocalario);
 
-        SiCasa.setOnClickListener(this);
-        NoCasa.setOnClickListener(this);
-        SiCama.setOnClickListener(this);
-        NoCama.setOnClickListener(this);
-        SiAvion.setOnClickListener(this);
-        NoAvion.setOnClickListener(this);
-        SiSilla.setOnClickListener(this);
-        NoSilla.setOnClickListener(this);
-        SiConejo.setOnClickListener(this);
-        NoConejo.setOnClickListener(this);
-        SiCaballo.setOnClickListener(this);
-        NoCaballo.setOnClickListener(this);
-        SiZanahoria.setOnClickListener(this);
-        NoZanahoria.setOnClickListener(this);
-        SiGuisquil.setOnClickListener(this);
-        NoGuisquil.setOnClickListener(this);
-        SiGallo.setOnClickListener(this);
-        NoGallo.setOnClickListener(this);
-        SiManzana.setOnClickListener(this);
-        NoManzana.setOnClickListener(this);
+        SiJaA.setOnClickListener(this);
+        NoJaA.setOnClickListener(this);
+        SiWatbilKuxlil.setOnClickListener(this);
+        NoWatbilKuxlil.setOnClickListener(this);
+        SiXikXiky.setOnClickListener(this);
+        NoXikXiky.setOnClickListener(this);
+        SiChej.setOnClickListener(this);
+        NoChej.setOnClickListener(this);
+        SiJosTpaqik.setOnClickListener(this);
+        NoJosTpaqik.setOnClickListener(this);
+        SiBixBich.setOnClickListener(this);
+        NoBixBich.setOnClickListener(this);
+        SiKyix.setOnClickListener(this);
+        NoKyix.setOnClickListener(this);
+        SiWitz.setOnClickListener(this);
+        NoWitz.setOnClickListener(this);
+        SiBEe.setOnClickListener(this);
+        NoBEe.setOnClickListener(this);
+        SiMuj.setOnClickListener(this);
+        NoMuj.setOnClickListener(this);
         swPrincipal();
     }
 
     private void swPrincipal() {
-        swCasa.setOnCheckedChangeListener(list);
-        swCama.setOnCheckedChangeListener(list);
-        swAvion.setOnCheckedChangeListener(list);
-        swSilla.setOnCheckedChangeListener(list);
-        swConejo.setOnCheckedChangeListener(list);
-        swCaballo.setOnCheckedChangeListener(list);
-        swZanahoria.setOnCheckedChangeListener(list);
-        swGuisquil.setOnCheckedChangeListener(list);
-        swGallo.setOnCheckedChangeListener(list);
-        swManzana.setOnCheckedChangeListener(list);
+        swJaA.setOnCheckedChangeListener(list);
+        swWatbilKuxlil.setOnCheckedChangeListener(list);
+        swXikXiky.setOnCheckedChangeListener(list);
+        swChej.setOnCheckedChangeListener(list);
+        swJosTpaqik.setOnCheckedChangeListener(list);
+        swBixBich.setOnCheckedChangeListener(list);
+        swKyix.setOnCheckedChangeListener(list);
+        swWitz.setOnCheckedChangeListener(list);
+        swBEe.setOnCheckedChangeListener(list);
+        swMuj.setOnCheckedChangeListener(list);
 
     }
 

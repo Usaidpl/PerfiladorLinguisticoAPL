@@ -24,7 +24,7 @@
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvImage1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         card_view:cardBackgroundColor="@android:color/background_light"
         card_view:cardCornerRadius="6dp"
         card_view:cardElevation="10dp"
@@ -91,7 +91,7 @@
 
                             <RadioButton
                                 android:id="@+id/SiKar"
-                                android:layout_width="95dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si_kiche2" />
@@ -169,14 +169,14 @@
 
                             <RadioButton
                                 android:id="@+id/SiJar"
-                                android:layout_width="81dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoJar"
-                                android:layout_width="91dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no_kiche2" />
@@ -247,14 +247,14 @@
 
                             <RadioButton
                                 android:id="@+id/SiLej"
-                                android:layout_width="81dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoLej"
-                                android:layout_width="91dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no_kiche2" />
@@ -325,14 +325,14 @@
 
                             <RadioButton
                                 android:id="@+id/SiKumatz"
-                                android:layout_width="81dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoKumatz"
-                                android:layout_width="91dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no_kiche2" />
@@ -403,14 +403,14 @@
 
                             <RadioButton
                                 android:id="@+id/SiKej"
-                                android:layout_width="81dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoKej"
-                                android:layout_width="91dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no_kiche2" />
@@ -481,14 +481,14 @@
 
                             <RadioButton
                                 android:id="@+id/SiKoy"
-                                android:layout_width="81dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoKoy"
-                                android:layout_width="91dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no_kiche2" />
@@ -559,14 +559,14 @@
 
                             <RadioButton
                                 android:id="@+id/SiTzi"
-                                android:layout_width="81dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoTzi"
-                                android:layout_width="91dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no_kiche2" />
@@ -637,14 +637,14 @@
 
                             <RadioButton
                                 android:id="@+id/SiKix"
-                                android:layout_width="81dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoKix"
-                                android:layout_width="91dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no_kiche2" />
@@ -715,14 +715,14 @@
 
                             <RadioButton
                                 android:id="@+id/SiMukunKum"
-                                android:layout_width="81dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoMukunKum"
-                                android:layout_width="91dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no_kiche2" />
@@ -793,14 +793,14 @@
 
                             <RadioButton
                                 android:id="@+id/SiQatzuQanxul"
-                                android:layout_width="81dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
                                 android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoQatzuQanxul"
-                                android:layout_width="91dp"
+                                android:layout_width="134dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
                                 android:text="@string/no_kiche2" />

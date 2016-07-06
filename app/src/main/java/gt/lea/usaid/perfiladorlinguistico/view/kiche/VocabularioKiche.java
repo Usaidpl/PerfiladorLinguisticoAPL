@@ -63,7 +63,7 @@ public class VocabularioKiche extends Activity implements View.OnClickListener, 
 
         private void Jar() {
             if (swJar.isChecked())
-                tvJar.setText("Jar");
+                tvJar.setText("Ja");
             else
                 tvJar.setText(" ");
 
@@ -92,35 +92,35 @@ public class VocabularioKiche extends Activity implements View.OnClickListener, 
 
         private void Koy() {
             if (swKoy.isChecked())
-                tvKoy.setText("Koy");
+                tvKoy.setText("K'oy");
             else
                 tvKoy.setText(" ");
         }
 
         private void Tzi() {
             if (swTzi.isChecked())
-                tvTzi.setText("Tzi");
+                tvTzi.setText("Tz'i'");
             else
                 tvTzi.setText(" ");
         }
 
         private void Kix() {
             if (swKix.isChecked())
-                tvKix.setText("Kix");
+                tvKix.setText("K'ix");
             else
                 tvKix.setText(" ");
         }
 
         private void MukunKum() {
             if (swMukunKum.isChecked())
-                tvMukunKum.setText("MukunKum");
+                tvMukunKum.setText("Mukun / K'um");
             else
                 tvMukunKum.setText(" ");
         }
 
         private void QatzuQanxul() {
             if (swQatzuQanxul.isChecked())
-                tvQatzuQanxul.setText("QatzuQanxul");
+                tvQatzuQanxul.setText("Q'atzu / Q'anxul");
             else
                 tvQatzuQanxul.setText(" ");
         }

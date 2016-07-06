@@ -19,7 +19,6 @@ import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Gramatica;
 
 /**
  * Created by Roberto on 20/06/2016.
@@ -27,7 +26,7 @@ import gt.lea.usaid.perfiladorlinguistico.view.espanol.Gramatica;
 public class SonidosEspecificosKiche extends Activity implements View.OnClickListener, OnInitializeComponent {
 
     private ViewFlipper vf;
-    private TextView tvInstruccSonidosEsp, tvKa, tvSiii, tvChee, tvPapalot, tvNosQel, tvChat, tvTzUnun, tvKotzij, tvQam, tvQaq;
+    private TextView tvInstruccSonidoskiche, tvInst_titulo_kiche,tvKa, tvSiii, tvChee, tvPapalot, tvNosQel, tvChat, tvTzUnun, tvKotzij, tvQam, tvQaq;
     private RadioButton SiKa, NoKa, SiSiii, NoSiii, SiChee, NoChee, SiPapalot, NoPapalot, SiNosQel, NoNosQel, SiChat, NoChat, SiTzUnun, NoTzUnun, SiKotzij, NoKotzij, SiQam, NoQam, SiQaq, NoQaq;
     private Switch swKa, swSiii, swChee, swPapalot, swNosQel, swChat, swTzUnun, swKotzij, swQam, swQaq;
     private int[] dr = {R.mipmap.book};
@@ -45,11 +44,11 @@ public class SonidosEspecificosKiche extends Activity implements View.OnClickLis
         switch (v.getId()) {
             case R.id.SiKa2:
                 vf.showNext();
-                tvInstruccSonidosEsp.setText("");
+                tvInstruccSonidoskiche.setText("");
                 break;
             case R.id.NoKa2:
                 vf.showNext();
-                tvInstruccSonidosEsp.setText("");
+                tvInstruccSonidoskiche.setText("");
                 break;
             case R.id.SiSiii:
                 vf.showNext();
@@ -77,14 +76,20 @@ public class SonidosEspecificosKiche extends Activity implements View.OnClickLis
                 break;
             case R.id.SiChat:
                 vf.showNext();
+                tvInst_titulo_kiche.setText(R.string.titulo_sonidos_especificos_kiche);
+                tvInstruccSonidoskiche.setText(R.string.inst_sonidos_especificos_kiche);
                 break;
             case R.id.NoChat:
                 vf.showNext();
+                tvInst_titulo_kiche.setText(R.string.titulo_sonidos_especificos_kiche);
+                tvInstruccSonidoskiche.setText(R.string.inst_sonidos_especificos_kiche);
                 break;
             case R.id.SiTzUnun:
                 vf.showNext();
+                tvInstruccSonidoskiche.setText("");
                 break;
             case R.id.NoTzUnun:
+                tvInstruccSonidoskiche.setText("");
                 vf.showNext();
                 break;
             case R.id.SiKotzij:
@@ -103,7 +108,7 @@ public class SonidosEspecificosKiche extends Activity implements View.OnClickLis
                 vf.showNext();
                 Toast toast0 =
                         Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
+                                "Serie finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
                 Intent gramatica1 = new Intent(getApplication(), GramaticaKiche.class);
@@ -113,7 +118,7 @@ public class SonidosEspecificosKiche extends Activity implements View.OnClickLis
                 vf.showNext();
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
+                                "Serie finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
                 Intent gramatica2 = new Intent(getApplication(), GramaticaKiche.class);
@@ -177,7 +182,8 @@ public class SonidosEspecificosKiche extends Activity implements View.OnClickLis
         tvQam = (TextView) findViewById(R.id.tvQam);
         swQaq = (Switch) findViewById(R.id.swQaq);
         tvQaq = (TextView) findViewById(R.id.tvQaq);
-        tvInstruccSonidosEsp = (TextView) findViewById(R.id.tvInstruccSonidosEsp);
+        tvInstruccSonidoskiche = (TextView) findViewById(R.id.tvInstruccSonidosKiche);
+        tvInst_titulo_kiche = (TextView) findViewById(R.id.tvInst_titulo_kiche);
         SiKa.setOnClickListener(this);
         NoKa.setOnClickListener(this);
         SiSiii.setOnClickListener(this);
@@ -216,70 +222,70 @@ public class SonidosEspecificosKiche extends Activity implements View.OnClickLis
         }
         private void Ka() {
             if (swKa.isChecked())
-                tvKa.setText("Ka");
+                tvKa.setText("Ka'");
             else
                 tvKa.setText("");
         }
 
         private void Siii() {
             if (swSiii.isChecked())
-                tvSiii.setText("Siii");
+                tvSiii.setText("Si'");
             else
                 tvSiii.setText(" ");
         }
 
         private void Chee() {
             if (swChee.isChecked())
-                tvChee.setText("Chee");
+                tvChee.setText("Che'");
             else
                 tvChee.setText(" ");
         }
 
         private void Papalot() {
             if (swPapalot.isChecked())
-                tvPapalot.setText("Papalot");
+                tvPapalot.setText("Papalo't");
             else
                 tvPapalot.setText("");
         }
 
         private void NosQel() {
             if (swNosQel.isChecked())
-                tvNosQel.setText("NosQel");
+                tvNosQel.setText("No's / Qu'l");
             else
                 tvNosQel.setText(" ");
         }
 
         private void Chat() {
             if (swChat.isChecked())
-                tvChat.setText("Chat");
+                tvChat.setText("Ch'at");
             else
                 tvChat.setText(" ");
         }
 
         private void TzUnun() {
             if (swTzUnun.isChecked())
-                tvTzUnun.setText("TzUnun");
+                tvTzUnun.setText("Tz'Unun");
             else
                 tvTzUnun.setText(" ");
         }
 
         private void Kotzij() {
             if (swKotzij.isChecked())
-                tvKotzij.setText("Kotzij");
+                tvKotzij.setText("Kotz'i'j");
             else
                 tvKotzij.setText(" ");
         }
 
         private void Qam() {
             if (swQam.isChecked())
-                tvQam.setText("Qam");
+                tvQam.setText("Q'a'm");
             else
                 tvQam.setText(" ");
         }
 
         private void Qaq() {
             if (swQaq.isChecked())
-                tvQaq.setText("Qaq");
+                tvQaq.setText("Q'aq'");
             else
                 tvQaq.setText(" ");
         }

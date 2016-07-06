@@ -11,9 +11,7 @@ import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
-import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
-import gt.lea.usaid.perfiladorlinguistico.view.mam.VocabularioMam;
+import gt.lea.usaid.perfiladorlinguistico.view.kiche.GramaticaKiche;
 
 /**
  * Created by Roberto on 21/06/16.
@@ -72,7 +70,7 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivKicheEva:
-                intent = new Intent(getActivity(), Interactua.class);
+                intent = new Intent(getActivity(), GramaticaKiche.class);
                 intent.putExtras(envia(1));
                 getActivity().startActivity(intent);
                 break;

@@ -1,7 +1,5 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -12,6 +10,7 @@ import android.widget.ViewFlipper;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
 import gt.lea.usaid.perfiladorlinguistico.view.mam.VocabularioMam;
 
 /**
@@ -95,11 +94,11 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                     case 0:
                         resultado += selectImageView(v);
                         s = String.valueOf(resultado);
-                        setNextContext(Precisiona.this, VocabularioMam.class);break;
+                        setNextContext(Precisiona.this, VocabularioKiche.class);break;
                     case 1:
                         resultado += selectImageView(v);
                         s = String.valueOf(resultado);
-                        setNextContext(Precisiona.this, VocabularioMam.class);break;
+                        setNextContext(Precisiona.this, Vocabulario.class);break;
                     case 2:
                         resultado += selectImageView(v);
                         s = String.valueOf(resultado);

@@ -10,16 +10,16 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="\nVI. CHOLAJ. UTZALAJ UKOJIK CH’AB’AL / GRAMÁTICA\nAli, ala. (jujunal, k’itaq) Número (singular o plural)"
-        android:textSize="20dp"
+        android:text="@string/titulo_gramatica_kiche"
+        android:textSize="@dimen/_11sdp"
         android:textAlignment="center"
         android:id="@+id/title_gramatica_kiche_kiche"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_12sdp"
+        android:textSize="@dimen/_8sdp"
         android:padding="@dimen/_11sdp"
-        android:text="Se le enseñaran algunos dibujos, dígame qué es cada uno."
+        android:text="@string/inst_gramatica_kiche_singular_plular"
         android:id="@+id/tvInstrGramaticaKicheKiche"/>
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"

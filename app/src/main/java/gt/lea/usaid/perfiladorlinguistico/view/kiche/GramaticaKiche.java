@@ -23,7 +23,6 @@ import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 
 public class GramaticaKiche  extends Activity implements View.OnClickListener, OnInitializeComponent {
     private ViewFlipper vf;
@@ -67,13 +66,15 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
                 break;
             case R.id.SiTaqMes:
                 vf.showNext();
-                title_gramatica_kiche.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
-                tvInstrGramaticaKiche.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
+                title_gramatica_kiche.setText("UCH'AB'EXIK (AMA, ATIT)\nGÉNERO GRAMATICAL (MASCULINO FEMENINO");
+                tvInstrGramaticaKiche.setText("Ub'eyal / Instrucciones\n" +
+                        "K'utu la chikijujunal taq ru wachib'al, kata la ri k'otb'al chi', k'ate k'uri', katz'ib'aj la ri utzalaj tzalim tzij chi uach ri wuj.");
                 break;
             case R.id.NoTaqMes:
                 vf.showNext();
-                title_gramatica_kiche.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
-                tvInstrGramaticaKiche.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
+                title_gramatica_kiche.setText("UCH'AB'EXIK (AMA, ATIT)\n" +
+                        "GÉNERO GRAMATICAL (MASCULINO FEMENINO");
+                tvInstrGramaticaKiche.setText("Ub'eyal / Instrucciones\nK'utu la chikijujunal taq ru wachib'al, kata la ri k'otb'al chi', k'ate k'uri', katz'ib'aj la ri utzalaj tzalim tzij chi uach ri wuj.");
                 break;
             case R.id.SiAli:
                 vf.showNext();
@@ -99,7 +100,7 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
                 vf.showNext();
                 Toast toast0 =
                         Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
+                                "Serie finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
                 Intent expresionoral = new Intent(getApplication(), ExpresionOralKiche.class);
@@ -109,7 +110,7 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
                 vf.showNext();
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
+                                "Serie finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
                 Intent expresionoral2 = new Intent(getApplication(), ExpresionOralKiche.class);
@@ -168,7 +169,7 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
         SwAkTux = (Switch) findViewById(R.id.SwAkTux);
         tvAkTux = (TextView) findViewById(R.id.tvAkTux);
         tvInstrGramaticaKiche = (TextView) findViewById(R.id.tvInstrGramaticaKicheKiche);
-        title_gramatica_kiche = (TextView) findViewById(R.id.title_gramatica);
+        title_gramatica_kiche = (TextView) findViewById(R.id.title_gramatica_kiche_kiche);
 
         SiXajab.setOnClickListener(this);
         NoXajab.setOnClickListener(this);
@@ -234,30 +235,30 @@ public class GramaticaKiche  extends Activity implements View.OnClickListener, O
 
         private void ali() {
             if (SwAli.isChecked())
-                tvAli.setText("ali");
+                tvAli.setText("Ali");
             else
-                tvAli.setText("Esta es una Abuela, si fuera hombre ¿cómo se diría?");
+                tvAli.setText("Are jun ala.\n¿Su ub'ixik we k'o ruq?");
         }
 
         private void tatachi() {
             if (SwTatAchi.isChecked())
-                tvTatAchi.setText("tat / achi");
+                tvTatAchi.setText("Tat / Achi");
             else
-                tvTatAchi.setText("Este es un maestro, si fuera una mujer ¿cómo se diría?");
+                tvTatAchi.setText("Are jun chichu'.\n¿Su ub'ixk we k'o rismachi?");
         }
 
         private void mamtat() {
             if (SwMamTat.isChecked())
-                tvMamTat.setText("mam / tat");
+                tvMamTat.setText("Mam / Tat");
             else
-                tvMamTat.setText("Este es un doctor, si fuera mujer ¿cómo se diría?");
+                tvMamTat.setText("Are jun ti't.\n¿Si ib'ixik we k'o upwi?");
         }
 
         private void aktux() {
             if (SwAkTux.isChecked())
                 tvAkTux.setText("ak' / tux ");
             else
-                tvAkTux.setText("Este es un cocinero, si fuera mujer ¿cómo se diría?");
+                tvAkTux.setText("pregunta pendiente por falta de material en la guía..");
         }
 
 

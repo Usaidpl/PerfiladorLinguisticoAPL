@@ -16,16 +16,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/SonidosEspecificos_Esp_SerE"
-        android:textSize="20sp"
-        android:textAlignment="center"/>
+        android:text="V. CHOLAJ. KICH'AB'AL LE TAQ TZIJ\nSONIDOS ESPECÍFICOS DEL K'ICHE' (PRIMERA PARTE)"
+        android:textSize="@dimen/_11sdp"
+        android:textAlignment="center"
+        android:id="@+id/tvInst_titulo_kiche"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_12sdp"
-        android:padding="@dimen/_11sdp"
-        android:text="@string/que_es_esta_imagen_esp"
-        android:id="@+id/tvInstruccSonidosEsp"/>
+        android:textSize="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Ub'eyal / Instrucciones\nB'ij la che le ajtijoxel Kink'ut jujun taq wachib'al chawach, chab'ij le ub'i. Kajuch'la par ri wuj we utz ub'ixik kub'ano, ri taq'tz'ib ek'o paqulaj panika'j ene pa uk'isb'alil taq tzij.\nKink'ut jujun taq wachib'al wachib'al chawach, chab'ij le ub'i."
+        android:id="@+id/tvInstruccSonidosKiche"/>
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvImage1"
@@ -86,17 +87,17 @@
 
                             <RadioButton
                                 android:id="@+id/SiKa2"
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI" />
+                                android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoKa2"
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO" />
+                                android:text="@string/no_kiche2" />
 
                         </RadioGroup>
                     </TableRow>
@@ -154,17 +155,17 @@
 
                             <RadioButton
                                 android:id="@+id/SiSiii"
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI" />
+                                android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoSiii"
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO" />
+                                android:text="@string/no_kiche2" />
 
                         </RadioGroup>
                     </TableRow>
@@ -222,17 +223,17 @@
 
                             <RadioButton
                                 android:id="@+id/SiChee"
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI" />
+                                android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoChee"
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO" />
+                                android:text="@string/no_kiche2" />
 
                         </RadioGroup>
                     </TableRow>
@@ -290,17 +291,17 @@
 
                             <RadioButton
                                 android:id="@+id/SiPapalot"
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI" />
+                                android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoPapalot"
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO" />
+                                android:text="@string/no_kiche2" />
 
                         </RadioGroup>
                     </TableRow>
@@ -358,17 +359,17 @@
 
                             <RadioButton
                                 android:id="@+id/SiNosQel"
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI" />
+                                android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoNosQel"
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO" />
+                                android:text="@string/no_kiche2" />
 
                         </RadioGroup>
                     </TableRow>
@@ -426,17 +427,17 @@
 
                             <RadioButton
                                 android:id="@+id/SiChat"
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI" />
+                                android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoChat"
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO" />
+                                android:text="@string/no_kiche2" />
 
                         </RadioGroup>
                     </TableRow>
@@ -494,17 +495,17 @@
 
                             <RadioButton
                                 android:id="@+id/SiTzUnun"
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI" />
+                                android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoTzUnun"
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO" />
+                                android:text="@string/no_kiche2" />
 
                         </RadioGroup>
                     </TableRow>
@@ -562,17 +563,17 @@
 
                             <RadioButton
                                 android:id="@+id/SiKotzij"
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI" />
+                                android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoKotzij"
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO" />
+                                android:text="@string/no_kiche2" />
 
                         </RadioGroup>
                     </TableRow>
@@ -630,17 +631,17 @@
 
                             <RadioButton
                                 android:id="@+id/SiQam"
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI" />
+                                android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoQam"
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO" />
+                                android:text="@string/no_kiche2" />
 
                         </RadioGroup>
                     </TableRow>
@@ -698,17 +699,17 @@
 
                             <RadioButton
                                 android:id="@+id/SiQaq"
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="SI" />
+                                android:text="@string/si_kiche2" />
 
                             <RadioButton
                                 android:id="@+id/NoQaq"
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="NO" />
+                                android:text="@string/no_kiche2" />
 
                         </RadioGroup>
                     </TableRow>

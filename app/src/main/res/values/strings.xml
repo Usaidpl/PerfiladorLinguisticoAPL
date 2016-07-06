@@ -787,5 +787,9 @@
     <string name="inst_vocabulario_kiche_2">Chikb\'ab\'il / Instrucciones\nQ\'amanxa te xnaq\'tzanjtz: Kxel nyek\'una junjun tib\'ilal teya; q\'amantza tb\'i jujun, Yek\'unxa jujun tillb\'ilal, tzib\'ankub\'a toj u\'j aju tzaq\'web\'il qa\'b\'an ex qa mya\'b\'an.\nKxel nyek\'una junjun tib0lal; q\'amantza tb\'i junjun.</string>
     <string name="si_kiche2">Je\' / Si</string>
     <string name="no_kiche2">Je\' taj / No</string>
+    <string name="inst_sonidos_especificos_kiche">Ub\'eyal / Instrucciones\nB\'k la che le ajtijoxel Kink\'ut jujun taq wachib\'al chawach, kab\'ij jas le kib\'i.\nTz\'ib\'ak la pa le uxaq re tzalimtzij we utz ri kub\'ij</string>
+    <string name="titulo_sonidos_especificos_kiche">CH\'AB\'AL XAQ K\'ICHE\'\nSONIDOS ESPECIFICOS DEL K\'ICHE\' (SEGUNDA PARTE)</string>
+    <string name="titulo_gramatica_kiche">\nVI. CHOLAJ. UTZALAJ UKOJIK CH’AB’AL / GRAMÁTICA\nAli, ala. (jujunal, k’itaq) Número (singular o plural)</string>
+    <string name="inst_gramatica_kiche_singular_plular">Ub\'eyal / Instrucciones\nB\'ij la che le ajtijoxel Kink\'ut jujun taq wachib\'al chawe utz kilik chikijujunal kab\'ano, ek\'o jujun taq xaq kitukel, le jujun taq chik ek\'i, kab\'ij jachike taq le kib\'i\'. Tz\'ib\'aj la pa le uxaq re tzalimtzil we utz ri kub\'ik are ek\'i le jastaq. Jujunal K\'itaq\nKink\'ut jujun taq wachib\'al chawe, utz kilik chikijujunal kab\'ano, jujun taq xaq kitukel, le jujun taq chik ek\'im kab\'j jachike taq le kib\'i.</string>
 
 </resources>

@@ -778,5 +778,14 @@
     <string name="tvAli">ali</string>
     <string name="tvTatAchi">Tat Achi</string>
     <string name="tvMamTat">Mam / Tat</string>
+    <string name="tvTtxuTxyan">Ttxu tx\'ya\'n</string>
+    <string name="tvTtxuEkTtxuik">Ttxu ek\' / ttxu ik\'</string>
+    <string name="tvTtxritKnel">Ttxu rit / kne\'l</string>
+    <string name="tvTxubaj">Txub\'aj</string>
+    <string name="titulo_vocabulario_mam">\nIV. K\'LOJ. K\'LOL MAM / VOCABULRION</string>
+    <string name="titulo_vocabulario_kiche">\nIV. CHOLAJ. TAQ TZIJ/ VOCABULARIO</string>
+    <string name="inst_vocabulario_kiche_2">Chikb\'ab\'il / Instrucciones\nQ\'amanxa te xnaq\'tzanjtz: Kxel nyek\'una junjun tib\'ilal teya; q\'amantza tb\'i jujun, Yek\'unxa jujun tillb\'ilal, tzib\'ankub\'a toj u\'j aju tzaq\'web\'il qa\'b\'an ex qa mya\'b\'an.\nKxel nyek\'una junjun tib0lal; q\'amantza tb\'i junjun.</string>
+    <string name="si_kiche2">Je\' / Si</string>
+    <string name="no_kiche2">Je\' taj / No</string>
 
 </resources>

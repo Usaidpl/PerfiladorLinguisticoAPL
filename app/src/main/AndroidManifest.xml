@@ -101,6 +101,18 @@
         <activity
             android:name=".view.kiche.GramaticaKiche"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.mam.SonidosEspecificosMam"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.kiche.SonidosEspecificosKiche"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.kiche.VocabularioKiche"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.mam.VocabularioMam"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

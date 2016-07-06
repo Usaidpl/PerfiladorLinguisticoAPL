@@ -27,9 +27,9 @@ import gt.lea.usaid.perfiladorlinguistico.view.espanol.Gramatica;
 public class SonidosEspecificosMam extends Activity implements View.OnClickListener, OnInitializeComponent {
 
     private ViewFlipper vf;
-    private TextView tvInstruccSonidosEsp, tvPelota, tvBota, tvNaranja, tvElote, tvMachete, tvMoto, tvHelado, tvTelefono, tvGallina, tvPerro;
-    private RadioButton SiPelota, NoPelota, SiBota, NoBota, SiNaranja, NoNaranja, SiElote, NoElote, SiMachete, NoMachete, SiMoto, NoMoto, SiHelado, NoHelado, SiTelefono, NoTelefono, SiGallina, NoGallina, SiPerro, NoPerro;
-    private Switch swPelota, swBota, swNaranja, swElote, swMachete, swMoto, swHelado, swTelefono, swGallina, swPerro;
+    private TextView tvInstruccSonidosEsp, tvKaKya, tvChew, tvSiI, tvUJj, tvXar, tvPwaq, tvLaq, tvQaq, tvKum, tvBoch;
+    private RadioButton SiKaKya, NoKaKya, SiChew, NoChew, SiSiI, NoSiI, SiUJj, NoUJj, SiXar, NoXar, SiPwaq, NoPwaq, SiLaq, NoLaq, SiQaq, NoQaq, SiKum, NoKum, SiBoch, NoBoch;
+    private Switch swKaKya, swChew, swSiI, swUJj, swXar, swPwaq, swLaq, swQaq, swKum, swBoch;
     private int[] dr = {R.mipmap.book};
 
     @Override
@@ -43,80 +43,80 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.SiPelota2:
+            case R.id.SiKaKya2:
                 vf.showNext();
                 tvInstruccSonidosEsp.setText("");
                 break;
-            case R.id.NoPelota2:
+            case R.id.NoKaKya2:
                 vf.showNext();
                 tvInstruccSonidosEsp.setText("");
                 break;
-            case R.id.SiBota:
+            case R.id.SiChew:
                 vf.showNext();
                 break;
-            case R.id.NoBota:
+            case R.id.NoChew:
                 vf.showNext();
                 break;
-            case R.id.SiNaranja:
+            case R.id.SiSiI:
                 vf.showNext();
                 break;
-            case R.id.NoNaranja:
+            case R.id.NoSiI:
                 vf.showNext();
                 break;
-            case R.id.SiElote:
+            case R.id.SiUJj:
                 vf.showNext();
                 break;
-            case R.id.NoElote:
+            case R.id.NoUJj:
                 vf.showNext();
                 break;
-            case R.id.SiMachete:
+            case R.id.SiXar:
                 vf.showNext();
                 break;
-            case R.id.NoMachete:
+            case R.id.NoXar:
                 vf.showNext();
                 break;
-            case R.id.SiMoto:
+            case R.id.SiPwaq:
                 vf.showNext();
                 break;
-            case R.id.NoMoto:
+            case R.id.NoPwaq:
                 vf.showNext();
                 break;
-            case R.id.SiHelado:
+            case R.id.SiLaq:
                 vf.showNext();
                 break;
-            case R.id.NoHelado:
+            case R.id.NoLaq:
                 vf.showNext();
                 break;
-            case R.id.SiTelefono:
+            case R.id.SiQaq:
                 vf.showNext();
                 break;
-            case R.id.NoTelefono:
+            case R.id.NoQaq:
                 vf.showNext();
                 break;
-            case R.id.SiGallina:
+            case R.id.SiKum:
                 vf.showNext();
                 break;
-            case R.id.NoGallina:
+            case R.id.NoKum:
                 vf.showNext();
                 break;
-            case R.id.SiPerro:
+            case R.id.SiBoch:
                 vf.showNext();
                 Toast toast0 =
                         Toast.makeText(getApplicationContext(),
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
-                Intent gramatica1 = new Intent(getApplication(), Gramatica.class);
+                Intent gramatica1 = new Intent(getApplication(), GramaticaMam.class);
                 startActivity(gramatica1);
                 break;
-            case R.id.NoPerro:
+            case R.id.NoBoch:
                 vf.showNext();
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
                                 "Evaluacion Finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
-                Intent gramatica2 = new Intent(getApplication(), Gramatica.class);
+                Intent gramatica2 = new Intent(getApplication(), GramaticaMam.class);
                 startActivity(gramatica2);
                 break;
             default:
@@ -136,170 +136,170 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
         for (int i = 0; i < dr.length; i++) {
             vf.addView(ad.getView(i, null, null));
         }
-        SiPelota = (RadioButton) findViewById(R.id.SiPelota2);
-        NoPelota = (RadioButton) findViewById(R.id.NoPelota2);
-        SiBota = (RadioButton) findViewById(R.id.SiBota);
-        NoBota = (RadioButton) findViewById(R.id.NoBota);
-        SiNaranja = (RadioButton) findViewById(R.id.SiNaranja);
-        NoNaranja = (RadioButton) findViewById(R.id.NoNaranja);
-        SiElote = (RadioButton) findViewById(R.id.SiElote);
-        NoElote = (RadioButton) findViewById(R.id.NoElote);
-        SiMachete = (RadioButton) findViewById(R.id.SiMachete);
-        NoMachete = (RadioButton) findViewById(R.id.NoMachete);
-        SiMoto = (RadioButton) findViewById(R.id.SiMoto);
-        NoMoto = (RadioButton) findViewById(R.id.NoMoto);
-        SiHelado = (RadioButton) findViewById(R.id.SiHelado);
-        NoHelado = (RadioButton) findViewById(R.id.NoHelado);
-        SiTelefono = (RadioButton) findViewById(R.id.SiTelefono);
-        NoTelefono = (RadioButton) findViewById(R.id.NoTelefono);
-        SiGallina = (RadioButton) findViewById(R.id.SiGallina);
-        NoGallina = (RadioButton) findViewById(R.id.NoGallina);
-        SiPerro = (RadioButton) findViewById(R.id.SiPerro);
-        NoPerro = (RadioButton) findViewById(R.id.NoPerro);
+        SiKaKya = (RadioButton) findViewById(R.id.SiKaKya2);
+        NoKaKya = (RadioButton) findViewById(R.id.NoKaKya2);
+        SiChew = (RadioButton) findViewById(R.id.SiChew);
+        NoChew = (RadioButton) findViewById(R.id.NoChew);
+        SiSiI = (RadioButton) findViewById(R.id.SiSiI);
+        NoSiI = (RadioButton) findViewById(R.id.NoSiI);
+        SiUJj = (RadioButton) findViewById(R.id.SiUJj);
+        NoUJj = (RadioButton) findViewById(R.id.NoUJj);
+        SiXar = (RadioButton) findViewById(R.id.SiXar);
+        NoXar = (RadioButton) findViewById(R.id.NoXar);
+        SiPwaq = (RadioButton) findViewById(R.id.SiPwaq);
+        NoPwaq = (RadioButton) findViewById(R.id.NoPwaq);
+        SiLaq = (RadioButton) findViewById(R.id.SiLaq);
+        NoLaq = (RadioButton) findViewById(R.id.NoLaq);
+        SiQaq = (RadioButton) findViewById(R.id.SiQaq);
+        NoQaq = (RadioButton) findViewById(R.id.NoQaq);
+        SiKum = (RadioButton) findViewById(R.id.SiKum);
+        NoKum = (RadioButton) findViewById(R.id.NoKum);
+        SiBoch = (RadioButton) findViewById(R.id.SiBoch);
+        NoBoch = (RadioButton) findViewById(R.id.NoBoch);
 
-        swPelota = (Switch) findViewById(R.id.swPelota2);
-        tvPelota = (TextView) findViewById(R.id.tvPelota2);
-        swBota = (Switch) findViewById(R.id.swBota);
-        tvBota = (TextView) findViewById(R.id.tvBota);
-        swNaranja = (Switch) findViewById(R.id.swNaranja);
-        tvNaranja = (TextView) findViewById(R.id.tvNaranja);
-        swElote = (Switch) findViewById(R.id.swElote);
-        tvElote = (TextView) findViewById(R.id.tvElote);
-        swMachete = (Switch) findViewById(R.id.swMachete);
-        tvMachete = (TextView) findViewById(R.id.tvMachete);
-        swMoto = (Switch) findViewById(R.id.swMoto);
-        tvMoto = (TextView) findViewById(R.id.tvMoto);
-        swHelado = (Switch) findViewById(R.id.swHelado);
-        tvHelado = (TextView) findViewById(R.id.tvHelado);
-        swTelefono = (Switch) findViewById(R.id.swTelefono);
-        tvTelefono = (TextView) findViewById(R.id.tvTelefono);
-        swGallina = (Switch) findViewById(R.id.swGallina);
-        tvGallina = (TextView) findViewById(R.id.tvGallina);
-        swPerro = (Switch) findViewById(R.id.swPerro);
-        tvPerro = (TextView) findViewById(R.id.tvPerro);
+        swKaKya = (Switch) findViewById(R.id.swKaKya2);
+        tvKaKya = (TextView) findViewById(R.id.tvKaKya2);
+        swChew = (Switch) findViewById(R.id.swChew);
+        tvChew = (TextView) findViewById(R.id.tvChew);
+        swSiI = (Switch) findViewById(R.id.swSiI);
+        tvSiI = (TextView) findViewById(R.id.tvSiI);
+        swUJj = (Switch) findViewById(R.id.swUJj);
+        tvUJj = (TextView) findViewById(R.id.tvUJj);
+        swXar = (Switch) findViewById(R.id.swXar);
+        tvXar = (TextView) findViewById(R.id.tvXar);
+        swPwaq = (Switch) findViewById(R.id.swPwaq);
+        tvPwaq = (TextView) findViewById(R.id.tvPwaq);
+        swLaq = (Switch) findViewById(R.id.swLaq);
+        tvLaq = (TextView) findViewById(R.id.tvLaq);
+        swQaq = (Switch) findViewById(R.id.swQaq);
+        tvQaq = (TextView) findViewById(R.id.tvQaq);
+        swKum = (Switch) findViewById(R.id.swKum);
+        tvKum = (TextView) findViewById(R.id.tvKum);
+        swBoch = (Switch) findViewById(R.id.swBoch);
+        tvBoch = (TextView) findViewById(R.id.tvBoch);
         tvInstruccSonidosEsp = (TextView) findViewById(R.id.tvInstruccSonidosEsp);
-        SiPelota.setOnClickListener(this);
-        NoPelota.setOnClickListener(this);
-        SiBota.setOnClickListener(this);
-        NoBota.setOnClickListener(this);
-        SiNaranja.setOnClickListener(this);
-        NoNaranja.setOnClickListener(this);
-        SiElote.setOnClickListener(this);
-        NoElote.setOnClickListener(this);
-        SiMachete.setOnClickListener(this);
-        NoMachete.setOnClickListener(this);
-        SiMoto.setOnClickListener(this);
-        NoMoto.setOnClickListener(this);
-        SiHelado.setOnClickListener(this);
-        NoHelado.setOnClickListener(this);
-        SiTelefono.setOnClickListener(this);
-        NoTelefono.setOnClickListener(this);
-        SiGallina.setOnClickListener(this);
-        NoGallina.setOnClickListener(this);
-        SiPerro.setOnClickListener(this);
-        NoPerro.setOnClickListener(this);
+        SiKaKya.setOnClickListener(this);
+        NoKaKya.setOnClickListener(this);
+        SiChew.setOnClickListener(this);
+        NoChew.setOnClickListener(this);
+        SiSiI.setOnClickListener(this);
+        NoSiI.setOnClickListener(this);
+        SiUJj.setOnClickListener(this);
+        NoUJj.setOnClickListener(this);
+        SiXar.setOnClickListener(this);
+        NoXar.setOnClickListener(this);
+        SiPwaq.setOnClickListener(this);
+        NoPwaq.setOnClickListener(this);
+        SiLaq.setOnClickListener(this);
+        NoLaq.setOnClickListener(this);
+        SiQaq.setOnClickListener(this);
+        NoQaq.setOnClickListener(this);
+        SiKum.setOnClickListener(this);
+        NoKum.setOnClickListener(this);
+        SiBoch.setOnClickListener(this);
+        NoBoch.setOnClickListener(this);
         swPrincipal();
     }
 
     private CompoundButton.OnCheckedChangeListener list = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            pelota();
-            bota();
-            naranja();
-            elote();
-            machete();
-            moto();
-            helado();
-            telefono();
-            gallina();
-            perro();
+            KaKya();
+            Chew();
+            SiI();
+            UJj();
+            Xar();
+            Pwaq();
+            Laq();
+            Qaq();
+            Kum();
+            Boch();
         }
 
-        private void pelota() {
-            if (swPelota.isChecked())
-                tvPelota.setText("Pelota");
+        private void KaKya() {
+            if (swKaKya.isChecked())
+                tvKaKya.setText("KaKya");
             else
-                tvPelota.setText("");
+                tvKaKya.setText("");
         }
 
-        private void bota() {
-            if (swBota.isChecked())
-                tvBota.setText("Bota");
+        private void Chew() {
+            if (swChew.isChecked())
+                tvChew.setText("Chew");
             else
-                tvBota.setText(" ");
+                tvChew.setText(" ");
         }
 
-        private void naranja() {
-            if (swNaranja.isChecked())
-                tvNaranja.setText("Naranja");
+        private void SiI() {
+            if (swSiI.isChecked())
+                tvSiI.setText("SiI");
             else
-                tvNaranja.setText(" ");
+                tvSiI.setText(" ");
         }
 
-        private void elote() {
-            if (swElote.isChecked())
-                tvElote.setText("Elote");
+        private void UJj() {
+            if (swUJj.isChecked())
+                tvUJj.setText("UJj");
             else
-                tvElote.setText("");
+                tvUJj.setText("");
         }
 
-        private void machete() {
-            if (swMachete.isChecked())
-                tvMachete.setText("Machete");
+        private void Xar() {
+            if (swXar.isChecked())
+                tvXar.setText("Xar");
             else
-                tvMachete.setText(" ");
+                tvXar.setText(" ");
         }
 
-        private void moto() {
-            if (swMoto.isChecked())
-                tvMoto.setText("Moto");
+        private void Pwaq() {
+            if (swPwaq.isChecked())
+                tvPwaq.setText("Pwaq");
             else
-                tvMoto.setText(" ");
+                tvPwaq.setText(" ");
         }
 
-        private void helado() {
-            if (swHelado.isChecked())
-                tvHelado.setText("Helado");
+        private void Laq() {
+            if (swLaq.isChecked())
+                tvLaq.setText("Laq");
             else
-                tvHelado.setText(" ");
+                tvLaq.setText(" ");
         }
 
-        private void telefono() {
-            if (swTelefono.isChecked())
-                tvTelefono.setText("Telefono");
+        private void Qaq() {
+            if (swQaq.isChecked())
+                tvQaq.setText("Qaq");
             else
-                tvTelefono.setText(" ");
+                tvQaq.setText(" ");
         }
 
-        private void gallina() {
-            if (swGallina.isChecked())
-                tvGallina.setText("Gallina");
+        private void Kum() {
+            if (swKum.isChecked())
+                tvKum.setText("Kum");
             else
-                tvGallina.setText(" ");
+                tvKum.setText(" ");
         }
 
-        private void perro() {
-            if (swPerro.isChecked())
-                tvPerro.setText("Perro");
+        private void Boch() {
+            if (swBoch.isChecked())
+                tvBoch.setText("Boch");
             else
-                tvPerro.setText(" ");
+                tvBoch.setText(" ");
         }
 
 
     };
 
     private void swPrincipal() {
-        swPelota.setOnCheckedChangeListener(list);
-        swBota.setOnCheckedChangeListener(list);
-        swNaranja.setOnCheckedChangeListener(list);
-        swElote.setOnCheckedChangeListener(list);
-        swMachete.setOnCheckedChangeListener(list);
-        swMoto.setOnCheckedChangeListener(list);
-        swHelado.setOnCheckedChangeListener(list);
-        swTelefono.setOnCheckedChangeListener(list);
-        swGallina.setOnCheckedChangeListener(list);
-        swPerro.setOnCheckedChangeListener(list);
+        swKaKya.setOnCheckedChangeListener(list);
+        swChew.setOnCheckedChangeListener(list);
+        swSiI.setOnCheckedChangeListener(list);
+        swUJj.setOnCheckedChangeListener(list);
+        swXar.setOnCheckedChangeListener(list);
+        swPwaq.setOnCheckedChangeListener(list);
+        swLaq.setOnCheckedChangeListener(list);
+        swQaq.setOnCheckedChangeListener(list);
+        swKum.setOnCheckedChangeListener(list);
+        swBoch.setOnCheckedChangeListener(list);
 
     }
 

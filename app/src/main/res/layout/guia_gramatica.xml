@@ -354,7 +354,7 @@
                             android:layout_height="400dp"
                             android:layout_margin="6dp">
 
-                            <RelativeLayout
+                            <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam"
                                 android:layout_width="match_parent"
                                 android:layout_height="400dp"
@@ -376,9 +376,9 @@
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
 
-                            </RelativeLayout>
+                            </LinearLayout>
 
-                            <RelativeLayout
+                            <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam02"
                                 android:layout_width="match_parent"
                                 android:layout_height="400dp"
@@ -405,9 +405,9 @@
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
 
-                            </RelativeLayout>
+                            </LinearLayout>
 
-                            <RelativeLayout
+                            <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam03"
                                 android:layout_width="match_parent"
                                 android:layout_height="400dp"
@@ -434,8 +434,8 @@
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
 
-                            </RelativeLayout>
-                            <RelativeLayout
+                            </LinearLayout>
+                            <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam04"
                                 android:layout_width="match_parent"
                                 android:layout_height="400dp"
@@ -462,8 +462,8 @@
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
 
-                            </RelativeLayout>
-                            <RelativeLayout
+                            </LinearLayout>
+                            <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam05"
                                 android:layout_width="match_parent"
                                 android:layout_height="400dp"
@@ -489,8 +489,8 @@
                                     android:text="@string/p_gina_05_10"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
-                            </RelativeLayout>
-                            <RelativeLayout
+                            </LinearLayout>
+                            <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam06"
                                 android:layout_width="match_parent"
                                 android:layout_height="400dp"
@@ -511,8 +511,8 @@
                                     android:text="@string/p_gina_06_10"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
-                            </RelativeLayout>
-                            <RelativeLayout
+                            </LinearLayout>
+                            <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam07"
                                 android:layout_width="match_parent"
                                 android:layout_height="400dp"
@@ -538,8 +538,8 @@
                                     android:text="@string/p_gina_07_10"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
-                            </RelativeLayout>
-                            <RelativeLayout
+                            </LinearLayout>
+                            <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam08"
                                 android:layout_width="match_parent"
                                 android:layout_height="400dp"
@@ -565,8 +565,8 @@
                                     android:text="@string/p_gina_08_10"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
-                            </RelativeLayout>
-                            <RelativeLayout
+                            </LinearLayout>
+                            <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam09"
                                 android:layout_width="match_parent"
                                 android:layout_height="400dp"
@@ -592,8 +592,8 @@
                                     android:text="@string/p_gina_09_10"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
-                            </RelativeLayout>
-                            <RelativeLayout
+                            </LinearLayout>
+                            <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam10"
                                 android:layout_width="match_parent"
                                 android:layout_height="400dp"
@@ -619,7 +619,7 @@
                                     android:text="@string/p_gina_10_10"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
-                            </RelativeLayout>
+                            </LinearLayout>
 
 
                         </ViewFlipper>

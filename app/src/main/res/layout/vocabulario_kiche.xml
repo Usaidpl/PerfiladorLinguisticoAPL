@@ -1,6 +1,823 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.kiche.VocabularioKiche">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_vocabulario_kiche"
+        android:textAlignment="center"
+        android:textSize="@dimen/_15sdp" />
+
+    <TextView
+        android:id="@+id/tvInstruccVocalario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_11sdp"
+        android:text="@string/inst_vocabulario_kiche_2"
+        android:textSize="@dimen/_9sdp" />
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cvImage1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardBackgroundColor="@android:color/background_light"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="10dp"
+        card_view:cardUseCompatPadding="true">
+
+        <ViewFlipper
+            android:id="@+id/viewflipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp">
+
+            <RelativeLayout
+                android:id="@+id/rlKar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivKar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/imagen_1_10_vobaulario_produccion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TableLayout
+                    android:id="@+id/tbKar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swKar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center"></TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/SiKar"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="@string/si_kiche2" />
+
+                            <RadioButton
+                                android:id="@+id/NoKar"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="@string/no_kiche2" />
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvKar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_9sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlJar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivJar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_2_10_vobaulario_produccion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TableLayout
+                    android:id="@+id/tbJar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swJar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center"></TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/SiJar"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="@string/si_kiche2" />
+
+                            <RadioButton
+                                android:id="@+id/NoJar"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="@string/no_kiche2" />
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvJar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAvio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivLej"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_3_10_vobaulario_produccion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TableLayout
+                    android:id="@+id/tbLej"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swLej"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center"></TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/SiLej"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="@string/si_kiche2" />
+
+                            <RadioButton
+                                android:id="@+id/NoLej"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="@string/no_kiche2" />
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvLej"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlKumatz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivKumatz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_4_10_vobaulario_produccion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TableLayout
+                    android:id="@+id/tbKumatz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swKumatz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center"></TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/SiKumatz"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="@string/si_kiche2" />
+
+                            <RadioButton
+                                android:id="@+id/NoKumatz"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="@string/no_kiche2" />
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvKumatz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView8"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlKej"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivKej"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_5_10_vobaulario_produccion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TableLayout
+                    android:id="@+id/tbKej"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swKej"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center"></TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/SiKej"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="@string/si_kiche2" />
+
+                            <RadioButton
+                                android:id="@+id/NoKej"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="@string/no_kiche2" />
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvKej"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView9"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlKoy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivKoy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_6_10_vobaulario_produccion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TableLayout
+                    android:id="@+id/tbKoy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swKoy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center"></TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/SiKoy"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="@string/si_kiche2" />
+
+                            <RadioButton
+                                android:id="@+id/NoKoy"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="@string/no_kiche2" />
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvKoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView10"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTzi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivTzi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_7_10_vobaulario_produccion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TableLayout
+                    android:id="@+id/tbTzi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swTzi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center"></TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/SiTzi"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="@string/si_kiche2" />
+
+                            <RadioButton
+                                android:id="@+id/NoTzi"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="@string/no_kiche2" />
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvTzi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView11"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlKix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivKix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_8_10_vobaulario_produccion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TableLayout
+                    android:id="@+id/tbKix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swKix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center"></TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/SiKix"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="@string/si_kiche2" />
+
+                            <RadioButton
+                                android:id="@+id/NoKix"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="@string/no_kiche2" />
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvKix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView12"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMukunKum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivMukunKum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_9_10_vobaulario_produccion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TableLayout
+                    android:id="@+id/tbMukunKum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swMukunKum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center"></TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/SiMukunKum"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="@string/si_kiche2" />
+
+                            <RadioButton
+                                android:id="@+id/NoMukunKum"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="@string/no_kiche2" />
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvMukunKum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView13"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlQatzuQanxul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivQatzuQanxul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_10_10_vobaulario_produccion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TableLayout
+                    android:id="@+id/tbQatzuQanxul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <Switch
+                            android:id="@+id/swQatzuQanxul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginTop="20dp" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_gravity="center"></TableRow>
+
+                    <TableRow android:gravity="right">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/SiQatzuQanxul"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="31"
+                                android:text="@string/si_kiche2" />
+
+                            <RadioButton
+                                android:id="@+id/NoQatzuQanxul"
+                                android:layout_width="134dp"
+                                android:layout_height="wrap_content"
+                                android:layout_column="33"
+                                android:text="@string/no_kiche2" />
+
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/tvQatzuQanxul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView14"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+        </ViewFlipper>
+    </android.support.v7.widget.CardView>
 </LinearLayout>

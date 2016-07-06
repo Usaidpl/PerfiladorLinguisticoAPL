@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
 import gt.lea.usaid.perfiladorlinguistico.view.mam.VocabularioMam;
@@ -65,18 +66,18 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         int evalua = 0;
         switch (v.getId()) {
             case R.id.ivMamEva:
-                intent = new Intent(getActivity(), Vocabulario.class);
+                intent = new Intent(getActivity(), Interactua.class);
                // b.putInt(KEY_EVALUACION, 0);
                 intent.putExtras(envia(0));
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivKicheEva:
-                intent = new Intent(getActivity(), VocabularioKiche.class);
+                intent = new Intent(getActivity(), Interactua.class);
                 intent.putExtras(envia(1));
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivEspanolEva:
-                intent = new Intent(getActivity(), VocabularioMam.class);
+                intent = new Intent(getActivity(), Interactua.class);
                 intent.putExtras(envia(2));
                 getActivity().startActivity(intent);
                 break;

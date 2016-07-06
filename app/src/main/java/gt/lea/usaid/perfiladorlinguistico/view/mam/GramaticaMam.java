@@ -23,12 +23,11 @@ import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 
 public class GramaticaMam extends Activity implements View.OnClickListener, OnInitializeComponent {
 
     private ViewFlipper vf;
-    private TextView title_gramatica, tvInstruccGramatica, tvIx, tvQeoxKyajix, tvWix, tvQewixOxwix, tvTtxuTxyan, tvTtxuEkTtxuik, tvTtxritKnel, Txubaj;
+    private TextView title_gramatica_mam, tvInstruccGramaticaMam, tvIx, tvQeoxKyajix, tvWix, tvQewixOxwix, tvTtxuTxyan, tvTtxuEkTtxuik, tvTtxritKnel, Txubaj;
     private RadioButton SiIx, NoIx, SiQeoxKyajix, NoQeoxKyajix, SiWix, NoWix, SiQewixOxwix, NoQewixOxwix, SiTtxuTxyan, NoTtxuTxyan, SiTtxuEkTtxuik, NoTtxuEkTtxuik, SiTtxritKnel, NoTtxritKnel, SiTxubaj, NoSiTxubaj;
     private Switch SwIx, SwQeoxKyajix, SwQewixOxwix, SwWix, SwTtxuTxyan, SwTtxuEkTtxuik, SwTtxritKnel, SwChef;
     private int[] dr = {R.mipmap.book};
@@ -48,11 +47,11 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
         switch (v.getId()) {
             case R.id.SiIx:
                 vf.showNext();
-                tvInstruccGramatica.setText("");
+                tvInstruccGramaticaMam.setText("");
                 break;
             case R.id.NoIx:
                 vf.showNext();
-                tvInstruccGramatica.setText("");
+                tvInstruccGramaticaMam.setText("");
                 break;
             case R.id.SiQeoxKyajix:
                 vf.showNext();
@@ -65,24 +64,26 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
                 break;
             case R.id.NoWix:
                 vf.showNext();
+                title_gramatica_mam.setText(R.string.titulo_gramatica_mam_masculino_femenino);
+                tvInstruccGramaticaMam.setText(R.string.instr_gramatica_mam_masculino_femenino);
                 break;
             case R.id.SiQewixOxwix:
                 vf.showNext();
-                title_gramatica.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
-                tvInstruccGramatica.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
+                title_gramatica_mam.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
+                tvInstruccGramaticaMam.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
                 break;
             case R.id.NoQewixOxwix:
                 vf.showNext();
-                title_gramatica.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
-                tvInstruccGramatica.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
+                title_gramatica_mam.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
+                tvInstruccGramaticaMam.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
                 break;
             case R.id.SiTtxuTxyan:
                 vf.showNext();
-                tvInstruccGramatica.setText("");
+                tvInstruccGramaticaMam.setText("");
                 break;
             case R.id.NoTtxuTxyan:
                 vf.showNext();
-                tvInstruccGramatica.setText("");
+                tvInstruccGramaticaMam.setText("");
                 break;
             case R.id.SiTtxuEkTtxuik:
                 vf.showNext();
@@ -168,8 +169,8 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
         tvTtxritKnel = (TextView) findViewById(R.id.tvTtxritKnel);
         SwChef = (Switch) findViewById(R.id.swChef);
         Txubaj = (TextView) findViewById(R.id.Txubaj);
-        tvInstruccGramatica = (TextView) findViewById(R.id.tvInstruccGramatica);
-        title_gramatica = (TextView) findViewById(R.id.title_gramatica);
+        tvInstruccGramaticaMam = (TextView) findViewById(R.id.tvInstruccGramaticaMam);
+        title_gramatica_mam = (TextView) findViewById(R.id.title_gramatica_mam);
 
         SiIx.setOnClickListener(this);
         NoIx.setOnClickListener(this);
@@ -207,14 +208,14 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
 
         private void Ix() {
             if (SwIx.isChecked())
-                tvIx.setText("Ix");
+                tvIx.setText("I'x");
             else
                 tvIx.setText("");
         }
 
         private void QeoxKyajix() {
             if (SwQeoxKyajix.isChecked())
-                tvQeoxKyajix.setText("QeoxKyajix");
+                tvQeoxKyajix.setText("Qe'ox / Kyaj i'x");
             else
                 tvQeoxKyajix.setText(" ");
         }
@@ -228,7 +229,7 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
 
         private void QewixOxwix() {
             if (SwQewixOxwix.isChecked())
-                tvQewixOxwix.setText("QewixOxwix");
+                tvQewixOxwix.setText("Qe'wix / Ox wix / Oxe wix");
             else
                 tvQewixOxwix.setText("");
         }

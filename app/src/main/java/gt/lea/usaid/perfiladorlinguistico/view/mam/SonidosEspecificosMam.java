@@ -19,7 +19,6 @@ import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Gramatica;
 
 /**
  * Created by Roberto on 20/06/2016.
@@ -27,7 +26,7 @@ import gt.lea.usaid.perfiladorlinguistico.view.espanol.Gramatica;
 public class SonidosEspecificosMam extends Activity implements View.OnClickListener, OnInitializeComponent {
 
     private ViewFlipper vf;
-    private TextView tvInstruccSonidosEsp, tvKaKya, tvChew, tvSiI, tvUJj, tvXar, tvPwaq, tvLaq, tvQaq, tvKum, tvBoch;
+    private TextView tvInstruccSonidosMam, titulo_sonidos_especificos_mam_primera_parte, tvKaKya, tvChew, tvSiI, tvUJj, tvXar, tvPwaq, tvLaq, tvQaq, tvKum, tvBoch;
     private RadioButton SiKaKya, NoKaKya, SiChew, NoChew, SiSiI, NoSiI, SiUJj, NoUJj, SiXar, NoXar, SiPwaq, NoPwaq, SiLaq, NoLaq, SiQaq, NoQaq, SiKum, NoKum, SiBoch, NoBoch;
     private Switch swKaKya, swChew, swSiI, swUJj, swXar, swPwaq, swLaq, swQaq, swKum, swBoch;
     private int[] dr = {R.mipmap.book};
@@ -45,11 +44,11 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.SiKaKya2:
                 vf.showNext();
-                tvInstruccSonidosEsp.setText("");
+                tvInstruccSonidosMam.setText("");
                 break;
             case R.id.NoKaKya2:
                 vf.showNext();
-                tvInstruccSonidosEsp.setText("");
+                tvInstruccSonidosMam.setText("");
                 break;
             case R.id.SiChew:
                 vf.showNext();
@@ -64,15 +63,21 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
                 vf.showNext();
                 break;
             case R.id.SiUJj:
+                titulo_sonidos_especificos_mam_primera_parte.setText(R.string.titulo_sonidos_especificos_mam_segunda_parte);
+                tvInstruccSonidosMam.setText(R.string.inst_sonidos_mam_segunda_parte);
                 vf.showNext();
                 break;
             case R.id.NoUJj:
+                titulo_sonidos_especificos_mam_primera_parte.setText(R.string.titulo_sonidos_especificos_mam_segunda_parte);
+                tvInstruccSonidosMam.setText(R.string.inst_sonidos_mam_segunda_parte);
                 vf.showNext();
                 break;
             case R.id.SiXar:
+                tvInstruccSonidosMam.setText("");
                 vf.showNext();
                 break;
             case R.id.NoXar:
+                tvInstruccSonidosMam.setText("");
                 vf.showNext();
                 break;
             case R.id.SiPwaq:
@@ -103,7 +108,7 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
                 vf.showNext();
                 Toast toast0 =
                         Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
+                                "Serie Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
                 Intent gramatica1 = new Intent(getApplication(), GramaticaMam.class);
@@ -113,7 +118,7 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
                 vf.showNext();
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
+                                "Serie Finalizada", Toast.LENGTH_LONG);
 
                 toast1.show();
                 Intent gramatica2 = new Intent(getApplication(), GramaticaMam.class);
@@ -177,7 +182,9 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
         tvKum = (TextView) findViewById(R.id.tvKum);
         swBoch = (Switch) findViewById(R.id.swBoch);
         tvBoch = (TextView) findViewById(R.id.tvBoch);
-        tvInstruccSonidosEsp = (TextView) findViewById(R.id.tvInstruccSonidosEsp);
+        tvInstruccSonidosMam = (TextView) findViewById(R.id.tvInstruccSonidosMam);
+        titulo_sonidos_especificos_mam_primera_parte = (TextView) findViewById(R.id.titulo_sonidos_especificos_mam_primera_parte);
+
         SiKaKya.setOnClickListener(this);
         NoKaKya.setOnClickListener(this);
         SiChew.setOnClickListener(this);
@@ -218,28 +225,28 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
 
         private void KaKya() {
             if (swKaKya.isChecked())
-                tvKaKya.setText("KaKya");
+                tvKaKya.setText("Ka' / Kya");
             else
                 tvKaKya.setText("");
         }
 
         private void Chew() {
             if (swChew.isChecked())
-                tvChew.setText("Chew");
+                tvChew.setText("Che'w");
             else
                 tvChew.setText(" ");
         }
 
         private void SiI() {
             if (swSiI.isChecked())
-                tvSiI.setText("SiI");
+                tvSiI.setText("Si'");
             else
                 tvSiI.setText(" ");
         }
 
         private void UJj() {
             if (swUJj.isChecked())
-                tvUJj.setText("UJj");
+                tvUJj.setText("U'j");
             else
                 tvUJj.setText("");
         }
@@ -267,21 +274,21 @@ public class SonidosEspecificosMam extends Activity implements View.OnClickListe
 
         private void Qaq() {
             if (swQaq.isChecked())
-                tvQaq.setText("Qaq");
+                tvQaq.setText("Q'aq'");
             else
                 tvQaq.setText(" ");
         }
 
         private void Kum() {
             if (swKum.isChecked())
-                tvKum.setText("Kum");
+                tvKum.setText("K'um");
             else
                 tvKum.setText(" ");
         }
 
         private void Boch() {
             if (swBoch.isChecked())
-                tvBoch.setText("Boch");
+                tvBoch.setText("B'och");
             else
                 tvBoch.setText(" ");
         }

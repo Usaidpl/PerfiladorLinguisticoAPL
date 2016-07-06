@@ -36,7 +36,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Ub'eyal / Instrucciones\nSe creara una histroria por cada dibujo"
+                    android:text="Chikb'ab'il / Instrucciones\nKxe'l nyek'una junjun tib'lal, q'amantza ti nb'aj kye jujun."
                     android:textSize="@dimen/_11sdp" />
 
                 <TextView
@@ -286,7 +286,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/para_terminar"
+                    android:text="Tun tb'aj aju na'Itqanil."
                     android:textAlignment="center"
                     android:textSize="@dimen/_11sdp" />
 
@@ -307,7 +307,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/despu_s_paso_que"
+                    android:text="Ti'd xb'aj."
                     android:textAlignment="center"
                     android:textSize="@dimen/_11sdp" />
 
@@ -328,7 +328,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/en_un_lugar_de"
+                    android:text="Toj jun kojb'il'."
                     android:textAlignment="center"
                     android:textSize="@dimen/_11sdp" />
 

@@ -10,17 +10,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/GramaticaIdioma_Esp_SerE"
+        android:text="VI. K'LOJ. TXOLIL QYOL MAM (JUN EX TX QAN)\nGRAMÁTICA DEL IDIOMA MAM (SINGULAR Y PLURAL)"
         android:textSize="20dp"
         android:textAlignment="center"
-        android:id="@+id/title_gramatica"/>
+        android:id="@+id/title_gramatica_mam"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/_12sdp"
         android:padding="@dimen/_11sdp"
-        android:text="@string/que_es_esta_imagen_esp"
-        android:id="@+id/tvInstruccGramatica"/>
+        android:text="Kxe'l nyek'una junjun tib'lal, q'amantza ti tb'i junjun"
+        android:id="@+id/tvInstruccGramaticaMam"/>
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvImage1"

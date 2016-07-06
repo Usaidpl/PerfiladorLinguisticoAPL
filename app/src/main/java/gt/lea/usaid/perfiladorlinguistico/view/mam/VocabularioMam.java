@@ -56,14 +56,14 @@ public class VocabularioMam extends Activity implements View.OnClickListener, On
 
         private void JaA() {
             if (swJaA.isChecked())
-                tvJaA.setText("JaA");
+                tvJaA.setText("Ja'");
             else
                 tvJaA.setText("");
         }
 
         private void WatbilKuxlil() {
             if (swWatbilKuxlil.isChecked())
-                tvWatbilKuxlil.setText("WatbilKuxlil");
+                tvWatbilKuxlil.setText("Watb'il / Kuxli'l");
             else
                 tvWatbilKuxlil.setText(" ");
 
@@ -71,7 +71,7 @@ public class VocabularioMam extends Activity implements View.OnClickListener, On
 
         private void XikXiky() {
             if (swXikXiky.isChecked())
-                tvXikXiky.setText("XikXiky");
+                tvXikXiky.setText("Xik / Xiky");
             else
                 tvXikXiky.setText(" ");
         }
@@ -85,14 +85,14 @@ public class VocabularioMam extends Activity implements View.OnClickListener, On
 
         private void JosTpaqik() {
             if (swJosTpaqik.isChecked())
-                tvJosTpaqik.setText("JosTpaqik");
+                tvJosTpaqik.setText("Jos / Tpaq ik' / Tjos ek'");
             else
                 tvJosTpaqik.setText(" ");
         }
 
         private void BixBich() {
             if (swBixBich.isChecked())
-                tvBixBich.setText("BixBich");
+                tvBixBich.setText("Bix /B'ich / Tal ek'");
             else
                 tvBixBich.setText(" ");
         }
@@ -113,7 +113,7 @@ public class VocabularioMam extends Activity implements View.OnClickListener, On
 
         private void BEe() {
             if (swBEe.isChecked())
-                tvBEe.setText("BEe");
+                tvBEe.setText("B'e");
             else
                 tvBEe.setText(" ");
         }
@@ -189,7 +189,7 @@ public class VocabularioMam extends Activity implements View.OnClickListener, On
                 vf.showNext();
                 Toast toast0 =
                         Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
+                                "Serie Finalizada", Toast.LENGTH_LONG);
 
                 toast0.show();
                 Intent pruebas2 = new Intent(getApplication(), SonidosEspecificosMam.class);
@@ -199,7 +199,7 @@ public class VocabularioMam extends Activity implements View.OnClickListener, On
                 vf.showNext();
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
+                                "Serie Finalizada", Toast.LENGTH_LONG);
                 toast1.show();
                 Intent pruebas = new Intent(getApplication(), SonidosEspecificosMam.class);
                 startActivity(pruebas);

@@ -9,14 +9,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/VocabularioProduccion_Esp_SerE"
+        android:text="IV. K'LOJ. K'LOJYOL MAM / VOCABULARIO"
         android:textSize="@dimen/_18sdp"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:id="@+id/titulo_sonidos_especificos_mam_primera_parte"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/le_mostrare_algunos_dibujos"
+        android:text="Chikb'ab'il / Instrucciones\Kxel nyek'una jujun tib'lal; q'amantza tb'i junjun."
         android:textSize="@dimen/_12sdp"
         android:padding="@dimen/_11sdp"
         android:id="@+id/tvInstruccVocalario"/>

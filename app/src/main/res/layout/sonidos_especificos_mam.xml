@@ -16,16 +16,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/SonidosEspecificos_Esp_SerE"
+        android:text="V. K'LOJ TQ'OJQ'OJAL QYOL MAM / \n SONIDOS ESPECÍFICOS DEL MAM (PRIMERA PARTE)"
         android:textSize="20sp"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:id="@+id/titulo_sonidos_especificos_mam_primera_parte"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/_12sdp"
         android:padding="@dimen/_11sdp"
-        android:text="@string/que_es_esta_imagen_esp"
-        android:id="@+id/tvInstruccSonidosEsp"/>
+        android:text="Chikb'ab'il / Instrucciones\n Kx'el nyek'una jujun tib'lal, q'amantza ti tb'i jujun."
+        android:id="@+id/tvInstruccSonidosMam"/>
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvImage1"

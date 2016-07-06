@@ -791,5 +791,9 @@
     <string name="titulo_sonidos_especificos_kiche">CH\'AB\'AL XAQ K\'ICHE\'\nSONIDOS ESPECIFICOS DEL K\'ICHE\' (SEGUNDA PARTE)</string>
     <string name="titulo_gramatica_kiche">\nVI. CHOLAJ. UTZALAJ UKOJIK CH’AB’AL / GRAMÁTICA\nAli, ala. (jujunal, k’itaq) Número (singular o plural)</string>
     <string name="inst_gramatica_kiche_singular_plular">Ub\'eyal / Instrucciones\nB\'ij la che le ajtijoxel Kink\'ut jujun taq wachib\'al chawe utz kilik chikijujunal kab\'ano, ek\'o jujun taq xaq kitukel, le jujun taq chik ek\'i, kab\'ij jachike taq le kib\'i\'. Tz\'ib\'aj la pa le uxaq re tzalimtzil we utz ri kub\'ik are ek\'i le jastaq. Jujunal K\'itaq\nKink\'ut jujun taq wachib\'al chawe, utz kilik chikijujunal kab\'ano, jujun taq xaq kitukel, le jujun taq chik ek\'im kab\'j jachike taq le kib\'i.</string>
+    <string name="titulo_sonidos_especificos_mam_segunda_parte">V. LOJ. TQ\'OJQ\'OJAL QYOL MAM/\nSONIDOS ESPECÍFICOS DEL MAM (SEGUNDA PARTE)</string>
+    <string name="inst_sonidos_mam_segunda_parte">Chikb\'ab\'il / Instrucciones\nKx\'el nyek\'una jujun tib\'lal, q\'amantza ti tb\'i junjun.</string>
+    <string name="instr_gramatica_mam_masculino_femenino">Chikb\'ab\'il / Instrucciones\nYek\'unxa junjun tilb\'ilal ex qaninxa te xnaq\'tnaq\'tzanjtz qe\'xjelb\'il, Tzib\'ankub\'a toj u\'j aju tzaq\'web\'il, qa b\'an ex qa mya\'b\'an.</string>
+    <string name="titulo_gramatica_mam_masculino_femenino">ICHAN-XUJ\nGÉNERO GRAMATICAL (MASCULINO FEMENINO)</string>
 
 </resources>

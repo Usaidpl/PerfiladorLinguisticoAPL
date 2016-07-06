@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Comprende;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
 
 /**
@@ -63,7 +64,7 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         int evalua = 0;
         switch (v.getId()) {
             case R.id.ivMamEva:
-                intent = new Intent(getActivity(), Interactua.class);
+                intent = new Intent(getActivity(), Comprende.class);
                // b.putInt(KEY_EVALUACION, 0);
                 intent.putExtras(envia(0));
                 getActivity().startActivity(intent);

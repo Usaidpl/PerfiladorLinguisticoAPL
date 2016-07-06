@@ -1,5 +1,7 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.ViewFlipper;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.view.mam.VocabularioMam;
 
 /**
  * Created by Bryan on 20/06/16.
@@ -18,6 +21,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
 public class Precisiona extends FlipperActivity implements OnInitializeComponent {
 
     private static final int TOTAL_SERIE = 5;//18;
+    private static final long PAUSA = 5000;
     private int pregunta = 0;
     private ImageView image, image2, image3;
     private ViewFlipper flipper;
@@ -25,7 +29,6 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
             {R.id.ivPoll, R.id.ivPat, R.id.ivPav}, {R.id.ivCon, R.id.ivPerr, R.id.ivGat},
             {R.id.ivCaball,R.id.ivOvej,R.id.ivVac}, {R.id.ivArb,R.id.ivRosa,R.id.ivMazorca},
             {R.id.ivElet, R.id.ivElet, R.id.ivCalaza}, {R.id.ivElo, R.id.ivZona, R.id.ivBanano}};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,47 +38,82 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
     }
 
     @Override
-    public void setOnInit(@IdRes int[][] matriz) {
-        this.setFlipperId(R.id.flipper);
-        flipper = getFlipper();
-
-            int vector[] = matriz[pregunta], imagen;
-            for(int v = 0; v < vector.length; v ++){
-                imagen = vector[v];
-                if(image == null)
-                    image =(ImageView) findViewById(imagen);
-                else if(image != null && image2 == null)
-                    image2 =(ImageView) findViewById(imagen);
-                else if(image2 != null && image3 == null)
-                    image3 =(ImageView) findViewById(imagen);
+    public void setOnInit(@IdRes final int[][] matriz) {
+        try{
+            this.setFlipperId(R.id.flipper);
+            flipper = getFlipper();
+        }catch (RuntimeException e){
+            String s = e.getMessage() + " flipper";
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+        Thread t = new Thread(new Runnable() {
+            int[][] m = matriz;
+            @Override
+            public void run() {
+                int vector[], imagen;
+                try {
+                    vector= m[pregunta];
+                    for(int v = 0; v < vector.length; v ++){
+                        imagen = vector[v];
+                        if(image == null)
+                            image =(ImageView) findViewById(imagen);
+                        else if(image != null && image2 == null)
+                            image2 =(ImageView) findViewById(imagen);
+                        else if(image2 != null && image3 == null)
+                            image3 =(ImageView) findViewById(imagen);
+                    }
+                    image.setOnClickListener(click);
+                    image2.setOnClickListener(click);
+                    image3.setOnClickListener(click);
+                    Thread.sleep(PAUSA);
+                } catch (InterruptedException e) {
+                    String s = e.getMessage() + " Vector";
+                    Toast.makeText(Precisiona.this, s, Toast.LENGTH_LONG).show();
+                } finally {
+                    vector = m[pregunta];
+                    image = (ImageView) findViewById(vector[0]);
+                    image2 = (ImageView) findViewById(vector[1]);
+                    image3 = (ImageView) findViewById(vector[2]);
+                }
             }
-        image.setOnClickListener(click);
-        image2.setOnClickListener(click);
-        image3.setOnClickListener(click);
+        });
+        t.start();
+
     }
 
 
     private View.OnClickListener click = new View.OnClickListener(){
         int resultado = 0;
+        String s = null;
         @Override
         public void onClick(View v) {
             this.selectImageView(v);
 
             if(pregunta == TOTAL_SERIE){
-                resultado += selectImageView(v);
-                String s = String.valueOf(resultado);
-                Toast.makeText(Precisiona.this,s,Toast.LENGTH_SHORT).show();
-                setNextContext(Precisiona.this, Vocabulario.class);
+                int serie = 0;
+                switch (serie){
+                    case 0:
+                        resultado += selectImageView(v);
+                        s = String.valueOf(resultado);
+                        setNextContext(Precisiona.this, VocabularioMam.class);break;
+                    case 1:
+                        resultado += selectImageView(v);
+                        s = String.valueOf(resultado);
+                        setNextContext(Precisiona.this, VocabularioMam.class);break;
+                    case 2:
+                        resultado += selectImageView(v);
+                        s = String.valueOf(resultado);
+                        setNextContext(Precisiona.this, VocabularioMam.class);break;
+                }
             }
             else{
                 resultado += this.selectImageView(v);
+
                 pregunta ++;
                 clearImage();
                 setOnInit(ids);
                 flipper.showNext();
             }
-
-
         }
 
         private int selectImageView(View v){
@@ -83,23 +121,22 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
             switch (v.getId()){
                 case R.id.ivPat:
                     sub_result ++;
-
                     break;
                 case R.id.ivGat:
-                         sub_result ++;
+                    sub_result ++;
                     break;
                 case R.id.ivVac:
                     sub_result ++;
                     break;
-                 case R.id.ivArb:
+                case R.id.ivArb:
                     sub_result ++;
-                     break;
-                 case R.id.ivElet:
+                    break;
+                case R.id.ivElet:
                     sub_result ++;
-                     break;
-                 case R.id.ivBanano:
+                    break;
+                case R.id.ivBanano:
                     sub_result ++;
-                     break;
+                    break;
                  /*case R.id.ivBus:
                     sub_result ++;
                  case R.id.ivCar:
@@ -144,4 +181,6 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
         image2 = null;
         image3 = null;
     }
+
+
 }//end class

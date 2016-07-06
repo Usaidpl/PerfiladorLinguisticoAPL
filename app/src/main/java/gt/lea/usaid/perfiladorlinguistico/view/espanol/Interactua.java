@@ -1,13 +1,16 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,14 +35,24 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
     private TextView intruduccion, respuesta_correcta, tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
     private static final String NOMBRE_TABLA = "interaccion";
 
-     private int serie = 0;
+    private int serie = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interpreta);
         Bundle b = getIntent().getExtras();
-        serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
+        try{
+            serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
+        }catch (Exception e){
+            try {
+                serie = 0;
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+            String s = e.getMessage() + " Bundle";
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
         setOnInit(null);
     }
 
@@ -63,7 +76,7 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
         intruduccion = (TextView) findViewById(R.id.tvInstrucionInteractua);
         respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaInteractua);
 
-        tvPregunta1 = (TextView) findViewById(R.id.tvPreguntaUnoComprende);
+        tvPregunta1 = (TextView) findViewById(R.id.tvPreguntaUnoInteractua);
         tvPregunta2 = (TextView) findViewById(R.id.tvPreguntaDosInteractua);
         tvPregunta3 = (TextView) findViewById(R.id.tvPreguntaTresInteractua);
         tvPregunta4 = (TextView) findViewById(R.id.tvPreguntaCuatroInteractua);
@@ -91,7 +104,7 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
                         R.string.Pre1_MamEsp_SerE_I, R.string.Pre2_MamEsp_SerE_I, R.string.Pre3_MamEsp_SerE_I,
                         R.string.Pre4_MamEsp_SerE_I, R.string.Pre5_MamEsp_SerE_I}};
 
-        //setTextCompoent(textos_idiomas);
+        setTextCompoent(textos_idiomas);
     }
 
     @Override
@@ -106,12 +119,12 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
         id_text4 = vector[5];
         id_text5 = vector[6];
         intruduccion.setText(id_intro);
-        respuesta_correcta.setText(id_intro);
-//        tvPregunta1.setText(id_text1);
-  //      tvPregunta2.setText(id_text2);
-    //    tvPregunta3.setText(id_text3);
-      //  tvPregunta4.setText(id_text4);
-        //tvPregunta5.setText(id_text5);
+        respuesta_correcta.setText(id_resp);
+        tvPregunta1.setText(id_text1);
+        tvPregunta2.setText(id_text2);
+        tvPregunta3.setText(id_text3);
+        tvPregunta4.setText(id_text4);
+        tvPregunta5.setText(id_text5);
     }
 
     @Override
@@ -139,4 +152,6 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
         super.onPause();
         finish();
     }
+
+
 }

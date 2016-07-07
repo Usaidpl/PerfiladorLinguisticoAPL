@@ -544,7 +544,7 @@
     <string name="no">NO</string>
     <string name="si">SI</string>
     <string name="CreditoLema">Creditos</string>
-    <string name="perfil_linguistico_de_estudiantes_de_primaria_y_primer_grado_de_primaria">PERFIL LINGUISTICO DE ESTUDIANTES \nDE PRIMARIA Y PRIMER GRADO DE \nPRIMARIA</string>
+    <string name="perfil_linguistico_de_estudiantes_de_primaria_y_primer_grado_de_primaria">PERFIL LINGÜÍSTICO DE ESTUDIANTES \nDE PRIMARIA Y PRIMER GRADO DE \nPRIMARIA</string>
     <string name="le_mostrare_algunos_dibujos">Instrucciones:\nSe le mostraran diez imágenes y pronuncie el nombre de cada una de ellas.</string>
     <string name="imagen_1_10_vobaulario_produccion">Imagen 1 / 10</string>
     <string name="imagen_2_10_vobaulario_produccion">Imagen 2 / 10</string>
@@ -797,5 +797,8 @@
     <string name="inst_sonidos_mam_segunda_parte">Chikb\'ab\'il / Instrucciones\nKx\'el nyek\'una jujun tib\'lal, q\'amantza ti tb\'i junjun.</string>
     <string name="instr_gramatica_mam_masculino_femenino">Chikb\'ab\'il / Instrucciones\nYek\'unxa junjun tilb\'ilal ex qaninxa te xnaq\'tnaq\'tzanjtz qe\'xjelb\'il, Tzib\'ankub\'a toj u\'j aju tzaq\'web\'il, qa b\'an ex qa mya\'b\'an.</string>
     <string name="titulo_gramatica_mam_masculino_femenino">ICHAN-XUJ\nGÉNERO GRAMATICAL (MASCULINO FEMENINO)</string>
+    <string name="eva_finalizada">Evaluacion  Finalizada</string>
+    <string name="ti_tb_i_lu_ntx_ya_n_nqa_at_tal_ti_tb_i">Ti tb\'i lu\nTx\'ya\'n.\nQa at tal, ti tb\'i</string>
+    <string name="ti_tbi_lu">Ti tb\'i lu\nTx\'ya\'n.\nQa at tal, ti tb\'i</string>
 
 </resources>

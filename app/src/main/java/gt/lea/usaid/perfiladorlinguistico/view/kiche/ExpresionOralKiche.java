@@ -1,5 +1,7 @@
 package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.MotionEvent;
@@ -12,6 +14,7 @@ import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
 
+import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
@@ -23,6 +26,8 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
     private RadioButton RespNoPregunta1, RespSiPregunta1, RespNoPregunta2, RespSiPregunta2, RespNoPregunta3, RespSiPregunta3, RespNoPregunta4, RespSiPregunta4;
     private ViewFlipper vfEvaExpresionOralKiche;
     private float lastX;
+
+    //public static final String KEY = "ESPAÑOL";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +60,7 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
         try {
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
             descition(resultado);
-            setNextContext(ExpresionOralKiche.this, NavigationMenu.class);
+            setNextContext(ExpresionOralKiche.this, Interactua.class);
         } catch (Exception e) {
             //e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -112,5 +117,14 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
                 break;
         }
         return false;
+    }
+
+    @Override
+    public void setNextContext(Context context, Class<?> next_context) {
+        Intent i = new Intent(context, next_context);
+        Bundle b = new Bundle();
+        b.putInt(IniciarEvaluacion.KEY_EVALUACION, 2);
+        i.putExtras(b);
+        startActivity(i);
     }
 }

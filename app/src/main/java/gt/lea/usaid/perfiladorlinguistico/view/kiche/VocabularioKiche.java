@@ -30,10 +30,13 @@ public class VocabularioKiche extends Activity implements View.OnClickListener, 
     private Switch swKar, swJar, swLej, swKumatz, swKej, swKoy, swTzi, swKix, swMukunKum, swQatzuQanxul;
     private int[] dr = {R.mipmap.book};
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vocabulario_kiche);
+
 
         setOnInit(null);
         //DialogoAlerta.alertDialog("Hola", "Desea Continuar", false, this);

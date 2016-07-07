@@ -11,7 +11,6 @@ import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
-import gt.lea.usaid.perfiladorlinguistico.view.mam.GramaticaMam;
 
 /**
  * Created by Roberto on 21/06/16.
@@ -26,10 +25,10 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         View vista = inflater.inflate(R.layout.iniciar_evaluacion, container, false);
         ivMamEva =(ImageView) vista.findViewById(R.id.ivMamEva);
         ivKicheEva =(ImageView) vista.findViewById(R.id.ivKicheEva);
-        ivEspanolEva = (ImageView) vista.findViewById(R.id.ivEspanolEva);
+        //ivEspanolEva = (ImageView) vista.findViewById(R.id.ivEspanolEva);
         ivMamEva.setOnClickListener(this);
         ivKicheEva.setOnClickListener(this);
-        ivEspanolEva.setOnClickListener(this);
+        //ivEspanolEva.setOnClickListener(this);
         return vista;
     }
 
@@ -69,15 +68,15 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivKicheEva:
-                intent = new Intent(getActivity(), GramaticaMam.class);
+                intent = new Intent(getActivity(), Interactua.class);
                 intent.putExtras(envia(1));
                 getActivity().startActivity(intent);
                 break;
-            case R.id.ivEspanolEva:
+           /* case R.id.ivEspanolEva:
                 intent = new Intent(getActivity(), Interactua.class);
                 intent.putExtras(envia(2));
                 getActivity().startActivity(intent);
-                break;
+                break;*/
         }
         //select * from entrevista join interaccion join .... where id = 002;
         //Inte

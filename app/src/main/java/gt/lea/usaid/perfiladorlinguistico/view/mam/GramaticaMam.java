@@ -64,18 +64,16 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
                 break;
             case R.id.NoWix:
                 vf.showNext();
-                title_gramatica_mam.setText(R.string.titulo_gramatica_mam_masculino_femenino);
-                tvInstruccGramaticaMam.setText(R.string.instr_gramatica_mam_masculino_femenino);
                 break;
             case R.id.SiQewixOxwix:
                 vf.showNext();
-                title_gramatica_mam.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
-                tvInstruccGramaticaMam.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
+                title_gramatica_mam.setText(R.string.titulo_gramatica_mam_masculino_femenino);
+                tvInstruccGramaticaMam.setText(R.string.instr_gramatica_mam_masculino_femenino);
                 break;
             case R.id.NoQewixOxwix:
                 vf.showNext();
-                title_gramatica_mam.setText("GENERO GRAMATICAL (MASCULINO Y FEMENINO)");
-                tvInstruccGramaticaMam.setText("Responda correctamente cada pregunta planteada en los siguientes casos");
+                title_gramatica_mam.setText(R.string.titulo_gramatica_mam_masculino_femenino);
+                tvInstruccGramaticaMam.setText(R.string.instr_gramatica_mam_masculino_femenino);
                 break;
             case R.id.SiTtxuTxyan:
                 vf.showNext();
@@ -101,7 +99,7 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
                 vf.showNext();
                 Toast toast0 =
                         Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
+                                R.string.eva_finalizada, Toast.LENGTH_LONG);
 
                 toast0.show();
                 Intent expresionoral = new Intent(getApplication(), ExpresionOralMam.class);
@@ -111,7 +109,7 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
                 vf.showNext();
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
+                                R.string.eva_finalizada, Toast.LENGTH_LONG);
 
                 toast1.show();
                 Intent expresionoral2 = new Intent(getApplication(), ExpresionOralMam.class);
@@ -224,7 +222,7 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
             if (SwWix.isChecked())
                 tvWix.setText("Wix");
             else
-                tvWix.setText(" ");
+                tvWix.setText("");
         }
 
         private void QewixOxwix() {
@@ -236,30 +234,30 @@ public class GramaticaMam extends Activity implements View.OnClickListener, OnIn
 
         private void TtxuTxyan() {
             if (SwTtxuTxyan.isChecked())
-                tvTtxuTxyan.setText("TtxuTxyan");
+                tvTtxuTxyan.setText("Ttxu tx'ya'n.");
             else
-                tvTtxuTxyan.setText("Esta es una Abuela, si fuera hombre ¿cómo se diría?");
+                tvTtxuTxyan.setText(R.string.ti_tbi_lu);
         }
 
         private void TtxuEkTtxuik() {
             if (SwTtxuEkTtxuik.isChecked())
-                tvTtxuEkTtxuik.setText("TtxuEkTtxuik");
+                tvTtxuEkTtxuik.setText("Ttxu ek' / Ttxu ik'");
             else
-                tvTtxuEkTtxuik.setText("Este es un maestro, si fuera una mujer ¿cómo se diría?");
+                tvTtxuEkTtxuik.setText("Ti tb'i lu\nek' / ik'\nQa npaqin, ti tb'i");
         }
 
         private void TtxritKnel() {
             if (SwTtxritKnel.isChecked())
-                tvTtxritKnel.setText("TtxritKnel");
+                tvTtxritKnel.setText("Ttxu rit / kne'l");
             else
-                tvTtxritKnel.setText("Este es un doctor, si fuera mujer ¿cómo se diría?");
+                tvTtxritKnel.setText("Ti tb'i lu\nrit / kne'l.\nQa at tal, ti tb'i");
         }
 
         private void chef() {
             if (SwChef.isChecked())
-                Txubaj.setText("Cociera / ");
+                Txubaj.setText("Txub'aj");
             else
-                Txubaj.setText("Este es un cocinero, si fuera mujer ¿cómo se diría?");
+                Txubaj.setText("Ti tb'i lu\nmanb'aj.\nQa xu'j qya, ti tb'i.");
         }
 
 

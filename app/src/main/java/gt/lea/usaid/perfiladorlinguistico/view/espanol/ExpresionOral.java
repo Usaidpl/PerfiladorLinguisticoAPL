@@ -29,6 +29,7 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
         vfEvaExpresionOral = (ViewFlipper) findViewById(R.id.vfEvaExpresionOral);
         setOnInit(null);
 
+
     }
 
     public void setOnInit(@IdRes int[][] matriz) {
@@ -111,4 +112,6 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
         }
         return false;
     }
+
+
 }

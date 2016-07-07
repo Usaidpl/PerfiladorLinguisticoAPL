@@ -90,17 +90,17 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="@string/si"
+                                android:text="@string/Si_MamEsp"
                                 android:id="@+id/SiIx"/>
 
                             <RadioButton
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="@string/no"
+                                android:text="@string/No_MamEsp"
                                 android:id="@+id/NoIx"/>
 
                         </RadioGroup>
@@ -171,17 +171,17 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="@string/si"
+                                android:text="@string/Si_MamEsp"
                                 android:id="@+id/SiQeoxKyajix"/>
 
                             <RadioButton
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="@string/no"
+                                android:text="@string/No_MamEsp"
                                 android:id="@+id/NoQeoxKyajix"/>
 
                         </RadioGroup>
@@ -246,17 +246,17 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="@string/si"
+                                android:text="@string/Si_MamEsp"
                                 android:id="@+id/SiWix"/>
 
                             <RadioButton
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="@string/no"
+                                android:text="@string/No_MamEsp"
                                 android:id="@+id/NoWix"/>
 
                         </RadioGroup>
@@ -322,17 +322,17 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="@string/si"
+                                android:text="@string/Si_MamEsp"
                                 android:id="@+id/SiQewixOxwix"/>
 
                             <RadioButton
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="@string/no"
+                                android:text="@string/No_MamEsp"
                                 android:id="@+id/NoQewixOxwix"/>
 
                         </RadioGroup>
@@ -399,17 +399,17 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="@string/si"
+                                android:text="@string/Si_MamEsp"
                                 android:id="@+id/SiTtxuTxyan"/>
 
                             <RadioButton
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="@string/no"
+                                android:text="@string/No_MamEsp"
                                 android:id="@+id/NoTtxuTxyan"/>
 
                         </RadioGroup>
@@ -423,7 +423,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_column="0"
                     android:layout_gravity="center"
-                    android:text="@string/tvTtxuTxyan"
+                    android:text="@string/ti_tb_i_lu_ntx_ya_n_nqa_at_tal_ti_tb_i"
                     android:textSize="30dp" />
 
             </RelativeLayout>
@@ -475,17 +475,17 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="@string/si"
+                                android:text="@string/Si_MamEsp"
                                 android:id="@+id/SiTtxuEkTtxuik"/>
 
                             <RadioButton
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="@string/no"
+                                android:text="@string/No_MamEsp"
                                 android:id="@+id/NoTtxuEkTtxuik"/>
 
                         </RadioGroup>
@@ -551,17 +551,17 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="@string/Si"
+                                android:text="@string/Si_MamEsp"
                                 android:id="@+id/SiTtxritKnel"/>
 
                             <RadioButton
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="@string/no"
+                                android:text="@string/No_MamEsp"
                                 android:id="@+id/NoTtxritKnel"/>
 
                         </RadioGroup>
@@ -627,17 +627,17 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:layout_width="81dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="31"
-                                android:text="@string/si"
+                                android:text="@string/Si_MamEsp"
                                 android:id="@+id/SiTxubaj"/>
 
                             <RadioButton
-                                android:layout_width="91dp"
+                                android:layout_width="128dp"
                                 android:layout_height="wrap_content"
                                 android:layout_column="33"
-                                android:text="@string/no"
+                                android:text="@string/No_MamEsp"
                                 android:id="@+id/NoSiTxubaj"/>
 
                         </RadioGroup>
@@ -651,7 +651,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_column="0"
                     android:layout_gravity="center"
-                    android:text="@string/tvcocinera"
+                    android:text=""
                     android:textSize="30dp" />
 
             </RelativeLayout>

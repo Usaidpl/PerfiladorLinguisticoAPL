@@ -1,5 +1,7 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
+import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
 import gt.lea.usaid.perfiladorlinguistico.view.mam.VocabularioMam;
@@ -28,11 +31,14 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
             {R.id.ivPoll, R.id.ivPat, R.id.ivPav}, {R.id.ivCon, R.id.ivPerr, R.id.ivGat},
             {R.id.ivCaball,R.id.ivOvej,R.id.ivVac}, {R.id.ivArb,R.id.ivRosa,R.id.ivMazorca},
             {R.id.ivElet, R.id.ivElet, R.id.ivCalaza}, {R.id.ivElo, R.id.ivZona, R.id.ivBanano}};
+    private int serie = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.precisiona);
+        Bundle b = getIntent().getExtras();
+        serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
         setOnInit(ids);
     }
 
@@ -72,12 +78,11 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
     private View.OnClickListener click = new View.OnClickListener(){
         int resultado = 0;
         String s = null;
+        //int serie = this.serie;
         @Override
         public void onClick(View v) {
             this.selectImageView(v);
-
             if(pregunta == TOTAL_SERIE){
-                int serie = 0;
                 switch (serie){
                     case 0:
                         resultado += selectImageView(v);
@@ -86,11 +91,11 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                     case 1:
                         resultado += selectImageView(v);
                         s = String.valueOf(resultado);
-                        setNextContext(Precisiona.this, Vocabulario.class);break;
+                        setNextContext(Precisiona.this, VocabularioMam.class);break;
                     case 2:
                         resultado += selectImageView(v);
                         s = String.valueOf(resultado);
-                        setNextContext(Precisiona.this, VocabularioMam.class);break;
+                        setNextContext(Precisiona.this, Vocabulario.class);break;
                 }
             }
             else{
@@ -168,5 +173,13 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
         image3 = null;
     }
 
+    @Override
+    public void setNextContext(Context context, Class<?> next_context) {
+        Intent i = new Intent(context, next_context);
+        Bundle b = new Bundle();
+        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
+        i.putExtras(b);
+        startActivity(i);
 
+    }
 }//end class

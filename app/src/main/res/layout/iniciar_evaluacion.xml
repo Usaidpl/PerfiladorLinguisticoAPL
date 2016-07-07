@@ -66,32 +66,4 @@
             android:textSize="25dp" />
     </FrameLayout>
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/flEspanolEva"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginStart="55dp"
-        android:layout_alignTop="@+id/flMamEva"
-        android:layout_toRightOf="@+id/flMamEva"
-        android:layout_toEndOf="@+id/flMamEva">
-
-        <ImageView
-            android:id="@+id/ivEspanolEva"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/book" />
-
-        <TextView
-            android:id="@+id/tvEspanolEva"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|bottom"
-            android:background="#AA000000"
-            android:text="Evaluación Español"
-            android:textAlignment="center"
-            android:textColor="#ffffffff"
-            android:textSize="25dp" />
-    </FrameLayout>
 </RelativeLayout>

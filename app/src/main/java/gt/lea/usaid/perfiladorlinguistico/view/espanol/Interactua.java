@@ -1,11 +1,20 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
+import android.content.Context;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
@@ -22,9 +31,8 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
     private TextView intruduccion, respuesta_correcta, tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
     private static final String NOMBRE_TABLA = "interaccion";
-    private static final String NOMBRE_TABLA_KICKE = "interaccion_kiche";
-    private static final String NOMBRE_TABLA_MAN = "interaccion_man";
-    private int serie = 0;
+
+     private int serie = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,23 +98,13 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
     public void setTextCompoent(@IdRes int [][] textos){
         int vector[] = textos[serie], texto = 0;
         int  id_intro = 0, id_resp = 0,id_text1 = 0, id_text2 = 0, id_text3 = 0, id_text4 = 0, id_text5 = 0;
-        for(int v = 0; v < vector.length; v++){
-            texto = vector[v];
-            if(id_intro == 0)
-                id_intro = texto;
-            else  if(id_intro > 0 && id_resp == 0)
-                id_resp = texto;
-            else  if(id_resp > 0 && id_text1 == 0)
-                id_text1 = texto;
-            else  if(id_text1 > 0 && id_text2 == 0)
-                id_text2 = texto;
-            else  if(id_text2 > 0 && id_text3 == 0)
-                id_text3 = texto;
-            else  if(id_text3 > 0 && id_text4 == 0)
-                id_text4 = texto;
-            else  if(id_text4 > 0 && id_text5 == 0)
-                id_text5 = texto;
-        }
+        id_intro = vector[0];
+        id_resp = vector[1];
+        id_text1 = vector[2];
+        id_text2 = vector[3];
+        id_text3 = vector[4];
+        id_text4 = vector[5];
+        id_text5 = vector[6];
         intruduccion.setText(id_intro);
         respuesta_correcta.setText(id_intro);
 //        tvPregunta1.setText(id_text1);

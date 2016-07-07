@@ -207,7 +207,7 @@
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:src="@mipmap/ic_launcher"
-                    android:id="@+id/Ejote"/>
+                    android:id="@+id/ivEjote"/>
                 <Space
                     android:layout_width="40dp"
                     android:layout_height="match_parent" />

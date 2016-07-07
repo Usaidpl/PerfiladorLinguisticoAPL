@@ -22,10 +22,9 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
     private ImageView image, image2, image3;
     private ViewFlipper flipper;
     private int[][] ids = {
-            {R.id.ivPoll, R.id.ivPat, R.id.ivPav},
-            {R.id.ivCon, R.id.ivPerr, R.id.ivGat},{R.id.ivCaball,R.id.ivOvej,R.id.ivVac},
-            {R.id.ivArb,R.id.ivRosa,R.id.ivMazorca},{R.id.Ejote, R.id.ivElet, R.id.ivCalaza},
-            {R.id.ivElo, R.id.ivZona, R.id.ivBanano}};
+            {R.id.ivPoll, R.id.ivPat, R.id.ivPav}, {R.id.ivCon, R.id.ivPerr, R.id.ivGat},
+            {R.id.ivCaball,R.id.ivOvej,R.id.ivVac}, {R.id.ivArb,R.id.ivRosa,R.id.ivMazorca},
+            {R.id.ivElet, R.id.ivElet, R.id.ivCalaza}, {R.id.ivElo, R.id.ivZona, R.id.ivBanano}};
 
 
     @Override
@@ -61,7 +60,6 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
         @Override
         public void onClick(View v) {
             this.selectImageView(v);
-            //setNextContext(Precisiona.this, ExpresionOral.class);
 
             if(pregunta == TOTAL_SERIE){
                 resultado += selectImageView(v);
@@ -76,7 +74,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                 setOnInit(ids);
                 flipper.showNext();
             }
-        //selectImageView(v);
+
 
         }
 
@@ -131,11 +129,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
             }
 
             result = sub_result;
-            //setNextContext(Precisiona.this, Vocabulario.class);
             return result;
-        }
-        private int getResult(){
-            return resultado;
         }
     };
 

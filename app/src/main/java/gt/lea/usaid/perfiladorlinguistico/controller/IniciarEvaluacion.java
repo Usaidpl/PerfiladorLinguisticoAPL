@@ -65,7 +65,7 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         switch (v.getId()) {
             case R.id.ivMamEva:
                 intent = new Intent(getActivity(), Interactua.class);
-               // b.putInt(KEY_EVALUACION, 0);
+               //b.putInt(KEY_EVALUACION, 0);
                 intent.putExtras(envia(0));
                 getActivity().startActivity(intent);
                 break;
@@ -80,6 +80,8 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
                 getActivity().startActivity(intent);
                 break;
         }
+        //select * from entrevista join interaccion join .... where id = 002;
+        //Inte
     }
 
     private Bundle envia(int cantidad){

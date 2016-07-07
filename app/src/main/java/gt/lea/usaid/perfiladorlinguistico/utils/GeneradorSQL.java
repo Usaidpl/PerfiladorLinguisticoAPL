@@ -35,6 +35,7 @@ public class GeneradorSQL {
                    }else
                        insert += "'" + valor.get(v) + "'";
                }
+               //INSERT INTO (i.....);
                db.execSQL(insert);
            }
 

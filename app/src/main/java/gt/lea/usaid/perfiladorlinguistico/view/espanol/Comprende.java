@@ -3,9 +3,13 @@ package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
@@ -18,7 +22,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
 /**
  * Created by Bryan on 20/06/16.
  */
-public class Comprende extends FlipperActivity implements OnInitializeComponent,OnInitializeText,View.OnClickListener{
+public class Comprende extends Interactua{
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
     private static final String NOMBRE_TABLA = "comprencion";
@@ -31,11 +35,28 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.comprende);
+        //int ids[][] = {{R.id.rbRespuesta11}};
         setOnInit(null);
     }
 
     @Override
     public void setTextCompoent(@IdRes int[][] matriz_id_texto) {
+        int vector[] = matriz_id_texto[serie], texto = 0;
+        int  id_intro = 0, id_resp = 0,id_text1 = 0, id_text2 = 0, id_text3 = 0, id_text4 = 0, id_text5 = 0;
+        id_intro = vector[0];
+        id_resp = vector[1];
+        id_text1 = vector[2];
+        id_text2 = vector[3];
+        id_text3 = vector[4];
+        id_text4 = vector[5];
+        id_text5 = vector[6];
+        intruduccion.setText(id_intro);
+        respuesta_correcta.setText(id_resp);
+        tvPregunta1.setText(id_text1);
+        tvPregunta2.setText(id_text2);
+        tvPregunta3.setText(id_text3);
+        tvPregunta4.setText(id_text4);
+        tvPregunta5.setText(id_text5);
 
     }
 
@@ -51,7 +72,7 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
         respuesta8 = (RadioButton) findViewById(R.id.rbRespuesta18);
         respuesta9 =(RadioButton) findViewById(R.id.rbRespuesta19);
         respuesta10 = (RadioButton) findViewById(R.id.rbRespuesta20);
-        //Modificar ID correspientes al layout
+
         intruduccion = (TextView) findViewById(R.id.tvInstrucionInteractua);
         respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaInteractua);
 
@@ -62,6 +83,10 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
         tvPregunta5 = (TextView) findViewById(R.id.tvPreguntaCincoInteractua);
         respuesta9.setOnClickListener(this);
         respuesta10.setOnClickListener(this);
+    }
+
+    private void texto(){
+        int txt[][] = {};
     }
 
     @Override
@@ -75,7 +100,7 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
             descition(resultado);
             setNextContext(Comprende.this, Precisiona.class);
         } catch (Exception e) {
-            //e.printStackTrace();
+
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
@@ -93,6 +118,32 @@ public class Comprende extends FlipperActivity implements OnInitializeComponent,
     protected void onPause() {
         super.onPause();
         finish();
+    }
+
+    //--------------------------------------------
+    private class Adapter extends BaseAdapter{
+
+        private ArrayList<Comprende> c = new ArrayList();
+
+        @Override
+        public int getCount() {
+            return 0;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            return null;
+        }
     }
 
 

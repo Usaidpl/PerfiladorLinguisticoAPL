@@ -59,7 +59,11 @@ public class DialogoAlerta {
     }
 
    private static  void confirm(){
-       Toast.makeText(context, "CONFIRMADO", Toast.LENGTH_SHORT).show();
+      String s = "tabla     1,0,1,0,1";
+       String linea[] = s.split(",");
+       for(int i = 0; i < linea.length; i++){
+          // g.campo(i);
+       }
    }
 
     private  static void cancel(){

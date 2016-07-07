@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="interaccion">I. K’LOJ, LAJB’IL / INTERACCIÓN ORAL</string>
+    <string name="i_respuesta_man">Tzaq’web’il toj tumel \nRespuesta correcta</string>
+    <string name="si_man">May / Si</string>
+    <string name="no_man">Mi’ / No</string>
+    <string name="i_pregunta_uno_man">Ti tb’iya.</string>
+    <string name="i_pregunta_dos_man">Jte’ tab’q’iya.</string>
+    <string name="i_pregunta_tres_man">Ti tb’i ttxuya.</string>
+    <string name="i_pregunta_cuantro_man">Ti’xix twaya tajb’ila.</string>
+    <string name="i_pregunta_cinco_man">Ti’xix tsaqchb’ila tajb’ila.</string>
+
+    <string name="comprension">II. K’LOJ. NEL TNIK’TIJ YOLB’IL / COMPRENSIÓN ORAL.</string>
+    <string name="ii_pregunta_uno_man">Yek’unxa ttxa’na.</string>
+    <string name="ii_pregunta_dos_man">Q’inksa tq’aba.</string>
+    <string name="ii_pregunta_tres_man">Q’onkub’a tq’aba.</string>
+    <string name="ii_pregunta_cuatro_man">We’kuya.</string>
+    <string name="ii_pregunta_cinco_man">Sutintib’a.</string>
+
+    <string name="precision">III. K’LOJ, K’LOJYOL MAM / VOCABULARIO (PRECISIÓN)</string>
+    <string name="tat_1_man">Tat</string>
+    <string name="txin_2_mn">Txin</string>
+    <string name="nam_ya_3_mn">Nan ya / chman</string>
+    <string name="tx_4_mn">Tx’yan</string>
+    <string name="chmek_5_mn">Chmek’ / choj</string>
+    <string name="ek_6_mn">Ek’/ik’</string>
+    <string name="wix_7_mn">Wix</string>
+    <string name="chej_8_mn">Chej</string>
+    <string name="tze_9_mn">Tze</string>
+    <string name="ich_10_mn">Ich</string>
+    <string name="kjo_11_mn">Kjo’n</string>
+    <string name="ix_12_mn">I’x</string>
+    <string name="bech_13_mn">B’ech</string>
+    <string name="wexj_14_mn">Wexj</string>
+    <string name="xjab_15">Xjab</string>
+    <string name="xkon_16_mn">Xk’o’n</string>
+    <string name="kil_17_mn">K’il/ k’wil/ ok’il</string>
+    <string name="chil_18_mn">Chi’l</string>
+
+</resources>

@@ -291,7 +291,9 @@
     <string name="Pre9_MamEsp_SerA">9. T-amb´il xnaq´tzbil / Ciclo escolar:</string>
     <string name="Ins_MamEsp_SerA_CodEva">Tajlal xjelb´il / Codigo de evaluación:</string>
     //SERIE B
-    <string name="Tit_MamEsp_SerB">B. XJELB´IL KYE MANB´AJ EX KYE TXUB´AJ, JUNXITL / XNAQ´TZANJTZ\nTI´J TAJB’IN QYOL MAM TOJ KYCHWINQLAL JAXJAL\nENTREVISTA A PADRES O ENCARGADO/A DE ESTUDIANTES\nUSO DEL IDIOMA EN CONTEXTO FAMILIAR</string>
+    <string name="Tit_MamEsp_SerB">B. XJELB´IL KYE MANB´AJ EX KYE TXUB´AJ,
+        JUNXITL / XNAQ´TZANJTZ\nTI´J TAJB’IN QYOL MAM TOJ KYCHWINQLAL JAXJAL\nENTREVISTA
+        A PADRES O ENCARGADO/A DE ESTUDIANTES\nUSO DEL IDIOMA EN CONTEXTO FAMILIAR</string>
     <string name="Inst_MamEsp_SerB">Ixjelin / Persona entrevistada</string>
     <string name="Pre1_MamEsp_SerB">1. Mamb’aj / Padre:</string>
     <string name="Pre1.1_MamEsp_SerB">Txub’aj / Madre:</string>

@@ -1,7 +1,9 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -25,11 +27,12 @@ import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 
 /**
  * Created by Bryan on 20/06/16.
  */
-public class Interactua extends FlipperActivity implements OnInitializeComponent,OnInitializeText, View.OnClickListener  {
+public class Interactua extends Activity implements OnStartNextContext,OnInitializeComponent,OnInitializeText, View.OnClickListener  {
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
     private TextView intruduccion, respuesta_correcta, tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
@@ -45,11 +48,7 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
         try{
             serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
         }catch (Exception e){
-            try {
-                serie = 0;
-            } catch (Exception e1) {
-                e1.printStackTrace();
-            }
+            serie = 0;
             String s = e.getMessage() + " Bundle";
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
@@ -91,25 +90,27 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
     private void textos(){
         int textos_idiomas[][] = {
                 //-- idioma Quiche --
-                {R.string.Ins_EspQui_SerD2, R.string.RespuestaCorrecta_EspQui,
-                        R.string.Pre1_EspQui_SerD_TabI, R.string.Pre2_EspQui_SerD_TabI, R.string.Pre3_EspQui_SerD_TabI,
-                        R.string.Pre4_EspQui_SerD_TabI, R.string.Pre5_EspQui_SerD_TabI},
+                {R.string.guia_kiche, R.string.i_respusta_correcta_kiche,
+                R.string.i_pregunta_uno_kiche, R.string.i_pregunta_dos_kiche,
+                R.string.i_pregunta_tres_kiche, R.string.i_pregunta_cuatro_kiche,
+                R.string.i_pregunta_cinco_kiche},
                 //Segundo vector
                 //-- idioma Man --
-                {R.string.Ins_MamEsp_SerD_I, R.string.RespCorr_MamEsp,
-                        R.string.Pre1_MamEsp_SerD_I, R.string.Pre2_MamEsp_SerD_I, R.string.Pre3_MamEsp_SerD_I,
-                        R.string.Pre4_MamEsp_SerD_I, R.string.Pre5_MamEsp_SerD_I},
+                {R.string.interaccion, R.string.i_respuesta_man, R.string.i_pregunta_uno_man,
+                R.string.i_pregunta_dos_man, R.string.i_pregunta_tres_man, R.string.i_pregunta_cuantro_man,
+                R.string.i_pregunta_cinco_man},
                 //--idioma español --
                 {R.string.Ins_MamEsp_SerE_I, R.string.RespuestaCorrecta_Esp,
                         R.string.Pre1_MamEsp_SerE_I, R.string.Pre2_MamEsp_SerE_I, R.string.Pre3_MamEsp_SerE_I,
                         R.string.Pre4_MamEsp_SerE_I, R.string.Pre5_MamEsp_SerE_I}};
+
 
         setTextCompoent(textos_idiomas);
     }
 
     @Override
     public void setTextCompoent(@IdRes int [][] textos){
-        int vector[] = textos[serie], texto = 0;
+        int vector[] = textos[serie];
         int  id_intro = 0, id_resp = 0,id_text1 = 0, id_text2 = 0, id_text3 = 0, id_text4 = 0, id_text5 = 0;
         id_intro = vector[0];
         id_resp = vector[1];
@@ -151,6 +152,15 @@ public class Interactua extends FlipperActivity implements OnInitializeComponent
     protected void onPause() {
         super.onPause();
         finish();
+    }
+
+    @Override
+    public void setNextContext(Context context, Class<?> next_context) {
+        Bundle b = new Bundle();
+        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
+        Intent i = new Intent(context, next_context);
+        i.putExtras(b);
+        startActivity(i);
     }
 
 

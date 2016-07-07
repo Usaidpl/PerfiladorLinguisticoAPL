@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="guia_kiche">Chak’ama’ ub’eyal le kab’ix chawe kajuch’u kicholaj are kakojo ri kutzalij ub’ixik le ajtijoxel.
+        /\nSiga las instrucciones que están en la guía de aplicación y marque en cada serie según sea la respuesta del estudiante.
+    </string>
+
+    <string name="interaccion_kch">Interaccion</string>
+
+    <string name="i_respusta_correcta_kiche">Utz tzlim tzik \nRespuesta correcta</string>
+    <string name="i_pregunta_uno_kiche">¿Jas ab’i’ / su ri ab’i’?</string>
+    <string name="i_pregunta_dos_kiche">¿Janipa ajunab’?</string>
+    <string name="i_pregunta_tres_kiche">¿Jas / su ib’i ri anan?</string>
+    <string name="i_pregunta_cuatro_kiche">¿Jachike rikil utz kana’ utijik?</string>
+    <string name="i_pregunta_cinco_kiche">¿Jachike etz’anem utz kaqaj chawach?</string>
+
+    <string name="tituto_dos_kiche">II.	CHOLAJ. UCH’OB’IK TZIJOB’AL / COMPRENSIÓN ORAL</string>
+    <string name="ii_pregunta_uno_kiche">Chachapa le atza’m.</string>
+    <string name="ii_pregunta_dos_kiche">Chayaka le aq’ab’.</string>
+    <string name="ii_pregunta_tres_kiche">Chaqasaj le aq’ab’.</string>
+    <string name="ii_pregunta_cuatro_kiche">Chatwajiloq.</string>
+    <string name="ii_pregunta_cinco_kiche">Chatsutin jumul.</string>
+
+    <string name="precision_kch">III.	CHOLAJ. TAQ TZIJ (K’YAQALIK) / VOCABULARION (PRECISIÓN)</string>
+    <string name="tat_1_kch">Tat</string>
+    <string name="nan_2_kch">Nan</string>
+    <string name="ali_3_kch">Ali</string>
+    <string name="ti_4_kch">Ti’t</string>
+    <string name="man_5_kch">Mam</string>
+    <string name="aq_6_kch">Aq</string>
+    <string name="imul_7_kch">Imul</string>
+    <string name="chij_8_kch">Chij</string>
+    <string name="pix_9_kch">Pix</string>
+    <string name="aj_10_kch">Aj</string>
+    <string name="oj_11_kch">Oj</string>
+    <string name="wuj_12_kch">Wuj</string>
+    <string name="ti_job_13_kch">Tijob’al</string>
+    <string name="tem_14_kch">Tem</string>
+    <string name="pas_15_kch">Pas</string>
+    <string name="up_16_kch">Uq</string>
+    <string name="laq_17_kch">Laq</string>
+    <string name="xot_18_kch">xot</string>
+
+</resources>

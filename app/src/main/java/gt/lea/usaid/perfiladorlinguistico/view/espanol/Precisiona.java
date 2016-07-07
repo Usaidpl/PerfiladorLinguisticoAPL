@@ -51,16 +51,11 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
             public void run() {
                 int vector[], imagen;
                 try {
-                    vector= m[pregunta];
-                    for(int v = 0; v < vector.length; v ++){
-                        imagen = vector[v];
-                        if(image == null)
-                            image =(ImageView) findViewById(imagen);
-                        else if(image != null && image2 == null)
-                            image2 =(ImageView) findViewById(imagen);
-                        else if(image2 != null && image3 == null)
-                            image3 =(ImageView) findViewById(imagen);
-                    }
+                    vector = m[pregunta];
+                    image = (ImageView) findViewById(vector[0]);
+                    image2 = (ImageView) findViewById(vector[1]);
+                    image3 = (ImageView) findViewById(vector[2]);
+
                     image.setOnClickListener(click);
                     image2.setOnClickListener(click);
                     image3.setOnClickListener(click);
@@ -68,18 +63,11 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                 } catch (InterruptedException e) {
                     String s = e.getMessage() + " Vector";
                     Toast.makeText(Precisiona.this, s, Toast.LENGTH_LONG).show();
-                } finally {
-                    vector = m[pregunta];
-                    image = (ImageView) findViewById(vector[0]);
-                    image2 = (ImageView) findViewById(vector[1]);
-                    image3 = (ImageView) findViewById(vector[2]);
                 }
             }
         });
         t.start();
-
     }
-
 
     private View.OnClickListener click = new View.OnClickListener(){
         int resultado = 0;
@@ -163,7 +151,6 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                 default:
                     sub_result += 0;
             }
-
             result = sub_result;
             return result;
         }

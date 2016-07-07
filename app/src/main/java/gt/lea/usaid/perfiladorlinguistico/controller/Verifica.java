@@ -9,8 +9,7 @@ public class Verifica {
 
     private boolean[] array_true, array_false;
     public static final int TOTAL_SERIE = 100;
-    //public static final int PREGUNTA = 5;
-    //public static final int PREGUNTA
+    private String dato = "";
     private String tabla = "";
 
     public Verifica(boolean[] arreglo_verdadero, boolean[] arreglo_falso, String nombre_tabla){
@@ -33,8 +32,9 @@ public class Verifica {
         else{
             //replace PREGUNTA for address complet type Const.
             sub_resultado = TOTAL_SERIE / Pregunta.Interactua.PREGUNTA;
-            sub_resultado = toVerificaRespuesta();
+            sub_resultado *= toVerificaRespuesta();
         }
+        resultado = sub_resultado;
         return resultado;
     }
 
@@ -45,8 +45,9 @@ public class Verifica {
             throw  new Exception("Error: todo debe tener una respuesta.");
         else{
             sub_resultado = TOTAL_SERIE / cantidad_pregunta;
-            sub_resultado = toVerificaRespuesta();
+            sub_resultado *= toVerificaRespuesta();
         }
+        resultado = sub_resultado;
         return resultado;
     }
 
@@ -62,7 +63,7 @@ public class Verifica {
         if(resultado == Pregunta.Interactua.PREGUNTA)
             return true;
         else
-        return false;
+            return false;
     }
 
     private boolean toCompara(int preguntas) {
@@ -78,6 +79,7 @@ public class Verifica {
 
     private int resultado(boolean[] arreglo){
         int resultado = 0, insert;
+        String dato = "";
         //DataBase db = new DataBase(tabla);
         boolean select = false;
         for(int s = 0; s  < arreglo.length; s ++){
@@ -90,9 +92,14 @@ public class Verifica {
                 insert = 0;
                 resultado += 0;
             }
-            //db.execute("INSERT INTO " + tabla + "(" + insert + ");");
         }
         return resultado;
+    }
+
+    private String concatena(boolean[] arreglo){
+        String s = "";
+
+        return "";
     }
 
     public static final class Pregunta{

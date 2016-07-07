@@ -27,7 +27,6 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         ivMamEva =(ImageView) vista.findViewById(R.id.ivMamEva);
         ivKicheEva =(ImageView) vista.findViewById(R.id.ivKicheEva);
         ivEspanolEva = (ImageView) vista.findViewById(R.id.ivEspanolEva);
-        //DialogoAlerta.alertDialog("Hola", "Desea Continuar", false,this);
         ivMamEva.setOnClickListener(this);
         ivKicheEva.setOnClickListener(this);
         ivEspanolEva.setOnClickListener(this);

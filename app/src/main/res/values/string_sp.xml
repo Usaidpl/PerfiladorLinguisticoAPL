@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- inicio de la serie de interaccion -->
+    <string name="interaccion_sp">I. SERIE. INTERACCION ORAL</string>
+    <string name="respuesta_sp">Respuesta correcta</string>
+    <string name="i_pregunta_uno_sp">¿Cómo se llama?</string>
+    <string name="i_pregunta_dos_sp">¿En dónde vive?</string>
+    <string name="i_pregunta_tres_sp">¿Cómo se llama su mamá?</string>
+    <string name="i_pregunta_cuatro_sp">¿Qué le gusta comer?</string>
+    <string name="i_pregunta_cinco_sp">¿Qué le gusta jugar?</string>
+    <string name="tota_sp">TOTAL</string>
+    <!-- inicio de la serie de comprension -->
+    <string name="comprension_sp">II SERIE. COMPRENSIÓN ORAL</string>
+    <string name="ii_pregunta_uno_sp">Señale su nariz.</string>
+    <string name="ii_pregunta_dos_sp">Levante su mano.</string>
+    <string name="ii_pregunta_tres_sp">Baje su mano.</string>
+    <string name="ii_pregunta_cuatro_sp">Párese.</string>
+    <string name="ii_pregunta_cinco_sp">De una vuelta.</string>
+    <!-- inicio de la serie de precicion -->
+    <string name="precision_sp">III. SERIE. VOCABULARIO (PRECISIÓN)</string>
+    <string name="iii_pato1_sp">Pato</string>
+    <string name="iii_gato2_sp">Gato</string>
+    <string name="iii_vaca3_sp">Vaca</string>
+    <string name="iii_arbol4_sp">Árbol</string>
+    <string name="iii_elote5_sp">Elote</string>
+    <string name="iii_banano6_sp">Banano</string>
+    <string name="iii_camioneta7_sp">Camioneta</string>
+    <string name="iii_carro8_sp">Carro</string>
+    <string name="iii_pantalon9_sp">pantalón</string>
+    <string name="iii_vestido10_sp">Vestido</string>
+    <string name="iii_zapato11_sp">Zapato</string>
+    <string name="iii_sombrero12_sp">Sombrero</string>
+    <string name="iii_mesa13_sp">Mesa</string>
+    <string name="iii_escalera14_sp">Escalera</string>
+    <string name="iii_canasta15_sp">Canasta</string>
+    <string name="iii_peine16_sp">Peine</string>
+    <string name="iii_libro17_sp">Libro</string>
+    <string name="iii_bicicleta18_sp">bicicleta</string>
+</resources>

@@ -32,13 +32,15 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 /**
  * Created by Bryan on 20/06/16.
  */
-public class Interactua extends Activity implements OnStartNextContext,OnInitializeComponent,OnInitializeText, View.OnClickListener  {
+public class Interactua extends Activity
+        implements OnStartNextContext,OnInitializeComponent,OnInitializeText, View.OnClickListener  {
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
     private TextView intruduccion, respuesta_correcta, tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
     private static final String NOMBRE_TABLA = "interaccion";
 
     private int serie = 0;
+    private int evalua = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,7 @@ public class Interactua extends Activity implements OnStartNextContext,OnInitial
         setOnInit(null);
     }
 
-    private void msg(String s){
+    protected void msg(String s){
         Toast.makeText(this, s ,Toast.LENGTH_SHORT).show();
     }
 
@@ -74,15 +76,14 @@ public class Interactua extends Activity implements OnStartNextContext,OnInitial
         //Textos -- TextView
         intruduccion = (TextView) findViewById(R.id.tvInstrucionInteractua);
         respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaInteractua);
-
         tvPregunta1 = (TextView) findViewById(R.id.tvPreguntaUnoInteractua);
         tvPregunta2 = (TextView) findViewById(R.id.tvPreguntaDosInteractua);
         tvPregunta3 = (TextView) findViewById(R.id.tvPreguntaTresInteractua);
         tvPregunta4 = (TextView) findViewById(R.id.tvPreguntaCuatroInteractua);
         tvPregunta5 = (TextView) findViewById(R.id.tvPreguntaCincoInteractua);
-
+        //método encargado de agregar los textos correpondientes con base al idioma seleccionado
         textos();
-
+        //evento de click
         respuesta9.setOnClickListener(this);
         respuesta10.setOnClickListener(this);
     }
@@ -103,8 +104,7 @@ public class Interactua extends Activity implements OnStartNextContext,OnInitial
                 {R.string.Ins_MamEsp_SerE_I, R.string.RespuestaCorrecta_Esp,
                         R.string.Pre1_MamEsp_SerE_I, R.string.Pre2_MamEsp_SerE_I, R.string.Pre3_MamEsp_SerE_I,
                         R.string.Pre4_MamEsp_SerE_I, R.string.Pre5_MamEsp_SerE_I}};
-
-
+        //método encargado de agregar los textos a los componentes correspondientes
         setTextCompoent(textos_idiomas);
     }
 
@@ -133,10 +133,18 @@ public class Interactua extends Activity implements OnStartNextContext,OnInitial
         boolean[][] radios_selected = {
                 {respuesta1.isChecked(),respuesta3.isChecked(), respuesta5.isChecked(), respuesta7.isChecked(), respuesta9.isChecked()},
                 {respuesta2.isChecked(),respuesta4.isChecked(), respuesta6.isChecked(), respuesta8.isChecked(), respuesta10.isChecked()}};
-        Verifica vr = new Verifica(radios_selected, NOMBRE_TABLA);
+        Verifica vr;
         try {
-            float resultado = vr.getResultado();
-            descition(resultado);
+            if(getEvalua() == 1){
+                vr = new Verifica(radios_selected, NOMBRE_TABLA);
+                float resultado = vr.getResultado();
+                descition(resultado);
+            }/*else if(getEvalua() == 2){
+                vr = new Verifica(radios_selected, NOMBRE_TABLA);
+                float resultado = vr.getResultado();
+                descition(resultado);
+            }*/
+            //lanzamiento a la siguiente actividad
             setNextContext(Interactua.this, Comprende.class);
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -164,4 +172,7 @@ public class Interactua extends Activity implements OnStartNextContext,OnInitial
     }
 
 
+    public int getEvalua() {
+        return evalua;
+    }
 }

@@ -1,5 +1,7 @@
 package gt.lea.usaid.perfiladorlinguistico.controller;
 
+import gt.lea.usaid.perfiladorlinguistico.utils.GeneradorSQL;
+
 /**
  * Created by Bryan on 14/06/16.
  */
@@ -102,6 +104,7 @@ public class Verifica {
         public static final class Expresa{
             public static final int PREGUNTA = 4;
         }
-
     }
+
+
 }

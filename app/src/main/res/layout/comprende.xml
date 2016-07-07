@@ -2,7 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".view.espanol.Interactua">
+
+    <!-- inicio -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,11 +18,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="II. Cholaj uch'ob'ik tzijob'al / Comprension Oral"
+                android:text="I. Cholaj uch'ob'ik tzijob'al / Interacción Oral"
                 android:textSize="45dp"
                 android:textColor="@color/colorPrimaryDark"
                 android:gravity="center"
-                android:id="@+id/tvInstrucionComprension"/>
+                android:id="@+id/tvInstrucionComprende"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,40 +46,63 @@
     </LinearLayout>
     <!-- end title -->
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="90dp" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="75dp"
+            android:paddingRight="75dp">
             <!-- 1 -->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="6sp"
+                    android:padding="20dp"
                     android:layout_margin="5sp"
-                    >
+                    android:background="@xml/border2"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:text="1"
+                        android:textSize="35dp"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:background="@xml/redondeado"
+                        android:fadingEdgeLength="@dimen/_100sdp"/>
+                    <Space
+                        android:layout_width="35dp"
+                        android:layout_height="50dp" />
                     <TextView
-                        android:layout_width="850dp"
+                        android:padding="20dp"
+                        android:layout_width="830dp"
                         android:layout_height="wrap_content"
                         android:text="¿Jas ab'i' / su ri ab 'i'?"
-                        android:textSize="55dp"
+                        android:textSize="36dp"
+                        android:textColor="#000"
                         android:id="@+id/tvPreguntaUnoComprende"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:gravity="right">
+                        android:gravity="center">
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="right"
+                            android:gravity="center"
                             android:orientation="horizontal">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -91,10 +119,6 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
-
             <!-- 2 -->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -102,21 +126,38 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    android:layout_margin="5sp"
+                    android:background="@xml/border2">
+                    <Button
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:text="2"
+                        android:textSize="35dp"
+                        android:gravity="center"
+                        android:background="@xml/redondeado"
+                        android:fadingEdgeLength="@dimen/_100sdp"/>
+                    <Space
+                        android:layout_width="35dp"
+                        android:layout_height="50dp" />
                     <TextView
-                        android:layout_width="850dp"
+                        android:padding="20dp"
+                        android:layout_width="830dp"
                         android:layout_height="wrap_content"
                         android:text="¿Janipa ajunab?"
-                        android:textSize="55dp"/>
+                        android:textSize="36dp"
+                        android:textColor="#000"
+                        android:id="@+id/tvPreguntaDosComprende"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:gravity="right">
+                        android:gravity="center">
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="right"
+                            android:gravity="center"
                             android:orientation="horizontal">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -133,32 +174,46 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
 
-            <!-- 2 -->
+            <!-- 3 -->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    android:layout_margin="5sp"
+                    android:background="@xml/border2">
+                    <Button
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:text="3"
+                        android:textSize="35dp"
+                        android:gravity="center"
+                        android:background="@xml/redondeado"
+                        android:fadingEdgeLength="@dimen/_100sdp"/>
+                    <Space
+                        android:layout_width="35dp"
+                        android:layout_height="50dp" />
                     <TextView
-                        android:layout_width="850dp"
+                        android:padding="20dp"
+                        android:layout_width="830dp"
                         android:layout_height="wrap_content"
                         android:text="¿Jas / su ub'i' ri anam?"
-                        android:textSize="55dp"/>
+                        android:textSize="36dp"
+                        android:textColor="#000"
+                        android:id="@+id/tvPreguntaTresComprende"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:gravity="right">
+                        android:gravity="center">
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="right"
+                            android:gravity="center"
                             android:orientation="horizontal">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -175,9 +230,6 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
 
             <!-- 2 -->
             <android.support.v7.widget.CardView
@@ -188,21 +240,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="5sp">
+                    android:padding="20dp"
+                    android:layout_margin="5sp"
+                    android:background="@xml/border2">
+                    <Button
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:text="4"
+                        android:textSize="35dp"
+                        android:gravity="center"
+                        android:background="@xml/redondeado"
+                        android:fadingEdgeLength="@dimen/_100sdp"/>
+                    <Space
+                        android:layout_width="35dp"
+                        android:layout_height="50dp" />
                     <TextView
-                        android:layout_width="850dp"
+                        android:padding="20dp"
+                        android:layout_width="830dp"
                         android:layout_height="wrap_content"
                         android:text="¿Jachike rikil utz kana' ututijik?"
-                        android:textSize="55dp"/>
+                        android:textSize="36dp"
+                        android:textColor="#000"
+                        android:id="@+id/tvPreguntaCuatroComprende"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:gravity="right">
+                        android:gravity="center">
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="right"
+                            android:gravity="center"
                             android:orientation="horizontal">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -219,9 +287,6 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
 
             <!-- 2 -->
             <android.support.v7.widget.CardView
@@ -230,21 +295,38 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    android:layout_margin="5sp"
+                    android:background="@xml/border2">
+                    <Button
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:text="5"
+                        android:textSize="40dp"
+                        android:gravity="center"
+                        android:background="@xml/redondeado"
+                        android:fadingEdgeLength="@dimen/_100sdp"/>
+                    <Space
+                        android:layout_width="35dp"
+                        android:layout_height="50dp" />
                     <TextView
-                        android:layout_width="850dp"
+                        android:padding="20dp"
+                        android:layout_width="830dp"
                         android:layout_height="wrap_content"
                         android:text="¿Jas ab'i' / su ri ab 'i'?"
-                        android:textSize="55dp"/>
+                        android:textSize="36dp"
+                        android:textColor="#000"
+                        android:id="@+id/tvPreguntaCincoComprende"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:gravity="right">
+                        android:gravity="center">
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="right"
+                            android:gravity="center"
                             android:orientation="horizontal">
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -259,12 +341,11 @@
                         </RadioGroup>
                     </LinearLayout>
                 </LinearLayout>
-                <!-- comentario de respuesta -->
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
 
     </ScrollView>
-
+    <!-- fin -->
 
 </LinearLayout>

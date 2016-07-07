@@ -1,5 +1,8 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -18,16 +21,20 @@ import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.ConectaInternet;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
+import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 
 /**
  * Created by Bryan on 20/06/16.
  */
-public class Comprende extends Interactua{
+public class Comprende extends Activity
+        implements OnStartNextContext,OnInitializeComponent,OnInitializeText, View.OnClickListener  {
+
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
     private static final String NOMBRE_TABLA = "comprencion";
     private static final String NOMBRE_TABLA_KICHE = "compresion_kiche";
     private static final String NOMBRE_TABLA_MAN = "compresion_man";
+
     private int serie = 0;
     private TextView intruduccion, respuesta_correcta, tvPregunta1, tvPregunta2,tvPregunta3,tvPregunta4,tvPregunta5;
 
@@ -35,13 +42,22 @@ public class Comprende extends Interactua{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.comprende);
-        //int ids[][] = {{R.id.rbRespuesta11}};
+        Bundle b = getIntent().getExtras();
+        try{
+            serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
+        }catch (Exception e){
+            msg(e.getMessage());
+        }
         setOnInit(null);
+    }
+
+    private void msg(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void setTextCompoent(@IdRes int[][] matriz_id_texto) {
-        int vector[] = matriz_id_texto[serie], texto = 0;
+        int vector[] = matriz_id_texto[serie];
         int  id_intro = 0, id_resp = 0,id_text1 = 0, id_text2 = 0, id_text3 = 0, id_text4 = 0, id_text5 = 0;
         id_intro = vector[0];
         id_resp = vector[1];
@@ -73,20 +89,31 @@ public class Comprende extends Interactua{
         respuesta9 =(RadioButton) findViewById(R.id.rbRespuesta19);
         respuesta10 = (RadioButton) findViewById(R.id.rbRespuesta20);
 
-        intruduccion = (TextView) findViewById(R.id.tvInstrucionInteractua);
-        respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaInteractua);
+        intruduccion = (TextView) findViewById(R.id.tvInstrucionComprende);
+        respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaComprende);
 
         tvPregunta1 = (TextView) findViewById(R.id.tvPreguntaUnoComprende);
-        tvPregunta2 = (TextView) findViewById(R.id.tvPreguntaDosInteractua);
-        tvPregunta3 = (TextView) findViewById(R.id.tvPreguntaTresInteractua);
-        tvPregunta4 = (TextView) findViewById(R.id.tvPreguntaCuatroInteractua);
-        tvPregunta5 = (TextView) findViewById(R.id.tvPreguntaCincoInteractua);
+        tvPregunta2 = (TextView) findViewById(R.id.tvPreguntaDosComprende);
+        tvPregunta3 = (TextView) findViewById(R.id.tvPreguntaTresComprende);
+        tvPregunta4 = (TextView) findViewById(R.id.tvPreguntaCuatroComprende);
+        tvPregunta5 = (TextView) findViewById(R.id.tvPreguntaCincoComprende);
+        texto();
         respuesta9.setOnClickListener(this);
         respuesta10.setOnClickListener(this);
     }
 
     private void texto(){
-        int txt[][] = {};
+        int txt[][] =
+                {{R.string.tituto_dos_kiche, R.string.i_respusta_correcta_kiche,R.string.ii_pregunta_uno_kiche,
+                R.string.ii_pregunta_dos_kiche, R.string.ii_pregunta_tres_kiche, R.string.ii_pregunta_cuatro_kiche,
+                R.string.ii_pregunta_cinco_kiche},
+                        {R.string.comprension, R.string.i_respuesta_man, R.string.ii_pregunta_uno_man,
+                R.string.ii_pregunta_dos_man, R.string.ii_pregunta_tres_man, R.string.ii_pregunta_cuatro_man,
+                R.string.ii_pregunta_cinco_man},
+                        {R.string.comprension_sp, R.string.respuesta_sp,
+                R.string.ii_pregunta_uno_sp, R.string.ii_pregunta_dos_sp,
+                R.string.ii_pregunta_tres_sp, R.string.ii_pregunta_cuatro_sp, R.string.ii_pregunta_cinco_sp}};
+        setTextCompoent(txt);
     }
 
     @Override
@@ -118,6 +145,15 @@ public class Comprende extends Interactua{
     protected void onPause() {
         super.onPause();
         finish();
+    }
+
+    @Override
+    public void setNextContext(Context context, Class<?> next_context) {
+        Bundle b = new Bundle();
+        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
+        Intent i = new Intent(context, next_context);
+        i.putExtras(b);
+        startActivity(i);
     }
 
     //--------------------------------------------

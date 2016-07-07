@@ -18,23 +18,23 @@
     <string name="ii_pregunta_cinco_man">Sutintib’a.</string>
 
     <string name="precision">III. K’LOJ, K’LOJYOL MAM / VOCABULARIO (PRECISIÓN)</string>
-    <string name="tat_1_man">Tat</string>
-    <string name="txin_2_mn">Txin</string>
-    <string name="nam_ya_3_mn">Nan ya / chman</string>
-    <string name="tx_4_mn">Tx’yan</string>
-    <string name="chmek_5_mn">Chmek’ / choj</string>
-    <string name="ek_6_mn">Ek’/ik’</string>
-    <string name="wix_7_mn">Wix</string>
-    <string name="chej_8_mn">Chej</string>
-    <string name="tze_9_mn">Tze</string>
-    <string name="ich_10_mn">Ich</string>
-    <string name="kjo_11_mn">Kjo’n</string>
-    <string name="ix_12_mn">I’x</string>
-    <string name="bech_13_mn">B’ech</string>
-    <string name="wexj_14_mn">Wexj</string>
-    <string name="xjab_15">Xjab</string>
-    <string name="xkon_16_mn">Xk’o’n</string>
-    <string name="kil_17_mn">K’il/ k’wil/ ok’il</string>
-    <string name="chil_18_mn">Chi’l</string>
+    <string name="iii_tat_1_mn">Tat</string>
+    <string name="iii_txin_2_mn">Txin</string>
+    <string name="iii_nam_ya_3_mn">Nan ya / chman</string>
+    <string name="iii_tx_4_mn">Tx’yan</string>
+    <string name="iii_chmek_5_mn">Chmek’ / choj</string>
+    <string name="iii_ek_6_mn">Ek’/ik’</string>
+    <string name="iii_wix_7_mn">Wix</string>
+    <string name="iii_chej_8_mn">Chej</string>
+    <string name="iii_tze_9_mn">Tze</string>
+    <string name="iii_ich_10_mn">Ich</string>
+    <string name="iii_kjo_11_mn">Kjo’n</string>
+    <string name="iii_ix_12_mn">I’x</string>
+    <string name="iii_bech_13_mn">B’ech</string>
+    <string name="iii_wexj_14_mn">Wexj</string>
+    <string name="iii_xjab_15">Xjab</string>
+    <string name="iii_xkon_16_mn">Xk’o’n</string>
+    <string name="iii_kil_17_mn">K’il/ k’wil/ ok’il</string>
+    <string name="iii_chil_18_mn">Chi’l</string>
 
 </resources>

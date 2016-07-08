@@ -17,7 +17,10 @@
             android:layout_width="350dp"
             android:layout_height="250dp"
             android:layout_alignTop="@+id/flKicheEva"
-            android:layout_centerHorizontal="true">
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="203dp"
+            android:layout_marginEnd="203dp">
 
             <ImageView
                 android:id="@+id/ivMamEva"
@@ -44,8 +47,10 @@
         android:layout_width="350dp"
         android:layout_height="250dp"
         android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_toLeftOf="@+id/flMamEva"
+        android:layout_toStartOf="@+id/flMamEva"
+        android:layout_marginRight="165dp"
+        android:layout_marginEnd="165dp">
 
         <ImageView
             android:id="@+id/ivKicheEva"

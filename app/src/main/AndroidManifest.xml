@@ -113,6 +113,9 @@
         <activity
             android:name=".view.mam.VocabularioMam"
             android:screenOrientation="landscape" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="a331f555b7e64d233fcdef738ced04073a5bacce" />
     </application>
 
 </manifest>

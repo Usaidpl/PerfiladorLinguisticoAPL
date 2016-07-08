@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@mipmap/ninos_jugando_parque">
+    android:background="@mipmap/ninos_juegan_pelota">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/interaccion_oral" />
+                    android:src="@mipmap/ninia" />
 
                 <TextView
                     android:id="@+id/guia_interaccion_oral_oral2"
@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/comprension_oral" />
+                    android:src="@mipmap/ninia" />
 
                 <TextView
                     android:id="@+id/guia_compresion_oral2"
@@ -85,7 +85,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/vocabulario_precision" />
+                    android:src="@mipmap/pelota_arbol_ninos" />
 
                 <TextView
                     android:id="@+id/guia_vocabulario_precision2"

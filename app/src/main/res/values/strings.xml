@@ -519,6 +519,7 @@
     <string name="Pre3_MamEsp_SerF">Idioma que prefiere utilizar el/la estudiante en la escuela (entrevista con el estudiante):</string>
     <string name="Pre4_MamEsp_SerF">Dominio oral del estudiante en  cada uno de los idiomas (escriba la cantidad de respuestas correctas del/la estudiante en cada idioma, según cada  serie de la evaluación diagnostica).</string>
     <string name="Aspecto_Esp">Aspecto</string>
+    <string name="prueba">prueba</string>
     <string name="Mam">Mam</string>
     <string name="Español">Español</string>
     <string name="CompredeCuandoHabla_MamEsp">Comprende cuando se le habla. \n(Series I y II – Total 10 respuestas).</string>

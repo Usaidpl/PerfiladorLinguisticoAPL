@@ -61,7 +61,8 @@ public class GuiaSonidosEspecificos extends Activity {
         toolbar.setTitle(R.string.guia_sonidos_especificos);
         //setSupportActionBar(toolbar);
 
-        toolbar.setNavigationIcon(R.mipmap.back3);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.myColorBasic));
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
                     @Override

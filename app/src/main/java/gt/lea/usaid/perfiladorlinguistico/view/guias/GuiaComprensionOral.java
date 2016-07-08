@@ -60,9 +60,10 @@ public class GuiaComprensionOral extends Activity {
     private void initToolBar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.guia_comprension_oral);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.myColorBasic));
         //setSupportActionBar(toolbar);
 
-        toolbar.setNavigationIcon(R.mipmap.back3);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
                     @Override

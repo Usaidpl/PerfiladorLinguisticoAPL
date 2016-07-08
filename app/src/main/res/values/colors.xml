@@ -6,4 +6,16 @@
     <color name="myColor">#c5cae9</color>
     <color name="myColorBasic">#ffebee</color>
     <color name="green">#4caf50</color>
+    <color name="orange">#FF9800</color>
+    <color name="withe">#FFFDE7</color>
+
+
+
+
+    <color name="ColorPrimary">#3F51B5</color>
+    <color name="ColorPrimaryDark">#303F9F</color>
+    <color name="ColorAccent">#E91E63</color>
+    <color name="ColorPrimary2">#F44336</color>
+    <color name="ColorPrimaryDark2">#D32F2F</color>
+    <color name="ColorAccent2">#2196F3</color>
 </resources>

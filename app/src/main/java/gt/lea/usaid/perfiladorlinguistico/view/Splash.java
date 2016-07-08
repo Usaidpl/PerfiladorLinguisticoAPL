@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.crashlytics.android.Crashlytics;
-import com.crashlytics.android.ndk.CrashlyticsNdk;
+
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import io.fabric.sdk.android.Fabric;
@@ -19,9 +19,9 @@ public class Splash extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics(), new CrashlyticsNdk());
+        //Fabric.with(this, new Crashlytics(), new CrashlyticsNdk());
         setContentView(R.layout.splash);
-
+        Fabric.with(this, new Crashlytics());
         Thread timerTread = new Thread(){
             public void run(){
                 try{

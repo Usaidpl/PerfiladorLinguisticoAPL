@@ -46,12 +46,15 @@ public class Verifica {
         else{
             sub_resultado = TOTAL_SERIE / cantidad_pregunta;
             sub_resultado *= toVerificaRespuesta();
+
         }
         resultado = sub_resultado;
         return resultado;
     }
 
     private float toVerificaRespuesta() {
+        String resultado = concatena(array_true);
+        //sqlite.insert(resultado);
         return resultado(array_true);
     }
 
@@ -95,9 +98,16 @@ public class Verifica {
     }
 
     private String concatena(boolean[] arreglo){
-        String s = "";
-
-        return "";
+        String cadena = "";
+        boolean select = false;
+        for(int s = 0; s < arreglo.length; s ++){
+            select = arreglo[s];
+            if(select == true)
+                cadena += 1;
+            else
+                cadena += 0;
+        }
+        return cadena;
     }
 
     public static final class Pregunta{

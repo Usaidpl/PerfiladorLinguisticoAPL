@@ -19,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="I. Cholaj uch'ob'ik tzijob'al / Interacción Oral"
-                android:textSize="45dp"
+                android:textSize="@dimen/_13sdp"
                 android:textColor="@color/colorPrimaryDark"
                 android:gravity="center"
                 android:id="@+id/tvInstrucionComprende"/>
@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Utz Tzalim tzij"
-                android:textSize="45dp"
+                android:textSize="@dimen/_13sdp"
                 android:gravity="center"
                 android:id="@+id/tvRespuestaComprende"/>
             <TextView
@@ -91,7 +91,7 @@
                         android:layout_width="830dp"
                         android:layout_height="wrap_content"
                         android:text="¿Jas ab'i' / su ri ab 'i'?"
-                        android:textSize="36dp"
+                        android:textSize="@dimen/_11sdp"
                         android:textColor="#000"
                         android:id="@+id/tvPreguntaUnoComprende"/>
                     <LinearLayout
@@ -146,7 +146,7 @@
                         android:layout_width="830dp"
                         android:layout_height="wrap_content"
                         android:text="¿Janipa ajunab?"
-                        android:textSize="36dp"
+                        android:textSize="@dimen/_11sdp"
                         android:textColor="#000"
                         android:id="@+id/tvPreguntaDosComprende"/>
                     <LinearLayout
@@ -202,7 +202,7 @@
                         android:layout_width="830dp"
                         android:layout_height="wrap_content"
                         android:text="¿Jas / su ub'i' ri anam?"
-                        android:textSize="36dp"
+                        android:textSize="@dimen/_11sdp"
                         android:textColor="#000"
                         android:id="@+id/tvPreguntaTresComprende"/>
                     <LinearLayout
@@ -259,7 +259,7 @@
                         android:layout_width="830dp"
                         android:layout_height="wrap_content"
                         android:text="¿Jachike rikil utz kana' ututijik?"
-                        android:textSize="36dp"
+                        android:textSize="@dimen/_11sdp"
                         android:textColor="#000"
                         android:id="@+id/tvPreguntaCuatroComprende"/>
                     <LinearLayout
@@ -315,7 +315,7 @@
                         android:layout_width="830dp"
                         android:layout_height="wrap_content"
                         android:text="¿Jas ab'i' / su ri ab 'i'?"
-                        android:textSize="36dp"
+                        android:textSize="@dimen/_11sdp"
                         android:textColor="#000"
                         android:id="@+id/tvPreguntaCincoComprende"/>
                     <LinearLayout

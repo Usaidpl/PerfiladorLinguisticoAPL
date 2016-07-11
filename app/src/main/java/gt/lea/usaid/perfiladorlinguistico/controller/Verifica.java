@@ -78,18 +78,16 @@ public class Verifica {
     }
 
     private int resultado(boolean[] arreglo){
-        int resultado = 0, insert;
-        String dato = "";
+        int resultado = 0;
+
         //DataBase db = new DataBase(tabla);
         boolean select = false;
         for(int s = 0; s  < arreglo.length; s ++){
             select = arreglo[s];
             if(select == true){
-                insert = 1;
                 resultado ++;
             }
             else{
-                insert = 0;
                 resultado += 0;
             }
         }

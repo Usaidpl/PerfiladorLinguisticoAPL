@@ -55,24 +55,18 @@
                         <ViewFlipper
                             android:id="@+id/vfGuiaPrecisionOral"
                             android:layout_width="match_parent"
-                            android:layout_height="400dp"
+                            android:layout_height="match_parent"
                             android:layout_margin="6dp">
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/inst_guia_vocabulario"
-                                    android:textSize="@dimen/_11sdp" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -80,14 +74,28 @@
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
 
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/inst_guia_vocabulario"
+                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral2"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_2_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -100,24 +108,24 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_2_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
 
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral3"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_3_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -130,24 +138,24 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_3_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
 
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral4"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_4_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -160,24 +168,24 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_4_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
 
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral5"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_5_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -190,23 +198,23 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_5_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral6"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_6_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -219,23 +227,23 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_6_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral7"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_7_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -248,23 +256,23 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_7_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral8"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_8_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -277,23 +285,23 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_8_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral9"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_9_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -306,23 +314,23 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_9_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral10"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_10_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -335,23 +343,23 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_10_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral11"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_11_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -364,23 +372,23 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_11_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral12"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_12_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -393,22 +401,23 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_12_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
                             <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOral13"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_13_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -422,21 +431,13 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_13_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOral14"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -465,7 +466,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOral15"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -494,7 +495,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOral16"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -523,7 +524,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOral17"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -552,7 +553,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOral18"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -602,13 +603,13 @@
                         <ViewFlipper
                             android:id="@+id/vfGuiaPrecisionOralMam"
                             android:layout_width="match_parent"
-                            android:layout_height="400dp"
+                            android:layout_height="match_parent"
                             android:layout_margin="6dp">
 
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -632,7 +633,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam2"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -662,7 +663,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam3"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -692,7 +693,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam4"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -722,7 +723,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam5"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -751,7 +752,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam6"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -780,7 +781,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam7"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -809,7 +810,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam8"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -838,7 +839,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam9"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -867,7 +868,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam10"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -896,7 +897,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam11"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -925,7 +926,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam12"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -954,7 +955,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam13"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -983,7 +984,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam14"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1012,7 +1013,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam15"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1041,7 +1042,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam16"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1070,7 +1071,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam17"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1099,7 +1100,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam18"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1150,13 +1151,13 @@
                         <ViewFlipper
                             android:id="@+id/vfGuiaPrecisionOralKiche"
                             android:layout_width="match_parent"
-                            android:layout_height="400dp"
+                            android:layout_height="match_parent"
                             android:layout_margin="6dp">
 
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1180,7 +1181,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche2"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1210,7 +1211,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche3"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1240,7 +1241,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche4"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1270,7 +1271,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche5"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1299,7 +1300,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche6"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1328,7 +1329,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche7"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1357,7 +1358,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche8"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1386,7 +1387,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche9"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1415,7 +1416,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche10"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1444,7 +1445,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche11"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1473,7 +1474,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche12"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1502,7 +1503,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche13"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1531,7 +1532,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche14"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -1557,12 +1558,20 @@
                                     android:textSize="@dimen/_11sdp" />
                             </RelativeLayout>
 
-                            <RelativeLayout
+                            <LinearLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche15"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_15_18"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1575,23 +1584,23 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/rlGuiaComprensionOralKiche16"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_15_18"
+                                    android:text="@string/p_gina_16_18"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:id="@+id/rlGuiaComprensionOralKiche16"
-                                android:layout_width="match_parent"
-                                android:layout_height="400dp"
-                                android:orientation="vertical">
-
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1604,23 +1613,23 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/rlGuiaComprensionOralKiche17"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_16_18"
+                                    android:text="@string/p_gina_17_18"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:id="@+id/rlGuiaComprensionOralKiche17"
-                                android:layout_width="match_parent"
-                                android:layout_height="400dp"
-                                android:orientation="vertical">
-
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1633,23 +1642,23 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/rlGuiaComprensionOralKiche18"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_17_18"
+                                    android:text="@string/p_gina_18_18"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:id="@+id/rlGuiaComprensionOralKiche18"
-                                android:layout_width="match_parent"
-                                android:layout_height="400dp"
-                                android:orientation="vertical">
-
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1662,16 +1671,8 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_18_18"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
-                            </RelativeLayout>
+
+                            </LinearLayout>
                         </ViewFlipper>
                     </android.support.v7.widget.CardView>
 

@@ -16,8 +16,6 @@
         android:theme="@style/Toolbar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-
-
     <TabHost
         android:id="@+id/tabHost"
         android:layout_width="match_parent"
@@ -43,10 +41,10 @@
                 <RelativeLayout
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent">
 
                     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/cvExpresionOral"
+                        android:id="@+id/cvImage1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_alignParentTop="true"
@@ -59,7 +57,7 @@
                         <ViewFlipper
                             android:id="@+id/vfGuiaComprensionOral"
                             android:layout_width="match_parent"
-                            android:layout_height="400dp"
+                            android:layout_height="match_parent"
                             android:layout_margin="6dp">
 
                             <ScrollView
@@ -70,7 +68,7 @@
                                 <RelativeLayout
                                     android:id="@+id/rlGuiaComprensionOral"
                                     android:layout_width="match_parent"
-                                    android:layout_height="400dp"
+                                    android:layout_height="match_parent"
                                     android:orientation="vertical">
 
                                     <TextView
@@ -89,7 +87,7 @@
                 <RelativeLayout
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"

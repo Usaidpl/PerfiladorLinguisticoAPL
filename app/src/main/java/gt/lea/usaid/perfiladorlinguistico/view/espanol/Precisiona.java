@@ -29,8 +29,9 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
     private ViewFlipper flipper;
     private int[][] ids = {
             {R.id.ivPoll, R.id.ivPat, R.id.ivPav}, {R.id.ivCon, R.id.ivPerr, R.id.ivGat},
-            {R.id.ivCaball,R.id.ivOvej,R.id.ivVac}, {R.id.ivArb,R.id.ivRosa,R.id.ivMazorca},
-            {R.id.ivElet, R.id.ivElet, R.id.ivCalaza}, {R.id.ivElo, R.id.ivZona, R.id.ivBanano}};
+            //{R.id.ivCaball,R.id.ivOvej,R.id.ivVac}, {R.id.ivArb,R.id.ivRosa,R.id.ivMazorca},
+            //{R.id.ivElet, R.id.ivElet, R.id.ivCalaza}, {R.id.ivElo, R.id.ivZona, R.id.ivBanano}
+            };
     private int serie = 0;
 
     @Override
@@ -116,7 +117,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                     break;
                 case R.id.ivGat:
                     sub_result ++;
-                    break;
+                    break;/*
                 case R.id.ivVac:
                     sub_result ++;
                     break;
@@ -128,7 +129,8 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                     break;
                 case R.id.ivBanano:
                     sub_result ++;
-                    break;
+                    break;*/
+
                  /*case R.id.ivBus:
                     sub_result ++;
                  case R.id.ivCar:

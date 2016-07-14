@@ -179,45 +179,7 @@
 
         </LinearLayout>
         <!-- fin uno -->
-        <!-- cinco -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Elote"
-                android:textSize="@dimen/_13sdp"
-                android:gravity="center"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:src="@mipmap/ejote"
-                    android:id="@+id/ivEjote"/>
-
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivElet"
-                    android:src="@mipmap/elote"/>
-
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivCalaza"
-                    android:src="@mipmap/ayote"/>
-            </LinearLayout>
-
-        </LinearLayout>
-        <!-- fin uno -->
         <!-- seis -->
         <LinearLayout
             android:layout_width="match_parent"

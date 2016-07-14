@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -36,13 +35,13 @@ public class Interactua extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.interpreta);
+        setContentView(R.layout.interactua);
         Bundle b = getIntent().getExtras();
         try{
             serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
         }catch (Exception e){
             serie = 0;
-            String s = e.getMessage() + " Bundle";
+            //String s = e.getMessage() + " Bundle";
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
         msg(getMsg());
@@ -83,17 +82,17 @@ public class Interactua extends Activity
     private void textos(){
         int textos_idiomas[][] = {
                 //-- idioma Quiche --
-                {R.string.guia_kiche, R.string.i_respusta_correcta_kiche,
+                {R.string.guia_kiche,
                 R.string.i_pregunta_uno_kiche, R.string.i_pregunta_dos_kiche,
                 R.string.i_pregunta_tres_kiche, R.string.i_pregunta_cuatro_kiche,
                 R.string.i_pregunta_cinco_kiche},
                 //Segundo vector
                 //-- idioma Man --
-                {R.string.interaccion, R.string.i_respuesta_man, R.string.i_pregunta_uno_man,
+                {R.string.interaccion,  R.string.i_pregunta_uno_man,
                 R.string.i_pregunta_dos_man, R.string.i_pregunta_tres_man, R.string.i_pregunta_cuantro_man,
                 R.string.i_pregunta_cinco_man},
                 //--idioma español --
-                {R.string.Ins_MamEsp_SerE_I, R.string.RespuestaCorrecta_Esp,
+                {R.string.Ins_MamEsp_SerE_I,
                         R.string.Pre1_MamEsp_SerE_I, R.string.Pre2_MamEsp_SerE_I, R.string.Pre3_MamEsp_SerE_I,
                         R.string.Pre4_MamEsp_SerE_I, R.string.Pre5_MamEsp_SerE_I}};
         //método encargado de agregar los textos a los componentes correspondientes
@@ -103,16 +102,14 @@ public class Interactua extends Activity
     @Override
     public void setTextCompoent(@IdRes int [][] textos){
         int vector[] = textos[serie];
-        int  id_intro = 0, id_resp = 0,id_text1 = 0, id_text2 = 0, id_text3 = 0, id_text4 = 0, id_text5 = 0;
+        int  id_intro = 0,id_text1 = 0, id_text2 = 0, id_text3 = 0, id_text4 = 0, id_text5 = 0;
         id_intro = vector[0];
-        id_resp = vector[1];
-        id_text1 = vector[2];
-        id_text2 = vector[3];
-        id_text3 = vector[4];
-        id_text4 = vector[5];
-        id_text5 = vector[6];
+        id_text1 = vector[1];
+        id_text2 = vector[2];
+        id_text3 = vector[3];
+        id_text4 = vector[4];
+        id_text5 = vector[5];
         intruduccion.setText(id_intro);
-      //  respuesta_correcta.setText(id_resp);
         tvPregunta1.setText(id_text1);
         tvPregunta2.setText(id_text2);
         tvPregunta3.setText(id_text3);
@@ -131,13 +128,7 @@ public class Interactua extends Activity
                 vr = new Verifica(radios_selected, NOMBRE_TABLA);
                 float resultado = vr.getResultado();
                 descition(resultado);
-            }/*else if(getEvalua() == 2){
-                vr = new Verifica(radios_selected, NOMBRE_TABLA);
-                float resultado = vr.getResultado();
-                descition(resultado);
-            }*/
-            //lanzamiento a la siguiente actividad
-
+            }
             setNextContext(Interactua.this, Comprende.class);
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -146,7 +137,7 @@ public class Interactua extends Activity
 
     private void descition(float resultado){
         if(resultado >= (100/50) + 1)
-            setNextContext(this, Interactua.class);
+            setNextContext(this, Comprende.class);
     }
 
     @Override

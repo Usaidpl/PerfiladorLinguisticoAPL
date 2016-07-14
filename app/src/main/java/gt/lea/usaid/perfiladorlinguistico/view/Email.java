@@ -2,6 +2,7 @@ package gt.lea.usaid.perfiladorlinguistico.view;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,15 +11,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import java.net.URI;
+
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.ResultadosAula;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class Email extends Activity implements OnInitializeComponent, View.OnClickListener {
 
-    private EditText correo_eletronico,nombre, codigo, grado, seccion, direccion, asunto;
+    private EditText nombre, codigo, grado, seccion, correo, asunto;
     private ImageView envia;
-    private String ce,n, c, g, s, d ,a;
+    private String ce,n, c, g, s, a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,7 @@ public class Email extends Activity implements OnInitializeComponent, View.OnCli
         codigo = (EditText) findViewById(R.id.etCodigo);
         grado = (EditText) findViewById(R.id.etGrado);
         seccion = (EditText) findViewById(R.id.etSeccion);
-        direccion = (EditText) findViewById(R.id.etDireccion);
+        correo = (EditText) findViewById(R.id.etDireccion);
         asunto = (EditText) findViewById(R.id.etAsunto);
         envia = (ImageView) findViewById(R.id.ivCorreo);
         envia.setOnClickListener(this);
@@ -43,22 +46,25 @@ public class Email extends Activity implements OnInitializeComponent, View.OnCli
     public void onClick(View v) {
         ediTextToString();
         String[] cuerpo = null;
+
         String direccion_correo[] = {ce};
         Intent i = new Intent(Intent.ACTION_SEND);
         i.putExtra(Intent.EXTRA_EMAIL, direccion_correo);
+
         i.putExtra(Intent.EXTRA_SUBJECT, "Android App");
-        i.setType("text/plain");
+        i.setType("image/png");
         i.putExtra(Intent.EXTRA_TEXT, cuerpo);
+        i.putExtra(Intent.EXTRA_STREAM, Uri.parse("android.resource://" + getPackageName() + "/" + R.drawable.back));
         startActivity(i);
     }
 
     private void ediTextToString(){
-        ce = correo_eletronico.toString().trim();
+        ce = correo.toString().trim();
         n = nombre.toString().trim();
         c = codigo.toString().trim();
         g = grado.toString().trim();
         s = seccion.toString().trim();
-        d = direccion.toString().trim();
+
         a = asunto.toString().trim();
     }
 

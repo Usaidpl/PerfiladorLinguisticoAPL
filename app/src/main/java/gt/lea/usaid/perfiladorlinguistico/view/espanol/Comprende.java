@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
@@ -31,12 +32,9 @@ public class Comprende extends Activity
 
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
-    private static final String NOMBRE_TABLA = "comprencion";
-    private static final String NOMBRE_TABLA_KICHE = "compresion_kiche";
-    private static final String NOMBRE_TABLA_MAN = "compresion_man";
 
-    private int serie = 0;
-    private TextView intruduccion, respuesta_correcta, tvPregunta1, tvPregunta2,tvPregunta3,tvPregunta4,tvPregunta5;
+    private int idioma = 0, serie;
+    private TextView intruduccion, tvPregunta1, tvPregunta2,tvPregunta3,tvPregunta4,tvPregunta5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +42,7 @@ public class Comprende extends Activity
         setContentView(R.layout.comprende);
         Bundle b = getIntent().getExtras();
         try{
-            serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
+            idioma = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
         }catch (Exception e){
             msg(e.getMessage());
         }
@@ -57,17 +55,15 @@ public class Comprende extends Activity
 
     @Override
     public void setTextCompoent(@IdRes int[][] matriz_id_texto) {
-        int vector[] = matriz_id_texto[serie];
+        int vector[] = matriz_id_texto[idioma];
         int  id_intro = 0, id_resp = 0,id_text1 = 0, id_text2 = 0, id_text3 = 0, id_text4 = 0, id_text5 = 0;
         id_intro = vector[0];
-        id_resp = vector[1];
-        id_text1 = vector[2];
-        id_text2 = vector[3];
-        id_text3 = vector[4];
-        id_text4 = vector[5];
-        id_text5 = vector[6];
+        id_text1 = vector[1];
+        id_text2 = vector[2];
+        id_text3 = vector[3];
+        id_text4 = vector[4];
+        id_text5 = vector[5];
         intruduccion.setText(id_intro);
-        respuesta_correcta.setText(id_resp);
         tvPregunta1.setText(id_text1);
         tvPregunta2.setText(id_text2);
         tvPregunta3.setText(id_text3);
@@ -90,8 +86,6 @@ public class Comprende extends Activity
         respuesta10 = (RadioButton) findViewById(R.id.rbRespuesta20);
 
         intruduccion = (TextView) findViewById(R.id.tvInstrucionComprende);
-        respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaComprende);
-
         tvPregunta1 = (TextView) findViewById(R.id.tvPreguntaUnoComprende);
         tvPregunta2 = (TextView) findViewById(R.id.tvPreguntaDosComprende);
         tvPregunta3 = (TextView) findViewById(R.id.tvPreguntaTresComprende);
@@ -104,13 +98,13 @@ public class Comprende extends Activity
 
     private void texto(){
         int txt[][] =
-                {{R.string.tituto_dos_kiche, R.string.i_respusta_correcta_kiche,R.string.ii_pregunta_uno_kiche,
+                {{R.string.tituto_dos_kiche, R.string.i_respusta_correcta_kiche,
                 R.string.ii_pregunta_dos_kiche, R.string.ii_pregunta_tres_kiche, R.string.ii_pregunta_cuatro_kiche,
                 R.string.ii_pregunta_cinco_kiche},
-                        {R.string.comprension, R.string.i_respuesta_man, R.string.ii_pregunta_uno_man,
+                        {R.string.comprension,  R.string.ii_pregunta_uno_man,
                 R.string.ii_pregunta_dos_man, R.string.ii_pregunta_tres_man, R.string.ii_pregunta_cuatro_man,
                 R.string.ii_pregunta_cinco_man},
-                        {R.string.comprension_sp, R.string.respuesta_sp,
+                        {R.string.comprension_sp,
                 R.string.ii_pregunta_uno_sp, R.string.ii_pregunta_dos_sp,
                 R.string.ii_pregunta_tres_sp, R.string.ii_pregunta_cuatro_sp, R.string.ii_pregunta_cinco_sp}};
         setTextCompoent(txt);
@@ -124,20 +118,9 @@ public class Comprende extends Activity
         Verifica vr = new Verifica(radios_selected, null);
         try {
             float resultado = vr.getResultado();
-            descition(resultado);
             setNextContext(Comprende.this, Precisiona.class);
         } catch (Exception e) {
-
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void descition(float resultado){
-        if(resultado >= (Verifica.TOTAL_SERIE/50) + 1){
-            setNextContext(Comprende.this, Precisiona.class);
-        }
-        else{
-            setNextContext(this, Interactua.class);
         }
     }
 
@@ -150,37 +133,9 @@ public class Comprende extends Activity
     @Override
     public void setNextContext(Context context, Class<?> next_context) {
         Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
+        b.putInt(IniciarEvaluacion.KEY_EVALUACION, idioma);
         Intent i = new Intent(context, next_context);
         i.putExtras(b);
         startActivity(i);
     }
-
-    //--------------------------------------------
-    private class Adapter extends BaseAdapter{
-
-        private ArrayList<Comprende> c = new ArrayList();
-
-        @Override
-        public int getCount() {
-            return 0;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            return null;
-        }
-    }
-
-
 }

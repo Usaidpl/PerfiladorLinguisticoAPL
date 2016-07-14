@@ -28,7 +28,8 @@ public class Vocabulario extends Activity implements View.OnClickListener, OnIni
     private TextView tvInstruccVocalario,tvCasa, tvCama, tvAvion, tvSilla, tvConejo, tvCaballo, tvZanahoria, tvGuisquil, tvGallo, tvManzana;
     private RadioButton SiCasa, NoCasa, SiCama, NoCama, SiAvion, NoAvion, SiSilla, NoSilla, SiConejo, NoConejo, SiCaballo, NoCaballo, SiZanahoria, NoZanahoria, SiGuisquil, NoGuisquil, SiGallo, NoGallo, SiManzana, NoManzana;
     private Switch swCasa, swCama, swAvion, swSilla, swConejo, swCaballo, swZanahoria, swGuisquil, swGallo, swManzana;
-    private int[] dr = {R.mipmap.book};
+    private int[] dr = {R.id.vfGuiaVocabulario};
+    //private int[] flopper ={R.id.vfEvaExpresionOral};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -211,7 +212,7 @@ public class Vocabulario extends Activity implements View.OnClickListener, OnIni
 
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
-        vf = (ViewFlipper) findViewById(R.id.viewflipper);
+        vf = (ViewFlipper) findViewById(R.id.vfGuiaVocabulario);
         vf.setInAnimation(AnimationUtils.loadAnimation(this,
                 android.R.anim.fade_in));
         vf.setOutAnimation(AnimationUtils.loadAnimation(this,

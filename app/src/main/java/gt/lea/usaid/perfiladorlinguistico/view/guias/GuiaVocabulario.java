@@ -73,7 +73,7 @@ public class GuiaVocabulario extends Activity {
         toolbar.setTitleTextColor(getResources().getColor(R.color.myColorBasic));
 
 
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
+        //toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
                     @Override

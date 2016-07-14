@@ -60,7 +60,7 @@ public class GuiaExpresionOral extends Activity {
         toolbar.setTitle(R.string.guia_expresion_oral);
         //setSupportActionBar(toolbar);
 
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
+        //toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
         toolbar.setTitleTextColor(getResources().getColor(R.color.myColorBasic));
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {

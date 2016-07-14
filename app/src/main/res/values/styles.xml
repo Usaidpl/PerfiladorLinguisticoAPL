@@ -1,7 +1,6 @@
 <resources>
 
     <!-- Base application theme. -->
-   
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -11,19 +10,27 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-
-
+    <!--
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/ColorPrimary</item>
         <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
         <item name="colorAccent">@color/ColorAccent</item>
-    </style>
+    </style> -->
 
     <style name="Toolbar" parent="Theme.AppCompat">
         <item name="colorPrimary">@color/ColorPrimary2</item>
         <item name="android:textColorPrimary">@color/ColorAccent2</item>
     </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#FF9800</item>
+        <item name="colorPrimaryDark">#F57C00</item>
+        <item name="android:textColorPrimary">@color/blue_text</item>
+    </style>
+
+
+
+
 </resources>
 
 

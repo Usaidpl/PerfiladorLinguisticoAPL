@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -57,37 +57,35 @@
                         <ViewFlipper
                             android:id="@+id/vfGuiaSonidosEspecificos"
                             android:layout_width="match_parent"
-                            android:layout_height="400dp"
+                            android:layout_height="match_parent"
                             android:layout_margin="6dp">
 
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificos2"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/inst_guia_sonidos_especificos"
                                     android:textSize="@dimen/_11sdp" />
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/p_gina_01_12"
                                     android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+                                    android:textSize="@dimen/_11sdp"
+                                    android:layout_alignParentTop="true" />
 
                             </RelativeLayout>
 
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificos3"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -103,7 +101,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -116,7 +114,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificos4"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -132,7 +130,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -145,7 +143,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificos5"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -161,7 +159,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -174,7 +172,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificos6"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -190,7 +188,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -202,19 +200,19 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificos7"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/ist_guia_sonidos_especificos2"
                                     android:textSize="@dimen/_11sdp"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -226,7 +224,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificos8"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="wrap_content"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -242,7 +240,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -254,7 +252,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificos9"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -270,7 +268,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -282,7 +280,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificos10"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -298,7 +296,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -310,7 +308,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificos11"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -326,7 +324,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -338,7 +336,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOral11"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -354,7 +352,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -366,7 +364,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificos12"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -382,7 +380,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -399,7 +397,7 @@
                 <RelativeLayout
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -416,24 +414,24 @@
                         <ViewFlipper
                             android:id="@+id/vfGuiaSonidosEspecificosMam"
                             android:layout_width="match_parent"
-                            android:layout_height="400dp"
+                            android:layout_height="match_parent"
                             android:layout_margin="6dp">
 
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam2"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/sonidos_especificos_mam_primera_parte"
                                     android:textSize="@dimen/_11sdp" />
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -446,7 +444,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam3"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -462,7 +460,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -475,7 +473,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam4"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -491,7 +489,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -504,7 +502,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam5"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -520,7 +518,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -533,7 +531,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam6"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -549,7 +547,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -561,23 +559,20 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam7"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/pwaq"
-                                    android:textSize="@dimen/_11sdp"/>
-                                <ImageView
-                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:src="@mipmap/book"/>
+                                    android:text="@string/inst_sonidos_especificos_segunda_parte"
+                                    android:textSize="@dimen/_11sdp"/>
+
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -589,7 +584,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam8"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -605,7 +600,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -613,36 +608,36 @@
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
                             </RelativeLayout>
-<ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-                            <LinearLayout
-                                android:id="@+id/rlGuiaSonidosEspecificosMam9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-                                <TextView
+                            <ScrollView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:id="@+id/rlGuiaSonidosEspecificosMam9"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_08_12"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/inst_sonidos_especificos_segunda_parte"
-                                    android:textSize="@dimen/_13sdp"
-                                    android:textAlignment="center"/>
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentStart="true"
+                                        android:text="@string/p_gina_08_12"
+                                        android:textAlignment="textEnd"
+                                        android:textSize="@dimen/_11sdp" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/inst_sonidos_especificos_segunda_parte"
+                                        android:textSize="@dimen/_13sdp"
+                                        android:textAlignment="center"/>
 
-                            </LinearLayout>
-</ScrollView>
+                                </LinearLayout>
+                            </ScrollView>
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam10"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -658,7 +653,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -670,7 +665,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam11"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -686,7 +681,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -698,7 +693,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralMam11"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -714,7 +709,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -726,7 +721,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam12"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -742,7 +737,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -776,24 +771,24 @@
                         <ViewFlipper
                             android:id="@+id/vfGuiaSonidosEspecificosKiche"
                             android:layout_width="match_parent"
-                            android:layout_height="400dp"
+                            android:layout_height="match_parent"
                             android:layout_margin="6dp">
 
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosKiche2"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/inst_sonidos_especificos_kiche_primera_parte"
                                     android:textSize="@dimen/_11sdp" />
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -806,7 +801,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosKiche3"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -822,7 +817,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -835,7 +830,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosKiche4"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -851,7 +846,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -864,7 +859,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosKiche5"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -880,7 +875,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -893,7 +888,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosKiche6"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -909,7 +904,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -921,19 +916,19 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosKiche7"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
 
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/inst_guia_sonidos_especificos_segunda_parte"
                                     android:textSize="@dimen/_11sdp"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -945,7 +940,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosKiche8"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -961,7 +956,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -973,7 +968,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosKiche9"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -989,7 +984,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -1001,7 +996,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosKiche10"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -1017,7 +1012,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -1029,7 +1024,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosKiche11"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -1057,7 +1052,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaComprensionOralKiche11"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -1073,7 +1068,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
@@ -1085,7 +1080,7 @@
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosKiche12"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
                                 <TextView
                                     android:layout_width="match_parent"
@@ -1101,7 +1096,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"

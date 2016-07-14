@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B0BEC5"
+    android:background="#ffffff"
     android:orientation="vertical"
     tools:context=".view.espanol.Interactua">
 
@@ -14,10 +14,10 @@
     <TextView
         android:id="@+id/tvInstrucionInteractua"
         android:layout_width="612dp"
-        android:layout_height="wrap_content"
+        android:layout_height="69dp"
         android:layout_x="175dp"
         android:layout_y="5dp"
-        android:background="#cef7030b"
+        android:background="#B71C1C"
         android:gravity="center"
         android:text="I. Cholaj uch'ob'ik tzijob'al / Interacción Oral"
         android:textColor="#ffffffff"
@@ -25,11 +25,11 @@
 
     <AbsoluteLayout
         android:layout_width="900dp"
-        android:layout_height="85dp"
+        android:layout_height="65dp"
         android:layout_margin="5sp"
         android:layout_x="35dp"
-        android:layout_y="141dp"
-        android:background="#CFD8DC"
+        android:layout_y="206dp"
+        android:background="#eceff1"
         android:orientation="horizontal"
         android:padding="20dp">
 
@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:layout_x="120dp"
-            android:layout_y="-10dp"
+            android:layout_y="-20dp"
             android:padding="20dp"
             android:text="¿Janipa ajunab?"
             android:textColor="#000"
@@ -46,24 +46,24 @@
             android:textStyle="bold" />
 
         <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_gravity="top|bottom"
             android:layout_x="30dp"
             android:layout_y="0dp"
             android:background="@xml/redondeado"
             android:fadingEdgeLength="@dimen/_100sdp"
-            android:gravity="center"
+            android:gravity="center_horizontal|bottom"
             android:text="2"
             android:textColor="#ffffff"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <RadioGroup
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_x="650dp"
-            android:layout_y="9dp"
+            android:layout_y="2dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -87,24 +87,24 @@
 
     <AbsoluteLayout
         android:layout_width="900dp"
-        android:layout_height="85dp"
+        android:layout_height="65dp"
         android:layout_margin="5sp"
         android:layout_x="35dp"
-        android:layout_y="237dp"
-        android:background="#CFD8DC"
+        android:layout_y="277dp"
+        android:background="#eceff1"
         android:orientation="horizontal"
         android:padding="20dp">
         <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_x="30dp"
             android:layout_y="0dp"
             android:background="@xml/redondeado"
             android:fadingEdgeLength="@dimen/_100sdp"
-            android:gravity="center"
+            android:gravity="center_horizontal|bottom"
             android:text="3"
             android:textColor="#ffffff"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
@@ -112,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:layout_x="120dp"
-            android:layout_y="-10dp"
+            android:layout_y="-20dp"
             android:padding="20dp"
             android:text="¿Jas / su ub'i' ri anam?"
             android:textColor="#000"
@@ -123,7 +123,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_x="650dp"
-            android:layout_y="9dp"
+            android:layout_y="2dp"
             android:gravity="center"
             android:orientation="horizontal">
             <RadioButton
@@ -145,24 +145,24 @@
 
     <AbsoluteLayout
         android:layout_width="900dp"
-        android:layout_height="85dp"
+        android:layout_height="65dp"
         android:layout_margin="5sp"
         android:layout_x="35dp"
-        android:layout_y="333dp"
-        android:background="#CFD8DC"
+        android:layout_y="346dp"
+        android:background="#eceff1"
         android:orientation="horizontal"
         android:padding="20dp">
         <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_x="30dp"
             android:layout_y="0dp"
             android:background="@xml/redondeado"
             android:fadingEdgeLength="@dimen/_100sdp"
-            android:gravity="center"
+            android:gravity="center_horizontal|bottom"
             android:text="4"
             android:textColor="#ffffff"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
@@ -170,7 +170,7 @@
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:layout_x="120dp"
-            android:layout_y="-10dp"
+            android:layout_y="-20dp"
             android:padding="20dp"
             android:text="¿Jachike ?"
             android:textColor="#000"
@@ -181,7 +181,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_x="650dp"
-            android:layout_y="9dp"
+            android:layout_y="2dp"
             android:gravity="center"
             android:orientation="horizontal">
             <RadioButton
@@ -203,24 +203,24 @@
 
     <AbsoluteLayout
         android:layout_width="900dp"
-        android:layout_height="85dp"
+        android:layout_height="65dp"
         android:layout_margin="5sp"
         android:layout_x="35dp"
-        android:layout_y="429dp"
-        android:background="#CFD8DC"
+        android:layout_y="417dp"
+        android:background="#eceff1"
         android:orientation="horizontal"
         android:padding="20dp">
         <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_x="30dp"
             android:layout_y="0dp"
             android:background="@xml/redondeado"
             android:fadingEdgeLength="@dimen/_100sdp"
-            android:gravity="center"
+            android:gravity="center_horizontal|bottom"
             android:text="5"
             android:textColor="#ffffff"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
@@ -228,7 +228,7 @@
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:layout_x="120dp"
-            android:layout_y="-10dp"
+            android:layout_y="-20dp"
             android:padding="20dp"
             android:text="¿Jas ab'i' / su ri ab 'i'?"
             android:textColor="#000"
@@ -239,7 +239,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_x="650dp"
-            android:layout_y="9dp"
+            android:layout_y="2dp"
             android:gravity="center"
             android:orientation="horizontal">
             <RadioButton
@@ -261,27 +261,28 @@
 
     <AbsoluteLayout
         android:layout_width="900dp"
-        android:layout_height="85dp"
+        android:layout_height="65dp"
         android:layout_margin="5sp"
         android:layout_x="35dp"
-        android:layout_y="45dp"
-        android:background="#CFD8DC"
+        android:layout_y="138dp"
+        android:background="#eceff1"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="20dp">
 
         <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_x="30dp"
             android:layout_y="0dp"
             android:background="@xml/redondeado"
+            android:backgroundTint="#1565c0"
             android:fadingEdgeLength="@dimen/_100sdp"
-            android:gravity="center"
+            android:gravity="center_horizontal|bottom"
             android:lines="@integer/abc_max_action_buttons"
             android:text="1"
             android:textColor="#FFFFFFFF"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
@@ -289,7 +290,7 @@
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:layout_x="120dp"
-            android:layout_y="-10dp"
+            android:layout_y="-20dp"
             android:padding="20dp"
             android:text="¿Jas ab'i' / su ri ab 'i'?"
             android:textColor="#000"
@@ -300,7 +301,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_x="650dp"
-            android:layout_y="9dp"
+            android:layout_y="2dp"
             android:gravity="center"
             android:orientation="horizontal">
             <RadioButton
@@ -319,6 +320,7 @@
                 android:textStyle="bold" />
         </RadioGroup>
     </AbsoluteLayout>
+
     <!-- fin -->
 
 </AbsoluteLayout>

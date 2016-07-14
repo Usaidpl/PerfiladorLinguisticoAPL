@@ -1,23 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".view.guias.GuiaGramatica">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize">
-
-    </android.support.v7.widget.Toolbar>
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        android:elevation="4dp"
+        android:theme="@style/Toolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     <TabHost
         android:id="@+id/tabHost"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true">
 
         <LinearLayout
@@ -28,7 +29,7 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></TabWidget>
+                android:layout_height="match_parent"></TabWidget>
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -66,18 +67,18 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/inst_guia_gramatica"
-                                    android:textSize="@dimen/_11sdp" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
                                     android:text="@string/p_gina_01_10"
                                     android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/inst_guia_gramatica"
                                     android:textSize="@dimen/_11sdp" />
 
                             </LinearLayout>
@@ -90,6 +91,15 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_02_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/este_es_un_cocinero"
                                     android:textSize="@dimen/_13sdp"
                                     android:textAlignment="center"/>
@@ -99,15 +109,6 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_02_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
 
                             </LinearLayout>
 
@@ -116,6 +117,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_03_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -128,15 +138,7 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_03_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
 
                             </LinearLayout>
                             <LinearLayout
@@ -144,6 +146,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_04_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -156,15 +168,6 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_04_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
 
                             </LinearLayout>
                             <LinearLayout
@@ -172,6 +175,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_05_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -184,15 +196,6 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_05_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramatica06"
@@ -202,18 +205,18 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/inst_guia_gramatica2"
-                                    android:textSize="@dimen/_11sdp" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
                                     android:text="@string/p_gina_06_10"
                                     android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/inst_guia_gramatica_mam2"
                                     android:textSize="@dimen/_11sdp" />
                             </LinearLayout>
                             <LinearLayout
@@ -221,6 +224,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_07_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -233,21 +245,22 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_07_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramatica08"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_08_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -260,21 +273,22 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_08_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramatica09"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_09_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -287,21 +301,21 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_09_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramatica10"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_10_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -314,15 +328,7 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_10_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
 
@@ -334,7 +340,7 @@
                 <LinearLayout
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -362,18 +368,18 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/inst_guia_gramatica_mam"
-                                    android:textSize="@dimen/_11sdp" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
                                     android:text="@string/p_gina_01_10"
                                     android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/inst_guia_gramatica_mam"
                                     android:textSize="@dimen/_11sdp" />
 
                             </LinearLayout>
@@ -383,6 +389,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_02_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -395,15 +411,7 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_02_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
 
                             </LinearLayout>
 
@@ -412,6 +420,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_03_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -424,15 +441,7 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_03_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
 
                             </LinearLayout>
                             <LinearLayout
@@ -440,6 +449,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_04_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -452,15 +470,6 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_04_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
 
                             </LinearLayout>
                             <LinearLayout
@@ -468,6 +477,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_05_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -480,43 +498,44 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_05_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam06"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
-
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/inst_guia_gramatica_mam2"
-                                    android:textSize="@dimen/_11sdp" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
                                     android:text="@string/p_gina_06_10"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/inst_guia_gramatica_mam2"
+                                    android:textSize="@dimen/_11sdp" />
+
+
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam07"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_07_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -529,21 +548,22 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_07_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam08"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_08_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -556,21 +576,22 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_08_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam09"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_09_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -583,21 +604,22 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_09_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaMam10"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_10_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -610,15 +632,7 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_10_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
 
@@ -631,7 +645,7 @@
                 <LinearLayout
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -656,22 +670,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
-
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/inst_guia_gramatica_kiche_singular_plural"
-                                    android:textSize="@dimen/_11sdp" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
                                     android:text="@string/p_gina_01_10"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/inst_guia_gramatica_kiche_singular_plural"
+                                    android:textSize="@dimen/_11sdp" />
+
+
 
                             </LinearLayout>
 
@@ -680,6 +694,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_02_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -692,15 +716,6 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_02_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
 
                             </LinearLayout>
 
@@ -709,6 +724,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_03_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -721,15 +745,7 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_03_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
 
                             </LinearLayout>
                             <LinearLayout
@@ -737,6 +753,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_04_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -749,15 +774,7 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_04_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
 
                             </LinearLayout>
                             <LinearLayout
@@ -765,6 +782,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_05_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -777,43 +803,45 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_05_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaKiche06"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
-
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/inst_guia_gramatica_masculino_femenino"
-                                    android:textSize="@dimen/_11sdp" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentLeft="true"
                                     android:layout_alignParentStart="true"
                                     android:text="@string/p_gina_06_10"
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/inst_guia_gramatica_masculino_femenino"
+                                    android:textSize="@dimen/_11sdp" />
+
+
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaKiche07"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_07_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -826,21 +854,22 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_07_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaKiche08"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_08_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -853,21 +882,22 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_08_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaKiche09"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_09_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -880,21 +910,22 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_09_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/rlGuiaGramaticaKiche10"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_10_10"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -907,15 +938,7 @@
                                     android:layout_height="wrap_content"
                                     android:src="@mipmap/book" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_10_10"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
+
                             </LinearLayout>
 
 

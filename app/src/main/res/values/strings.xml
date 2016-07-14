@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PL</string>
+    <string name="app_name">APL USAID</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -519,6 +519,7 @@
     <string name="Pre3_MamEsp_SerF">Idioma que prefiere utilizar el/la estudiante en la escuela (entrevista con el estudiante):</string>
     <string name="Pre4_MamEsp_SerF">Dominio oral del estudiante en  cada uno de los idiomas (escriba la cantidad de respuestas correctas del/la estudiante en cada idioma, según cada  serie de la evaluación diagnostica).</string>
     <string name="Aspecto_Esp">Aspecto</string>
+    <string name="prueba">prueba</string>
     <string name="Mam">Mam</string>
     <string name="Español">Español</string>
     <string name="CompredeCuandoHabla_MamEsp">Comprende cuando se le habla. \n(Series I y II – Total 10 respuestas).</string>
@@ -535,7 +536,7 @@
     <string name="are_jun_ti_t">Are jun ti´t \n ¿Su ub´ixik we k´o upki?</string>
     <string name="nooooo">no</string>
     <string name="come_back">Regresando al Menu!</string>
-    <string name="que_es_esta_imagen_esp">Instrucciones:\nSe le mostraran diez imágenes y debe pronunciar que es cada una de ellas</string>
+    <string name="que_es_esta_imagen_esp">Instrucciones:\nSe le mostraran unos dibujos, digame qué es cada uno.</string>
     <string name="que_es_esta_imagen_gramatica">Instrucciones:\nSe le mostraran ocho imágenes y deberá pronunciar cada una de ellas.</string>
     <string name="tvabuelo">Esta es una Abuela, si fuera hombre ¿cómo se diría?</string>
     <string name="tvmaestra">Este es un maestro, si fuera mujer ¿cómo se diría?</string>
@@ -683,7 +684,7 @@
     <string name="k_ix">K\'ix</string>
     <string name="mukun_k_um">Mukun / k\'um</string>
     <string name="qatzu">Q\'atzu / q\'anxul</string>
-    <string name="inst_sonidos_especificos_segunda_parte">V. \'LOJ. TQ\'OJQ\'OJAL QYOL MAM / SONIDOS ESPECÍFICOS DEL MAM \n(SEGUNDA PARTE)\n\nChikb\'ab\'il / Instrucciones\nQ\'amanxa te xnaq\'tzanjtz: Kx\'el nyek\'una junjun tilb\'ilal, q\'amantza ti tb\'i junjun. Yek\'unxa junjun tilb\'ilal, tzib\'nkub\'a toj u\'j aju tzaq\'web\'il, qa b\'an ex qa mya\' b\'anm b\'inxa tq\'ojq\'ojal aju tchq\'aj tuk\'il txwiniq\': q\',\'k\', b\', x q\n\nDiga al estudiante: Kx\'el nyek\'una junjun tib\'lal, q\'amantza ti tb\'i junjun. Luego enséñele cada dibujo. Marque en la hoja de respuestas si el/la estudiante dice correctamente todos los sonidos de la palabra. Fíjese especialmente lo relacionado con consonantes glotalizadas y sonidos especiales del mam: \nx, q</string>
+    <string name="inst_sonidos_especificos_segunda_parte">\nV. \'LOJ. TQ\'OJQ\'OJAL QYOL MAM / SONIDOS ESPECÍFICOS DEL MAM \n(SEGUNDA PARTE)\n\nChikb\'ab\'il / Instrucciones\nQ\'amanxa te xnaq\'tzanjtz: Kx\'el nyek\'una junjun tilb\'ilal, q\'amantza ti tb\'i junjun. Yek\'unxa junjun tilb\'ilal, tzib\'nkub\'a toj u\'j aju tzaq\'web\'il, qa b\'an ex qa mya\' b\'anm b\'inxa tq\'ojq\'ojal aju tchq\'aj tuk\'il txwiniq\': q\',\'k\', b\', x q\n\nDiga al estudiante: Kx\'el nyek\'una junjun tib\'lal, q\'amantza ti tb\'i junjun. Luego enséñele cada dibujo. Marque en la hoja de respuestas si el/la estudiante dice correctamente todos los sonidos de la palabra. Fíjese especialmente lo relacionado con consonantes glotalizadas y sonidos especiales del mam: x, q</string>
     <string name="ka_kya">Ka\' / kya\'</string>
     <string name="chew">Che\'w</string>
     <string name="si_">Si\'</string>

@@ -20,6 +20,7 @@ import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.ResultadosAula;
 import gt.lea.usaid.perfiladorlinguistico.controller.Series;
 import gt.lea.usaid.perfiladorlinguistico.view.Creditos;
+import gt.lea.usaid.perfiladorlinguistico.view.Email;
 import gt.lea.usaid.perfiladorlinguistico.view.EnviarInformacion;
 import gt.lea.usaid.perfiladorlinguistico.view.Sincronizar;
 
@@ -31,6 +32,7 @@ public class NavigationMenu extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //Fabric.with(this, new Crashlytics());
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -69,7 +71,7 @@ public class NavigationMenu extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.enviar_informacion) {
-            Intent intent = new Intent(this, EnviarInformacion.class);
+            Intent intent = new Intent(this, Email.class);
             startActivity(intent);
             return true;
         }

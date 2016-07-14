@@ -55,6 +55,16 @@
                     android:layout_alignParentBottom="true"
                     android:src="@mipmap/book"
                     />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Imagen 1 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/textView5" />
 
                 <TableLayout
                     android:id="@+id/tbPelota"
@@ -137,6 +147,13 @@
                     android:padding="25dp"
                     android:src="@mipmap/book"
                     />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Imagen 2 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView6"/>
 
                 <TableLayout
                     android:id="@+id/tlPelotas"
@@ -212,6 +229,13 @@
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Imagen 3 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView7"/>
 
                 <TableLayout
                     android:id="@+id/tlLapices"
@@ -287,7 +311,13 @@
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Imagen 4 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView8"/>
                 <TableLayout
                     android:id="@+id/tlLapiz"
                     android:layout_width="match_parent"
@@ -364,6 +394,13 @@
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\n\nImagen 5 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView9"/>
 
                 <TableLayout
                     android:id="@+id/tlAbuelo"
@@ -441,6 +478,13 @@
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\n\nImagen 6 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView10"/>
 
                 <TableLayout
                     android:id="@+id/tlMaestra"
@@ -517,6 +561,13 @@
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\n\nImagen 7 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView11"/>
 
                 <TableLayout
                     android:id="@+id/tlDoctora"
@@ -593,6 +644,13 @@
                     android:layout_height="wrap_content"
                     android:padding="25dp"
                     android:src="@mipmap/book" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\n\nImagen 8 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView12"/>
 
                 <TableLayout
                     android:id="@+id/tlChef"

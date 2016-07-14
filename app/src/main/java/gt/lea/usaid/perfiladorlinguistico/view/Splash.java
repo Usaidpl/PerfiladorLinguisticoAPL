@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.crashlytics.android.Crashlytics;
+
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
+import io.fabric.sdk.android.Fabric;
 
 /**
  * Created by Roberto on 27/06/2016.
@@ -16,8 +19,9 @@ public class Splash extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Fabric.with(this, new Crashlytics(), new CrashlyticsNdk());
         setContentView(R.layout.splash);
-
+        Fabric.with(this, new Crashlytics());
         Thread timerTread = new Thread(){
             public void run(){
                 try{

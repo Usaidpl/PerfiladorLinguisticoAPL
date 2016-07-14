@@ -3,17 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".view.guias.GuiaSonidosEspecificos">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize">
-
-    </android.support.v7.widget.Toolbar>
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        android:elevation="4dp"
+        android:theme="@style/Toolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <TabHost
         android:id="@+id/tabHost"
@@ -612,12 +613,23 @@
                                     android:textAlignment="textEnd"
                                     android:textSize="@dimen/_11sdp" />
                             </RelativeLayout>
-
-                            <RelativeLayout
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+                            <LinearLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam9"
                                 android:layout_width="match_parent"
-                                android:layout_height="400dp"
+                                android:layout_height="wrap_content"
                                 android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/p_gina_08_12"
+                                    android:textAlignment="textEnd"
+                                    android:textSize="@dimen/_11sdp" />
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -625,17 +637,8 @@
                                     android:textSize="@dimen/_13sdp"
                                     android:textAlignment="center"/>
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_alignParentStart="true"
-                                    android:text="@string/p_gina_08_12"
-                                    android:textAlignment="textEnd"
-                                    android:textSize="@dimen/_11sdp" />
-                            </RelativeLayout>
-
+                            </LinearLayout>
+</ScrollView>
                             <RelativeLayout
                                 android:id="@+id/rlGuiaSonidosEspecificosMam10"
                                 android:layout_width="match_parent"

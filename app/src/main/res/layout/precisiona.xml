@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <ViewFlipper
-        android:layout_width="match_parent"
+        android:layout_width="1285dp"
         android:layout_height="match_parent"
         android:id="@+id/flipper">
         <!-- uno -->
@@ -18,6 +18,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="30dp"
                 android:text="Pato"
                 android:textSize="@dimen/_13sdp"
                 android:gravity="center"/>
@@ -26,28 +27,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:weightSum="3">
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@mipmap/pollito"
+                    android:layout_weight="1"
                     android:id="@+id/ivPoll"/>
                 <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivPat"
-                    android:src="@mipmap/pato"/>
-                <Space
-                    android:layout_width="40dp"
+                    android:layout_width="25dp"
                     android:layout_height="match_parent" />
 
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
+                    android:id="@+id/ivPat"
+                    android:layout_weight="1"
+                    android:src="@mipmap/pato"/>
+                <Space
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent" />
+
+
+                <ImageView
+                    android:padding="20dp"
+                    android:layout_width="350dp"
+                    android:layout_height="450dp"
                     android:id="@+id/ivPav"
+                    android:layout_weight="1"
                     android:src="@mipmap/pavo"/>
             </LinearLayout>
 
@@ -74,25 +82,21 @@
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@mipmap/perro"
                     android:id="@+id/ivPerr"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+
+
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivCon"
-                    android:src="@mipmap/pato"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+                    android:src="@mipmap/conejo"/>
 
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivGat"
-                    android:src="@mipmap/pavo"/>
+                    android:src="@mipmap/gato"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -118,25 +122,21 @@
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@mipmap/caballlo"
                     android:id="@+id/ivCaball"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+
+
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivOvej"
-                    android:src="@mipmap/pato"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+                    android:src="@mipmap/oveja"/>
 
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivVac"
-                    android:src="@mipmap/pavo"/>
+                    android:src="@mipmap/vaca"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -162,25 +162,20 @@
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@mipmap/arbol"
                     android:id="@+id/ivArb"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivRosa"
-                    android:src="@mipmap/pato"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+                    android:src="@mipmap/rosa"/>
 
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivMazorca"
-                    android:src="@mipmap/pavo"/>
+                    android:src="@mipmap/milpa"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -206,25 +201,20 @@
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@mipmap/ejote"
                     android:id="@+id/ivEjote"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivElet"
-                    android:src="@mipmap/pato"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+                    android:src="@mipmap/elote"/>
 
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivCalaza"
-                    android:src="@mipmap/pavo"/>
+                    android:src="@mipmap/ayote"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -250,25 +240,20 @@
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@mipmap/elote"
                     android:id="@+id/ivElo"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivZona"
-                    android:src="@mipmap/pato"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+                    android:src="@mipmap/zanahoria"/>
 
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="450dp"
                     android:id="@+id/ivBanano"
-                    android:src="@mipmap/pavo"/>
+                    android:src="@mipmap/banano"/>
             </LinearLayout>
 
         </LinearLayout>

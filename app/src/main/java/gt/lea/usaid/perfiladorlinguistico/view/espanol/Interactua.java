@@ -31,6 +31,8 @@ public class Interactua extends Activity
     private int serie = 0;
     private int evalua = 1;
 
+    private String msg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,10 +45,11 @@ public class Interactua extends Activity
             String s = e.getMessage() + " Bundle";
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+        msg(getMsg());
         setOnInit(null);
     }
 
-    protected void msg(String s){
+    public void msg(String s){
         Toast.makeText(this, s ,Toast.LENGTH_SHORT).show();
     }
 
@@ -164,5 +167,13 @@ public class Interactua extends Activity
 
     public int getEvalua() {
         return evalua;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 }

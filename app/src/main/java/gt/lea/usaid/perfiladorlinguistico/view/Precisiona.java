@@ -58,7 +58,7 @@ public class Precisiona extends Activity implements OnInitializeComponent, OnSta
         boolean terminado = false;
         int vector[] = matriz[pregunta];
         String texto[] = {"PATO", "GATO","VACA"};
-        tv = (TextView) findViewById(R.id.tvTituloPresicion);
+        tv = (TextView) findViewById(R.id.tvPreguntaIII);
         tv.setText(texto[pregunta]);
         image = (ImageView) findViewById(R.id.ivImagen1);
         image2 = (ImageView) findViewById(R.id.ivImagen2);

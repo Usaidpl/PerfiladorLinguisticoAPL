@@ -5,308 +5,80 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ViewFlipper
+    <AbsoluteLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/flipper"
-        android:background="#eceff1">
-        <!-- uno -->
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:text="pato"
+            android:textSize="26dp"
+            android:gravity="center"
+            android:layout_x="415dp"
+            android:layout_y="25dp"
+            android:textColor="#1A237E"
+            android:autoText="false"
+            android:textStyle="bold|italic" />
+
         <AbsoluteLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="130dp"
-                android:layout_height="50dp"
-                android:text="pato"
-                android:textSize="26dp"
-                android:gravity="center"
-                android:layout_x="415dp"
-                android:layout_y="25dp"
-                android:textColor="#1A237E"
-                android:autoText="false"
-                android:textStyle="bold|italic" />
-
-            <AbsoluteLayout
 
 
-                android:orientation="horizontal"
-                android:layout_width="260dp"
-                android:layout_height="310dp"
-                android:layout_x="50dp"
-                android:layout_y="150dp"
-                android:background="@xml/redondeado"
-                android:id="@+id/redondeadouno">
+            android:orientation="horizontal"
+            android:layout_width="260dp"
+            android:layout_height="310dp"
+            android:layout_x="50dp"
+            android:layout_y="150dp"
+            android:background="@xml/redondeado"
+            android:id="@+id/redondeadouno">
 
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="250dp"
-                    android:id="@+id/ivPat"
-                    android:src="@mipmap/pato"
-                    android:layout_x="30dp"
-                    android:layout_y="30dp"
-                    android:background="#ffffffff" />
-            </AbsoluteLayout>
-
-            <AbsoluteLayout
-                android:orientation="horizontal"
-                android:layout_width="260dp"
-                android:layout_height="310dp"
-                android:layout_x="345dp"
-                android:layout_y="150dp"
-                android:background="@xml/redondeado" >
-
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="250dp"
-                    android:src="@mipmap/logolea"
-                    android:id="@+id/ivPoll"
-                    android:layout_x="30dp"
-                    android:layout_y="30dp"
-                    android:background="#ffffffff" />
-            </AbsoluteLayout>
-
-            <AbsoluteLayout
-                android:orientation="horizontal"
-                android:layout_width="260dp"
-                android:layout_height="310dp"
-                android:layout_x="645dp"
-                android:layout_y="150dp"
-                android:background="@xml/redondeado" >
-
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="250dp"
-                    android:id="@+id/ivPav"
-                    android:src="@mipmap/pavo"
-                    android:layout_x="30dp"
-                    android:layout_y="30dp"
-                    android:background="#ffffffff" />
-            </AbsoluteLayout>
-
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:id="@+id/ivPat"
+                android:src="@mipmap/logolea"
+                android:layout_x="30dp"
+                android:layout_y="30dp"
+                android:background="#ffffffff" />
         </AbsoluteLayout>
-        <!-- fin uno -->
-        <!-- dos -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Gato"
-                android:textSize="@dimen/_13sdp"
-                android:gravity="center"/>
+        <AbsoluteLayout
+            android:orientation="horizontal"
+            android:layout_width="260dp"
+            android:layout_height="310dp"
+            android:layout_x="345dp"
+            android:layout_y="150dp"
+            android:background="@xml/redondeado" >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:id="@+id/ivPerr"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivCon"
-                    android:src="@mipmap/pato"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:src="@mipmap/logolea"
+                android:id="@+id/ivPoll"
+                android:layout_x="30dp"
+                android:layout_y="30dp"
+                android:background="#ffffffff" />
+        </AbsoluteLayout>
 
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivGat"
-                    android:src="@mipmap/pavo"/>
-            </LinearLayout>
+        <AbsoluteLayout
+            android:orientation="horizontal"
+            android:layout_width="260dp"
+            android:layout_height="310dp"
+            android:layout_x="645dp"
+            android:layout_y="150dp"
+            android:background="@xml/redondeado" >
 
-        </LinearLayout>
-        <!-- fin uno -->
-        <!-- tres -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:id="@+id/ivPav"
+                android:src="@mipmap/logolea"
+                android:layout_x="30dp"
+                android:layout_y="30dp"
+                android:background="#ffffffff" />
+        </AbsoluteLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Vaca"
-                android:textSize="@dimen/_13sdp"
-                android:gravity="center"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:id="@+id/ivCaball"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivOvej"
-                    android:src="@mipmap/pato"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
-
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivVac"
-                    android:src="@mipmap/pavo"/>
-            </LinearLayout>
-
-        </LinearLayout>
-        <!-- fin uno -->
-        <!-- cuatro -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Árbol"
-                android:textSize="@dimen/_13sdp"
-                android:gravity="center"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:id="@+id/ivArb"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivRosa"
-                    android:src="@mipmap/pato"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
-
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivMazorca"
-                    android:src="@mipmap/pavo"/>
-            </LinearLayout>
-
-        </LinearLayout>
-        <!-- fin uno -->
-        <!-- cinco -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Elote"
-                android:textSize="@dimen/_13sdp"
-                android:gravity="center"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:id="@+id/ivEjote"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivElet"
-                    android:src="@mipmap/pato"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
-
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivCalaza"
-                    android:src="@mipmap/pavo"/>
-            </LinearLayout>
-
-        </LinearLayout>
-        <!-- fin uno -->
-        <!-- seis -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Banano"
-                android:textSize="@dimen/_13sdp"
-                android:gravity="center"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:id="@+id/ivElo"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivZona"
-                    android:src="@mipmap/pato"/>
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
-
-                <ImageView
-                    android:layout_width="350dp"
-                    android:layout_height="450dp"
-                    android:id="@+id/ivBanano"
-                    android:src="@mipmap/pavo"/>
-            </LinearLayout>
-
-        </LinearLayout>
-        <!-- fin uno -->
-    </ViewFlipper>
+    </AbsoluteLayout>
 
 </AbsoluteLayout>

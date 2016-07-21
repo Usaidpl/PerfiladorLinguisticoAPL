@@ -27,10 +27,10 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
     private int pregunta = 0;
     private ImageView image, image2, image3;
     private ViewFlipper flipper;
-    private int[][] ids = {
+    /*private int[][] ids = {
             {R.id.ivPoll, R.id.ivPat, R.id.ivPav}, {R.id.ivCon, R.id.ivPerr, R.id.ivGat},
             {R.id.ivCaball,R.id.ivOvej,R.id.ivVac}, {R.id.ivArb,R.id.ivRosa,R.id.ivMazorca},
-            {R.id.ivElet, R.id.ivElet, R.id.ivCalaza}, {R.id.ivElo, R.id.ivZona, R.id.ivBanano}};
+            {R.id.ivElet, R.id.ivElet, R.id.ivCalaza}, {R.id.ivElo, R.id.ivZona, R.id.ivBanano}};*/
     private int serie = 0;
 
     @Override
@@ -39,7 +39,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
         setContentView(R.layout.precisiona);
         Bundle b = getIntent().getExtras();
         serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
-        setOnInit(ids);
+        //setOnInit(ids);
     }
 
     @Override
@@ -103,7 +103,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
 
                 pregunta ++;
                 clearImage();
-                setOnInit(ids);
+                //setOnInit(ids);
                 flipper.showNext();
             }
         }

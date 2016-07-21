@@ -18,9 +18,7 @@ import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaPrecisionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaSonidosEspecificos;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaVocabulario;
 
-/**
- * Created by Roberto on 21/06/16.
- */
+
 public class GuiaEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener {
     private ImageView comprencionoral, expresionral, gramatica, interpretacionoral, precicionoral,sonidosespecificos, vocabulario;
     private OnFragmentInteractionListener mListener;

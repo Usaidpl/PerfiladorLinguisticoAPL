@@ -1,351 +1,327 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="1000dp"
+    android:layout_height="550dp"
     android:orientation="vertical"
-    tools:context=".view.espanol.Interactua">
+    tools:context=".view.espanol.Interactua"
+    android:background="#eceff1">
 
     <!-- inicio -->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="750dp"
-            android:layout_height="wrap_content">
-            <TextView
+    <!-- end title -->
+
+    <TextView
+        android:id="@+id/tvInstrucionInteractua"
+        android:layout_width="900dp"
+        android:layout_height="50dp"
+        android:layout_x="35dp"
+        android:layout_y="25dp"
+        android:background="#B71C1C"
+        android:gravity="center"
+        android:text="I. Cholaj uch'ob'ik tzijob'al / Interacción Oral"
+        android:textColor="#ffffffff"
+        android:textSize="26dp"
+        android:textStyle="bold" />
+
+    <AbsoluteLayout
+        android:layout_width="900dp"
+        android:layout_height="65dp"
+        android:layout_margin="5sp"
+        android:layout_x="35dp"
+        android:layout_y="203dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvPreguntaDosInteractua"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_x="120dp"
+            android:layout_y="-20dp"
+            android:padding="20dp"
+            android:text="¿Janipa ajunab?"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top|bottom"
+            android:layout_x="30dp"
+            android:layout_y="0dp"
+            android:background="@xml/redondeado"
+            android:fadingEdgeLength="@dimen/_100sdp"
+            android:gravity="center_horizontal|bottom"
+            android:text="2"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_x="650dp"
+            android:layout_y="2dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbRespuesta3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="I. Cholaj uch'ob'ik tzijob'al / Interacción Oral"
-                android:textSize="@dimen/_11sdp"
-                android:textColor="@color/colorPrimaryDark"
-                android:gravity="center"
-                android:id="@+id/tvInstrucionInteractua"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
+                android:buttonTint="#1a3187"
+                android:text="si"
+                android:textStyle="bold" />
+            <RadioButton
+                android:id="@+id/rbRespuesta4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#1a3187"
+                android:text="no"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+    </AbsoluteLayout>
+
+    <AbsoluteLayout
+        android:layout_width="900dp"
+        android:layout_height="65dp"
+        android:layout_margin="5sp"
+        android:layout_x="35dp"
+        android:layout_y="275dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:padding="20dp">
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_x="30dp"
+            android:layout_y="0dp"
+            android:background="@xml/redondeado"
+            android:fadingEdgeLength="@dimen/_100sdp"
+            android:gravity="center_horizontal|bottom"
+            android:text="3"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPreguntaTresInteractua"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_x="120dp"
+            android:layout_y="-20dp"
+            android:padding="20dp"
+            android:text="¿Jas / su ub'i' ri anam?"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:layout_width="match_parent"
+            android:layout_x="650dp"
+            android:layout_y="2dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbRespuesta5"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Utz Tzalim tzij"
-                android:textSize="@dimen/_11sdp"
-                android:gravity="center"
-                android:id="@+id/tvRespuestaInteractua"/>
-            <TextView
-                android:layout_width="match_parent"
+                android:buttonTint="#1a3187"
+                android:text="si"
+                android:textStyle="bold" />
+            <RadioButton
+                android:id="@+id/rbRespuesta6"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta Correcta"
-                android:textSize="45dp"
-                android:gravity="center"/>
-        </LinearLayout>
-    </LinearLayout>
-    <!-- end title -->
-    
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="90dp" />
+                android:buttonTint="#1a3187"
+                android:text="no"
+                android:textStyle="bold" />
+        </RadioGroup>
+    </AbsoluteLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="75dp"
-            android:paddingRight="75dp">
-            <!-- 1 -->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
+    <AbsoluteLayout
+        android:layout_width="900dp"
+        android:layout_height="65dp"
+        android:layout_margin="5sp"
+        android:layout_x="35dp"
+        android:layout_y="346dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:padding="20dp">
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_x="30dp"
+            android:layout_y="0dp"
+            android:background="@xml/redondeado"
+            android:fadingEdgeLength="@dimen/_100sdp"
+            android:gravity="center_horizontal|bottom"
+            android:text="4"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPreguntaCuatroInteractua"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_x="120dp"
+            android:layout_y="-20dp"
+            android:padding="20dp"
+            android:text="¿Jachike ?"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_x="650dp"
+            android:layout_y="2dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbRespuesta7"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="20dp"
-                    android:layout_margin="5sp"
-                    android:background="@xml/border2"
-                    android:gravity="center">
-
-                    <Button
-                        android:layout_width="105dp"
-                        android:layout_height="105dp"
-                        android:text="1"
-                        android:textSize="35dp"
-                        android:gravity="center"
-                        android:textColor="#000000"
-                        android:background="@xml/redondeado"
-                        android:fadingEdgeLength="@dimen/_100sdp"/>
-                    <Space
-                        android:layout_width="35dp"
-                        android:layout_height="50dp" />
-                    <TextView
-                        android:padding="20dp"
-                        android:layout_width="830dp"
-                        android:layout_height="wrap_content"
-                        android:text="¿Jas ab'i' / su ri ab 'i'?"
-                        android:textSize="@dimen/_11sdp"
-                        android:textColor="#000"
-                        android:id="@+id/tvPreguntaUnoInteractua"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="si"
-                                android:id="@+id/rbRespuesta1"/>
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="no"
-                                android:id="@+id/rbRespuesta2"/>
-                        </RadioGroup>
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <!-- 2 -->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="20dp"
-                    android:layout_margin="5sp"
-                    android:background="@xml/border2">
-                    <Button
-                        android:layout_width="105dp"
-                        android:layout_height="105dp"
-                        android:text="2"
-                        android:textSize="35dp"
-                        android:gravity="center"
-                        android:background="@xml/redondeado"
-                        android:fadingEdgeLength="@dimen/_100sdp"/>
-                    <Space
-                        android:layout_width="35dp"
-                        android:layout_height="50dp" />
-                    <TextView
-                        android:padding="20dp"
-                        android:layout_width="830dp"
-                        android:layout_height="wrap_content"
-                        android:text="¿Janipa ajunab?"
-                        android:textSize="@dimen/_11sdp"
-                        android:textColor="#000"
-                        android:id="@+id/tvPreguntaDosInteractua"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="si"
-                                android:id="@+id/rbRespuesta3"/>
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="no"
-                                android:id="@+id/rbRespuesta4"/>
-                        </RadioGroup>
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-
-            <!-- 3 -->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="20dp"
-                    android:layout_margin="5sp"
-                    android:background="@xml/border2">
-                    <Button
-                        android:layout_width="105dp"
-                        android:layout_height="105dp"
-                        android:text="3"
-                        android:textSize="35dp"
-                        android:gravity="center"
-                        android:background="@xml/redondeado"
-                        android:fadingEdgeLength="@dimen/_100sdp"/>
-                    <Space
-                        android:layout_width="35dp"
-                        android:layout_height="50dp" />
-                    <TextView
-                        android:padding="20dp"
-                        android:layout_width="830dp"
-                        android:layout_height="wrap_content"
-                        android:text="¿Jas / su ub'i' ri anam?"
-                        android:textSize="@dimen/_11sdp"
-                        android:textColor="#000"
-                        android:id="@+id/tvPreguntaTresInteractua"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="si"
-                                android:id="@+id/rbRespuesta5"/>
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="no"
-                                android:id="@+id/rbRespuesta6"/>
-                        </RadioGroup>
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-
-            <!-- 2 -->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
+                android:buttonTint="#1a3187"
+                android:text="si"
+                android:textStyle="bold" />
+            <RadioButton
+                android:id="@+id/rbRespuesta8"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="13sp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="20dp"
-                    android:layout_margin="5sp"
-                    android:background="@xml/border2">
-                    <Button
-                        android:layout_width="105dp"
-                        android:layout_height="105dp"
-                        android:text="4"
-                        android:textSize="35dp"
-                        android:gravity="center"
-                        android:background="@xml/redondeado"
-                        android:fadingEdgeLength="@dimen/_100sdp"/>
-                    <Space
-                        android:layout_width="35dp"
-                        android:layout_height="50dp" />
-                    <TextView
-                        android:padding="20dp"
-                        android:layout_width="830dp"
-                        android:layout_height="wrap_content"
-                        android:text="¿Jachike rikil utz kana' ututijik?"
-                        android:textSize="@dimen/_11sdp"
-                        android:textColor="#000"
-                        android:id="@+id/tvPreguntaCuatroInteractua"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="si"
-                                android:id="@+id/rbRespuesta7"/>
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="no"
-                                android:id="@+id/rbRespuesta8"/>
-                        </RadioGroup>
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                android:buttonTint="#1a3187"
+                android:text="no"
+                android:textStyle="bold" />
+        </RadioGroup>
+    </AbsoluteLayout>
 
+    <AbsoluteLayout
+        android:layout_width="900dp"
+        android:layout_height="65dp"
+        android:layout_margin="5sp"
+        android:layout_x="35dp"
+        android:layout_y="417dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:padding="20dp">
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_x="30dp"
+            android:layout_y="0dp"
+            android:background="@xml/redondeado"
+            android:fadingEdgeLength="@dimen/_100sdp"
+            android:gravity="center_horizontal|bottom"
+            android:text="5"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-            <!-- 2 -->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="20dp"
-                    android:layout_margin="5sp"
-                    android:background="@xml/border2">
-                    <Button
-                        android:layout_width="105dp"
-                        android:layout_height="105dp"
-                        android:text="5"
-                        android:textSize="40dp"
-                        android:gravity="center"
-                        android:background="@xml/redondeado"
-                        android:fadingEdgeLength="@dimen/_100sdp"/>
-                    <Space
-                        android:layout_width="35dp"
-                        android:layout_height="50dp" />
-                    <TextView
-                        android:padding="20dp"
-                        android:layout_width="830dp"
-                        android:layout_height="wrap_content"
-                        android:text="¿Jas ab'i' / su ri ab 'i'?"
-                        android:textSize="@dimen/_11sdp"
-                        android:textColor="#000"
-                        android:id="@+id/tvPreguntaCincoInteractua"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="si"
-                                android:id="@+id/rbRespuesta9"/>
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="no"
-                                android:id="@+id/rbRespuesta10"/>
-                        </RadioGroup>
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+        <TextView
+            android:id="@+id/tvPreguntaCincoInteractua"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_x="120dp"
+            android:layout_y="-20dp"
+            android:padding="20dp"
+            android:text="¿Jas ab'i' / su ri ab 'i'?"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-        </LinearLayout>
+        <RadioGroup
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_x="650dp"
+            android:layout_y="2dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbRespuesta9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#1a3187"
+                android:text="si"
+                android:textStyle="bold" />
+            <RadioButton
+                android:id="@+id/rbRespuesta10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#1a3187"
+                android:text="no"
+                android:textStyle="bold" />
+        </RadioGroup>
+    </AbsoluteLayout>
 
-    </ScrollView>
+    <AbsoluteLayout
+        android:layout_width="900dp"
+        android:layout_height="65dp"
+        android:layout_margin="5sp"
+        android:layout_x="35dp"
+        android:layout_y="130dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_x="30dp"
+            android:layout_y="0dp"
+            android:background="@xml/redondeado"
+            android:backgroundTint="#1565c0"
+            android:fadingEdgeLength="@dimen/_100sdp"
+            android:gravity="center_horizontal|bottom"
+            android:lines="@integer/abc_max_action_buttons"
+            android:text="1"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPreguntaUnoInteractua"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_x="120dp"
+            android:layout_y="-20dp"
+            android:padding="20dp"
+            android:text="¿Jas ab'i' / su ri ab 'i'?"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_x="650dp"
+            android:layout_y="2dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbRespuesta1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#1a3187"
+                android:text="si"
+                android:textStyle="bold" />
+            <RadioButton
+                android:id="@+id/rbRespuesta2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#1a3187"
+                android:text="no"
+                android:textStyle="bold" />
+        </RadioGroup>
+    </AbsoluteLayout>
+
     <!-- fin -->
 
-</LinearLayout>
+</AbsoluteLayout>

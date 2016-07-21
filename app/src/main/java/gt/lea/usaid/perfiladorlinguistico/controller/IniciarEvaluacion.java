@@ -12,9 +12,6 @@ import android.widget.ImageView;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
 
-/**
- * Created by Roberto on 21/06/16.
- */
 public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener  {
      private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
     private OnFragmentInteractionListener mListener;

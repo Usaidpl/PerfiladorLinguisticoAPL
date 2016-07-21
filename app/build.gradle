@@ -28,4 +28,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.0.+'
     compile 'de.hdodenhof:circleimageview:2.0.0'
     compile 'com.intuit.sdp:sdp-android:1.0.2'
+    compile 'com.android.support:appcompat-v7:X.X.X' // where X.X.X version
 }

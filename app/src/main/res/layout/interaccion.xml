@@ -4,7 +4,7 @@
     android:layout_width="1000dp"
     android:layout_height="550dp"
     android:orientation="vertical"
-    tools:context=".view.espanol.Interactua"
+    tools:context=".view.espanol.Interaccion"
     android:background="#eceff1">
 
     <!-- inicio -->

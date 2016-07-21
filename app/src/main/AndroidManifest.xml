@@ -53,13 +53,13 @@
             android:name=".view.espanol.SonidosEspecificos"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.Comprende"
+            android:name=".view.espanol.Comprension"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.Interactua"
+            android:name=".view.espanol.Interaccion"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.Precisiona"
+            android:name=".view.espanol.Precision"
             android:screenOrientation="landscape" />
         <activity
             android:name=".view.guias.GuiaComprensionOral"

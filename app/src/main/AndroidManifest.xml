@@ -59,9 +59,6 @@
             android:name=".view.espanol.Interaccion"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.Precision"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".view.guias.GuiaComprensionOral"
             android:screenOrientation="landscape" />
         <activity
@@ -115,11 +112,8 @@
         <activity
             android:name=".view.mam.VocabularioMam"
             android:screenOrientation="landscape" />
+        <activity android:name=".view.Precision"></activity>
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="a331f555b7e64d233fcdef738ced04073a5bacce"
-            />
     </application>
 
 </manifest>

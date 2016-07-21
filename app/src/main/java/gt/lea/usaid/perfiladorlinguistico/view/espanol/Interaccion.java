@@ -20,7 +20,8 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 /**
  * Created by Bryan on 20/06/16.
  */
-public class Interaccion extends Activity
+public class Interaccion
+        extends Activity
         implements OnStartNextContext,OnInitializeComponent,OnInitializeText, View.OnClickListener  {
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
@@ -111,7 +112,7 @@ public class Interaccion extends Activity
         id_text4 = vector[5];
         id_text5 = vector[6];
         intruduccion.setText(id_intro);
-      //  respuesta_correcta.setText(id_resp);
+        //respuesta_correcta.setText(id_resp);
         tvPregunta1.setText(id_text1);
         tvPregunta2.setText(id_text2);
         tvPregunta3.setText(id_text3);
@@ -130,11 +131,7 @@ public class Interaccion extends Activity
                 vr = new Verifica(radios_selected, NOMBRE_TABLA);
                 float resultado = vr.getResultado();
                 descition(resultado);
-            }/*else if(getEvalua() == 2){
-                vr = new Verifica(radios_selected, NOMBRE_TABLA);
-                float resultado = vr.getResultado();
-                descition(resultado);
-            }*/
+            }
             //lanzamiento a la siguiente actividad
 
             setNextContext(Interaccion.this, Comprension.class);

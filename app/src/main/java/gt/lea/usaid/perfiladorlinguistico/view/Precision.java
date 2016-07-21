@@ -18,7 +18,7 @@ import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 /**
  * @author Bryan
  */
-public class Precisiona extends Activity implements OnInitializeComponent, OnStartNextContext{
+public class Precision extends Activity implements OnInitializeComponent, OnStartNextContext{
 
     private int pregunta = 0;
     private ImageView image, image2, image3;
@@ -45,7 +45,7 @@ public class Precisiona extends Activity implements OnInitializeComponent, OnSta
         @Override
         public void onClick(View v) {
            if((pregunta + 1) == images.length){
-                setNextContext(Precisiona.this, Vocabulario.class);
+                setNextContext(Precision.this, Vocabulario.class);
            }else{
                pregunta ++;
                setOnInit(images);

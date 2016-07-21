@@ -236,7 +236,7 @@ public class SonidosEspecificos extends Activity implements View.OnClickListener
 
         private void elote() {
             if (swElote.isChecked())
-                tvElote.setText("Elote");
+                tvElote.setText("elote");
             else
                 tvElote.setText("");
         }

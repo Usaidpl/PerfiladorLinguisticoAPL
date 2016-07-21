@@ -20,6 +20,7 @@ import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
+import gt.lea.usaid.perfiladorlinguistico.view.Precision;
 
 /**
  * Created by Bryan on 20/06/16.

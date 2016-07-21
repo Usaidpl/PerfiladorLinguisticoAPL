@@ -61,7 +61,7 @@ public class GuiaGramatica extends Activity {
         toolbar.setTitle(R.string.guia_gramatica);
         //setSupportActionBar(toolbar);
 
-        toolbar.setNavigationIcon(R.mipmap.back3);
+        toolbar.setNavigationIcon(R.mipmap.book);
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
                     @Override

@@ -20,7 +20,6 @@ import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
-import gt.lea.usaid.perfiladorlinguistico.view.Precision;
 
 /**
  * Created by Bryan on 20/06/16.
@@ -124,7 +123,7 @@ public class Comprension extends Activity
         try {
             float resultado = vr.getResultado();
             descition(resultado);
-            setNextContext(Comprension.this, Precision.class);
+            setNextContext(Comprension.this, Gramatica.class);
         } catch (Exception e) {
 
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -133,7 +132,7 @@ public class Comprension extends Activity
 
     private void descition(float resultado){
         if(resultado >= (Verifica.TOTAL_SERIE/50) + 1){
-            setNextContext(Comprension.this, Precision.class);
+            setNextContext(Comprension.this, Gramatica.class);
         }
         else{
             setNextContext(this, Interaccion.class);

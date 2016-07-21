@@ -25,7 +25,7 @@
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvImage1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:textAlignment="center"
         card_view:cardBackgroundColor="@android:color/white"
@@ -50,11 +50,21 @@
 
                 <ImageView
                     android:id="@+id/ivIx"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
                     android:layout_alignParentBottom="true"
                     android:src="@mipmap/book"
-                    />
+                    android:layout_below="@+id/textView1"/>
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Imagen 1 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <TableLayout
                     android:id="@+id/tbIx"
@@ -132,11 +142,21 @@
 
                 <ImageView
                     android:id="@+id/ivQeoxKyajix"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="25dp"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
+                    android:layout_alignParentBottom="true"
                     android:src="@mipmap/book"
-                    />
+                    android:layout_below="@+id/textView3"/>
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Imagen 2 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <TableLayout
                     android:id="@+id/tlQeoxKyajix"
@@ -203,15 +223,27 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/rlWix">
 
 
                 <ImageView
                     android:id="@+id/ivWix"
-                    android:layout_width="match_parent"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book"
+                    android:layout_below="@+id/textView4"/>
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:padding="25dp"
-                    android:src="@mipmap/book" />
+                    android:text="Imagen 3 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <TableLayout
                     android:id="@+id/tlWix"
@@ -278,15 +310,25 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
+                android:orientation="horizontal"
+                android:id="@+id/rlQewixqxwix">
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Imagen 4 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"   />
 
                 <ImageView
                     android:id="@+id/ivQewixOxwix"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="25dp"
-                    android:src="@mipmap/book" />
+                    android:layout_width="1350dp"
+                    android:layout_height="700dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book"
+                    android:layout_below="@+id/tvAbuelo"/>
 
                 <TableLayout
                     android:id="@+id/tlQewixOxwix"
@@ -355,15 +397,33 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/rlTtxuTxyan">
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Imagen 5 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
 
                 <ImageView
                     android:id="@+id/ivTtxuTxyan"
+                    android:layout_width="1350dp"
+                    android:layout_height="700dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book"
+                    android:layout_below="@+id/tvTtxuTxyan" />
+                <TextView
+                    android:id="@+id/tvTtxuTxyan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="25dp"
-                    android:src="@mipmap/book" />
+                    android:text="@string/ti_tb_i_lu_ntx_ya_n_nqa_at_tal_ti_tb_i"
+                    android:textSize="@dimen/_11sdp"
+                    android:textAlignment="center"/>
 
                 <TableLayout
                     android:id="@+id/tlTtxuTxyan"
@@ -416,15 +476,7 @@
                     </TableRow>
                 </TableLayout>
 
-                <TextView
-                    android:id="@+id/tvTtxuTxyan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_column="0"
-                    android:layout_gravity="center"
-                    android:text="@string/ti_tb_i_lu_ntx_ya_n_nqa_at_tal_ti_tb_i"
-                    android:textSize="30dp" />
+
 
             </RelativeLayout>
 
@@ -432,15 +484,26 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/rlTtxuEkTxuik">
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Imagen 6 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
 
                 <ImageView
                     android:id="@+id/ivTtxuEkTtxuik"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="25dp"
-                    android:src="@mipmap/book" />
+                    android:layout_width="1350dp"
+                    android:layout_height="700dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book"
+                    />
+
 
                 <TableLayout
                     android:id="@+id/tlTtxuEkTtxuik"
@@ -508,15 +571,27 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/rlTtxriKnel">
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Imagen 7 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"  />
 
 
                 <ImageView
                     android:id="@+id/ivTtxritKnel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="25dp"
-                    android:src="@mipmap/book" />
+                    android:layout_width="1350dp"
+                    android:layout_height="700dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book"
+                    />
+
 
                 <TableLayout
                     android:id="@+id/tlTtxritKnel"
@@ -584,15 +659,26 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/rlTxubaj">
+                <TextView
+                    android:id="@+id/tvTxuba2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Imagen 8 / 8"
+                    android:textSize="@dimen/_8sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"  />
 
 
                 <ImageView
-                    android:id="@+id/ivChef"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="25dp"
-                    android:src="@mipmap/book" />
+                    android:id="@+id/ivTxuba"
+                    android:layout_width="1350dp"
+                    android:layout_height="700dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/book"
+                     />
 
                 <TableLayout
                     android:id="@+id/tlChef"

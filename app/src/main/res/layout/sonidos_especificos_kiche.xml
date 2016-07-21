@@ -6,33 +6,29 @@
     android:orientation="vertical"
     tools:context=".view.kiche.SonidosEspecificosKiche">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize">
-    </android.support.v7.widget.Toolbar>
+
     <TextView
+        android:id="@+id/tvInst_titulo_kiche"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="V. CHOLAJ. KICH'AB'AL LE TAQ TZIJ\nSONIDOS ESPECÍFICOS DEL K'ICHE' (PRIMERA PARTE)"
-        android:textSize="@dimen/_11sdp"
         android:textAlignment="center"
-        android:id="@+id/tvInst_titulo_kiche"/>
+        android:textSize="@dimen/_11sdp" />
+
     <TextView
+        android:id="@+id/tvInstruccSonidosKiche"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_8sdp"
         android:padding="@dimen/_8sdp"
         android:text="Ub'eyal / Instrucciones\nB'ij la che le ajtijoxel Kink'ut jujun taq wachib'al chawach, chab'ij le ub'i. Kajuch'la par ri wuj we utz ub'ixik kub'ano, ri taq'tz'ib ek'o paqulaj panika'j ene pa uk'isb'alil taq tzij.\nKink'ut jujun taq wachib'al wachib'al chawach, chab'ij le ub'i."
-        android:id="@+id/tvInstruccSonidosKiche"/>
+        android:textSize="@dimen/_8sdp" />
+
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvImage1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        card_view:cardBackgroundColor="@android:color/holo_green_light"
+        android:layout_height="match_parent"
+        card_view:cardBackgroundColor="@android:color/background_light"
         card_view:cardCornerRadius="6dp"
         card_view:cardElevation="10dp"
         card_view:cardUseCompatPadding="true">
@@ -51,10 +47,22 @@
 
                 <ImageView
                     android:id="@+id/ivKa"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/book" />
+                    android:src="@mipmap/anciana"
+                    android:layout_below="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/imagen_1_10_vobaulario_produccion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8sdp" />
 
                 <TableLayout
                     android:id="@+id/tbKa"
@@ -112,6 +120,7 @@
                     android:text=""
                     android:textSize="30dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rlSiii"
                 android:layout_width="match_parent"
@@ -120,10 +129,21 @@
 
                 <ImageView
                     android:id="@+id/ivSiii"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/book" />
+                    android:src="@mipmap/anciana"
+                    android:layout_below="@+id/textView6" />
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_2_10_vobaulario_produccion"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView6"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <TableLayout
                     android:id="@+id/tbSiii"
@@ -135,6 +155,7 @@
                     android:orientation="horizontal">
 
                     <TableRow>
+
                         <Switch
                             android:id="@+id/swSiii"
                             android:layout_width="wrap_content"
@@ -180,6 +201,7 @@
                     android:text=""
                     android:textSize="30dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rlChee"
                 android:layout_width="match_parent"
@@ -188,10 +210,21 @@
 
                 <ImageView
                     android:id="@+id/ivChee"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/book" />
+                    android:src="@mipmap/book"
+                    android:layout_below="@+id/textView7" />
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_3_10_vobaulario_produccion"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView7"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <TableLayout
                     android:id="@+id/tbChee"
@@ -203,6 +236,7 @@
                     android:orientation="horizontal">
 
                     <TableRow>
+
                         <Switch
                             android:id="@+id/swChee"
                             android:layout_width="wrap_content"
@@ -248,6 +282,7 @@
                     android:text=""
                     android:textSize="30dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rlPapalot"
                 android:layout_width="match_parent"
@@ -256,10 +291,21 @@
 
                 <ImageView
                     android:id="@+id/ivPapalot"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/book" />
+                    android:src="@mipmap/book"
+                    android:layout_below="@+id/textView8" />
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_4_10_vobaulario_produccion"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView8"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <TableLayout
                     android:id="@+id/tbPapalot"
@@ -271,6 +317,7 @@
                     android:orientation="horizontal">
 
                     <TableRow>
+
                         <Switch
                             android:id="@+id/swPapalot"
                             android:layout_width="wrap_content"
@@ -316,6 +363,7 @@
                     android:text=""
                     android:textSize="30dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rlNosQel"
                 android:layout_width="match_parent"
@@ -324,10 +372,21 @@
 
                 <ImageView
                     android:id="@+id/ivNosQel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/book" />
+                    android:src="@mipmap/book"
+                    android:layout_below="@+id/textView9" />
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_5_10_vobaulario_produccion"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView9"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <TableLayout
                     android:id="@+id/tbNosQel"
@@ -339,6 +398,7 @@
                     android:orientation="horizontal">
 
                     <TableRow>
+
                         <Switch
                             android:id="@+id/swNosQel"
                             android:layout_width="wrap_content"
@@ -384,6 +444,7 @@
                     android:text=""
                     android:textSize="30dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rlChat"
                 android:layout_width="match_parent"
@@ -392,10 +453,21 @@
 
                 <ImageView
                     android:id="@+id/ivChat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/book" />
+                    android:src="@mipmap/book"
+                    android:layout_below="@+id/textView10" />
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_6_10_vobaulario_produccion"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView10"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <TableLayout
                     android:id="@+id/tbChat"
@@ -407,6 +479,7 @@
                     android:orientation="horizontal">
 
                     <TableRow>
+
                         <Switch
                             android:id="@+id/swChat"
                             android:layout_width="wrap_content"
@@ -452,6 +525,7 @@
                     android:text=""
                     android:textSize="30dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rlTzUnun"
                 android:layout_width="match_parent"
@@ -460,10 +534,21 @@
 
                 <ImageView
                     android:id="@+id/ivTzUnun"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/book" />
+                    android:src="@mipmap/book"
+                    android:layout_below="@+id/textView11"/>
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_7_10_vobaulario_produccion"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView11"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <TableLayout
                     android:id="@+id/tbTzUnun"
@@ -475,6 +560,7 @@
                     android:orientation="horizontal">
 
                     <TableRow>
+
                         <Switch
                             android:id="@+id/swTzUnun"
                             android:layout_width="wrap_content"
@@ -520,6 +606,7 @@
                     android:text=""
                     android:textSize="30dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rlKotzij"
                 android:layout_width="match_parent"
@@ -528,10 +615,21 @@
 
                 <ImageView
                     android:id="@+id/ivKotzij"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/book" />
+                    android:src="@mipmap/book"
+                    android:layout_below="@+id/textView12"/>
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_8_10_vobaulario_produccion"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView12"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <TableLayout
                     android:id="@+id/tbKotzij"
@@ -543,6 +641,7 @@
                     android:orientation="horizontal">
 
                     <TableRow>
+
                         <Switch
                             android:id="@+id/swKotzij"
                             android:layout_width="wrap_content"
@@ -588,6 +687,7 @@
                     android:text=""
                     android:textSize="30dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rlQam"
                 android:layout_width="match_parent"
@@ -596,11 +696,21 @@
 
                 <ImageView
                     android:id="@+id/ivQam"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/book" />
-
+                    android:src="@mipmap/book"
+                    android:layout_below="@+id/textView13"/>
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_9_10_vobaulario_produccion"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView13"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
                 <TableLayout
                     android:id="@+id/tbQam"
                     android:layout_width="match_parent"
@@ -611,6 +721,7 @@
                     android:orientation="horizontal">
 
                     <TableRow>
+
                         <Switch
                             android:id="@+id/swQam"
                             android:layout_width="wrap_content"
@@ -656,6 +767,7 @@
                     android:text=""
                     android:textSize="30dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rlQaq"
                 android:layout_width="match_parent"
@@ -664,10 +776,21 @@
 
                 <ImageView
                     android:id="@+id/ivQaq"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="1350dp"
+                    android:layout_height="800dp"
                     android:layout_alignParentBottom="true"
-                    android:src="@mipmap/book" />
+                    android:src="@mipmap/book"
+                    android:layout_below="@+id/textView14"/>
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen_10_10_vobaulario_produccion"
+                    android:textSize="@dimen/_8sdp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView14"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <TableLayout
                     android:id="@+id/tbQaq"
@@ -679,6 +802,7 @@
                     android:orientation="horizontal">
 
                     <TableRow>
+
                         <Switch
                             android:id="@+id/swQaq"
                             android:layout_width="wrap_content"

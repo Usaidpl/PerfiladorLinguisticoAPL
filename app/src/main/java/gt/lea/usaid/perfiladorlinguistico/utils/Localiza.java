@@ -1,16 +1,9 @@
 package gt.lea.usaid.perfiladorlinguistico.utils;
 
-import android.app.Activity;
-import android.location.Location;
-import android.location.LocationListener;
-import android.os.Bundle;
-
-import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
-
-/**
+/*
  * Created by Bryan on 11/07/2016.
  */
+/*
 public class Localiza  implements LocationListener {
 
     private Interactua i;
@@ -45,3 +38,4 @@ public class Localiza  implements LocationListener {
         i.msg("Desactivado");
     }
 }
+*/

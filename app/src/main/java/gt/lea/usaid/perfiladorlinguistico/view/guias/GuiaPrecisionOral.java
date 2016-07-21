@@ -62,7 +62,7 @@ public class GuiaPrecisionOral extends Activity {
         toolbar.setTitle(R.string.guia_precicion_oral);
         //setSupportActionBar(toolbar);
 
-        toolbar.setNavigationIcon(R.mipmap.back3);
+        toolbar.setNavigationIcon(R.mipmap.book);
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
                     @Override

@@ -801,5 +801,7 @@
     <string name="eva_finalizada">Evaluacion  Finalizada</string>
     <string name="ti_tb_i_lu_ntx_ya_n_nqa_at_tal_ti_tb_i">Ti tb\'i lu\nTx\'ya\'n.\nQa at tal, ti tb\'i</string>
     <string name="ti_tbi_lu">Ti tb\'i lu\nTx\'ya\'n.\nQa at tal, ti tb\'i</string>
+    <string name="aplicationicon">APL Lea</string>
+    <string name="apllea">Usaid APL</string>
 
 </resources>

@@ -1,74 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:backgroundTint="#efb6b6b6">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/perfil_linguistico_de_estudiantes_de_primaria_y_primer_grado_de_primaria"
+        android:text="PERFIL LINGÜÍSTICO ORAL DE ESTUDIANTES DE PREPRIMARIA Y PRIMER GRADO DE PRIMARIA   MAM - ESPAÑOL   KICHE-ESPAÑOL"
         android:textAlignment="center"
-        android:textSize="@dimen/_15sdp" />
-
-
-        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/flMamEva"
-            android:layout_width="350dp"
-            android:layout_height="250dp"
-            android:layout_alignTop="@+id/flKicheEva"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="203dp"
-            android:layout_marginEnd="203dp">
-
-            <ImageView
-                android:id="@+id/ivMamEva"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/book" />
-
-            <TextView
-                android:id="@+id/tvMamEva"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right|bottom"
-                android:background="#AA000000"
-                android:text="Evaluación Kiche"
-                android:textAlignment="center"
-                android:textColor="#ffffffff"
-                android:textSize="25dp" />
-        </FrameLayout>
+        android:textSize="25dp"
+        android:textColor="#0d093f"
+        android:id="@+id/textView2"
+        android:textStyle="bold" />
 
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/flKicheEva"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/flMamEva"
-        android:layout_toStartOf="@+id/flMamEva"
-        android:layout_marginRight="165dp"
-        android:layout_marginEnd="165dp">
+        android:layout_width="290dp"
+        android:layout_height="270dp"
+        android:background="#ffffff"
+        android:layout_alignTop="@+id/flMamEva"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="76dp"
+        android:layout_marginEnd="76dp"
+        android:layout_x="449dp"
+        android:layout_y="111dp">
 
         <ImageView
             android:id="@+id/ivKicheEva"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            android:src="@drawable/book" />
+            android:src="@mipmap/lapizsmall"
+            android:layout_gravity="center_horizontal|top" />
 
         <TextView
-            android:id="@+id/tvKicheEva"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|bottom"
+            android:id="@+id/textView3"
+            android:layout_width="290dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal|bottom"
             android:background="#AA000000"
-            android:text="Evaluación Mam"
+            android:text="  K’OTB’AL CHI’ KECH TAT, NAN WENE AJCHAJINELAB’ RE JUJA WINAQ"
             android:textAlignment="center"
-            android:textColor="#ffffffff"
-            android:textSize="25dp" />
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:layout_below="@+id/flKicheEva"
+            android:layout_alignLeft="@+id/flKicheEva"
+            android:layout_alignStart="@+id/flKicheEva"
+            android:textStyle="bold" />
     </FrameLayout>
 
-</RelativeLayout>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/flMamEva"
+        android:layout_width="290dp"
+        android:layout_height="270dp"
+        android:background="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="76dp"
+        android:layout_marginStart="76dp"
+        android:layout_x="71dp"
+        android:layout_y="107dp">
+
+        <ImageView
+            android:id="@+id/ivMamEva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/lapizsmall"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBottom="@+id/flMamEva"
+            android:layout_toRightOf="@+id/flMamEva"
+            android:layout_toEndOf="@+id/flMamEva" />
+
+        <TextView
+            android:id="@+id/tvMamEva"
+            android:layout_width="290dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="#AA000000"
+            android:text=" ETAB’AL K’ICHE’ XUQUJE KAXLAN CH’AB’AL KECH AJTIJOXELAB’ RE NAB’E TAQ JUNAB’ PA TIJOB’AL"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:layout_alignLeft="@+id/flMamEva"
+            android:layout_alignStart="@+id/flMamEva"
+            android:layout_below="@+id/flMamEva"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</AbsoluteLayout>

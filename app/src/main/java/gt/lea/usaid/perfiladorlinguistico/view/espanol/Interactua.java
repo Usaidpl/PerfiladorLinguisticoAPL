@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -24,7 +25,7 @@ public class Interactua extends Activity
         implements OnStartNextContext,OnInitializeComponent,OnInitializeText, View.OnClickListener  {
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
-    private TextView intruduccion, respuesta_correcta, tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
+    private TextView intruduccion,  tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
     private static final String NOMBRE_TABLA = "interaccion";
 
     private int serie = 0;
@@ -66,7 +67,7 @@ public class Interactua extends Activity
         respuesta10 = (RadioButton) findViewById(R.id.rbRespuesta10);
         //Textos -- TextView
         intruduccion = (TextView) findViewById(R.id.tvInstrucionInteractua);
-        respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaInteractua);
+       // respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaInteractua);
         tvPregunta1 = (TextView) findViewById(R.id.tvPreguntaUnoInteractua);
         tvPregunta2 = (TextView) findViewById(R.id.tvPreguntaDosInteractua);
         tvPregunta3 = (TextView) findViewById(R.id.tvPreguntaTresInteractua);
@@ -111,7 +112,7 @@ public class Interactua extends Activity
         id_text4 = vector[5];
         id_text5 = vector[6];
         intruduccion.setText(id_intro);
-        respuesta_correcta.setText(id_resp);
+      //  respuesta_correcta.setText(id_resp);
         tvPregunta1.setText(id_text1);
         tvPregunta2.setText(id_text2);
         tvPregunta3.setText(id_text3);

@@ -12,19 +12,16 @@ import android.widget.ImageView;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
 
-/**
- * Created by Roberto on 21/06/16.
- */
-public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener {
-    private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
+public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener  {
+     private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
     private OnFragmentInteractionListener mListener;
     public static final String KEY_EVALUACION = "Evaluacion";
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.iniciar_evaluacion, container, false);
-        ivMamEva = (ImageView) vista.findViewById(R.id.ivMamEva);
-        ivKicheEva = (ImageView) vista.findViewById(R.id.ivKicheEva);
+        ivMamEva =(ImageView) vista.findViewById(R.id.ivMamEva);
+        ivKicheEva =(ImageView) vista.findViewById(R.id.ivKicheEva);
         //ivEspanolEva = (ImageView) vista.findViewById(R.id.ivEspanolEva);
         ivMamEva.setOnClickListener(this);
         ivKicheEva.setOnClickListener(this);
@@ -63,7 +60,7 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         switch (v.getId()) {
             case R.id.ivMamEva:
                 intent = new Intent(getActivity(), Interactua.class);
-                //b.putInt(KEY_EVALUACION, 0);
+               //b.putInt(KEY_EVALUACION, 0);
                 intent.putExtras(envia(0));
                 getActivity().startActivity(intent);
                 break;
@@ -82,9 +79,9 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         //Inte
     }
 
-    private Bundle envia(int cantidad) {
-        Bundle b = new Bundle();
-        b.putInt(KEY_EVALUACION, cantidad);
+    private Bundle envia(int cantidad){
+        Bundle b= new Bundle();
+        b.putInt(KEY_EVALUACION , cantidad);
         return b;
     }
 

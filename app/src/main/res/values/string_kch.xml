@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="guia_kiche">Chak’ama’ ub’eyal le kab’ix chawe kajuch’u kicholaj are kakojo ri kutzalij ub’ixik le ajtijoxel.
-        /\nSiga las instrucciones que están en la guía de aplicación y marque en cada serie según sea la respuesta del estudiante.
-    </string>
+    <string name="guia_kiche">I. CHOLAJ TZIJONEM / INTERACCION ORAL </string>
 
     <string name="interaccion_kch">Interaccion</string>
 

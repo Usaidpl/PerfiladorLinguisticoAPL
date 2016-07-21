@@ -5,13 +5,13 @@
 
     <!-- Color de fondo de la vista -->
     <solid
-        android:color="#ffff" >
+        android:color="#b6b6b6" >
     </solid>
 
     <!-- Color y ancho del borde del elemento -->
     <stroke
         android:width="8sp"
-        android:color="#0091ea" >
+        android:color="#4caf50" >
     </stroke>
 
     <!-- Si queremos añadir algún padding -->

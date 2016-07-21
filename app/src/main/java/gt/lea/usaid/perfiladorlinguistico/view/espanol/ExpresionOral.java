@@ -66,7 +66,7 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
             setNextContext(ExpresionOral.this, NavigationMenu.class);
         }
         else{
-            setNextContext(this, Interactua.class);
+            setNextContext(this, Interaccion.class);
         }
     }
 

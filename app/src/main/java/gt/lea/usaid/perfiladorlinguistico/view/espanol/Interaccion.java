@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -21,7 +20,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 /**
  * Created by Bryan on 20/06/16.
  */
-public class Interactua extends Activity
+public class Interaccion extends Activity
         implements OnStartNextContext,OnInitializeComponent,OnInitializeText, View.OnClickListener  {
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
@@ -36,7 +35,7 @@ public class Interactua extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.interpreta);
+        setContentView(R.layout.interaccion);
         Bundle b = getIntent().getExtras();
         try{
             serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
@@ -138,7 +137,7 @@ public class Interactua extends Activity
             }*/
             //lanzamiento a la siguiente actividad
 
-            setNextContext(Interactua.this, Comprende.class);
+            setNextContext(Interaccion.this, Comprension.class);
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
@@ -146,7 +145,7 @@ public class Interactua extends Activity
 
     private void descition(float resultado){
         if(resultado >= (100/50) + 1)
-            setNextContext(this, Interactua.class);
+            setNextContext(this, Interaccion.class);
     }
 
     @Override

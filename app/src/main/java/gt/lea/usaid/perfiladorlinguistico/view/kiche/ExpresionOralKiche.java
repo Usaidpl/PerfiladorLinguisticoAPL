@@ -17,7 +17,7 @@ import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interaccion;
 
 /**
  * Created by Roberto on 19/06/2016.
@@ -60,7 +60,7 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
         try {
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
             descition(resultado);
-            setNextContext(ExpresionOralKiche.this, Interactua.class);
+            setNextContext(ExpresionOralKiche.this, Interaccion.class);
         } catch (Exception e) {
             //e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -72,7 +72,7 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
             setNextContext(ExpresionOralKiche.this, NavigationMenu.class);
         }
         else{
-            setNextContext(this, Interactua.class);
+            setNextContext(this, Interaccion.class);
         }
     }
 

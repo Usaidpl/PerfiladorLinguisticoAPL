@@ -19,8 +19,8 @@ import gt.lea.usaid.perfiladorlinguistico.view.mam.VocabularioMam;
 /**
  * Created by Bryan on 20/06/16.
  *
- */
-public class Precisiona extends FlipperActivity implements OnInitializeComponent {
+
+public class Precision extends FlipperActivity implements OnInitializeComponent {
 
     private static final int TOTAL_SERIE = 5;//18;
     private static final long PAUSA = 5000;
@@ -30,13 +30,13 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
     /*private int[][] ids = {
             {R.id.ivPoll, R.id.ivPat, R.id.ivPav}, {R.id.ivCon, R.id.ivPerr, R.id.ivGat},
             {R.id.ivCaball,R.id.ivOvej,R.id.ivVac}, {R.id.ivArb,R.id.ivRosa,R.id.ivMazorca},
-            {R.id.ivElet, R.id.ivElet, R.id.ivCalaza}, {R.id.ivElo, R.id.ivZona, R.id.ivBanano}};*/
+            {R.id.ivElet, R.id.ivElet, R.id.ivCalaza}, {R.id.ivElo, R.id.ivZona, R.id.ivBanano}};
     private int serie = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.precisiona);
+        setContentView(R.layout.precision);
         Bundle b = getIntent().getExtras();
         serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
         //setOnInit(ids);
@@ -68,7 +68,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                     Thread.sleep(PAUSA);
                 } catch (InterruptedException e) {
                     String s = e.getMessage() + " Vector";
-                    Toast.makeText(Precisiona.this, s, Toast.LENGTH_LONG).show();
+                    Toast.makeText(Precision.this, s, Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -87,15 +87,15 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                     case 0:
                         resultado += selectImageView(v);
                         s = String.valueOf(resultado);
-                        setNextContext(Precisiona.this, VocabularioKiche.class);break;
+                        setNextContext(Precision.this, VocabularioKiche.class);break;
                     case 1:
                         resultado += selectImageView(v);
                         s = String.valueOf(resultado);
-                        setNextContext(Precisiona.this, VocabularioMam.class);break;
+                        setNextContext(Precision.this, VocabularioMam.class);break;
                     case 2:
                         resultado += selectImageView(v);
                         s = String.valueOf(resultado);
-                        setNextContext(Precisiona.this, Vocabulario.class);break;
+                        setNextContext(Precision.this, Vocabulario.class);break;
                 }
             }
             else{
@@ -152,7 +152,7 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
                  case R.id.ivBook:
                     sub_result ++;
                  case R.id.ivBicicleta:
-                    sub_result ++;*/
+                    sub_result ++;
                 default:
                     sub_result += 0;
             }
@@ -182,4 +182,4 @@ public class Precisiona extends FlipperActivity implements OnInitializeComponent
         startActivity(i);
 
     }
-}//end class
+}//end class*/

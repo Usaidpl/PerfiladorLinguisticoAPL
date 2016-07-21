@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interaccion;
 
 public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener  {
      private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
@@ -59,21 +59,17 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         int evalua = 0;
         switch (v.getId()) {
             case R.id.ivMamEva:
-                intent = new Intent(getActivity(), Interactua.class);
+                intent = new Intent(getActivity(), Interaccion.class);
                //b.putInt(KEY_EVALUACION, 0);
                 intent.putExtras(envia(0));
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivKicheEva:
-                intent = new Intent(getActivity(), Interactua.class);
+                intent = new Intent(getActivity(), Interaccion.class);
                 intent.putExtras(envia(1));
                 getActivity().startActivity(intent);
                 break;
-           /* case R.id.ivEspanolEva:
-                intent = new Intent(getActivity(), Interactua.class);
-                intent.putExtras(envia(2));
-                getActivity().startActivity(intent);
-                break;*/
+
         }
         //select * from entrevista join interaccion join .... where id = 002;
         //Inte

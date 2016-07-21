@@ -15,10 +15,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
-import gt.lea.usaid.perfiladorlinguistico.utils.ConectaInternet;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
@@ -26,7 +24,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 /**
  * Created by Bryan on 20/06/16.
  */
-public class Comprende extends Activity
+public class Comprension extends Activity
         implements OnStartNextContext,OnInitializeComponent,OnInitializeText, View.OnClickListener  {
 
 
@@ -41,7 +39,7 @@ public class Comprende extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.comprende);
+        setContentView(R.layout.comprension);
         Bundle b = getIntent().getExtras();
         try{
             serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
@@ -125,7 +123,7 @@ public class Comprende extends Activity
         try {
             float resultado = vr.getResultado();
             descition(resultado);
-            setNextContext(Comprende.this, Precisiona.class);
+            setNextContext(Comprension.this, Precision.class);
         } catch (Exception e) {
 
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -134,10 +132,10 @@ public class Comprende extends Activity
 
     private void descition(float resultado){
         if(resultado >= (Verifica.TOTAL_SERIE/50) + 1){
-            setNextContext(Comprende.this, Precisiona.class);
+            setNextContext(Comprension.this, Precision.class);
         }
         else{
-            setNextContext(this, Interactua.class);
+            setNextContext(this, Interaccion.class);
         }
     }
 
@@ -159,7 +157,7 @@ public class Comprende extends Activity
     //--------------------------------------------
     private class Adapter extends BaseAdapter{
 
-        private ArrayList<Comprende> c = new ArrayList();
+        private ArrayList<Comprension> c = new ArrayList();
 
         @Override
         public int getCount() {

@@ -62,7 +62,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_x="540dp"
                 android:layout_y="10dp"
-                android:textColor="#ffffffff"
                 android:text="Respuesta"/>
 
             <ImageView

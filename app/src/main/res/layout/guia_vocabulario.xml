@@ -299,7 +299,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/avi_n"
+                                    android:text="@string/avion"
                                     android:textAlignment="center"
                                     android:textSize="@dimen/_13sdp" />
 

@@ -17,8 +17,8 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
 public class Vocabulario extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private int pregunta_toca = 0;
     private int strings[] = {R.string.titulo_vocabulario_mam, R.string.inst_eva_expresion_oral},
-            img[] = {R.mipmap.cama, R.mipmap.arbol};
-    private int string_muestra[] = {R.string.cama, R.string.iii_arbol4_sp};//iv_arbol
+            img[] = {R.mipmap.casa, R.mipmap.cama, R.mipmap.avion, R.mipmap.silla, R.mipmap.conejo, R.mipmap.caballlo, R.mipmap.zanahoria, R.mipmap.guisquil, R.mipmap.pollito, R.mipmap.manzana};
+    private int string_muestra[] = {R.string.casa, R.string.cama, R.string.avion, R.string.silla, R.string.conejo, R.string.caballo, R.string.zanahoria, R.string.guisquil, R.string.gallo, R.string.manzana};//iv_arbol
     private TextView tv, tv2, nuPregunta;
     private ImageView iv;
     private RadioButton rbSi, rbNo;
@@ -46,7 +46,7 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
         nuPregunta.setText(guarda_numero);
         int i = strings[pregunta_toca],
                 imgs = img[pregunta_toca];//respuesta correcta
-        tv = (TextView) findViewById(R.id.tvVocabularioRespuestaSwitch);
+        tv = (TextView) findViewById(R.id.tvVocabularioTitulo);
         tv.setText(i);
         tv2.setText("");
         iv.setImageResource(imgs);

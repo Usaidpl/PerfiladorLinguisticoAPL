@@ -59,78 +59,9 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
         setOnInit(images);
     }
 
-    private View.OnClickListener click = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-           if((pregunta + 1) == images.length){
-                setNextContext(Precision.this, Vocabulario.class);
-           }else{
-               ques(pregunta, v);
-               pregunta ++;
-               setOnInit(images);
-           }
-        }
-
-        private int ques(int opcion, View v)
-        {
-            int resultado = 0, op = des(opcion);
-            if((op  + 1 )== (1)){
-                switch (v.getId()){
-                    case R.id.ivImagen1:
-                        resultado = 1;
-                        break;
-                    default:
-                        resultado = 0;
-                }
-            }else if((op + 1) == (2)){
-                switch (v.getId()){
-                    case R.id.ivImagen2:
-                        resultado = 1;
-                        break;
-                    default:
-                        resultado = 0;
-                }
-            }else if(op == 3){
-                switch (v.getId()){
-                    case R.id.ivImagen3:
-                        resultado = 1;
-                        break;
-                    default:
-                        resultado =0;
-                }
-            }
-        return  resultado;
-        }
-
-        private int  des(int valor){
-            int dev_val = 0;
-            switch (valor){
-                case 0: dev_val = 2;break;
-                case 1: dev_val = 3;break;
-                case 2: dev_val = 3;break;
-                case 3: dev_val = 1;break;
-                case 4: dev_val = 2;break;
-                case 5: dev_val = 3;break;
-                case 6: dev_val = 2;break;
-                case 7: dev_val = 1;break;
-                case 8: dev_val = 3;break;
-                case 9: dev_val = 2;break;
-                case 10: dev_val = 2;break;
-                case 11: dev_val = 3;break;
-                case 12: dev_val = 2;break;
-                case 13: dev_val = 1;break;
-                case 14: dev_val = 1;break;
-                case 15: dev_val = 1;break;
-                case 16: dev_val = 3;break;
-                case 17: dev_val = 1;break;
-            }
-            return dev_val;
-        }
-    };
-
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
-        boolean terminado = false;
+       // boolean terminado = false;
         int vector[] = matriz[pregunta];
         String texto[] = {"pato","gato","vaca","arbol","elote","banano","camioneta","carro","pantalon",
         "vestido","zapato","sombrero","mesa","escalera","canasta","peine","libro","bicicleta"};
@@ -146,6 +77,76 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
         image2.setOnClickListener(click);
         image3.setOnClickListener(click);
     }
+
+
+    private View.OnClickListener click = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if((pregunta + 1) == images.length){
+                setNextContext(Precision.this, Vocabulario.class);
+            }else{
+                ques(pregunta, v);
+                pregunta ++;
+                setOnInit(images);
+            }
+        }
+
+        private int ques(int opcion, View v)
+        {
+            int resultado = 0, op = des(opcion);
+            if(op == RESPUESTA_UNO){
+                switch (v.getId()){
+                    case R.id.ivImagen1:
+                        resultado = 1;
+                        break;
+                    default:
+                        resultado = 0;
+                }
+            }else if(op == RESPUESTA_DOS){
+                switch (v.getId()){
+                    case R.id.ivImagen2:
+                        resultado = 1;
+                        break;
+                    default:
+                        resultado = 0;
+                }
+            }else if(op == RESPUESTA_TRES){
+                switch (v.getId()){
+                    case R.id.ivImagen3:
+                        resultado = 1;
+                        break;
+                    default:
+                        resultado =0;
+                }
+            }
+            return  resultado;
+        }
+
+        private int  des(int valor){
+            int dev_val = 0;
+            switch (valor){
+                case 0: dev_val = RESPUESTA_DOS;break;
+                case 1: dev_val = RESPUESTA_TRES;break;
+                case 2: dev_val = RESPUESTA_TRES;break;
+                case 3: dev_val = RESPUESTA_UNO;break;
+                case 4: dev_val = RESPUESTA_DOS;break;
+                case 5: dev_val = RESPUESTA_TRES;break;
+                case 6: dev_val = RESPUESTA_DOS;break;
+                case 7: dev_val = RESPUESTA_UNO;break;
+                case 8: dev_val = RESPUESTA_TRES;break;
+                case 9: dev_val = RESPUESTA_DOS;break;
+                case 10: dev_val = RESPUESTA_DOS;break;
+                case 11: dev_val = RESPUESTA_TRES;break;
+                case 12: dev_val = RESPUESTA_DOS;break;
+                case 13: dev_val = RESPUESTA_UNO;break;
+                case 14: dev_val = RESPUESTA_UNO;break;
+                case 15: dev_val = RESPUESTA_UNO;break;
+                case 16: dev_val = RESPUESTA_TRES;break;
+                case 17: dev_val = RESPUESTA_UNO;break;
+            }
+            return dev_val;
+        }
+    };
 
     @Override
     public void setNextContext(Context context, Class<?> next_context) {

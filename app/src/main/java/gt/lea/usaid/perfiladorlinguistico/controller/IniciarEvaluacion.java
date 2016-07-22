@@ -10,8 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interaccion;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 
 public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener  {
      private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
@@ -60,13 +58,13 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         int evalua = 0;
         switch (v.getId()) {
             case R.id.ivMamEva:
-                intent = new Intent(getActivity(), Interaccion.class);
+                intent = new Intent(getActivity(), gt.lea.usaid.perfiladorlinguistico.model.Vocabulario.class);
                //b.putInt(KEY_EVALUACION, 0);
                 intent.putExtras(envia(0));
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivKicheEva:
-                intent = new Intent(getActivity(), Interaccion.class);
+                intent = new Intent(getActivity(), gt.lea.usaid.perfiladorlinguistico.model.Vocabulario.class);
                 intent.putExtras(envia(1));
                 getActivity().startActivity(intent);
                 break;

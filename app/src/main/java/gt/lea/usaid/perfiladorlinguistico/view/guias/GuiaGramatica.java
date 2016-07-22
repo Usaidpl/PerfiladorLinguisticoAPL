@@ -17,6 +17,7 @@ import gt.lea.usaid.perfiladorlinguistico.R;
  * Created by Roberto on 23/06/2016.
  */
 public class GuiaGramatica extends Activity {
+
     private TabHost tabHost;
     private ViewFlipper vfGuiaEsp, vfGuiaMam, vfGuiaKiche;
     private float lastX;
@@ -26,6 +27,7 @@ public class GuiaGramatica extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guia_gramatica);
+
         vfGuiaEsp = (ViewFlipper) findViewById(R.id.vfGuiaGramatica);
         vfGuiaMam = (ViewFlipper) findViewById(R.id.vfGuiaGramaticaMam);
         vfGuiaKiche = (ViewFlipper) findViewById(R.id.vfGuiaGramaticaKiche);

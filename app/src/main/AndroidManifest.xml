@@ -4,11 +4,10 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
-    <uses-permission android:name="android.permission.READ_LOGS"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -85,9 +84,7 @@
             android:screenOrientation="landscape" />
         <activity android:name=".view.EnviarInformacion" />
         <activity android:name=".view.Sincronizar" />
-        <activity android:name=".Entrevistas">
-
-        </activity>
+        <activity android:name=".Entrevistas" />
         <activity
             android:name=".view.kiche.ExpresionOralKiche"
             android:screenOrientation="landscape" />
@@ -112,7 +109,11 @@
         <activity
             android:name=".view.mam.VocabularioMam"
             android:screenOrientation="landscape" />
-        <activity android:name=".view.Precision"></activity>
+        <activity android:name=".view.Precision" />
+        <activity android:name=".model.ExpresionOral" />
+        <activity android:name=".model.Gramatica" />
+        <activity android:name=".model.SonidosEspecificos" />
+        <activity android:name=".model.Vocabulario"></activity>
 
     </application>
 

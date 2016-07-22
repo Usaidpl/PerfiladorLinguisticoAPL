@@ -40,7 +40,7 @@
                 <RelativeLayout
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent">
 
                     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/cvExpresionOral"
@@ -56,7 +56,7 @@
                         <ViewFlipper
                             android:id="@+id/vfGuiaInteraccionOral"
                             android:layout_width="match_parent"
-                            android:layout_height="400dp"
+                            android:layout_height="match_parent"
                             android:layout_margin="6dp">
 
                             <ScrollView
@@ -67,12 +67,12 @@
                                 <RelativeLayout
                                     android:id="@+id/rlGuiaComprensionOral"
                                     android:layout_width="match_parent"
-                                    android:layout_height="400dp"
+                                    android:layout_height="match_parent"
                                     android:orientation="vertical">
 
                                     <TextView
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
+                                        android:layout_height="wrap_content"
                                         android:text="@string/i_serie_interacci_n_oral"
                                         android:textSize="@dimen/_11sdp" />
 
@@ -103,7 +103,7 @@
                         <ViewFlipper
                             android:id="@+id/vfGuiaInteraccionOralMam"
                             android:layout_width="match_parent"
-                            android:layout_height="400dp"
+                            android:layout_height="match_parent"
                             android:layout_margin="6dp">
 
                             <ScrollView
@@ -114,7 +114,7 @@
                                 <RelativeLayout
                                     android:id="@+id/rlGuiaComprensionOralMam"
                                     android:layout_width="match_parent"
-                                    android:layout_height="400dp"
+                                    android:layout_height="match_parent"
                                     android:orientation="vertical">
 
                                     <TextView
@@ -151,7 +151,7 @@
                         <ViewFlipper
                             android:id="@+id/vfGuiaInteraccionOralKiche"
                             android:layout_width="match_parent"
-                            android:layout_height="400dp"
+                            android:layout_height="match_parent"
                             android:layout_margin="6dp">
 
                             <ScrollView
@@ -162,7 +162,7 @@
                                 <RelativeLayout
                                     android:id="@+id/rlGuiaComprensionOralKiche"
                                     android:layout_width="match_parent"
-                                    android:layout_height="400dp"
+                                    android:layout_height="match_parent"
                                     android:orientation="vertical">
 
                                     <TextView

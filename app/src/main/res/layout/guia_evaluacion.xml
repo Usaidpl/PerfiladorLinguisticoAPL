@@ -1,243 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@mipmap/ninos_juegan_pelota">
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="880dp"
+    android:layout_height="400dp"
+    android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frameLayout4"
+        android:layout_width="150dp"
+        android:layout_height="125dp"
+        android:background="#ffffff"
+        android:layout_alignTop="@+id/frameLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="63dp"
+        android:layout_marginStart="63dp"
+        android:layout_x="61dp"
+        android:layout_y="63dp">
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/guia_interaccion_oral_oral2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="#AA000000"
+            android:text="Interacción Oral"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/guia_interaccion_oral_oral"
+            android:layout_width="28dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/nino"
+            android:layout_gravity="center_horizontal|top" />
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frameLayout"
+        android:layout_width="150dp"
+        android:layout_height="125dp"
+        android:layout_marginLeft="207dp"
+        android:layout_marginStart="207dp"
+        android:background="#ffffff"
+        android:layout_alignTop="@+id/frameLayout5"
+        android:layout_toRightOf="@+id/frameLayout4"
+        android:layout_toEndOf="@+id/frameLayout4"
+        android:layout_x="255dp"
+        android:layout_y="63dp">
+
+        <ImageView
+            android:id="@+id/guia_compresion_oral"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/casa"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/guia_compresion_oral2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:background="#AA000000"
+            android:text="Comprensión Oral"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:textSize="16dp" />
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frameLayout5"
+        android:layout_width="150dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/frameLayout3"
+        android:layout_toEndOf="@+id/frameLayout3"
+        android:layout_x="458dp"
+        android:layout_y="65dp">
+
+        <ImageView
+            android:id="@+id/guia_vocabulario_precision"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/gato" />
+
+        <TextView
+            android:id="@+id/guia_vocabulario_precision2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:background="#AA000000"
+            android:text="Vob. Precisión"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:textSize="16dp" />
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frameLayout2"
+        android:layout_width="150dp"
+        android:layout_height="125dp"
+        android:layout_below="@+id/frameLayout3"
+        android:layout_alignLeft="@+id/frameLayout6"
+        android:layout_alignStart="@+id/frameLayout6"
+        android:layout_x="460dp"
+        android:layout_y="217dp">
+
+        <ImageView
+            android:id="@+id/guia_expresion_oral"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/nina" />
+
+        <TextView
+            android:id="@+id/guia_expresion_oral2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:background="#AA000000"
+            android:text="Expresion Oral"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:textSize="16dp" />
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frameLayout6"
+        android:layout_width="150dp"
+        android:layout_height="125dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/guia_navegacion"
+        android:layout_alignStart="@+id/guia_navegacion"
+        android:layout_x="648dp"
+        android:layout_y="63dp">
+
+        <ImageView
+            android:id="@+id/guia_vocabulario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/tortillas" />
+
+        <TextView
+            android:id="@+id/guia_vocabulario2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:background="#AA000000"
+            android:text="Vob. Producción"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:textSize="16dp" />
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frameLayout3"
+        android:layout_width="150dp"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/frameLayout"
+        android:layout_toEndOf="@+id/frameLayout"
+        android:layout_x="257dp"
+        android:layout_y="217dp">
+
+        <ImageView
+            android:id="@+id/guia_gramatica"
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/elote" />
+
+        <TextView
+            android:id="@+id/guia_gramatica2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="#AA000000"
+            android:text="Gramática"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:textSize="16dp" />
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/guia_navegacion"
+        android:layout_width="150dp"
+        android:layout_height="125dp"
+        android:layout_marginRight="139dp"
+        android:layout_marginEnd="139dp"
+        android:layout_below="@+id/frameLayout3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:layout_x="648dp"
+        android:layout_y="219dp">
+
+        <ImageView
+            android:id="@+id/guia_navegacion2"
+            android:layout_width="150dp"
+            android:layout_height="125dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/logolea" />
+
+        <TextView
+            android:id="@+id/guia_navegacion3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="#AA000000"
+            android:text="Guia APL"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:textSize="16dp" />
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frameLayout7"
+        android:layout_width="150dp"
+        android:layout_height="125dp"
+        android:layout_above="@+id/frameLayout3"
+        android:layout_alignLeft="@+id/frameLayout4"
+        android:layout_alignStart="@+id/frameLayout4"
+        android:layout_x="63dp"
+        android:layout_y="217dp"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/guia_sonidos_especificos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/fuego"
+            android:layout_gravity="center_horizontal|top" />
+
+        <TextView
+            android:id="@+id/guia_sonidos_especificos2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="#AA000000"
+            android:text="Son. Específicos"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:textSize="16dp" />
+    </FrameLayout>
 
 
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/frameLayout4"
-                android:layout_width="250dp"
-                android:layout_height="200dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true">
-
-                <ImageView
-                    android:id="@+id/guia_interaccion_oral_oral"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/ninia" />
-
-                <TextView
-                    android:id="@+id/guia_interaccion_oral_oral2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom"
-                    android:background="#AA000000"
-                    android:text="Interacción Oral"
-                    android:textAlignment="center"
-                    android:textColor="#ffffffff"
-                    android:textSize="25dp" />
-            </FrameLayout>
-
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/frameLayout"
-                android:layout_width="250dp"
-                android:layout_height="200dp"
-                android:layout_above="@+id/frameLayout7"
-                android:layout_marginLeft="47dp"
-                android:layout_marginStart="47dp"
-                android:layout_toEndOf="@+id/frameLayout4"
-                android:layout_toRightOf="@+id/frameLayout4">
-
-                <ImageView
-                    android:id="@+id/guia_compresion_oral"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/ninia" />
-
-                <TextView
-                    android:id="@+id/guia_compresion_oral2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom"
-                    android:background="#AA000000"
-                    android:text="Comprensión Oral"
-                    android:textAlignment="center"
-                    android:textColor="#ffffffff"
-                    android:textSize="25dp" />
-            </FrameLayout>
-
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/frameLayout5"
-                android:layout_width="250dp"
-                android:layout_height="200dp"
-                android:layout_above="@+id/frameLayout7"
-                android:layout_marginLeft="55dp"
-                android:layout_marginStart="55dp"
-                android:layout_toEndOf="@+id/frameLayout"
-                android:layout_toRightOf="@+id/frameLayout">
-
-                <ImageView
-                    android:id="@+id/guia_vocabulario_precision"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/pelota_arbol_ninos" />
-
-                <TextView
-                    android:id="@+id/guia_vocabulario_precision2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom"
-                    android:background="#AA000000"
-                    android:text="Vocabulario Precisión"
-                    android:textAlignment="center"
-                    android:textColor="#ffffffff"
-                    android:textSize="25dp" />
-            </FrameLayout>
-
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/frameLayout2"
-                android:layout_width="250dp"
-                android:layout_height="200dp"
-                android:layout_alignParentBottom="true"
-                android:layout_toLeftOf="@+id/frameLayout6"
-                android:layout_toStartOf="@+id/frameLayout6">
-
-                <ImageView
-                    android:id="@+id/guia_expresion_oral"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/book" />
-
-                <TextView
-                    android:id="@+id/guia_expresion_oral2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom"
-                    android:background="#AA000000"
-                    android:text="Expresion Oral"
-                    android:textAlignment="center"
-                    android:textColor="#ffffffff"
-                    android:textSize="25dp" />
-            </FrameLayout>
-
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/frameLayout7"
-                android:layout_width="250dp"
-                android:layout_height="200dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/frameLayout4"
-                android:layout_marginTop="59dp">
-
-                <ImageView
-                    android:id="@+id/guia_sonidos_especificos"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/book" />
-
-                <TextView
-                    android:id="@+id/guia_sonidos_especificos2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom"
-                    android:background="#AA000000"
-                    android:text="Sonidos Específicos"
-                    android:textAlignment="center"
-                    android:textColor="#ffffffff"
-                    android:textSize="25dp" />
-            </FrameLayout>
-
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/frameLayout6"
-                android:layout_width="250dp"
-                android:layout_height="200dp"
-                android:layout_marginLeft="65dp"
-                android:layout_marginStart="65dp"
-                android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/frameLayout5"
-                android:layout_toEndOf="@+id/frameLayout5">
-
-                <ImageView
-                    android:id="@+id/guia_vocabulario"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/book" />
-
-                <TextView
-                    android:id="@+id/guia_vocabulario2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom"
-                    android:background="#AA000000"
-                    android:text="Vocabulario Producción"
-                    android:textAlignment="center"
-                    android:textColor="#ffffffff"
-                    android:textSize="25dp" />
-            </FrameLayout>
-
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/frameLayout3"
-                android:layout_width="250dp"
-                android:layout_height="200dp"
-                android:layout_alignParentBottom="true"
-                android:layout_toLeftOf="@+id/frameLayout5"
-                android:layout_toStartOf="@+id/frameLayout5">
-
-                <ImageView
-                    android:id="@+id/guia_gramatica"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/book" />
-
-                <TextView
-                    android:id="@+id/guia_gramatica2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom"
-                    android:background="#AA000000"
-                    android:text="Gramática"
-                    android:textAlignment="center"
-                    android:textColor="#ffffffff"
-                    android:textSize="25dp" />
-            </FrameLayout>
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/guia_navegacion"
-                android:layout_width="250dp"
-                android:layout_height="200dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignLeft="@+id/frameLayout6"
-                android:layout_alignStart="@+id/frameLayout6">
-
-                <ImageView
-                    android:id="@+id/guia_navegacion2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/book" />
-
-                <TextView
-                    android:id="@+id/guia_navegacion3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom"
-                    android:background="#AA000000"
-                    android:text="Navegación Aplicación"
-                    android:textAlignment="center"
-                    android:textColor="#ffffffff"
-                    android:textSize="25dp" />
-            </FrameLayout>
-        </RelativeLayout>
-    </ScrollView>
-
-
-</LinearLayout>
+</AbsoluteLayout>
 

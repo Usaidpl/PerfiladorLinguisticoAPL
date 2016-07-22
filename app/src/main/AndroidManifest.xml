@@ -12,13 +12,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/usaid"
-        android:label="@string/app_name"
+        android:icon="@mipmap/logolea"
+        android:label="Usaid APL"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".NavigationMenu"
-            android:label="@string/app_name"
+            android:label="Perfil Lingüistico"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
         </activity>
         <activity
             android:name=".view.Splash"
-            android:label="@string/app_name"
+            android:label="@string/apllea"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -53,13 +53,10 @@
             android:name=".view.espanol.SonidosEspecificos"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.Comprende"
+            android:name=".view.espanol.Comprension"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.Interactua"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.espanol.Precisiona"
+            android:name=".view.espanol.Interaccion"
             android:screenOrientation="landscape" />
         <activity
             android:name=".view.guias.GuiaComprensionOral"
@@ -88,7 +85,9 @@
             android:screenOrientation="landscape" />
         <activity android:name=".view.EnviarInformacion" />
         <activity android:name=".view.Sincronizar" />
-        <activity android:name=".Entrevistas"></activity>
+        <activity android:name=".Entrevistas">
+
+        </activity>
         <activity
             android:name=".view.kiche.ExpresionOralKiche"
             android:screenOrientation="landscape" />
@@ -113,11 +112,8 @@
         <activity
             android:name=".view.mam.VocabularioMam"
             android:screenOrientation="landscape" />
+        <activity android:name=".view.Precision"></activity>
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="a331f555b7e64d233fcdef738ced04073a5bacce"
-            />
     </application>
 
 </manifest>

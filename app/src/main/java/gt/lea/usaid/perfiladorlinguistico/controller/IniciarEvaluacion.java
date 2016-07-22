@@ -10,21 +10,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interactua;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 
-/**
- * Created by Roberto on 21/06/16.
- */
-public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener {
-    private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
+public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener  {
+     private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
     private OnFragmentInteractionListener mListener;
     public static final String KEY_EVALUACION = "Evaluacion";
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.iniciar_evaluacion, container, false);
-        ivMamEva = (ImageView) vista.findViewById(R.id.ivMamEva);
-        ivKicheEva = (ImageView) vista.findViewById(R.id.ivKicheEva);
+        ivMamEva =(ImageView) vista.findViewById(R.id.ivMamEva);
+        ivKicheEva =(ImageView) vista.findViewById(R.id.ivKicheEva);
         //ivEspanolEva = (ImageView) vista.findViewById(R.id.ivEspanolEva);
         ivMamEva.setOnClickListener(this);
         ivKicheEva.setOnClickListener(this);
@@ -62,29 +59,25 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
         int evalua = 0;
         switch (v.getId()) {
             case R.id.ivMamEva:
-                intent = new Intent(getActivity(), Interactua.class);
-                //b.putInt(KEY_EVALUACION, 0);
+                intent = new Intent(getActivity(), Vocabulario.class);
+               //b.putInt(KEY_EVALUACION, 0);
                 intent.putExtras(envia(0));
                 getActivity().startActivity(intent);
                 break;
             case R.id.ivKicheEva:
-                intent = new Intent(getActivity(), Interactua.class);
+                intent = new Intent(getActivity(), Vocabulario.class);
                 intent.putExtras(envia(1));
                 getActivity().startActivity(intent);
                 break;
-           /* case R.id.ivEspanolEva:
-                intent = new Intent(getActivity(), Interactua.class);
-                intent.putExtras(envia(2));
-                getActivity().startActivity(intent);
-                break;*/
+
         }
         //select * from entrevista join interaccion join .... where id = 002;
         //Inte
     }
 
-    private Bundle envia(int cantidad) {
-        Bundle b = new Bundle();
-        b.putInt(KEY_EVALUACION, cantidad);
+    private Bundle envia(int cantidad){
+        Bundle b= new Bundle();
+        b.putInt(KEY_EVALUACION , cantidad);
         return b;
     }
 

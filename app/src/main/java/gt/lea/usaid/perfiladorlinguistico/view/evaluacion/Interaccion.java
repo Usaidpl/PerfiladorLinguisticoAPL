@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.view.espanol;
+package gt.lea.usaid.perfiladorlinguistico.view.evaluacion;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,13 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
@@ -20,12 +16,11 @@ import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
-import gt.lea.usaid.perfiladorlinguistico.view.Precision;
 
 /**
  * Created by Bryan on 20/06/16.
  */
-public class Comprension
+public class Interaccion
         extends Activity
         implements OnStartNextContext,OnInitializeComponent,OnInitializeText, View.OnClickListener  {
 
@@ -35,6 +30,8 @@ public class Comprension
 
     private int serie = 0;
     private int evalua = 1;
+
+    private String msg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +45,11 @@ public class Comprension
             String s = e.getMessage() + " Bundle";
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+        msg(getMsg());
         setOnInit(null);
     }
 
-    protected void msg(String s){
+    public void msg(String s){
         Toast.makeText(this, s ,Toast.LENGTH_SHORT).show();
     }
 
@@ -69,31 +67,37 @@ public class Comprension
         respuesta10 = (RadioButton) findViewById(R.id.rbRespuesta10);
         //Textos -- TextView
         intruduccion = (TextView) findViewById(R.id.tvInstrucionInteractua);
-        // respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaInteractua);
+       // respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaInteractua);
         tvPregunta1 = (TextView) findViewById(R.id.tvPreguntaUnoInteractua);
         tvPregunta2 = (TextView) findViewById(R.id.tvPreguntaDosInteractua);
         tvPregunta3 = (TextView) findViewById(R.id.tvPreguntaTresInteractua);
         tvPregunta4 = (TextView) findViewById(R.id.tvPreguntaCuatroInteractua);
         tvPregunta5 = (TextView) findViewById(R.id.tvPreguntaCincoInteractua);
         //método encargado de agregar los textos correpondientes con base al idioma seleccionado
-        texto();
+        textos();
         //evento de click
         respuesta9.setOnClickListener(this);
         respuesta10.setOnClickListener(this);
     }
 
-    private void texto(){
-        int txt[][] =
-                {{R.string.tituto_dos_kiche, R.string.i_respusta_correcta_kiche,R.string.ii_pregunta_uno_kiche,
-                        R.string.ii_pregunta_dos_kiche, R.string.ii_pregunta_tres_kiche, R.string.ii_pregunta_cuatro_kiche,
-                        R.string.ii_pregunta_cinco_kiche},
-                        {R.string.comprension, R.string.i_respuesta_man, R.string.ii_pregunta_uno_man,
-                                R.string.ii_pregunta_dos_man, R.string.ii_pregunta_tres_man, R.string.ii_pregunta_cuatro_man,
-                                R.string.ii_pregunta_cinco_man},
-                        {R.string.comprension_sp, R.string.respuesta_sp,
-                                R.string.ii_pregunta_uno_sp, R.string.ii_pregunta_dos_sp,
-                                R.string.ii_pregunta_tres_sp, R.string.ii_pregunta_cuatro_sp, R.string.ii_pregunta_cinco_sp}};
-        setTextCompoent(txt);
+    private void textos(){
+        int textos_idiomas[][] = {
+                //-- idioma Quiche --
+                {R.string.guia_kiche, R.string.i_respusta_correcta_kiche,
+                R.string.i_pregunta_uno_kiche, R.string.i_pregunta_dos_kiche,
+                R.string.i_pregunta_tres_kiche, R.string.i_pregunta_cuatro_kiche,
+                R.string.i_pregunta_cinco_kiche},
+                //Segundo vector
+                //-- idioma Man --
+                {R.string.interaccion, R.string.i_respuesta_man, R.string.i_pregunta_uno_man,
+                R.string.i_pregunta_dos_man, R.string.i_pregunta_tres_man, R.string.i_pregunta_cuantro_man,
+                R.string.i_pregunta_cinco_man},
+                //--idioma español --
+                {R.string.Ins_MamEsp_SerE_I, R.string.RespuestaCorrecta_Esp,
+                        R.string.Pre1_MamEsp_SerE_I, R.string.Pre2_MamEsp_SerE_I, R.string.Pre3_MamEsp_SerE_I,
+                        R.string.Pre4_MamEsp_SerE_I, R.string.Pre5_MamEsp_SerE_I}};
+        //método encargado de agregar los textos a los componentes correspondientes
+        setTextCompoent(textos_idiomas);
     }
 
     @Override
@@ -126,20 +130,20 @@ public class Comprension
             if(getEvalua() == 1){
                 vr = new Verifica(radios_selected, NOMBRE_TABLA);
                 float resultado = vr.getResultado();
-                //descition(resultado);
+                descition(resultado);
             }
             //lanzamiento a la siguiente actividad
 
-            setNextContext(Comprension.this, Precision.class);
+            setNextContext(Interaccion.this, Comprension.class);
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-    /*
+
     private void descition(float resultado){
         if(resultado >= (100/50) + 1)
             setNextContext(this, Interaccion.class);
-    }*/
+    }
 
     @Override
     protected void onPause() {
@@ -156,12 +160,16 @@ public class Comprension
         startActivity(i);
     }
 
-    private void clear(){
-
-    }
-
 
     public int getEvalua() {
         return evalua;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 }

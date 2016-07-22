@@ -12,10 +12,10 @@ import android.widget.Button;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Comprension;
+import gt.lea.usaid.perfiladorlinguistico.view.evaluacion.Comprension;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.ExpresionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Gramatica;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Interaccion;
+import gt.lea.usaid.perfiladorlinguistico.view.evaluacion.Interaccion;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.SonidosEspecificos;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaPrecisionOral;

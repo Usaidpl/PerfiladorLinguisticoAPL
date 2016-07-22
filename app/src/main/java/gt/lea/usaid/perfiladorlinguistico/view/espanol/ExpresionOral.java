@@ -13,6 +13,7 @@ import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.view.evaluacion.Interaccion;
 
 /**
  * Created by Roberto on 19/06/2016.

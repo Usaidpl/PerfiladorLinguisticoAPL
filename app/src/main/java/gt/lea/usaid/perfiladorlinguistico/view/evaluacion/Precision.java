@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.view;
+package gt.lea.usaid.perfiladorlinguistico.view.evaluacion;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,7 +8,6 @@ import android.support.annotation.IdRes;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
@@ -21,17 +20,17 @@ import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
  */
 public class Precision extends Activity implements OnInitializeComponent, OnStartNextContext{
 
+    //área de variables privadas
     private int pregunta = 0;
     private ImageView image, image2, image3;
     private TextView tv;
-    private int idoma = 0;
+    private int idioma = 0;
 
     //área estatica
-    private static final int PREGUNTA = 3;
     private static final int RESPUESTA_UNO = 1;
     private static final int RESPUESTA_DOS = 2;
     private static final int RESPUESTA_TRES = 3;
-
+    //área declaraciones de matricez
     private  int[][] images = {
             {R.mipmap.pollito, R.mipmap.pato, R.mipmap.pavo},
             {R.mipmap.conejo, R.mipmap.perro, R.mipmap.gato},
@@ -57,12 +56,12 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.precision);
-        setOnInit(images);
+        setOnInit(null);
+
     }
 
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
-       // boolean terminado = false;
         int vector[] = matriz[pregunta];
         String texto[] = {"pato","gato","vaca","arbol","elote","banano","camioneta","carro","pantalon",
         "vestido","zapato","sombrero","mesa","escalera","canasta","peine","libro","bicicleta"};
@@ -83,11 +82,10 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
     private View.OnClickListener click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String s = String.valueOf(ques(pregunta, v));
+
             if((pregunta + 1) == images.length){
                 setNextContext(Precision.this, Vocabulario.class);
             }else{
-                Toast.makeText(Precision.this, s, Toast.LENGTH_SHORT).show();
                 pregunta ++;
                 setOnInit(images);
             }
@@ -106,11 +104,8 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
                 }
             }else if(op == RESPUESTA_DOS){
                 switch (v.getId()){
-                    case R.id.ivImagen2:
-                        resultado = 1;
-                        break;
-                    default:
-                        resultado = 0;
+                    case R.id.ivImagen2:resultado = 1;break;
+                    default:resultado = 0;
                 }
             }else if(op == RESPUESTA_TRES){
                 switch (v.getId()){
@@ -160,5 +155,9 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
         startActivity(i);
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
+    }
 }

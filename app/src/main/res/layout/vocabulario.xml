@@ -9,14 +9,14 @@
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cvImage1"
-        android:layout_width="700dp"
-        android:layout_height="350dp"
+        android:layout_width="900dp"
+        android:layout_height="400dp"
         card_view:cardBackgroundColor="@android:color/background_light"
         card_view:cardCornerRadius="6dp"
         card_view:cardElevation="10dp"
         card_view:cardUseCompatPadding="true"
-        android:layout_x="190dp"
-        android:layout_y="110dp">
+        android:layout_x="27dp"
+        android:layout_y="105dp">
 
         <ViewFlipper
             android:id="@+id/viewflipper"
@@ -54,18 +54,18 @@
                     android:textSize="20dp"
                     android:layout_below="@+id/textView5"
                     android:layout_centerHorizontal="true"
-                    android:layout_x="540dp"
-                    android:layout_y="10dp"
+                    android:layout_x="753dp"
+                    android:layout_y="12dp"
                     android:background="#3f51b5"
                     android:textColor="#ffffffff" />
 
                 <ImageView
                     android:id="@+id/ivCasa"
-                    android:layout_width="200dp"
-                    android:layout_height="250dp"
+                    android:layout_width="250dp"
+                    android:layout_height="300dp"
                     android:layout_alignParentBottom="true"
                     android:src="@mipmap/logolea"
-                    android:layout_x="234dp"
+                    android:layout_x="310dp"
                     android:layout_y="20dp" />
 
                 <Switch
@@ -83,8 +83,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_x="485dp"
-                    android:layout_y="250dp">
+                    android:layout_x="681dp"
+                    android:layout_y="253dp">
 
                     <RadioButton
                         android:id="@+id/SiCasa"
@@ -802,10 +802,10 @@
     </android.support.v7.widget.CardView>
 
     <TextView
-        android:layout_width="700dp"
+        android:layout_width="900dp"
         android:layout_height="50dp"
-        android:layout_x="190dp"
-        android:layout_y="25dp"
+        android:layout_x="27dp"
+        android:layout_y="19dp"
         android:background="#B71C1C"
         android:gravity="center"
         android:text="VI. Vocabulario"

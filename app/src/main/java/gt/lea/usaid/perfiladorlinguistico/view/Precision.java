@@ -8,6 +8,7 @@ import android.support.annotation.IdRes;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
@@ -82,10 +83,11 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
     private View.OnClickListener click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            String s = String.valueOf(ques(pregunta, v));
             if((pregunta + 1) == images.length){
                 setNextContext(Precision.this, Vocabulario.class);
             }else{
-                ques(pregunta, v);
+                Toast.makeText(Precision.this, s, Toast.LENGTH_SHORT).show();
                 pregunta ++;
                 setOnInit(images);
             }

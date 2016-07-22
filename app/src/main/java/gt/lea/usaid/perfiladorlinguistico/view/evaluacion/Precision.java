@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
+import gt.lea.usaid.perfiladorlinguistico.utils.MyR;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
@@ -56,7 +57,7 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.precision);
-        setOnInit(null);
+        setOnInit(MyR.ArragloImagenes.images);
 
     }
 
@@ -87,7 +88,7 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
                 setNextContext(Precision.this, Vocabulario.class);
             }else{
                 pregunta ++;
-                setOnInit(images);
+                setOnInit(MyR.ArragloImagenes.images);
             }
         }
 

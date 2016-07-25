@@ -37,5 +37,38 @@
     <string name="up_16_kch">Uq</string>
     <string name="laq_17_kch">Laq</string>
     <string name="xot_18_kch">xot</string>
-
+    <!-- inicio de la serie de Vocabulario -->
+    <string name="iv_titulo_gramatica_kiche">VI. CHOLAJ. TAQ TZIJ / VOCABULARIO</string>
+    <string name="iv_kar">kar</string>
+    <string name="iv_ja">ja</string>
+    <string name="iv_lej">lej</string>
+    <string name="iv_kumatz">kumatz</string>
+    <string name="iv_kej">kej</string>
+    <string name="iv_kyo">k'oy</string>
+    <string name="iv_tzi">tz'i'</string>
+    <string name="iv_kix">k'ix</string>
+    <string name="iv_mukun">mukun / k'um</string>
+    <string name="iv_qatzu">q'atzu / q'anxul</string>
+    <!-- inicio de la serie de sonidos especificos -->
+    <string name="v_titulo_kiche">Sonidos Específicos</string>
+    <string name="v_ka">ka'</string>
+    <string name="v_si">si'</string>
+    <string name="v_che">che'</string>
+    <string name="v_papalot">papalo't</string>
+    <string name="v_nos">no's / qu'l </string>
+    <string name="v_chat">ch'at</string>
+    <string name="v_tzunum">tz'unun</string>
+    <string name="v_kotzij">kotz'ij</string>
+    <string name="v_qam">q'a'm </string>
+    <string name="v_qaq">q'aq' </string>
+    <!-- inicio de la serie de gramatica -->
+    <string name="vi_titulo_kiche">Gramática Kiche</string>
+    <string name="vi_xajab">xajab'</string>
+    <string name="vi_taqxajab">taq' xajab</string>
+    <string name="vi_mes">me's</string>
+    <string name="vi_taqmes">taq me's</string>
+    <string name="vi_ali">ali</string>
+    <string name="vi_tat">tat / achi</string>
+    <string name="vi_mam">mam / tat</string>
+    <string name="vi_pendiente">falta hoja pdf</string>
 </resources>

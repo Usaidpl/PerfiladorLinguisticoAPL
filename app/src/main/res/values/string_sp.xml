@@ -37,6 +37,18 @@
     <string name="iii_peine16_sp">Peine</string>
     <string name="iii_libro17_sp">Libro</string>
     <string name="iii_bicicleta18_sp">bicicleta</string>
+    <!-- inicio de la serie de Vocabulario -->
+    <string name="iv_titulo_gramatica">IV. Vocabulario Producción</string>
+    <string name="iv_casa">casa</string>
+    <string name="iv_cama">cama</string>
+    <string name="iv_avion">avión</string>
+    <string name="iv_silla">silla</string>
+    <string name="iv_conejo">conejo</string>
+    <string name="iv_caballo">caballo</string>
+    <string name="iv_zanahoria">zanahoria</string>
+    <string name="iv_guisquil">güisquil</string>
+    <string name="iv_gallo">gallo</string>
+    <string name="iv_manzana">manzana</string>
     <!-- inicio de la serie de sonidos especificos -->
     <string name="v_titulo">Sonidos Específicos</string>
     <string name="v_pelota">pelota</string>

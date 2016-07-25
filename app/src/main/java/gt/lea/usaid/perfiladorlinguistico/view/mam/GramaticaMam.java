@@ -18,8 +18,8 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
     private int pregunta_toca = 0;
     //private int strings[] = {R.string.titulo_GramaticaMam_mam, R.string.inst_eva_expresion_oral},
 
-    private int img[] = {R.mipmap.pelotabasketball, R.mipmap.logolea, R.mipmap.logolea, R.mipmap.lapiz, R.mipmap.abuelo, R.mipmap.maestro, R.mipmap.doctor, R.mipmap.cocinero};
-    private int string_muestra[] = {R.string.vi_pelota, R.string.vi_pelotas, R.string.vi_lapices, R.string.vi_lapiz, R.string.vi_abuelo, R.string.vi_maestra, R.string.vi_doctora, R.string.vi_cocinera};
+    private int img[] = {R.mipmap.elote, R.mipmap.logolea, R.mipmap.gato, R.mipmap.gatos, R.mipmap.perro, R.mipmap.logolea, R.mipmap.carnero, R.mipmap.padre};
+    private int string_muestra[] = {R.string.vi_ix, R.string.vi_qeox, R.string.vi_wix, R.string.vi_qewix, R.string.vi_ttxutxyan, R.string.vi_ttxuek, R.string.vi_ttxurit, R.string.vi_txubaj};
     private TextView tvGramaticaMam, tvRespuesta, nuPregunta;
     private ImageView ivGramaticaMam;
     private RadioButton rbSiGramaticaMam, rbNoGramaticaMam;

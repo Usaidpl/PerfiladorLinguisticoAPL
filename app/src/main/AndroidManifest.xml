@@ -60,6 +60,9 @@
         <activity
             android:name=".view.guias.GuiaSonidosEspecificos"
             android:screenOrientation="landscape" />
+
+        <activity android:name=".view.espanol.Vocabulario"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".view.guias.GuiaVocabulario"
             android:screenOrientation="landscape" />
@@ -70,18 +73,7 @@
         <activity android:name=".view.EnviarInformacion" />
         <activity android:name=".view.Email" />
         <activity android:name=".view.evaluacion.Precision" />
-        <activity
-            android:name=".model.SonidosEspecificos"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".model.Vocabulario"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".model.Gramatica"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".model.ExpresionOral"
-            android:screenOrientation="landscape" />
+
         <activity android:name=".view.mam.ExpresionOralMam" />
         <activity android:name=".view.mam.GramaticaMam" />
         <activity android:name=".view.mam.SonidosEspecificosMam" />
@@ -90,6 +82,7 @@
         <activity android:name=".view.kiche.GramaticaKiche" />
         <activity android:name=".view.kiche.SonidosEspecificosKiche" />
         <activity android:name=".view.kiche.VocabularioKiche"></activity>
+
     </application>
 
 </manifest>

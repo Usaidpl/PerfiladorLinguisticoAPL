@@ -19,7 +19,7 @@ public class  Vocabulario extends Activity implements OnInitializeComponent, Vie
     //private int strings[] = {R.string.titulo_vocabulario_mam, R.string.inst_eva_expresion_oral},
 
     private int img[] = {R.mipmap.casa, R.mipmap.cama, R.mipmap.avion, R.mipmap.silla, R.mipmap.conejo, R.mipmap.caballlo, R.mipmap.zanahoria, R.mipmap.guisquil, R.mipmap.pollito, R.mipmap.manzana};
-    private int string_muestra[] = {R.string.casa, R.string.cama, R.string.avion, R.string.silla, R.string.conejo, R.string.caballo, R.string.zanahoria, R.string.guisquil, R.string.gallo, R.string.manzana};//iv_arbol
+    private int string_muestra[] = {R.string.iv_casa, R.string.iv_cama, R.string.iv_avion, R.string.iv_silla, R.string.iv_conejo, R.string.iv_caballo, R.string.iv_zanahoria, R.string.iv_guisquil, R.string.iv_gallo, R.string.iv_manzana};//iv_arbol
     private TextView tvVocabulario, tvRespuesta, nuPregunta;
     private ImageView ivVocabulario;
     private RadioButton rbSiVocabulario, rbNoVocabulario;

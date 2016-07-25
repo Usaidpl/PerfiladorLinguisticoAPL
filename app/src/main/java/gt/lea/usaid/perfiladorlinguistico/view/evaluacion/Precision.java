@@ -11,10 +11,11 @@ import android.widget.TextView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
-import gt.lea.usaid.perfiladorlinguistico.model.Vocabulario;
+
 import gt.lea.usaid.perfiladorlinguistico.utils.MyR;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 
 /**
  * @author Bryan

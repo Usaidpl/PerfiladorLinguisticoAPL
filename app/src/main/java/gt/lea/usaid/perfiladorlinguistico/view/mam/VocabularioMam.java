@@ -17,9 +17,9 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
 public class  VocabularioMam extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private int pregunta_toca = 0;
     //private int strings[] = {R.string.titulo_VocabularioMam_mam, R.string.inst_eva_expresion_oral},
+    private int img[] = {R.mipmap.casa, R.mipmap.cama, R.mipmap.conejo, R.mipmap.caballlo, R.mipmap.huevo, R.mipmap.pollito, R.mipmap.pescado2, R.mipmap.volcan, R.mipmap.camino, R.mipmap.nube};
+    private int string_muestra[] = {R.string.iv_jat, R.string.iv_watbil, R.string.iv_xik, R.string.iv_chej, R.string.iv_jos, R.string.iv_bix, R.string.iv_kyix, R.string.iv_witz, R.string.iv_be, R.string.iv_muj};//iv_arbol
 
-    private int img[] = {R.mipmap.casa, R.mipmap.cama, R.mipmap.avion, R.mipmap.silla, R.mipmap.conejo, R.mipmap.caballlo, R.mipmap.zanahoria, R.mipmap.guisquil, R.mipmap.pollito, R.mipmap.manzana};
-    private int string_muestra[] = {R.string.casa, R.string.cama, R.string.avion, R.string.silla, R.string.conejo, R.string.caballo, R.string.zanahoria, R.string.guisquil, R.string.gallo, R.string.manzana};//iv_arbol
     private TextView tvVocabularioMam, tvRespuesta, nuPregunta;
     private ImageView ivVocabularioMam;
     private RadioButton rbSiVocabularioMam, rbNoVocabularioMam;

@@ -18,8 +18,8 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
     private int pregunta_toca = 0;
     //private int strings[] = {R.string.titulo_SonidosEspecificosKiche_mam, R.string.inst_eva_expresion_oral},
 
-    private int img[] = {R.mipmap.pelotabasketball, R.mipmap.bota, R.mipmap.naranja, R.mipmap.elote, R.mipmap.machete, R.mipmap.moto, R.mipmap.helado, R.mipmap.telefono, R.mipmap.gallina, R.mipmap.perro};
-    private int string_muestra[] = {R.string.v_pelota, R.string.v_bota, R.string.v_naranja, R.string.v_elote, R.string.v_machete, R.string.v_moto, R.string.v_helado, R.string.v_telefono, R.string.v_gallina, R.string.v_perro};//iv_arbol
+    private int img[] = {R.mipmap.piedra, R.mipmap.logolea, R.mipmap.arbol, R.mipmap.barrilete, R.mipmap.pavo, R.mipmap.cama, R.mipmap.logolea, R.mipmap.flor, R.mipmap.escalera, R.mipmap.fuego};
+    private int string_muestra[] = {R.string.v_ka, R.string.v_si, R.string.v_che, R.string.v_papalot, R.string.v_nos, R.string.v_chat, R.string.v_tzunum, R.string.v_kotzij, R.string.v_qam, R.string.v_qaq};
     private TextView tvSonidosEspecificosKiche, tvRespuesta, nuPregunta;
     private ImageView ivSonidosEspecificosKiche;
     private RadioButton rbSiSonidosEspecificosKiche, rbNoSonidosEspecificosKiche;

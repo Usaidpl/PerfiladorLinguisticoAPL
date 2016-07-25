@@ -70,7 +70,6 @@ public class GuiaComprensionOral extends Activity {
                         Toast.makeText(GuiaComprensionOral.this, "Regresando al Menu!", Toast.LENGTH_SHORT).show();
                         Intent navigation_menu = new Intent(getApplication(),NavigationMenu.class );
                         startActivity(navigation_menu);
-
                     }
                 }
         );

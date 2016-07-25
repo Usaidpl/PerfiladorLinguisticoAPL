@@ -100,7 +100,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:src="@mipmap/book" />
+                                    android:src="@mipmap/pelotabasketball" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:src="@mipmap/book" />
+                                    android:src="@mipmap/logolea" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -157,7 +157,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:src="@mipmap/book" />
+                                    android:src="@mipmap/maestro" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -185,7 +185,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:src="@mipmap/book" />
+                                    android:src="@mipmap/abuelita" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -234,7 +234,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:src="@mipmap/book" />
+                                    android:src="@mipmap/lapiz" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -261,7 +261,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:src="@mipmap/book" />
+                                    android:src="@mipmap/logolea" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -288,7 +288,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:src="@mipmap/book" />
+                                    android:src="@mipmap/logolea" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -315,7 +315,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:src="@mipmap/book" />
+                                    android:src="@mipmap/pelotabasketball" />
 
                                 <TextView
                                     android:layout_width="match_parent"

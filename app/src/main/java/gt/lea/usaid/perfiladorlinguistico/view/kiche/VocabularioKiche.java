@@ -1,6 +1,8 @@
 package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -9,13 +11,15 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.SonidosEspecificos;
 
-public class  VocabularioKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class VocabularioKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private int pregunta_toca = 0;
+    private int serie = 0;
     //private int strings[] = {R.string.titulo_VocabularioKiche_mam, R.string.inst_eva_expresion_oral},
 
     private int img[] = {R.mipmap.pescado2, R.mipmap.casa, R.mipmap.tortillas, R.mipmap.culebra, R.mipmap.caballlo, R.mipmap.mono, R.mipmap.perro, R.mipmap.guisquil, R.mipmap.ayote, R.mipmap.hongo};
@@ -24,7 +28,7 @@ public class  VocabularioKiche extends Activity implements OnInitializeComponent
     private ImageView ivVocabularioKiche;
     private RadioButton rbSiVocabularioKiche, rbNoVocabularioKiche;
     private Switch swVocabularioKiche;
-    private String resultado ="";
+    private String resultado = "";
     private int pregunta = 1;
 
     @Override
@@ -40,7 +44,7 @@ public class  VocabularioKiche extends Activity implements OnInitializeComponent
         rbNoVocabularioKiche = (RadioButton) findViewById(R.id.rbVocabularioKicheNo);
         ivVocabularioKiche = (ImageView) findViewById(R.id.ivVocabularioKiche);
         swVocabularioKiche = (Switch) findViewById(R.id.swVocabularioKiche);
-        tvRespuesta =(TextView) findViewById(R.id.tvVocabularioKicheRespuestaSwitch);
+        tvRespuesta = (TextView) findViewById(R.id.tvVocabularioKicheRespuestaSwitch);
         nuPregunta = (TextView) findViewById(R.id.tvVocabularioKicheNumero);
         tvVocabularioKiche = (TextView) findViewById(R.id.tvVocabularioKicheTitulo);
         String guarda_numero = "";
@@ -58,32 +62,46 @@ public class  VocabularioKiche extends Activity implements OnInitializeComponent
 
     @Override
     public void onClick(View v) {
-        pregunta_toca ++;
-        pregunta ++;
+        pregunta_toca++;
+        pregunta++;
         setOnInit(null);
         swVocabularioKiche.setChecked(false);
         rbSiVocabularioKiche.setChecked(false);
         rbNoVocabularioKiche.setChecked(false);
 
-        if(rbSiVocabularioKiche.isChecked()){
+        if (rbSiVocabularioKiche.isChecked()) {
             resultado += 1;
-        }else
+            setNextContext(VocabularioKiche.this, SonidosEspecificos.class);
+        } else
             resultado += 0;
-        Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+        setNextContext(VocabularioKiche.this, SonidosEspecificos.class);
+        //Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+
     }
+
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        if(swVocabularioKiche.isChecked()){
+        if (swVocabularioKiche.isChecked()) {
             int i = string_muestra[pregunta_toca];
             tvRespuesta.setText(i);
-        }else
+        } else
             tvRespuesta.setText("");
     }
+
+
     @Override
     protected void onPause() {
         super.onPause();
         finish();
+    }
+
+    public void setNextContext(Context context, Class<?> next_context) {
+        Bundle b = new Bundle();
+        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
+        Intent i = new Intent(context, next_context);
+        i.putExtras(b);
+        startActivity(i);
     }
 }
 

@@ -1,8 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -14,12 +12,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class Vocabulario extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private int pregunta_toca = 0;
-    private int serie = 0;
     //private int strings[] = {R.string.titulo_vocabulario_mam, R.string.inst_eva_expresion_oral},
 
     private int img[] = {R.mipmap.casa, R.mipmap.cama, R.mipmap.avion, R.mipmap.silla, R.mipmap.conejo, R.mipmap.caballlo, R.mipmap.zanahoria, R.mipmap.guisquil, R.mipmap.pollito, R.mipmap.manzana};
@@ -71,19 +67,15 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
         setOnInit(null);
         swVocabulario.setChecked(false);
         //rgVocabulario.setClickable(false);
-        //rbSiVocabulario.setChecked(false);
-        //rbNoVocabulario.setChecked(false);
-        //rbSiVocabulario2.setChecked(false);
-        //rbNoVocabulario2.setChecked(false);
+        rbSiVocabulario.setChecked(false);
+        rbNoVocabulario.setChecked(false);
 
 
         if (rbSiVocabulario.isChecked()) {
             resultado += 1;
-            setNextContext(Vocabulario.this, SonidosEspecificos.class);
         } else
             resultado += 0;
         Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
-        setNextContext(Vocabulario.this, SonidosEspecificos.class);
         //Intent i = new Intent(this, SonidosEspecificos.class );
         //startActivity(i);
     }
@@ -100,12 +92,6 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
     protected void onPause() {
         super.onPause();
         finish();
-    }   public void setNextContext(Context context, Class<?> next_context) {
-        Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
-        Intent i = new Intent(context, next_context);
-        i.putExtras(b);
-        startActivity(i);
     }
 }
 

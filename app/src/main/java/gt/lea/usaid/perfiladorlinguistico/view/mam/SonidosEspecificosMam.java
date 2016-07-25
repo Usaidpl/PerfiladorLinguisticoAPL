@@ -19,7 +19,7 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
     //private int strings[] = {R.string.titulo_SonidosEspecificosMam_mam, R.string.inst_eva_expresion_oral},
 
     private int img[] = {R.mipmap.piedra, R.mipmap.estrella, R.mipmap.logolea, R.mipmap.libro, R.mipmap.jarra, R.mipmap.dinero, R.mipmap.plato, R.mipmap.fuego, R.mipmap.ayote, R.mipmap.cerdo};
-    private int string_muestra[] = {R.string.v_ka, R.string.v_chew, R.string.v_si, R.string.v_uj, R.string.v_xar, R.string.v_pwaq, R.string.v_laq, R.string.v_qaq, R.string.v_kum, R.string.v_boch};//iv_arbol
+    private int string_muestra[] = {R.string.v_ka2, R.string.v_chew, R.string.v_si2, R.string.v_uj, R.string.v_xar, R.string.v_pwaq, R.string.v_laq, R.string.v_qaq2, R.string.v_kum, R.string.v_boch};//iv_arbol
     private TextView tvSonidosEspecificosMam, tvRespuesta, nuPregunta;
     private ImageView ivSonidosEspecificosMam;
     private RadioButton rbSiSonidosEspecificosMam, rbNoSonidosEspecificosMam;
@@ -79,6 +79,11 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
             tvRespuesta.setText(i);
         }else
             tvRespuesta.setText("");
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
 }
 

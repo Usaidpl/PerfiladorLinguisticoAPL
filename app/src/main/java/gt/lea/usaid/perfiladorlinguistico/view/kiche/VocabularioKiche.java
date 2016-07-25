@@ -80,5 +80,10 @@ public class  VocabularioKiche extends Activity implements OnInitializeComponent
         }else
             tvRespuesta.setText("");
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 }
 

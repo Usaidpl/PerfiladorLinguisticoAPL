@@ -82,6 +82,10 @@
         <activity android:name=".view.kiche.GramaticaKiche" />
         <activity android:name=".view.kiche.SonidosEspecificosKiche" />
         <activity android:name=".view.kiche.VocabularioKiche"></activity>
+<activity android:name=".view.espanol.SonidosEspecificos"
+    android:screenOrientation="landscape"/>
+        <activity android:name=".view.espanol.Gramatica"
+            android:screenOrientation="landscape"/>
 
     </application>
 

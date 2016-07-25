@@ -80,5 +80,10 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
         }else
             tvRespuesta.setText("");
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 }
 

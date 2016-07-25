@@ -80,5 +80,10 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
         }else
             tvRespuesta.setText("");
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 }
 

@@ -80,5 +80,10 @@ public class  SonidosEspecificos extends Activity implements OnInitializeCompone
         }else
             tvRespuesta.setText("");
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 }
 

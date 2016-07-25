@@ -62,7 +62,7 @@ public class GuiaComprensionOral extends Activity {
         toolbar.setTitle(R.string.guia_comprension_oral);
         //setSupportActionBar(toolbar);
 
-        toolbar.setNavigationIcon(R.mipmap.book);
+        toolbar.setNavigationIcon(R.drawable.btn_back);
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
                     @Override

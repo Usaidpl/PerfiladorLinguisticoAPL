@@ -80,5 +80,10 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
         }else
             tvRespuesta.setText("");
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 }
 

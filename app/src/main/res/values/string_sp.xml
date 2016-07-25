@@ -37,4 +37,26 @@
     <string name="iii_peine16_sp">Peine</string>
     <string name="iii_libro17_sp">Libro</string>
     <string name="iii_bicicleta18_sp">bicicleta</string>
+    <!-- inicio de la serie de sonidos especificos -->
+    <string name="v_titulo">Sonidos Específicos</string>
+    <string name="v_pelota">pelota</string>
+    <string name="v_bota">bota</string>
+    <string name="v_naranja">naranja</string>
+    <string name="v_elote">elote</string>
+    <string name="v_machete">machete</string>
+    <string name="v_moto">moto</string>
+    <string name="v_helado">helado</string>
+    <string name="v_telefono">teléfono</string>
+    <string name="v_gallina">gallina</string>
+    <string name="v_perro">perro</string>
+    <!-- inicio de la serie de gramatica -->
+    <string name="vi_titulo">Gramática</string>
+    <string name="vi_pelota">pelota</string>
+    <string name="vi_pelotas">pelotas</string>
+    <string name="vi_lapices">lapices</string>
+    <string name="vi_lapiz">lapiz</string>
+    <string name="vi_abuelo">abuelo</string>
+    <string name="vi_maestra">maestra</string>
+    <string name="vi_doctora">doctora</string>
+    <string name="vi_cocinera">cocinera / chef</string>
 </resources>

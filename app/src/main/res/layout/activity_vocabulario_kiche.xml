@@ -7,21 +7,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".view.espanol.SonidosEspecificos">
+    tools:context=".view.kiche.VocabularioKiche">
     <TextView
-        android:id="@+id/tvSonidosEspecificosTitulo"
+        android:id="@+id/tvVocabularioKicheTitulo"
         android:layout_width="700dp"
         android:layout_height="50dp"
         android:layout_x="190dp"
         android:layout_y="25dp"
         android:background="#B71C1C"
         android:gravity="center"
-        android:text="V. Sonidos Específicos"
+        android:text="Titulo Serie Vocabulario Kiche"
         android:textColor="#ffffffff"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold" />
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cvSonidosEspecificos"
+        android:id="@+id/cvVocabularioKiche"
         android:layout_width="700dp"
         android:layout_height="350dp"
         card_view:cardBackgroundColor="@android:color/background_light"
@@ -31,13 +31,13 @@
         android:layout_x="190dp"
         android:layout_y="110dp">
         <AbsoluteLayout
-            android:id="@+id/alSonidosEspecificos"
+            android:id="@+id/alVocabularioKiche"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tvSonidosEspecificosNumero"
+                android:id="@+id/tvVocabularioKicheNumero"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="0"
@@ -53,7 +53,7 @@
                 android:gravity="top|bottom|center_horizontal" />
 
             <TextView
-                android:id="@+id/tvSonidosEspecificosRespuestaSwitch"
+                android:id="@+id/tvVocabularioKicheRespuestaSwitch"
                 android:layout_width="102dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -65,7 +65,7 @@
                 android:text="Respuesta"/>
 
             <ImageView
-                android:id="@+id/ivSonidosEspecificos"
+                android:id="@+id/ivVocabularioKiche"
                 android:layout_width="200dp"
                 android:layout_height="250dp"
                 android:layout_alignParentBottom="true"
@@ -74,7 +74,7 @@
                 android:layout_y="20dp" />
 
             <Switch
-                android:id="@+id/swSonidosEspecificos"
+                android:id="@+id/swVocabularioKiche"
                 android:layout_width="65dp"
                 android:layout_height="25dp"
                 android:layout_column="0"
@@ -84,7 +84,7 @@
                 android:layout_y="250dp"/>
 
             <RadioGroup
-                android:id="@+id/rgSonidosEspecificos"
+                android:id="@+id/rgVocabularioKiche"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -92,7 +92,7 @@
                 android:layout_y="250dp">
 
                 <RadioButton
-                    android:id="@+id/rbSonidosEspecificosSi"
+                    android:id="@+id/rbVocabularioKicheSi"
                     android:layout_width="81dp"
                     android:layout_height="wrap_content"
                     android:layout_column="31"
@@ -100,7 +100,7 @@
                     android:textStyle="bold" />
 
                 <RadioButton
-                    android:id="@+id/rbSonidosEspecificosNo"
+                    android:id="@+id/rbVocabularioKicheNo"
                     android:layout_width="91dp"
                     android:layout_height="wrap_content"
                     android:layout_column="33"

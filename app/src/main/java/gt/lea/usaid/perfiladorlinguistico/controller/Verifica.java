@@ -1,6 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.controller;
 
-import gt.lea.usaid.perfiladorlinguistico.utils.GeneradorSQL;
+//import gt.lea.usaid.perfiladorlinguistico.utils.GeneradorSQL;
 
 /**
  * Created by Bryan on 14/06/16.

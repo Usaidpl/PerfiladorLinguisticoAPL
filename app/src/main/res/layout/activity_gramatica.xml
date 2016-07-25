@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".model.ExpresionOral">
+    tools:context=".view.espanol.Gramatica">
     <TextView
         android:id="@+id/tvGramaticaTitulo"
         android:layout_width="700dp"

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
+import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
@@ -81,23 +82,9 @@ public class Interaccion
     }
 
     private void textos(){
-        int textos_idiomas[][] = {
-                //-- idioma Quiche --
-                {R.string.guia_kiche, R.string.i_respusta_correcta_kiche,
-                R.string.i_pregunta_uno_kiche, R.string.i_pregunta_dos_kiche,
-                R.string.i_pregunta_tres_kiche, R.string.i_pregunta_cuatro_kiche,
-                R.string.i_pregunta_cinco_kiche},
-                //Segundo vector
-                //-- idioma Man --
-                {R.string.interaccion, R.string.i_respuesta_man, R.string.i_pregunta_uno_man,
-                R.string.i_pregunta_dos_man, R.string.i_pregunta_tres_man, R.string.i_pregunta_cuantro_man,
-                R.string.i_pregunta_cinco_man},
-                //--idioma español --
-                {R.string.Ins_MamEsp_SerE_I, R.string.RespuestaCorrecta_Esp,
-                        R.string.Pre1_MamEsp_SerE_I, R.string.Pre2_MamEsp_SerE_I, R.string.Pre3_MamEsp_SerE_I,
-                        R.string.Pre4_MamEsp_SerE_I, R.string.Pre5_MamEsp_SerE_I}};
+
         //método encargado de agregar los textos a los componentes correspondientes
-        setTextCompoent(textos_idiomas);
+        setTextCompoent(ArregloMultiDimensional.ArregloInteraccion.TEXTOS);
     }
 
     @Override

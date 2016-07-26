@@ -13,6 +13,7 @@ import android.widget.Toast;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
+import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
@@ -40,7 +41,7 @@ public class Comprension
             serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
         }catch (Exception e){
             serie = 0;
-            String s = e.getMessage() + " Bundle";
+            String s = e.getMessage() + " Bundle Exception";
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
         setOnInit(null);
@@ -78,17 +79,8 @@ public class Comprension
     }
 
     private void texto(){
-        int txt[][] =
-                {{R.string.tituto_dos_kiche, R.string.i_respusta_correcta_kiche,R.string.ii_pregunta_uno_kiche,
-                        R.string.ii_pregunta_dos_kiche, R.string.ii_pregunta_tres_kiche, R.string.ii_pregunta_cuatro_kiche,
-                        R.string.ii_pregunta_cinco_kiche},
-                        {R.string.comprension, R.string.i_respuesta_man, R.string.ii_pregunta_uno_man,
-                                R.string.ii_pregunta_dos_man, R.string.ii_pregunta_tres_man, R.string.ii_pregunta_cuatro_man,
-                                R.string.ii_pregunta_cinco_man},
-                        {R.string.comprension_sp, R.string.respuesta_sp,
-                                R.string.ii_pregunta_uno_sp, R.string.ii_pregunta_dos_sp,
-                                R.string.ii_pregunta_tres_sp, R.string.ii_pregunta_cuatro_sp, R.string.ii_pregunta_cinco_sp}};
-        setTextCompoent(txt);
+
+        setTextCompoent(ArregloMultiDimensional.ArregloComprension.TEXTOS);
     }
 
     @Override

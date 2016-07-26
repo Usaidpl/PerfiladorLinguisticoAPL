@@ -19,9 +19,9 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent
 public class Vocabulario extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private int pregunta_toca = 0;
     //private int strings[] = {R.string.titulo_vocabulario_mam, R.string.inst_eva_expresion_oral},
-
-    private int img[] = {R.mipmap.casa, R.mipmap.cama, R.mipmap.avion, R.mipmap.silla, R.mipmap.conejo, R.mipmap.caballlo, R.mipmap.zanahoria, R.mipmap.guisquil, R.mipmap.pollito, R.mipmap.manzana};
+    private static final int img[] = {R.mipmap.casa, R.mipmap.cama, R.mipmap.avion, R.mipmap.silla, R.mipmap.conejo, R.mipmap.caballlo, R.mipmap.zanahoria, R.mipmap.guisquil, R.mipmap.pollito, R.mipmap.manzana};
     private int string_muestra[] = {R.string.iv_casa, R.string.iv_cama, R.string.iv_avion, R.string.iv_silla, R.string.iv_conejo, R.string.iv_caballo, R.string.iv_zanahoria, R.string.iv_guisquil, R.string.iv_gallo, R.string.iv_manzana};//iv_arbol
+
     private TextView tvVocabulario, tvRespuesta, nuPregunta;
     private ImageView ivVocabulario;
     //private RadioGroup rgVocabulario, rgVocabulario2;
@@ -72,6 +72,10 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
         //rgVocabulario.setClickable(false);
         rbSiVocabulario.setChecked(false);
         rbNoVocabulario.setChecked(false);
+        if((pregunta + 1) != img.length)
+        //if (pregunta == arreglo.length) setOnNextText(this,class);
+        //else setOnInit(arreglo);
+
 
 
         if (rbSiVocabulario.isChecked()) {

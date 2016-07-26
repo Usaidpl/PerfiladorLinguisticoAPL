@@ -53,13 +53,11 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
             {R.mipmap.lapiz, R.mipmap.sacapuntas, R.mipmap.libro},
             {R.mipmap.bicicleta, R.mipmap.moto, R.mipmap.mototaxi}};
     private int serie = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.precision);
-        setOnInit(MyR.ArragloImagenes.images);
-
+        setOnInit(MyR.ArragloImagenes.IMAGENES_PRECISION);
     }
 
     @Override
@@ -80,16 +78,15 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
         image3.setOnClickListener(click);
     }
 
-
     private View.OnClickListener click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
-            if((pregunta + 1) == images.length){
+            boolean condicion = (pregunta + 1) == MyR.ArragloImagenes.IMAGENES_PRECISION.length;
+            if(condicion){
                 setNextContext(Precision.this, Vocabulario.class);
             }else{
                 pregunta ++;
-                setOnInit(MyR.ArragloImagenes.images);
+                setOnInit(MyR.ArragloImagenes.IMAGENES_PRECISION);
             }
         }
 

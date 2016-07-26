@@ -9,7 +9,7 @@ public class MyR {
 
     public static class ArragloImagenes{
 
-        public static int[][] images = {
+        public static int[][] IMAGENES_PRECISION = {
                 {R.mipmap.pollito, R.mipmap.pato, R.mipmap.pavo},
                 {R.mipmap.conejo, R.mipmap.perro, R.mipmap.gato},
                 {R.mipmap.caballlo,R.mipmap.oveja, R.mipmap.vaca},
@@ -28,5 +28,6 @@ public class MyR {
                 {R.mipmap.peine, R.mipmap.cepillo, R.mipmap.logolea},
                 {R.mipmap.lapiz, R.mipmap.sacapuntas, R.mipmap.libro},
                 {R.mipmap.bicicleta, R.mipmap.moto, R.mipmap.mototaxi}};
+            public static int[][] TEXTOS_PRECISION = {};
     }
 }

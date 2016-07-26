@@ -11,6 +11,7 @@ public class Verifica {
     public static final int TOTAL_SERIE = 100;
     private String dato = "";
     private String tabla = "";
+    private String insert = "";
 
     public Verifica(boolean[] arreglo_verdadero, boolean[] arreglo_falso, String nombre_tabla){
         array_true = arreglo_verdadero;
@@ -78,28 +79,26 @@ public class Verifica {
     }
 
     private int resultado(boolean[] arreglo){
-        int resultado = 0, insert;
+        int resultado = 0 ;
         String dato = "";
         //DataBase db = new DataBase(tabla);
         boolean select = false;
         for(int s = 0; s  < arreglo.length; s ++){
             select = arreglo[s];
             if(select == true){
-                insert = 1;
+                insert += 1;
                 resultado ++;
             }
             else{
-                insert = 0;
+                insert += 0;
                 resultado += 0;
             }
         }
         return resultado;
     }
 
-    private String concatena(boolean[] arreglo){
-        String s = "";
-
-        return "";
+    public String resultadoConcatenado(boolean[] arreglo){
+        return insert;
     }
 
     public static final class Pregunta{

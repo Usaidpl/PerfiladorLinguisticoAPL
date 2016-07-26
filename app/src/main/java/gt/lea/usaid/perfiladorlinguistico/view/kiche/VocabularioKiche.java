@@ -15,11 +15,9 @@ import android.widget.TextView;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.SonidosEspecificos;
 
 public class VocabularioKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
-    private int pregunta_toca = 0;
-    private int serie = 0;
+    private int pregunta = 0;
     //private int strings[] = {R.string.titulo_VocabularioKiche_mam, R.string.inst_eva_expresion_oral},
 
     private int img[] = {R.mipmap.pescado2, R.mipmap.casa, R.mipmap.tortillas, R.mipmap.culebra, R.mipmap.caballlo, R.mipmap.mono, R.mipmap.perro, R.mipmap.guisquil, R.mipmap.ayote, R.mipmap.hongo};
@@ -29,7 +27,8 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
     private RadioButton rbSiVocabularioKiche, rbNoVocabularioKiche;
     private Switch swVocabularioKiche;
     private String resultado = "";
-    private int pregunta = 1;
+    //rivate int pregunta = 0;
+    private int serie = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +48,9 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
         tvVocabularioKiche = (TextView) findViewById(R.id.tvVocabularioKicheTitulo);
         String guarda_numero = "";
         guarda_numero += pregunta;
-        nuPregunta.setText(guarda_numero);
-        int i = string_muestra[pregunta_toca],
-                imgs = img[pregunta_toca];//respuesta correcta
+        nuPregunta.setText(guarda_numero+1);
+        int i = string_muestra[pregunta],
+                imgs = img[pregunta];//respuesta correcta
 
         tvRespuesta.setText("");
         ivVocabularioKiche.setImageResource(imgs);
@@ -62,20 +61,20 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
 
     @Override
     public void onClick(View v) {
-        pregunta_toca++;
-        pregunta++;
-        setOnInit(null);
-        swVocabularioKiche.setChecked(false);
-        rbSiVocabularioKiche.setChecked(false);
-        rbNoVocabularioKiche.setChecked(false);
+        if ((pregunta +1) == img.length){
+            setNextContext(this, SonidosEspecificosKiche.class);
+        } else {
+            pregunta ++;
+            setOnInit(null);
+            swVocabularioKiche.setChecked(false);
+            rbSiVocabularioKiche.setChecked(false);
+            rbNoVocabularioKiche.setChecked(false);
+            if(rbSiVocabularioKiche.isChecked()){
+                resultado += 1;
+            }else
+                resultado += 0;
 
-        if (rbSiVocabularioKiche.isChecked()) {
-            resultado += 1;
-            setNextContext(VocabularioKiche.this, SonidosEspecificos.class);
-        } else
-            resultado += 0;
-        setNextContext(VocabularioKiche.this, SonidosEspecificos.class);
-        //Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+        }
 
     }
 
@@ -83,7 +82,7 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (swVocabularioKiche.isChecked()) {
-            int i = string_muestra[pregunta_toca];
+            int i = string_muestra[pregunta];
             tvRespuesta.setText(i);
         } else
             tvRespuesta.setText("");
@@ -103,5 +102,6 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
         i.putExtras(b);
         startActivity(i);
     }
+
 }
 

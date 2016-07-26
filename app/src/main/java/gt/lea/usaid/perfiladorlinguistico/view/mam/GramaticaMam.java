@@ -1,6 +1,8 @@
 package gt.lea.usaid.perfiladorlinguistico.view.mam;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -9,13 +11,14 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.view.evaluacion.Interaccion;
 
 public class GramaticaMam extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
-    private int pregunta_toca = 0;
+    private int pregunta = 0;
     //private int strings[] = {R.string.titulo_GramaticaMam_mam, R.string.inst_eva_expresion_oral},
 
     private int img[] = {R.mipmap.elote, R.mipmap.logolea, R.mipmap.gato, R.mipmap.gatos, R.mipmap.perro, R.mipmap.logolea, R.mipmap.carnero, R.mipmap.padre};
@@ -25,8 +28,9 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
     private RadioButton rbSiGramaticaMam, rbNoGramaticaMam;
     private Switch swGramaticaMam;
     private String resultado ="";
-    private int pregunta = 1;
 
+   // private int pregunta = 0;
+    private int serie = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,9 +49,9 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
         tvGramaticaMam = (TextView) findViewById(R.id.tvGramaticaMamTitulo);
         String guarda_numero = "";
         guarda_numero += pregunta;
-        nuPregunta.setText(guarda_numero);
-        int i = string_muestra[pregunta_toca],
-                imgs = img[pregunta_toca];//respuesta correcta
+        nuPregunta.setText(guarda_numero+1);
+        int i = string_muestra[pregunta],
+                imgs = img[pregunta];//respuesta correcta
 
         tvRespuesta.setText("");
         ivGramaticaMam.setImageResource(imgs);
@@ -58,24 +62,25 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
 
     @Override
     public void onClick(View v) {
-        pregunta_toca ++;
-        pregunta ++;
-        setOnInit(null);
-        swGramaticaMam.setChecked(false);
-        rbSiGramaticaMam.setChecked(false);
-        rbNoGramaticaMam.setChecked(false);
+        if ((pregunta +1) == img.length){
+            setNextContext(this, Interaccion.class);
+        } else {
+            pregunta ++;
+            setOnInit(null);
+            swGramaticaMam.setChecked(false);
+            rbSiGramaticaMam.setChecked(false);
+            rbNoGramaticaMam.setChecked(false);
+            if(rbSiGramaticaMam.isChecked()){
+                resultado += 1;
+            }else
+                resultado += 0;
 
-        if(rbSiGramaticaMam.isChecked()){
-            resultado += 1;
-        }else
-            resultado += 0;
-        Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
-    }
+        }}
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(swGramaticaMam.isChecked()){
-            int i = string_muestra[pregunta_toca];
+            int i = string_muestra[pregunta];
             tvRespuesta.setText(i);
         }else
             tvRespuesta.setText("");
@@ -84,6 +89,12 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
     protected void onPause() {
         super.onPause();
         finish();
+    } public void setNextContext(Context context, Class<?> next_context) {
+        Bundle b = new Bundle();
+        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
+        Intent i = new Intent(context, next_context);
+        i.putExtras(b);
+        startActivity(i);
     }
 }
 

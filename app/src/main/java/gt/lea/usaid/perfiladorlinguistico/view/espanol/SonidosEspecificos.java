@@ -1,6 +1,8 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -9,13 +11,12 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class  SonidosEspecificos extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
-    private int pregunta_toca = 0;
+    private int pregunta = 0;
     //private int strings[] = {R.string.titulo_SonidosEspecificos_mam, R.string.inst_eva_expresion_oral},
 
     private int img[] = {R.mipmap.pelotabasketball, R.mipmap.bota, R.mipmap.naranja, R.mipmap.elote, R.mipmap.machete, R.mipmap.moto, R.mipmap.helado, R.mipmap.telefono, R.mipmap.gallina, R.mipmap.perro};
@@ -25,7 +26,8 @@ public class  SonidosEspecificos extends Activity implements OnInitializeCompone
     private RadioButton rbSiSonidosEspecificos, rbNoSonidosEspecificos;
     private Switch swSonidosEspecificos;
     private String resultado ="";
-    private int pregunta = 1;
+    //private int pregunta = 0;
+    private int serie = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +48,8 @@ public class  SonidosEspecificos extends Activity implements OnInitializeCompone
         String guarda_numero = "";
         guarda_numero += pregunta;
         nuPregunta.setText(guarda_numero);
-        int i = string_muestra[pregunta_toca],
-                imgs = img[pregunta_toca];//respuesta correcta
+        int i = string_muestra[pregunta],
+                imgs = img[pregunta];//respuesta correcta
 
         tvRespuesta.setText("");
         ivSonidosEspecificos.setImageResource(imgs);
@@ -58,24 +60,26 @@ public class  SonidosEspecificos extends Activity implements OnInitializeCompone
 
     @Override
     public void onClick(View v) {
-        pregunta_toca ++;
-        pregunta ++;
-        setOnInit(null);
-        swSonidosEspecificos.setChecked(false);
-        rbSiSonidosEspecificos.setChecked(false);
-        rbNoSonidosEspecificos.setChecked(false);
+        if ((pregunta +1) == img.length){
+            setNextContext(this, Gramatica.class);
+        } else {
+            pregunta ++;
+            setOnInit(null);
+            swSonidosEspecificos.setChecked(false);
+            rbSiSonidosEspecificos.setChecked(false);
+            rbNoSonidosEspecificos.setChecked(false);
+            if(rbSiSonidosEspecificos.isChecked()){
+                resultado += 1;
+            }else
+                resultado += 0;
 
-        if(rbSiSonidosEspecificos.isChecked()){
-            resultado += 1;
-        }else
-            resultado += 0;
-        Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(swSonidosEspecificos.isChecked()){
-            int i = string_muestra[pregunta_toca];
+            int i = string_muestra[pregunta];
             tvRespuesta.setText(i);
         }else
             tvRespuesta.setText("");
@@ -84,6 +88,11 @@ public class  SonidosEspecificos extends Activity implements OnInitializeCompone
     protected void onPause() {
         super.onPause();
         finish();
+    }
+
+    public void setNextContext(Context context, Class<?> next_context) {
+        Intent i = new Intent(context, next_context);
+        startActivity(i);
     }
 }
 

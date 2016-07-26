@@ -47,7 +47,6 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
         tvRespuesta = (TextView) findViewById(R.id.tvVocabularioRespuestaSwitch);
         nuPregunta = (TextView) findViewById(R.id.tvVocabularioNumero);
         tvVocabulario = (TextView) findViewById(R.id.tvVocabularioTitulo);
-        //rgVocabulario = (RadioGroup) findViewById(R.id.rgVocabulario);
         String guarda_numero = "";
         guarda_numero += pregunta;
         nuPregunta.setText(guarda_numero);
@@ -57,37 +56,32 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
         tvRespuesta.setText("");
         ivVocabulario.setImageResource(imgs);
         swVocabulario.setOnCheckedChangeListener(this);
-        //rgVocabulario.setOnClickListener(this);
-        //rgVocabulario2.setOnClickListener(this);
-        rbSiVocabulario.setOnClickListener(this);
         rbNoVocabulario.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        pregunta_toca++;
-        pregunta++;
+        pregunta_toca ++;
+        pregunta ++;
         setOnInit(null);
         swVocabulario.setChecked(false);
-        //rgVocabulario.setClickable(false);
         rbSiVocabulario.setChecked(false);
         rbNoVocabulario.setChecked(false);
-        if((pregunta + 1) != img.length)
-        //if (pregunta == arreglo.length) setOnNextText(this,class);
-        //else setOnInit(arreglo);
+        /*
 
+       */
+        if ((pregunta +1) != img.length){
+            setNextContext(this, SonidosEspecificos.class);
+        } else {
 
-
-        if (rbSiVocabulario.isChecked()) {
-            resultado += 1;
-            setNextContext(Vocabulario.this, Vocabulario.class);
-        } else
+        }
+        if(rbSiVocabulario.isChecked()){
+            resultado += 0;
+        }else
             resultado += 0;
         Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
-        setNextContext(Vocabulario.this, Vocabulario.class);
-        //Intent i = new Intent(this, SonidosEspecificos.class );
-        //startActivity(i);
     }
+
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -102,13 +96,10 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
         super.onPause();
         finish();
     }
+
     public void setNextContext(Context context, Class<?> next_context) {
-        Intent i2 = new Intent(context, next_context);
-        startActivity(i2);
-        Bundle b = new Bundle();
-       // b.putInt(SonidosEspecificos.KEY_EVALUACION, serie);
-        //i2.putExtras(b);
-        startActivity(i2);
+        Intent i = new Intent(context, next_context);
+        startActivity(i);
     }
 }
 

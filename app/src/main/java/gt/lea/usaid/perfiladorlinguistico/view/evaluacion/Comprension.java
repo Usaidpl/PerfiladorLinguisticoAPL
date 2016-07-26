@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
@@ -110,23 +111,39 @@ public class Comprension
                 {respuesta2.isChecked(),respuesta4.isChecked(), respuesta6.isChecked(), respuesta8.isChecked(), respuesta10.isChecked()}};
         Verifica vr;
         try {
-            if(getEvalua() == 1){
-                vr = new Verifica(radios_selected, NOMBRE_TABLA);
-                float resultado = vr.getResultado();
-                //descition(resultado);
-            }
+            vr = new Verifica(radios_selected, NOMBRE_TABLA);
+            float resultado = vr.getResultado();
+            //msg(resultado);
+            descition(resultado);
             //lanzamiento a la siguiente actividad
 
-            setNextContext(Comprension.this, Precision.class);
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-    /*
+
     private void descition(float resultado){
-        if(resultado >= (100/50) + 1)
-            setNextContext(this, Interaccion.class);
-    }*/
+        Bundle b = getIntent().getExtras();
+        float resutaldo_interaccion = b.getFloat(Interaccion.KEY_RESULTADO), total;
+        total = (resultado + resutaldo_interaccion);
+        msg(total);
+        //total /= 2;
+        boolean negativo = (total <= 50);
+        if((total > 50) && (serie == 0 || serie == 1 || serie == 2))
+            setNextContext(Comprension.this, Precision.class);
+        else if((total <= 50) && (serie == 0 || serie == 1)){
+            serie = 2;
+            b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
+            Intent i = new Intent(Comprension.this , Interaccion.class);
+            i.putExtras(b);
+            startActivity(i);
+        }else if(negativo && (serie == 2)){
+            setNextContext(Comprension.this, NavigationMenu.class);
+            msg("Evaluacion finalizada");
+        }
+
+
+    }
 
     @Override
     protected void onPause() {
@@ -143,9 +160,10 @@ public class Comprension
         startActivity(i);
     }
 
-    private void clear(){
-
-    }
+    private void msg(float f){
+        String s = "";
+        s += f;
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();}
 
 
     public int getEvalua() {

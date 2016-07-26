@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="interaccion">I. K’LOJ, LAJB’IL / INTERACCIÓN ORAL</string>
+    <string name="interaccion_man">I. K’LOJ, LAJB’IL / INTERACCIÓN ORAL</string>
     <string name="i_respuesta_man">Tzaq’web’il toj tumel \nRespuesta correcta</string>
     <string name="si_man">May / Si</string>
     <string name="no_man">Mi’ / No</string>

@@ -29,9 +29,7 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
     private TextView tv;
     private int idioma = 0, pregunta = 0, imagenes[][];
 
-
     //área declaraciones de matricez
-
     private int serie = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

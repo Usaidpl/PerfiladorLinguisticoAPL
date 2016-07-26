@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 import gt.lea.usaid.perfiladorlinguistico.view.evaluacion.Interaccion;
+import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
 
 public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener  {
      private ImageView ivEspanolEva, ivMamEva, ivKicheEva;

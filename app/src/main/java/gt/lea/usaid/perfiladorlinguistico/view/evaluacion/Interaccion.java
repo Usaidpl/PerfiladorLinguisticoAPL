@@ -28,9 +28,11 @@ public class Interaccion
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
     private TextView intruduccion,  tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
     private static final String NOMBRE_TABLA = "interaccion";
+    public  static final String KEY_RESULTADO = "resultado";
 
     private int serie = 0;
     private int evalua = 1;
+    private int resultado_inter = 0;
 
     private String msg;
 
@@ -117,7 +119,11 @@ public class Interaccion
             if(getEvalua() == 1){
                 vr = new Verifica(radios_selected, NOMBRE_TABLA);
                 float resultado = vr.getResultado();
-                descition(resultado);
+                    Bundle b = new Bundle();
+                    b.putFloat(KEY_RESULTADO, resultado);
+                String s = "";
+                     s += resultado;
+                    msg(s);
             }
             //lanzamiento a la siguiente actividad
 
@@ -127,10 +133,7 @@ public class Interaccion
         }
     }
 
-    private void descition(float resultado){
-        if(resultado >= (100/50) + 1)
-            setNextContext(this, Interaccion.class);
-    }
+
 
     @Override
     protected void onPause() {

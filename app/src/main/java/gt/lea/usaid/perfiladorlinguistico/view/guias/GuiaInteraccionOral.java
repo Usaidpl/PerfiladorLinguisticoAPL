@@ -60,8 +60,7 @@ public class GuiaInteraccionOral extends Activity {
         toolbar.setTitle(R.string.guia_interaccion_oral);
         //setSupportActionBar(toolbar);
 
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.myColorBasic));
+        toolbar.setNavigationIcon(R.drawable.btn_back);
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
                     @Override

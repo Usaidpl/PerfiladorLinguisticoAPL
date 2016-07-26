@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- tools:context=".view.espanol.ExpresionOral" -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HOLA MUNDO"
+        android:textSize="36dp"
+        android:id="@+id/tvExpresa"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <Switch
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:id="@+id/switPrueba"/>
+
+        <TextView
+            android:layout_width="493dp"
+            android:layout_height="wrap_content"
+            android:text="muestra expresion"
+            android:textSize="@dimen/_11sdp"
+            android:id="@+id/muestra_exprecion"/>
+
+        <ImageView
+            android:layout_width="450dp"
+            android:layout_height="350dp"
+            android:src="@mipmap/book"
+            android:id="@+id/ivExprecion"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:text="SI"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbSi"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:id="@+id/rbNo"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="527dp"
+            android:layout_height="wrap_content"
+            android:text="texto nuevo"
+            android:id="@+id/textView"
+            android:layout_weight="0.37"
+            android:textSize="23dp" />
+
+    </LinearLayout>
+</LinearLayout>

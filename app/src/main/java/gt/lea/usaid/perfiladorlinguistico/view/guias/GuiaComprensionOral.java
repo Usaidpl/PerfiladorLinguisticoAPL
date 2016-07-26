@@ -60,10 +60,9 @@ public class GuiaComprensionOral extends Activity {
     private void initToolBar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.guia_comprension_oral);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.myColorBasic));
         //setSupportActionBar(toolbar);
 
-       toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
+        toolbar.setNavigationIcon(R.drawable.btn_back);
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -71,7 +70,6 @@ public class GuiaComprensionOral extends Activity {
                         Toast.makeText(GuiaComprensionOral.this, "Regresando al Menu!", Toast.LENGTH_SHORT).show();
                         Intent navigation_menu = new Intent(getApplication(),NavigationMenu.class );
                         startActivity(navigation_menu);
-
                     }
                 }
         );

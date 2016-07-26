@@ -18,14 +18,16 @@ import gt.lea.usaid.perfiladorlinguistico.controller.EntrevistasPendientes;
 import gt.lea.usaid.perfiladorlinguistico.controller.GuiaEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.ResultadosAula;
-import gt.lea.usaid.perfiladorlinguistico.controller.Series;
 import gt.lea.usaid.perfiladorlinguistico.view.Creditos;
 import gt.lea.usaid.perfiladorlinguistico.view.Email;
 import gt.lea.usaid.perfiladorlinguistico.view.EnviarInformacion;
-import gt.lea.usaid.perfiladorlinguistico.view.Sincronizar;
 
-public class NavigationMenu extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, Series.OnFragmentInteractionListener, EntrevistasPendientes.OnFragmentInteractionListener, GuiaEvaluacion.OnFragmentInteractionListener, IniciarEvaluacion.OnFragmentInteractionListener, ResultadosAula.OnFragmentInteractionListener{
+public class NavigationMenu
+        extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener,
+        EntrevistasPendientes.OnFragmentInteractionListener,
+        GuiaEvaluacion.OnFragmentInteractionListener, IniciarEvaluacion.OnFragmentInteractionListener,
+        ResultadosAula.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +78,7 @@ public class NavigationMenu extends AppCompatActivity
             return true;
         }
         if (id == R.id.sincronizar){
-            Intent intent = new Intent(this, Sincronizar.class);
+            Intent intent = new Intent(this, Email.class);
             startActivity(intent);
         }
         if (id == R.id.creditos){

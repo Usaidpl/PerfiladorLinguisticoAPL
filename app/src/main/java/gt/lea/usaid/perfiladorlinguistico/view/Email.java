@@ -7,14 +7,11 @@ import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-
-import java.net.URI;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.ResultadosAula;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class Email extends Activity implements OnInitializeComponent, View.OnClickListener {
@@ -26,8 +23,13 @@ public class Email extends Activity implements OnInitializeComponent, View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_email);
-        setOnInit(null);
+        try{
+            setContentView(R.layout.activity_email);
+            setOnInit(null);
+        }catch (Exception e){
+            Toast.makeText(this,e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @Override
@@ -36,7 +38,7 @@ public class Email extends Activity implements OnInitializeComponent, View.OnCli
         codigo = (EditText) findViewById(R.id.etCodigo);
         grado = (EditText) findViewById(R.id.etGrado);
         seccion = (EditText) findViewById(R.id.etSeccion);
-        correo = (EditText) findViewById(R.id.etDireccion);
+        correo = (EditText) findViewById(R.id.etCorreo);
         asunto = (EditText) findViewById(R.id.etAsunto);
         envia = (ImageView) findViewById(R.id.ivCorreo);
         envia.setOnClickListener(this);

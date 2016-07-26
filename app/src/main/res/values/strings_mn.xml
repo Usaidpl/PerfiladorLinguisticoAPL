@@ -37,4 +37,39 @@
     <string name="iii_kil_17_mn">K’il/ k’wil/ ok’il</string>
     <string name="iii_chil_18_mn">Chi’l</string>
 
+    <!-- inicio de la serie de Vocabulario -->
+    <string name="iv_titulo_gramatica_mam">VI. CHOLAJ. TAQ TZIJ / VOCABULARIO</string>
+    <string name="iv_jat">ja´r</string>
+    <string name="iv_watbil">watb´il / kuxlil´l</string>
+    <string name="iv_xik">xik / xiky</string>
+    <string name="iv_chej">chej</string>
+    <string name="iv_jos">jos / tpaq ik´ / tjos ek´ </string>
+    <string name="iv_bix">b´ix´ / b´ich / tal ek´ </string>
+    <string name="iv_kyix">kyix</string>
+    <string name="iv_witz">witz</string>
+    <string name="iv_be">b´e</string>
+    <string name="iv_muj">muj</string>
+    <!-- inicio de la serie de sonidos especificos -->
+    <string name="v_titulo_mam">Sonidos Específicos</string>
+    <string name="v_ka2">ka´ / kya´</string>
+    <string name="v_chew">che´w</string>
+    <string name="v_si2">si´</string>
+    <string name="v_uj">u´j</string>
+    <string name="v_xar">xar</string>
+    <string name="v_pwaq">pwaq</string>
+    <string name="v_laq">laq</string>
+    <string name="v_qaq2">q´aq´</string>
+    <string name="v_kum">k´um</string>
+    <string name="v_boch">b´och</string>
+    <!-- inicio de la serie de gramatica -->
+    <string name="vi_titulo_mam">Gramática Mam</string>
+    <string name="vi_ix">i´x</string>
+    <string name="vi_qeox">qe´ox / kyaj i´x</string>
+    <string name="vi_wix">wix</string>
+    <string name="vi_qewix">qe´wix / ox wix / oxe wix</string>
+    <string name="vi_ttxutxyan">ttxu tx´ya´n</string>
+    <string name="vi_ttxuek">ttxu ek´ / ttxu ik´</string>
+    <string name="vi_ttxurit">ttxu rit / kne´l</string>
+    <string name="vi_txubaj">txub´aj</string>
+
 </resources>

@@ -4,21 +4,20 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
-    <uses-permission android:name="android.permission.READ_LOGS"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logolea"
-        android:label="@string/aplicationicon"
+        android:label="Usaid APL"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".NavigationMenu"
-            android:label="@string/app_name"
+            android:label="Perfil Lingüistico"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,28 +37,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.espanol.Pruebas"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.espanol.Gramatica"
+            android:name=".view.evaluacion.Comprension"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.espanol.ExpresionOral"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.espanol.Vocabulario"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.espanol.SonidosEspecificos"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.espanol.Comprende"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.espanol.Interactua"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.espanol.Precisiona"
+            android:name=".view.evaluacion.Interaccion"
             android:screenOrientation="landscape" />
         <activity
             android:name=".view.guias.GuiaComprensionOral"
@@ -79,6 +60,9 @@
         <activity
             android:name=".view.guias.GuiaSonidosEspecificos"
             android:screenOrientation="landscape" />
+
+        <activity android:name=".view.espanol.Vocabulario"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".view.guias.GuiaVocabulario"
             android:screenOrientation="landscape" />
@@ -87,40 +71,22 @@
             android:name=".view.DetalleDeveloper"
             android:screenOrientation="landscape" />
         <activity android:name=".view.EnviarInformacion" />
-        <activity android:name=".view.Sincronizar" />
-        <activity android:name=".Entrevistas"></activity>
-        <activity
-            android:name=".view.kiche.ExpresionOralKiche"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.mam.ExpresionOralMam"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.mam.GramaticaMam"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.kiche.GramaticaKiche"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.mam.SonidosEspecificosMam"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.kiche.SonidosEspecificosKiche"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.kiche.VocabularioKiche"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.mam.VocabularioMam"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".view.Email"
-            android:screenOrientation="landscape" />
+        <activity android:name=".view.Email" />
+        <activity android:name=".view.evaluacion.Precision" />
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="a331f555b7e64d233fcdef738ced04073a5bacce"
-            />
+        <activity android:name=".view.mam.ExpresionOralMam" />
+        <activity android:name=".view.mam.GramaticaMam" />
+        <activity android:name=".view.mam.SonidosEspecificosMam" />
+        <activity android:name=".view.mam.VocabularioMam" />
+        <activity android:name=".view.kiche.ExpresionOralKiche" />
+        <activity android:name=".view.kiche.GramaticaKiche" />
+        <activity android:name=".view.kiche.SonidosEspecificosKiche" />
+        <activity android:name=".view.kiche.VocabularioKiche"></activity>
+<activity android:name=".view.espanol.SonidosEspecificos"
+    android:screenOrientation="landscape"/>
+        <activity android:name=".view.espanol.Gramatica"
+            android:screenOrientation="landscape"/>
+
     </application>
 
 </manifest>

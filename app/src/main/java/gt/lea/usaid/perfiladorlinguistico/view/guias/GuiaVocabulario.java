@@ -2,7 +2,6 @@ package gt.lea.usaid.perfiladorlinguistico.view.guias;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MotionEvent;
@@ -32,37 +31,28 @@ public class GuiaVocabulario extends Activity {
         vfGuiaKiche = (ViewFlipper) findViewById(R.id.vfGuiaVocabularioKiche);
 
         initToolBar();
+        TabHost host = (TabHost) findViewById(R.id.tabHost);
+        host.setup();
 
-        Resources res = getResources();
-        TabHost tabs = (TabHost) findViewById(R.id.tabHost);
-        tabs.setup();
 
         //Tab 1
-        TabHost.TabSpec spec = tabs.newTabSpec("Tab One");
+        TabHost.TabSpec spec = host.newTabSpec("Tab One");
         spec.setContent(R.id.tab1);
-        spec.setIndicator("Español",
-                res.getDrawable(android.R.drawable.btn_star_big_on));
-        tabs.addTab(spec);
-
-
+        spec.setIndicator("Español");
+        host.addTab(spec);
 
         //Tab 2
-        spec = tabs.newTabSpec("Tab Two");
+        spec = host.newTabSpec("Tab Two");
         spec.setContent(R.id.tab2);
-        spec.setIndicator("Mam",
-                res.getDrawable(android.R.drawable.ic_btn_speak_now));
-        tabs.addTab(spec);
-
+        spec.setIndicator("Mam");
+        host.addTab(spec);
 
         //Tab 3
-        spec = tabs.newTabSpec("Tab Three");
+        spec = host.newTabSpec("Tab Three");
         spec.setContent(R.id.tab3);
-        //spec.setIndicator("Kiche");
-        spec.setIndicator("Kiche",
-                res.getDrawable(android.R.drawable.ic_btn_speak_now));
-        tabs.addTab(spec);
+        spec.setIndicator("Kiche");
+        host.addTab(spec);
 
-        tabs.setCurrentTab(0);
 
     }
 
@@ -70,10 +60,8 @@ public class GuiaVocabulario extends Activity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.guia_vocabulario);
         //setSupportActionBar(toolbar);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.myColorBasic));
 
-
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black);
+        toolbar.setNavigationIcon(R.drawable.btn_back);
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
                     @Override

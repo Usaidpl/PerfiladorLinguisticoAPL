@@ -6,344 +6,102 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
-import android.widget.BaseAdapter;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.SonidosEspecificos;
 
-/**
- * Created by Roberto on 20/06/2016.
- */
-public class VocabularioKiche extends Activity implements View.OnClickListener, OnInitializeComponent {
-    private ViewFlipper vf;
-    private TextView tvInstruccVocalario,tvKar, tvJar, tvLej, tvKumatz, tvKej, tvKoy, tvTzi, tvKix, tvMukunKum, tvQatzuQanxul;
-    private RadioButton SiKar, NoKar, SiJar, NoJar, SiLej, NoLej, SiKumatz, NoKumatz, SiKej, NoKej, SiKoy, NoKoy, SiTzi, NoTzi, SiKix, NoKix, SiMukunKum, NoMukunKum, SiQatzuQanxul, NoQatzuQanxul;
-    private Switch swKar, swJar, swLej, swKumatz, swKej, swKoy, swTzi, swKix, swMukunKum, swQatzuQanxul;
-    private int[] dr = {R.mipmap.book};
+public class VocabularioKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+    private int pregunta_toca = 0;
+    private int serie = 0;
+    //private int strings[] = {R.string.titulo_VocabularioKiche_mam, R.string.inst_eva_expresion_oral},
 
-
+    private int img[] = {R.mipmap.pescado2, R.mipmap.casa, R.mipmap.tortillas, R.mipmap.culebra, R.mipmap.caballlo, R.mipmap.mono, R.mipmap.perro, R.mipmap.guisquil, R.mipmap.ayote, R.mipmap.hongo};
+    private int string_muestra[] = {R.string.iv_kar, R.string.iv_ja, R.string.iv_lej, R.string.iv_kumatz, R.string.iv_kej, R.string.iv_kyo, R.string.iv_tzi, R.string.iv_kix, R.string.iv_mukun, R.string.iv_qatzu};//iv_arbol
+    private TextView tvVocabularioKiche, tvRespuesta, nuPregunta;
+    private ImageView ivVocabularioKiche;
+    private RadioButton rbSiVocabularioKiche, rbNoVocabularioKiche;
+    private Switch swVocabularioKiche;
+    private String resultado = "";
+    private int pregunta = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vocabulario_kiche);
-
-
+        setContentView(R.layout.activity_vocabulario_kiche);
         setOnInit(null);
-        //DialogoAlerta.alertDialog("Hola", "Desea Continuar", false, this);
-    }
-
-    private CompoundButton.OnCheckedChangeListener list = new CompoundButton.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            Kar();
-            Jar();
-            Lej();
-            Kumatz();
-            Kej();
-            Koy();
-            Tzi();
-            Kix();
-            MukunKum();
-            QatzuQanxul();
-        }
-
-        private void Kar() {
-            if (swKar.isChecked())
-                tvKar.setText("Kar");
-            else
-                tvKar.setText("");
-        }
-
-        private void Jar() {
-            if (swJar.isChecked())
-                tvJar.setText("Ja");
-            else
-                tvJar.setText(" ");
-
-        }
-
-        private void Lej() {
-            if (swLej.isChecked())
-                tvLej.setText("Lej");
-            else
-                tvLej.setText(" ");
-        }
-
-        private void Kumatz() {
-            if (swKumatz.isChecked())
-                tvKumatz.setText("Kumatz");
-            else
-                tvKumatz.setText("");
-        }
-
-        private void Kej() {
-            if (swKej.isChecked())
-                tvKej.setText("Kej");
-            else
-                tvKej.setText(" ");
-        }
-
-        private void Koy() {
-            if (swKoy.isChecked())
-                tvKoy.setText("K'oy");
-            else
-                tvKoy.setText(" ");
-        }
-
-        private void Tzi() {
-            if (swTzi.isChecked())
-                tvTzi.setText("Tz'i'");
-            else
-                tvTzi.setText(" ");
-        }
-
-        private void Kix() {
-            if (swKix.isChecked())
-                tvKix.setText("K'ix");
-            else
-                tvKix.setText(" ");
-        }
-
-        private void MukunKum() {
-            if (swMukunKum.isChecked())
-                tvMukunKum.setText("Mukun / K'um");
-            else
-                tvMukunKum.setText(" ");
-        }
-
-        private void QatzuQanxul() {
-            if (swQatzuQanxul.isChecked())
-                tvQatzuQanxul.setText("Q'atzu / Q'anxul");
-            else
-                tvQatzuQanxul.setText(" ");
-        }
-    };
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.SiKar:
-                vf.showNext();
-                tvInstruccVocalario.setText("");
-                break;
-            case R.id.NoKar:
-                vf.showNext();
-                tvInstruccVocalario.setText("");
-                break;
-            case R.id.SiJar:
-                vf.showNext();
-                break;
-            case R.id.NoJar:
-                vf.showNext();
-                break;
-            case R.id.SiLej:
-                vf.showNext();
-                break;
-            case R.id.NoLej:
-                vf.showNext();
-                break;
-            case R.id.SiKumatz:
-                vf.showNext();
-                break;
-            case R.id.NoKumatz:
-                vf.showNext();
-                break;
-            case R.id.SiKej:
-                vf.showNext();
-                break;
-            case R.id.NoKej:
-                vf.showNext();
-                break;
-            case R.id.SiKoy:
-                vf.showNext();
-                break;
-            case R.id.NoKoy:
-                vf.showNext();
-                break;
-            case R.id.SiTzi:
-                vf.showNext();
-                break;
-            case R.id.NoTzi:
-                vf.showNext();
-                break;
-            case R.id.SiKix:
-                vf.showNext();
-                break;
-            case R.id.NoKix:
-                vf.showNext();
-                break;
-            case R.id.SiMukunKum:
-                vf.showNext();
-                break;
-            case R.id.NoMukunKum:
-                vf.showNext();
-                break;
-            case R.id.SiQatzuQanxul:
-                vf.showNext();
-                Toast toast0 =
-                        Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
-
-                toast0.show();
-                Intent pruebas2 = new Intent(getApplication(), SonidosEspecificosKiche.class);
-                startActivity(pruebas2);
-                break;
-            case R.id.NoQatzuQanxul:
-                vf.showNext();
-                Toast toast1 =
-                        Toast.makeText(getApplicationContext(),
-                                "Evaluacion Finalizada", Toast.LENGTH_LONG);
-                toast1.show();
-                Intent pruebas = new Intent(getApplication(), SonidosEspecificosKiche.class);
-                startActivity(pruebas);
-                break;
-            default:
-                break;
-        }
     }
 
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
-        vf = (ViewFlipper) findViewById(R.id.viewflipper);
-        vf.setInAnimation(AnimationUtils.loadAnimation(this,
-                android.R.anim.fade_in));
-        vf.setOutAnimation(AnimationUtils.loadAnimation(this,
-                android.R.anim.fade_out));
-        adapter ad = new adapter(this, dr);
-        for (int i = 0; i < dr.length; i++) {
-            vf.addView(ad.getView(i, null, null));
-        }
-        SiKar = (RadioButton) findViewById(R.id.SiKar);
-        NoKar = (RadioButton) findViewById(R.id.NoKar);
-        SiJar = (RadioButton) findViewById(R.id.SiJar);
-        NoJar = (RadioButton) findViewById(R.id.NoJar);
-        SiLej = (RadioButton) findViewById(R.id.SiLej);
-        NoLej = (RadioButton) findViewById(R.id.NoLej);
-        SiKumatz = (RadioButton) findViewById(R.id.SiKumatz);
-        NoKumatz = (RadioButton) findViewById(R.id.NoKumatz);
-        SiKej = (RadioButton) findViewById(R.id.SiKej);
-        NoKej = (RadioButton) findViewById(R.id.NoKej);
-        SiKoy = (RadioButton) findViewById(R.id.SiKoy);
-        NoKoy = (RadioButton) findViewById(R.id.NoKoy);
-        SiTzi = (RadioButton) findViewById(R.id.SiTzi);
-        NoTzi = (RadioButton) findViewById(R.id.NoTzi);
-        SiKix = (RadioButton) findViewById(R.id.SiKix);
-        NoKix = (RadioButton) findViewById(R.id.NoKix);
-        SiMukunKum = (RadioButton) findViewById(R.id.SiMukunKum);
-        NoMukunKum = (RadioButton) findViewById(R.id.NoMukunKum);
-        SiQatzuQanxul = (RadioButton) findViewById(R.id.SiQatzuQanxul);
-        NoQatzuQanxul = (RadioButton) findViewById(R.id.NoQatzuQanxul);
+        rbSiVocabularioKiche = (RadioButton) findViewById(R.id.rbVocabularioKicheSi);
+        rbNoVocabularioKiche = (RadioButton) findViewById(R.id.rbVocabularioKicheNo);
+        ivVocabularioKiche = (ImageView) findViewById(R.id.ivVocabularioKiche);
+        swVocabularioKiche = (Switch) findViewById(R.id.swVocabularioKiche);
+        tvRespuesta = (TextView) findViewById(R.id.tvVocabularioKicheRespuestaSwitch);
+        nuPregunta = (TextView) findViewById(R.id.tvVocabularioKicheNumero);
+        tvVocabularioKiche = (TextView) findViewById(R.id.tvVocabularioKicheTitulo);
+        String guarda_numero = "";
+        guarda_numero += pregunta;
+        nuPregunta.setText(guarda_numero);
+        int i = string_muestra[pregunta_toca],
+                imgs = img[pregunta_toca];//respuesta correcta
 
-        swKar = (Switch) findViewById(R.id.swKar);
-        tvKar = (TextView) findViewById(R.id.tvKar);
-        swJar = (Switch) findViewById(R.id.swJar);
-        tvJar = (TextView) findViewById(R.id.tvJar);
-        swLej = (Switch) findViewById(R.id.swLej);
-        tvLej = (TextView) findViewById(R.id.tvLej);
-        swKumatz = (Switch) findViewById(R.id.swKumatz);
-        tvKumatz = (TextView) findViewById(R.id.tvKumatz);
-        swKej = (Switch) findViewById(R.id.swKej);
-        tvKej = (TextView) findViewById(R.id.tvKej);
-        swKoy = (Switch) findViewById(R.id.swKoy);
-        tvKoy = (TextView) findViewById(R.id.tvKoy);
-        swTzi = (Switch) findViewById(R.id.swTzi);
-        tvTzi = (TextView) findViewById(R.id.tvTzi);
-        swKix = (Switch) findViewById(R.id.swKix);
-        tvKix = (TextView) findViewById(R.id.tvKix);
-        swMukunKum = (Switch) findViewById(R.id.swMukunKum);
-        tvMukunKum = (TextView) findViewById(R.id.tvMukunKum);
-        swQatzuQanxul = (Switch) findViewById(R.id.swQatzuQanxul);
-        tvQatzuQanxul = (TextView) findViewById(R.id.tvQatzuQanxul);
-        tvInstruccVocalario = (TextView) findViewById(R.id.tvInstruccVocalario);
-
-        SiKar.setOnClickListener(this);
-        NoKar.setOnClickListener(this);
-        SiJar.setOnClickListener(this);
-        NoJar.setOnClickListener(this);
-        SiLej.setOnClickListener(this);
-        NoLej.setOnClickListener(this);
-        SiKumatz.setOnClickListener(this);
-        NoKumatz.setOnClickListener(this);
-        SiKej.setOnClickListener(this);
-        NoKej.setOnClickListener(this);
-        SiKoy.setOnClickListener(this);
-        NoKoy.setOnClickListener(this);
-        SiTzi.setOnClickListener(this);
-        NoTzi.setOnClickListener(this);
-        SiKix.setOnClickListener(this);
-        NoKix.setOnClickListener(this);
-        SiMukunKum.setOnClickListener(this);
-        NoMukunKum.setOnClickListener(this);
-        SiQatzuQanxul.setOnClickListener(this);
-        NoQatzuQanxul.setOnClickListener(this);
-        swPrincipal();
+        tvRespuesta.setText("");
+        ivVocabularioKiche.setImageResource(imgs);
+        swVocabularioKiche.setOnCheckedChangeListener(this);
+        rbSiVocabularioKiche.setOnClickListener(this);
+        rbNoVocabularioKiche.setOnClickListener(this);
     }
 
-    private void swPrincipal() {
-        swKar.setOnCheckedChangeListener(list);
-        swJar.setOnCheckedChangeListener(list);
-        swLej.setOnCheckedChangeListener(list);
-        swKumatz.setOnCheckedChangeListener(list);
-        swKej.setOnCheckedChangeListener(list);
-        swKoy.setOnCheckedChangeListener(list);
-        swTzi.setOnCheckedChangeListener(list);
-        swKix.setOnCheckedChangeListener(list);
-        swMukunKum.setOnCheckedChangeListener(list);
-        swQatzuQanxul.setOnCheckedChangeListener(list);
+    @Override
+    public void onClick(View v) {
+        pregunta_toca++;
+        pregunta++;
+        setOnInit(null);
+        swVocabularioKiche.setChecked(false);
+        rbSiVocabularioKiche.setChecked(false);
+        rbNoVocabularioKiche.setChecked(false);
+
+        if (rbSiVocabularioKiche.isChecked()) {
+            resultado += 1;
+            setNextContext(VocabularioKiche.this, SonidosEspecificos.class);
+        } else
+            resultado += 0;
+        setNextContext(VocabularioKiche.this, SonidosEspecificos.class);
+        //Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
 
     }
 
-    class adapter extends BaseAdapter {
 
-        int[] drawables = null;
-        int [] mipmap = null;
-        private Context mcontext;
-
-        public adapter(Context context, int[] draw) {
-            mcontext = context;
-            drawables = draw;
-            mipmap = mipmap;
-        }
-
-        @Override
-        public int getCount() {
-            return drawables.length;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return drawables[position];
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return drawables[position];
-        }
-
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ImageView im = new ImageView(mcontext);
-            //@SuppressWarnings();
-            im.setImageDrawable(getResources().getDrawable(drawables[position]));
-            return im;
-        }
-
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if (swVocabularioKiche.isChecked()) {
+            int i = string_muestra[pregunta_toca];
+            tvRespuesta.setText(i);
+        } else
+            tvRespuesta.setText("");
     }
+
 
     @Override
     protected void onPause() {
         super.onPause();
         finish();
     }
+
+    public void setNextContext(Context context, Class<?> next_context) {
+        Bundle b = new Bundle();
+        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
+        Intent i = new Intent(context, next_context);
+        i.putExtras(b);
+        startActivity(i);
+    }
 }
+

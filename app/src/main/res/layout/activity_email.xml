@@ -6,9 +6,11 @@
     >
 
     <TextView
-        style="@style/text_email_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Perfil lingüistico de estudiante por aula, grado preprimaria y primer grado de primaria."
-        android:layout_width="match_parent" />
+        android:textSize="@dimen/_13sdp"
+        android:gravity="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,19 +28,20 @@
             android:gravity="center"/>
 
         <ImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@mipmap/ic_launcher"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:orientation="horizontal"
         android:weightSum="2"
         android:paddingTop="30dp">
 
         <LinearLayout
+
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
             android:orientation="vertical"
@@ -46,12 +49,13 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
             <TextView
-                android:paddingBottom="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Datos del establecimiento"
                 android:textSize="@dimen/_11sdp"/>
-
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,12 +65,13 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Nombre "
+
                     android:textSize="@dimen/_11sdp"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"
-                    android:id="@+id/etNombre"/>
+                    android:id="@+id/etNombre"
+                    android:inputType="text"/>
             </LinearLayout>
 
             <LinearLayout
@@ -77,13 +82,13 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Código: "
+                    android:text="Codigo "
                     android:textSize="@dimen/_11sdp"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"
-                    android:id="@+id/etCodigo"/>
+                    android:id="@+id/etCodigo"
+                    android:inputType="text"/>
             </LinearLayout>
 
             <LinearLayout
@@ -94,13 +99,14 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Grado: "
+                    android:text="Grado "
+
                     android:textSize="@dimen/_11sdp"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"
-                    android:id="@+id/etGrado"/>
+                    android:id="@+id/etGrado"
+                    android:inputType="text"/>
             </LinearLayout>
 
             <LinearLayout
@@ -111,13 +117,13 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Sección: "
+                    android:text="Seccion "
                     android:textSize="@dimen/_11sdp"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"
-                    android:id="@+id/etSeccion"/>
+                    android:id="@+id/etSeccion"
+                    android:inputType="text"/>
             </LinearLayout>
 
 
@@ -132,17 +138,15 @@
             android:orientation="vertical"
             android:layout_width="500dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center">
+            android:layout_weight="1">
             <TextView
-                android:paddingTop="20dp"
-                android:paddingBottom="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enviar por correo electrónico"
+                android:text="Datos del establecimiento"
                 android:textSize="@dimen/_11sdp"/>
-
-
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -151,13 +155,13 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Dirección: "
+                    android:text="Correo "
                     android:textSize="@dimen/_11sdp"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"
-                    android:id="@+id/etDireccion"/>
+                    android:id="@+id/etCorreo"
+                    android:inputType="text"/>
             </LinearLayout>
 
             <LinearLayout
@@ -168,20 +172,15 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Asunto: "
+                    android:text="Asunto"
                     android:textSize="@dimen/_11sdp"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"
-                    android:id="@+id/etAsunto"/>
+                    android:id="@+id/etAsunto"
+                    android:inputType="text"/>
             </LinearLayout>
-            <Button
-                android:layout_width="155dp"
-                android:layout_height="90dp"
-                android:text="adjuntar archivo"/>
         </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
@@ -190,18 +189,19 @@
         android:orientation="horizontal"
         android:weightSum="2">
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
             android:src="@drawable/ic_menu_share"
             android:layout_gravity="center"
             android:layout_weight="1"/>
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/email_2_icon"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@mipmap/ic_launcher"
             android:layout_gravity="center"
+            android:id="@+id/ivCorreo"
             android:layout_weight="1"
-            android:id="@+id/ivCorreo"/>
+            />
     </LinearLayout>
 
 </LinearLayout>

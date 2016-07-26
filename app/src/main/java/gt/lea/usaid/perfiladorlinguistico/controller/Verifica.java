@@ -1,6 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.controller;
 
-import gt.lea.usaid.perfiladorlinguistico.utils.GeneradorSQL;
+//import gt.lea.usaid.perfiladorlinguistico.utils.GeneradorSQL;
 
 /**
  * Created by Bryan on 14/06/16.
@@ -11,6 +11,7 @@ public class Verifica {
     public static final int TOTAL_SERIE = 100;
     private String dato = "";
     private String tabla = "";
+    private String insert = "";
 
     public Verifica(boolean[] arreglo_verdadero, boolean[] arreglo_falso, String nombre_tabla){
         array_true = arreglo_verdadero;
@@ -46,15 +47,12 @@ public class Verifica {
         else{
             sub_resultado = TOTAL_SERIE / cantidad_pregunta;
             sub_resultado *= toVerificaRespuesta();
-
         }
         resultado = sub_resultado;
         return resultado;
     }
 
     private float toVerificaRespuesta() {
-        String resultado = concatena(array_true);
-        //sqlite.insert(resultado);
         return resultado(array_true);
     }
 
@@ -81,33 +79,26 @@ public class Verifica {
     }
 
     private int resultado(boolean[] arreglo){
-        int resultado = 0;
-
+        int resultado = 0 ;
+        String dato = "";
         //DataBase db = new DataBase(tabla);
         boolean select = false;
         for(int s = 0; s  < arreglo.length; s ++){
             select = arreglo[s];
             if(select == true){
+                insert += 1;
                 resultado ++;
             }
             else{
+                insert += 0;
                 resultado += 0;
             }
         }
         return resultado;
     }
 
-    private String concatena(boolean[] arreglo){
-        String cadena = "";
-        boolean select = false;
-        for(int s = 0; s < arreglo.length; s ++){
-            select = arreglo[s];
-            if(select == true)
-                cadena += 1;
-            else
-                cadena += 0;
-        }
-        return cadena;
+    public String resultadoConcatenado(boolean[] arreglo){
+        return insert;
     }
 
     public static final class Pregunta{

@@ -11,10 +11,11 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/orange"
+        android:background="#B71C1C"
         android:elevation="4dp"
         android:theme="@style/Toolbar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
 
     <TabHost
         android:id="@+id/tabHost"
@@ -299,7 +300,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/avi_n"
+                                    android:text="@string/avion"
                                     android:textAlignment="center"
                                     android:textSize="@dimen/_13sdp" />
 

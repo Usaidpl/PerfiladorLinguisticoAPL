@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.view.evaluacion;
+package gt.lea.usaid.perfiladorlinguistico.controller.evaluacion;
 
 import android.app.Activity;
 import android.content.Context;

@@ -1,7 +1,5 @@
 package gt.lea.usaid.perfiladorlinguistico.controller;
 
-//import gt.lea.usaid.perfiladorlinguistico.utils.GeneradorSQL;
-
 /**
  * Created by Bryan on 14/06/16.
  */
@@ -9,10 +7,17 @@ public class Verifica {
 
     private boolean[] array_true, array_false;
     public static final int TOTAL_SERIE = 100;
-    private String dato = "";
+    private String concatena = "";
     private String tabla = "";
-    private String insert = "";
 
+    /**
+     * Costructor en el cual se pide el un vector izquiero que da referencia al lado verdadero y otro al
+     * lado falso el cual debe contener la misma cantidad, a la misma vez se pide el nombre de la tabla
+     * a la cual se hara la insercion
+     * @param arreglo_verdadero
+     * @param arreglo_falso
+     * @param nombre_tabla
+     */
     public Verifica(boolean[] arreglo_verdadero, boolean[] arreglo_falso, String nombre_tabla){
         array_true = arreglo_verdadero;
         array_false = arreglo_falso;
@@ -67,6 +72,17 @@ public class Verifica {
             return false;
     }
 
+    private String concat(String dato)
+    {
+        for(int v = 0; v < dato.length(); v ++){
+            if((v + 1) != dato.length())
+                concatena += v + ",";
+            else
+                concatena += v;
+        }
+        return concatena;
+    }
+
     private boolean toCompara(int preguntas) {
         int resultado = 0, respuesta1, respuesta2;
         respuesta1 = resultado(array_true);
@@ -80,26 +96,25 @@ public class Verifica {
 
     private int resultado(boolean[] arreglo){
         int resultado = 0 ;
-        String dato = "";
+        String dato = "", result;
+
         //DataBase db = new DataBase(tabla);
         boolean select = false;
         for(int s = 0; s  < arreglo.length; s ++){
             select = arreglo[s];
             if(select == true){
-                insert += 1;
                 resultado ++;
+                dato += 1;
             }
             else{
-                insert += 0;
                 resultado += 0;
+                dato += 0;
             }
         }
+        result = (dato);
         return resultado;
     }
 
-    public String resultadoConcatenado(boolean[] arreglo){
-        return insert;
-    }
 
     public static final class Pregunta{
 

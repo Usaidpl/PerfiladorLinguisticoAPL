@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.view.evaluacion;
+package gt.lea.usaid.perfiladorlinguistico.controller.evaluacion;
 
 import android.app.Activity;
 import android.content.Context;
@@ -78,7 +78,8 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
             case 1: vector = ArregloMultiDimensional.ArregloPrecision.TEXTOS[1];break;
             case 2: vector = ArregloMultiDimensional.ArregloPrecision.TEXTOS[2];break;
         }
-        return vector;}
+        return vector;
+    }
 
     //private View.OnClickListener click = new View.OnClickListener() {
     //};

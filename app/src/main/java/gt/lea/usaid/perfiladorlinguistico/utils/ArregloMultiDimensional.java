@@ -3,34 +3,61 @@ package gt.lea.usaid.perfiladorlinguistico.utils;
 import gt.lea.usaid.perfiladorlinguistico.R;
 
 /**
- * Created by programadormd on 07-22-16.
+ * Created by BryanJuarez on 07-22-16.
+ * @author Bryan
  */
 public class ArregloMultiDimensional {
 
         public static final class ArregloPrecision
         {
                 public static int[][][] IMAGENES = {
+                        //imagenes kiche
                         {
-                                {R.mipmap.pollito, R.mipmap.pato, R.mipmap.pavo},
-                                {R.mipmap.conejo, R.mipmap.perro, R.mipmap.gato},
-                                {R.mipmap.caballlo,R.mipmap.oveja, R.mipmap.vaca},
-                                {R.mipmap.arbol, R.mipmap.rosa, R.mipmap.milpa},
-                                {R.mipmap.ejote, R.mipmap.elote, R.mipmap.ayote},
-                                {R.mipmap.elote, R.mipmap.zanahoria, R.mipmap.banano},
-                                {R.mipmap.carro,R.mipmap.camioneta, R.mipmap.camioncito},
-                                {R.mipmap.carro, R.mipmap.carreta, R.mipmap.mototaxi},
-                                {R.mipmap.falda, R.mipmap.calceta, R.mipmap.pantalon},
-                                {R.mipmap.blusa, R.mipmap.vestido, R.mipmap.pantalon},
-                                {R.mipmap.sombrero, R.mipmap.zapato, R.mipmap.guante},
-                                {R.mipmap.gorra, R.mipmap.sombrilla, R.mipmap.sombrero},
-                                {R.mipmap.cama, R.mipmap.mesa, R.mipmap.silla},
-                                {R.mipmap.escalera, R.mipmap.cubeta, R.mipmap.banco},
-                                {R.mipmap.canasto, R.mipmap.soplador, R.mipmap.caja},
-                                {R.mipmap.peine, R.mipmap.cepillo, R.mipmap.logolea},
-                                {R.mipmap.lapiz, R.mipmap.sacapuntas, R.mipmap.libro},
-                                {R.mipmap.bicicleta, R.mipmap.moto, R.mipmap.mototaxi}
+                                {R.mipmap.nino, R.mipmap.senior, R.mipmap.abuelita},
+                                {R.mipmap.seniora, R.mipmap.nina, R.mipmap.senior},
+                                {R.mipmap.abuelita, R.mipmap.nina, R.mipmap.nino},
+                                {R.mipmap.nina, R.mipmap.senior, R.mipmap.abuelita},
+                                {R.mipmap.abuelo, R.mipmap.abuelita, R.mipmap.nino},
+                                {R.mipmap.caballlo, R.mipmap.vaca, R.mipmap.cerdo},
+                                {R.mipmap.gato, R.mipmap.conejo, R.mipmap.perro},
+                                {R.mipmap.vaca, R.mipmap.oveja, R.mipmap.caballlo},
+                                {R.mipmap.tomate, R.mipmap.naranja, R.mipmap.pera},
+                                {R.mipmap.elote, R.mipmap.elote, R.mipmap.ayote},
+                                {R.mipmap.fresa, R.mipmap.pera, R.mipmap.aguacate},
+                                {R.mipmap.lapicero, R.mipmap.regla, R.mipmap.cuaderno},
+                                {R.mipmap.casa, R.mipmap.escuala, R.mipmap.iglesia},
+                                {R.mipmap.mesa, R.mipmap.silla, R.mipmap.pizarro},
+                                {R.mipmap.blusa, R.mipmap.falda, R.mipmap.fajatipica},
+                                {R.mipmap.falda, R.mipmap.pantalon, R.mipmap.fajatipica},
+                                {R.mipmap.comal, R.mipmap.olla, R.mipmap.sarten}
+                        },
+                        //man
+                        {
+                                {R.mipmap.seniora, R.mipmap.nino, R.mipmap.senior},
+                                {R.mipmap.senior, R.mipmap.nina, R.mipmap.nino},
+                                {R.mipmap.nina, R.mipmap.nino, R.mipmap.abuelita},
+                                {R.mipmap.gato, R.mipmap.perro, R.mipmap.caballlo},
+                                {R.mipmap.logolea, R.mipmap.pavo, R.mipmap.pato},
+                                {R.mipmap.pato, R.mipmap.gallina, R.mipmap.colibri},
+                                {R.mipmap.perro, R.mipmap.caballlo, R.mipmap.gato},
+                                {R.mipmap.caballlo, R.mipmap.oveja, R.mipmap.vaca},
+                                {R.mipmap.milpa, R.mipmap.rosa, R.mipmap.arbol},
+                                {R.mipmap.chilepimiento, R.mipmap.zanahoria, R.mipmap.cebolla},
+                                {R.mipmap.milpa, R.mipmap.pino, R.mipmap.plantabanano},
+                                {R.mipmap.banano, R.mipmap.zanahoria, R.mipmap.elote},
+                                {R.mipmap.milpa, R.mipmap.flor, R.mipmap.arbol},
+                                {R.mipmap.camisa, R.mipmap.vestido, R.mipmap.pantalon},
+                                {R.mipmap.sandalia, R.mipmap.fajatipica, R.mipmap.cincho},
+                                {R.mipmap.jarra, R.mipmap.olla, R.mipmap.comal},
+                                {R.mipmap.comal, R.mipmap.olla, R.mipmap.vaso},
+                                {R.mipmap.canasto, R.mipmap.palangana, R.mipmap.soplador}
                         },
                         {
+                                {R.mipmap.pollito, R.mipmap.pato, R.mipmap.pavo},
+                                {R.mipmap.conejo, R.mipmap.perro, R.mipmap.gato},
+                                {R.mipmap.caballlo,R.mipmap.oveja, R.mipmap.vaca},
+                                {R.mipmap.arbol, R.mipmap.rosa, R.mipmap.milpa},
+                                {R.mipmap.ejote, R.mipmap.elote, R.mipmap.ayote},
                                 {R.mipmap.elote, R.mipmap.zanahoria, R.mipmap.banano},
                                 {R.mipmap.carro,R.mipmap.camioneta, R.mipmap.camioncito},
                                 {R.mipmap.carro, R.mipmap.carreta, R.mipmap.mototaxi},
@@ -38,11 +65,6 @@ public class ArregloMultiDimensional {
                                 {R.mipmap.blusa, R.mipmap.vestido, R.mipmap.pantalon},
                                 {R.mipmap.sombrero, R.mipmap.zapato, R.mipmap.guante},
                                 {R.mipmap.gorra, R.mipmap.sombrilla, R.mipmap.sombrero},
-                                {R.mipmap.pollito, R.mipmap.pato, R.mipmap.pavo},
-                                {R.mipmap.conejo, R.mipmap.perro, R.mipmap.gato},
-                                {R.mipmap.caballlo,R.mipmap.oveja, R.mipmap.vaca},
-                                {R.mipmap.arbol, R.mipmap.rosa, R.mipmap.milpa},
-                                {R.mipmap.ejote, R.mipmap.elote, R.mipmap.ayote},
                                 {R.mipmap.cama, R.mipmap.mesa, R.mipmap.silla},
                                 {R.mipmap.escalera, R.mipmap.cubeta, R.mipmap.banco},
                                 {R.mipmap.canasto, R.mipmap.soplador, R.mipmap.caja},
@@ -50,6 +72,7 @@ public class ArregloMultiDimensional {
                                 {R.mipmap.lapiz, R.mipmap.sacapuntas, R.mipmap.libro},
                                 {R.mipmap.bicicleta, R.mipmap.moto, R.mipmap.mototaxi}
                         }
+
                 };
 
                 public static final int[][] TEXTOS ={

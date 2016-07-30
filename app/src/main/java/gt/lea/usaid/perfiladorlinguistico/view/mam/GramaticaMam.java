@@ -15,7 +15,7 @@ import android.widget.TextView;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.view.evaluacion.Interaccion;
+import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 
 public class GramaticaMam extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private int pregunta = 0;

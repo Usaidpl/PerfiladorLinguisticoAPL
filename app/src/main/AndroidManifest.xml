@@ -37,10 +37,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.evaluacion.Comprension"
+            android:name=".controller.evaluacion.Comprension"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.evaluacion.Interaccion"
+            android:name=".controller.evaluacion.Interaccion"
             android:screenOrientation="landscape" />
         <activity
             android:name=".view.guias.GuiaComprensionOral"
@@ -72,7 +72,8 @@
             android:screenOrientation="landscape" />
         <activity android:name=".view.EnviarInformacion" />
         <activity android:name=".view.Email" />
-        <activity android:name=".view.evaluacion.Precision" />
+        <activity android:name=".controller.evaluacion.Precision" />
+        <activity android:name=".utils.Localizacion"/>
 
         <activity android:name=".view.mam.ExpresionOralMam" />
         <activity android:name=".view.mam.GramaticaMam" />

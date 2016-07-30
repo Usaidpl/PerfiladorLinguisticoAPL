@@ -14,31 +14,34 @@ public abstract class Respuesta implements View.OnClickListener{
     private static final int RESPUESTA_DOS = 2;
     private static final int RESPUESTA_TRES = 3;
 
-    protected int ques(int opcion, View v)
+    protected int result(int opcion, View v)
     {
         int resultado = 0, op = des(opcion);
+        String respuesta ="";
         if(op == RESPUESTA_UNO){
             switch (v.getId()){
                 case R.id.ivImagen1:
-                    resultado = 1;
+                    resultado ++;
                     break;
                 default:
-                    resultado = 0;
+                    resultado += 0;
             }
         }else if(op == RESPUESTA_DOS){
             switch (v.getId()){
-                case R.id.ivImagen2:resultado = 1;break;
-                default:resultado = 0;
+                case R.id.ivImagen2:resultado += 1;break;
+                default:resultado += 0;
             }
         }else if(op == RESPUESTA_TRES){
             switch (v.getId()){
                 case R.id.ivImagen3:
-                    resultado = 1;
+                    resultado += 1;
                     break;
                 default:
-                    resultado =0;
+                    resultado +=0;
             }
         }
+        //respuesta para la BD
+        respuesta += resultado;
         return  resultado;
     }
 

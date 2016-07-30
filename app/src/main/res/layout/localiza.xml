@@ -7,7 +7,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Loaclización"
-        android:id="@+id/tvLocaliza"/>
+        android:id="@+id/tvLocaliza"
+        android:padding="50dp"/>
 
     <Button
         android:layout_width="150dp"

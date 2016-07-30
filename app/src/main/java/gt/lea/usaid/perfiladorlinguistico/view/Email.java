@@ -29,7 +29,6 @@ public class Email extends Activity implements OnInitializeComponent, View.OnCli
         }catch (Exception e){
             Toast.makeText(this,e.getMessage(), Toast.LENGTH_SHORT).show();
         }
-
     }
 
     @Override
@@ -52,7 +51,6 @@ public class Email extends Activity implements OnInitializeComponent, View.OnCli
         String direccion_correo[] = {ce};
         Intent i = new Intent(Intent.ACTION_SEND);
         i.putExtra(Intent.EXTRA_EMAIL, direccion_correo);
-
         i.putExtra(Intent.EXTRA_SUBJECT, "Android App");
         i.setType("image/png");
         i.putExtra(Intent.EXTRA_TEXT, cuerpo);
@@ -68,17 +66,5 @@ public class Email extends Activity implements OnInitializeComponent, View.OnCli
         s = seccion.toString().trim();
 
         a = asunto.toString().trim();
-    }
-
-    private String consulta(String[] condicion){
-        String sentencia = "SELECT * FROM table1 INNER JOIN table2 INNER JOIN tableN " +
-                "WHERE " ;
-        for(int i = 0; i < condicion.length; i ++){
-            if((i + 1) != condicion.length){
-                sentencia += condicion[i] + " AND ";
-            }else
-                sentencia += condicion[i];
-        }
-        return sentencia;
     }
 }

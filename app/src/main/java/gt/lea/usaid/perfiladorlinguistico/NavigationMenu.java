@@ -18,6 +18,7 @@ import gt.lea.usaid.perfiladorlinguistico.controller.EntrevistasPendientes;
 import gt.lea.usaid.perfiladorlinguistico.controller.GuiaEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.ResultadosAula;
+import gt.lea.usaid.perfiladorlinguistico.utils.Localizacion;
 import gt.lea.usaid.perfiladorlinguistico.view.Creditos;
 import gt.lea.usaid.perfiladorlinguistico.view.Email;
 import gt.lea.usaid.perfiladorlinguistico.view.EnviarInformacion;
@@ -73,7 +74,7 @@ public class NavigationMenu
         int id = item.getItemId();
 
         if (id == R.id.enviar_informacion) {
-            Intent intent = new Intent(this, Email.class);
+            Intent intent = new Intent(this, Localizacion.class);
             startActivity(intent);
             return true;
         }

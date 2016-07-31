@@ -12,7 +12,6 @@ import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
@@ -29,6 +28,7 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
     private String resultado ="";
     //private int pregunta = 0;
     private int serie = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +47,9 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
         nuPregunta = (TextView) findViewById(R.id.tvGramaticaNumero);
         tvGramatica = (TextView) findViewById(R.id.tvGramaticaTitulo);
         String guarda_numero = "";
-        guarda_numero += pregunta;
+        guarda_numero += pregunta +1;
         nuPregunta.setText(guarda_numero);
-        int i = string_muestra[pregunta+1],
+        int i = string_muestra[pregunta],
                 imgs = img[pregunta];//respuesta correcta
 
         tvRespuesta.setText("");
@@ -62,7 +62,7 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, NavigationMenu.class);
+            setNextContext(this, ExpresionOral.class);
         } else {
             pregunta ++;
             setOnInit(null);

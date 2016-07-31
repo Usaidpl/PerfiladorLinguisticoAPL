@@ -48,8 +48,8 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
         nuPregunta = (TextView) findViewById(R.id.tvSonidosEspecificosMamNumero);
         tvSonidosEspecificosMam = (TextView) findViewById(R.id.tvSonidosEspecificosMamTitulo);
         String guarda_numero = "";
-        guarda_numero += pregunta;
-        nuPregunta.setText(guarda_numero+1);
+        guarda_numero += pregunta+1;
+        nuPregunta.setText(guarda_numero);
         int i = string_muestra[pregunta],
                 imgs = img[pregunta];//respuesta correcta
 

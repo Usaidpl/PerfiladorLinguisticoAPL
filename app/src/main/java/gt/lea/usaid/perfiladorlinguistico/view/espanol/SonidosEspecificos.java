@@ -46,7 +46,7 @@ public class  SonidosEspecificos extends Activity implements OnInitializeCompone
         nuPregunta = (TextView) findViewById(R.id.tvSonidosEspecificosNumero);
         tvSonidosEspecificos = (TextView) findViewById(R.id.tvSonidosEspecificosTitulo);
         String guarda_numero = "";
-        guarda_numero += pregunta;
+        guarda_numero += pregunta+1;
         nuPregunta.setText(guarda_numero);
         int i = string_muestra[pregunta],
                 imgs = img[pregunta];//respuesta correcta

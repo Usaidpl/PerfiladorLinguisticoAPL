@@ -47,8 +47,8 @@ public class  VocabularioMam extends Activity implements OnInitializeComponent, 
         nuPregunta = (TextView) findViewById(R.id.tvVocabularioMamNumero);
         tvVocabularioMam = (TextView) findViewById(R.id.tvVocabularioMamTitulo);
         String guarda_numero = "";
-        guarda_numero += pregunta;
-        nuPregunta.setText(guarda_numero+1);
+        guarda_numero += pregunta+1;
+        nuPregunta.setText(guarda_numero);
         int i = string_muestra[pregunta],
                 imgs = img[pregunta];//respuesta correcta
 

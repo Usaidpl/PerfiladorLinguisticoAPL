@@ -48,8 +48,8 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
         nuPregunta = (TextView) findViewById(R.id.tvGramaticaMamNumero);
         tvGramaticaMam = (TextView) findViewById(R.id.tvGramaticaMamTitulo);
         String guarda_numero = "";
-        guarda_numero += pregunta;
-        nuPregunta.setText(guarda_numero+1);
+        guarda_numero += pregunta+1;
+        nuPregunta.setText(guarda_numero);
         int i = string_muestra[pregunta],
                 imgs = img[pregunta];//respuesta correcta
 

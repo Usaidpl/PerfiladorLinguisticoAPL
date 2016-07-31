@@ -47,8 +47,8 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
         nuPregunta = (TextView) findViewById(R.id.tvSonidosEspecificosKicheNumero);
         tvSonidosEspecificosKiche = (TextView) findViewById(R.id.tvSonidosEspecificosKicheTitulo);
         String guarda_numero = "";
-        guarda_numero += pregunta;
-        nuPregunta.setText(guarda_numero+1);
+        guarda_numero += pregunta+1;
+        nuPregunta.setText(guarda_numero);
         int i = string_muestra[pregunta],
                 imgs = img[pregunta];//respuesta correcta
 

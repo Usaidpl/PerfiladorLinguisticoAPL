@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
+import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class  GramaticaKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -46,8 +47,8 @@ public class  GramaticaKiche extends Activity implements OnInitializeComponent, 
         nuPregunta = (TextView) findViewById(R.id.tvGramaticaKicheNumero);
         tvGramaticaKiche = (TextView) findViewById(R.id.tvGramaticaKicheTitulo);
         String guarda_numero = "";
-        guarda_numero += pregunta;
-        nuPregunta.setText(guarda_numero+1);
+        guarda_numero += pregunta +1;
+        nuPregunta.setText(guarda_numero);
         int i = string_muestra[pregunta],
                 imgs = img[pregunta];//respuesta correcta
 
@@ -61,7 +62,7 @@ public class  GramaticaKiche extends Activity implements OnInitializeComponent, 
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, GramaticaKiche.class);
+            setNextContext(this, Interaccion.class);
         } else {
         pregunta ++;
         setOnInit(null);

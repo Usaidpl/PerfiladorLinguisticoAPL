@@ -16,7 +16,7 @@
         android:layout_y="25dp"
         android:background="#B71C1C"
         android:gravity="center"
-        android:text="Titulo Serie Gramatica"
+        android:text="Titulo Nombre"
         android:textColor="#ffffffff"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold" />
@@ -62,8 +62,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_x="540dp"
                 android:layout_y="10dp"
-                android:background="#3f51b5"
-                android:textColor="#ffffffff"
                 android:text="Respuesta"/>
 
             <ImageView
@@ -83,8 +81,7 @@
                 android:layout_marginTop="20dp"
                 android:textStyle="bold"
                 android:layout_x="25dp"
-                android:layout_y="250dp"
-                android:background="#3f51b5" />
+                android:layout_y="250dp" />
 
             <RadioGroup
                 android:id="@+id/rgGramatica"

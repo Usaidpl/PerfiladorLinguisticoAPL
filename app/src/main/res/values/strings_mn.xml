@@ -71,5 +71,8 @@
     <string name="vi_ttxuek">ttxu ek´ / ttxu ik´</string>
     <string name="vi_ttxurit">ttxu rit / kne´l</string>
     <string name="vi_txubaj">txub´aj</string>
+    <string name="titulo_gramatica_mam">VI. Gramática Mam</string>
+    <string name="titulo_sonidos_especificos_mam">V. Sonidos Específicos Mam</string>
+    <string name="titulo_vocabulario_produccion_mam">IV. Vocabulario Producción Mam</string>
 
 </resources>

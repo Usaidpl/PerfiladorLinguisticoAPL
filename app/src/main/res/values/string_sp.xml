@@ -71,4 +71,6 @@
     <string name="vi_maestra">maestra</string>
     <string name="vi_doctora">doctora</string>
     <string name="vi_cocinera">cocinera / chef</string>
+    <string name="titulo_gramatica_espanol">VI. Gramática Español</string>
+    <string name="titulo_vocabulario_produccion_esp">IV. Vocabulario Producción Español</string>
 </resources>

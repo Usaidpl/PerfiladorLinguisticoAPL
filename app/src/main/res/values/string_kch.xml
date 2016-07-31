@@ -71,4 +71,7 @@
     <string name="vi_tat">tat / achi</string>
     <string name="vi_mam">mam / tat</string>
     <string name="vi_pendiente">falta hoja pdf</string>
+    <string name="titulo_gramatica_kiche">VI. Gramática Kiche</string>
+    <string name="titulo_sonidos_especificos_kiche">V. Sonidos Específicos Kiche</string>
+    <string name="titulo_vocabulario_produccion_kiche">IV. Vocabulario Producción Kiche</string>
 </resources>

@@ -92,6 +92,7 @@
             android:name=".view.espanol.ExpresionOral"
             android:screenOrientation="landscape" />
         <activity android:name=".view.RegistroEvaluar"></activity>
+        <activity android:name=".Entrevistas"></activity>
     </application>
 
 </manifest>

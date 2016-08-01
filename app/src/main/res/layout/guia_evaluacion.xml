@@ -14,8 +14,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="63dp"
         android:layout_marginStart="63dp"
-        android:layout_x="61dp"
-        android:layout_y="63dp">
+        android:layout_x="47dp"
+        android:layout_y="66dp">
 
         <TextView
             android:id="@+id/guia_interaccion_oral_oral2"
@@ -47,8 +47,8 @@
         android:layout_alignTop="@+id/frameLayout5"
         android:layout_toRightOf="@+id/frameLayout4"
         android:layout_toEndOf="@+id/frameLayout4"
-        android:layout_x="255dp"
-        android:layout_y="63dp">
+        android:layout_x="241dp"
+        android:layout_y="66dp">
 
         <ImageView
             android:id="@+id/guia_compresion_oral"
@@ -78,8 +78,8 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/frameLayout3"
         android:layout_toEndOf="@+id/frameLayout3"
-        android:layout_x="458dp"
-        android:layout_y="65dp">
+        android:layout_x="443dp"
+        android:layout_y="68dp">
 
         <ImageView
             android:id="@+id/guia_vocabulario_precision"
@@ -107,8 +107,8 @@
         android:layout_below="@+id/frameLayout3"
         android:layout_alignLeft="@+id/frameLayout6"
         android:layout_alignStart="@+id/frameLayout6"
-        android:layout_x="460dp"
-        android:layout_y="217dp">
+        android:layout_x="446dp"
+        android:layout_y="221dp">
 
         <ImageView
             android:id="@+id/guia_expresion_oral"
@@ -136,8 +136,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/guia_navegacion"
         android:layout_alignStart="@+id/guia_navegacion"
-        android:layout_x="648dp"
-        android:layout_y="63dp">
+        android:layout_x="634dp"
+        android:layout_y="66dp">
 
         <ImageView
             android:id="@+id/guia_vocabulario"
@@ -165,8 +165,8 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/frameLayout"
         android:layout_toEndOf="@+id/frameLayout"
-        android:layout_x="257dp"
-        android:layout_y="217dp">
+        android:layout_x="243dp"
+        android:layout_y="221dp">
 
         <ImageView
             android:id="@+id/guia_gramatica"
@@ -196,8 +196,8 @@
         android:layout_below="@+id/frameLayout3"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="false"
-        android:layout_x="648dp"
-        android:layout_y="219dp">
+        android:layout_x="634dp"
+        android:layout_y="223dp">
 
         <ImageView
             android:id="@+id/guia_navegacion2"
@@ -225,8 +225,8 @@
         android:layout_above="@+id/frameLayout3"
         android:layout_alignLeft="@+id/frameLayout4"
         android:layout_alignStart="@+id/frameLayout4"
-        android:layout_x="63dp"
-        android:layout_y="217dp"
+        android:layout_x="49dp"
+        android:layout_y="221dp"
         android:background="#ffffff">
 
         <ImageView

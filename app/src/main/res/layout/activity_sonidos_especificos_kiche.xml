@@ -16,7 +16,7 @@
         android:layout_y="25dp"
         android:background="#B71C1C"
         android:gravity="center"
-        android:text="Titulo Nombre"
+        android:text="@string/titulo_sonidos_especificos_kiche"
         android:textColor="#ffffffff"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold" />

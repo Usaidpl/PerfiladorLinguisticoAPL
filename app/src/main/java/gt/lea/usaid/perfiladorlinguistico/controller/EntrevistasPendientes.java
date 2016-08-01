@@ -1,10 +1,15 @@
 package gt.lea.usaid.perfiladorlinguistico.controller;
 
-/**
- * Created by Roberto on 21/06/16.
- */
-public class EntrevistasPendientes extends android.support.v4.app.Fragment{
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-    public interface OnFragmentInteractionListener {
+import gt.lea.usaid.perfiladorlinguistico.R;
+
+public class EntrevistasPendientes extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_entrevista_pendiente);
     }
 }

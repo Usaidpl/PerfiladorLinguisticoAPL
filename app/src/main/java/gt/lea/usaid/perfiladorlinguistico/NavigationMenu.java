@@ -113,9 +113,10 @@ public class NavigationMenu
 
         }else if (id ==  R.id.nav_entrevista) {
             clas = Entrevistas.class;
+            Intent i = new Intent(NavigationMenu.this, clas);
+            startActivity(i);
         }
-        Intent i = new Intent(NavigationMenu.this, clas);
-        startActivity(i);
+
 
         if (FragmentTransaction) {
             getSupportFragmentManager().beginTransaction()

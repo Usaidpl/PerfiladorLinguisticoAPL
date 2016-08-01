@@ -11,8 +11,6 @@ public class ErrorUsuario {
     public static class NumeroError{
         public static final String ERROR_NULL = "Error #001";
         public static final String ERROR_ATRIBUTO = "Error #003";
-
-
     }
 
 }

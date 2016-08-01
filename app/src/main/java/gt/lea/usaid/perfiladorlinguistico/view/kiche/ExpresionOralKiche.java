@@ -29,8 +29,6 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
         setContentView(R.layout.activity_expresion_oral_kiche);
         vfEvaExpresionOral = (ViewFlipper) findViewById(R.id.vfEvaExpresionOral);
         setOnInit(null);
-
-
     }
 
     @Override
@@ -56,7 +54,7 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
         try {
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
             descition(resultado);
-            setNextContext(ExpresionOralKiche.this, Vocabulario.class);
+            //setNextContext(ExpresionOralKiche.this, Vocabulario.class);
         } catch (Exception e) {
             //e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -64,16 +62,19 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
     }
 
     private void descition(float resultado) {
+        Bundle b = new Bundle();
+        b.putInt(IniciarEvaluacion.KEY_EVALUACION, 2);
+        Intent i = new Intent(ExpresionOralKiche.this, Interaccion.class);
+        i.putExtras(b);
+        startActivity(i);
+        /*
         if (resultado >= (100 / 40) + 1) {
             //setNextContext(ExpresionOralKiche.this, NavigationMenu.class);
-            Bundle b = new Bundle();
-            b.putInt(IniciarEvaluacion.KEY_EVALUACION, 2);
-            Intent i = new Intent(ExpresionOralKiche.this, Interaccion.class);
-            i.putExtras(b);
-            startActivity(i);
+
         } else {
             setNextContext(this, Interaccion.class);
         }
+         */
     }
 
 

@@ -116,9 +116,14 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
-        finish();
     }
 
     private void setIdioma()

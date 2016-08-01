@@ -61,16 +61,17 @@ public class ExpresionOralMam extends FlipperActivity implements OnInitializeCom
     }
 
     private void descition(float resultado) {
-        if (resultado >= (100 / 40) + 1) {
-            Bundle b = new Bundle();
-            b.putInt(IniciarEvaluacion.KEY_EVALUACION, 2);
-            Intent i = new Intent(ExpresionOralMam.this, Interaccion.class);
-            i.putExtras(b);
-            startActivity(i);
+        Bundle b = new Bundle();
+        b.putInt(IniciarEvaluacion.KEY_EVALUACION, 2);
+        Intent i = new Intent(ExpresionOralMam.this, Interaccion.class);
+        i.putExtras(b);
+        startActivity(i);
+        /*if (resultado >= (100 / 40) + 1) {
+
 
         } else {
             setNextContext(this, Interaccion.class);
-        }
+        }*/
     }
 
 

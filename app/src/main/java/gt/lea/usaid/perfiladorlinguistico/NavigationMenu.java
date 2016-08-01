@@ -89,7 +89,6 @@ public class NavigationMenu
             Intent intent = new Intent(this, RegistroEvaluar.class);
             startActivity(intent);
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -113,8 +112,8 @@ public class NavigationMenu
             FragmentTransaction = true;
 
         }else if (id ==  R.id.nav_entrevista) {
-            Intent creditos = new Intent(getApplicationContext(), Entrevistas.class);
-            startActivity(creditos);
+            Intent entrevistas = new Intent(NavigationMenu.this, Entrevistas.class);
+            getApplication().startActivity(entrevistas);
         }
 
         if (FragmentTransaction) {
@@ -123,7 +122,6 @@ public class NavigationMenu
                     .commit();
             item.setChecked(true);
             getSupportActionBar().setTitle(item.getTitle());
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

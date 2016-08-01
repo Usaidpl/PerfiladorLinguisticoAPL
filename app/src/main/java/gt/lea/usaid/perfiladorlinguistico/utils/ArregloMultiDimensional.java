@@ -13,7 +13,6 @@ public class ArregloMultiDimensional {
                 public static int[][][] IMAGENES = {
                         //imagenes kiche
                         {
-
                                 {R.mipmap.nino, R.mipmap.senior, R.mipmap.abuelita},//1
                                 {R.mipmap.seniora, R.mipmap.nina, R.mipmap.senior},//2
                                 {R.mipmap.abuelita, R.mipmap.nina, R.mipmap.nino},//3
@@ -30,8 +29,8 @@ public class ArregloMultiDimensional {
                                 {R.mipmap.mesa, R.mipmap.silla, R.mipmap.pizarro},//14
                                 {R.mipmap.blusa, R.mipmap.falda, R.mipmap.fajatipica},//15
                                 {R.mipmap.falda, R.mipmap.pantalon, R.mipmap.fajatipica},//16
-                                {R.mipmap.comal, R.mipmap.olla, R.mipmap.sarten},
-                                {R.mipmap.logolea, R.mipmap.logolea, R.mipmap.logolea}//17
+                                {R.mipmap.comal, R.mipmap.olla, R.mipmap.sarten},//17
+                                {R.mipmap.logolea, R.mipmap.logolea, R.mipmap.logolea}//18
                         },
                         //man
                         {

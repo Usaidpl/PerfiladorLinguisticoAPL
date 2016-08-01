@@ -17,4 +17,9 @@
         android:orderInCategory="100"
         android:title="Creditos"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/registro_evaluar"
+        android:orderInCategory="100"
+        android:title="Registro Evaluador"
+        app:showAsAction="never" />
 </menu>

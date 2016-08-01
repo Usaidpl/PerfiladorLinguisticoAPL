@@ -14,19 +14,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import gt.lea.usaid.perfiladorlinguistico.controller.EntrevistasPendientes;
 import gt.lea.usaid.perfiladorlinguistico.controller.GuiaEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.ResultadosAula;
 import gt.lea.usaid.perfiladorlinguistico.utils.Localizacion;
 import gt.lea.usaid.perfiladorlinguistico.view.Creditos;
 import gt.lea.usaid.perfiladorlinguistico.view.Email;
-import gt.lea.usaid.perfiladorlinguistico.view.EnviarInformacion;
+import gt.lea.usaid.perfiladorlinguistico.view.RegistroEvaluar;
 
 public class NavigationMenu
         extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-        EntrevistasPendientes.OnFragmentInteractionListener,
         GuiaEvaluacion.OnFragmentInteractionListener, IniciarEvaluacion.OnFragmentInteractionListener,
         ResultadosAula.OnFragmentInteractionListener{
 
@@ -86,6 +84,10 @@ public class NavigationMenu
             Intent intent = new Intent(this, Creditos.class);
             startActivity(intent);
         }
+        if (id == R.id.registro_evaluar){
+            Intent intent = new Intent(this, RegistroEvaluar.class);
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -100,9 +102,6 @@ public class NavigationMenu
 
         if (id == R.id.nav_iniciar_evaluacion) {
             fragment = new IniciarEvaluacion();
-            FragmentTransaction = true;
-        } else if (id == R.id.nav_entrevistas_pendientes) {
-            fragment = new EntrevistasPendientes();
             FragmentTransaction = true;
         } else if (id == R.id.nav_guia_evaluador) {
             fragment = new GuiaEvaluacion();

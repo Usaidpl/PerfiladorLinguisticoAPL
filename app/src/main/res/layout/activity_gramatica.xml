@@ -12,8 +12,8 @@
         android:id="@+id/tvGramaticaTitulo"
         android:layout_width="700dp"
         android:layout_height="50dp"
-        android:layout_x="190dp"
-        android:layout_y="25dp"
+        android:layout_x="83dp"
+        android:layout_y="58dp"
         android:background="#B71C1C"
         android:gravity="center"
         android:text="@string/titulo_gramatica_espanol"
@@ -28,8 +28,8 @@
         card_view:cardCornerRadius="6dp"
         card_view:cardElevation="10dp"
         card_view:cardUseCompatPadding="true"
-        android:layout_x="190dp"
-        android:layout_y="110dp">
+        android:layout_x="83dp"
+        android:layout_y="142dp">
         <AbsoluteLayout
             android:id="@+id/alGramatica"
             android:layout_width="match_parent"

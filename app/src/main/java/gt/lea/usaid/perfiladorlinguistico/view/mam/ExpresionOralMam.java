@@ -1,5 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.mam;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.MotionEvent;
@@ -11,6 +12,7 @@ import android.widget.ViewFlipper;
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
+import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
@@ -26,8 +28,6 @@ public class ExpresionOralMam extends FlipperActivity implements OnInitializeCom
         setContentView(R.layout.activity_expresion_oral);
         vfEvaExpresionOral = (ViewFlipper) findViewById(R.id.vfEvaExpresionOral);
         setOnInit(null);
-
-
     }
 
     @Override
@@ -53,7 +53,7 @@ public class ExpresionOralMam extends FlipperActivity implements OnInitializeCom
         try {
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
             descition(resultado);
-            setNextContext(ExpresionOralMam.this, NavigationMenu.class);
+            //setNextContext(ExpresionOralMam.this, NavigationMenu.class);
         } catch (Exception e) {
             //e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -62,7 +62,12 @@ public class ExpresionOralMam extends FlipperActivity implements OnInitializeCom
 
     private void descition(float resultado) {
         if (resultado >= (100 / 40) + 1) {
-            setNextContext(ExpresionOralMam.this, NavigationMenu.class);
+            Bundle b = new Bundle();
+            b.putInt(IniciarEvaluacion.KEY_EVALUACION, 2);
+            Intent i = new Intent(ExpresionOralMam.this, Interaccion.class);
+            i.putExtras(b);
+            startActivity(i);
+
         } else {
             setNextContext(this, Interaccion.class);
         }

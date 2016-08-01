@@ -18,6 +18,8 @@ import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
+import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
+import gt.lea.usaid.perfiladorlinguistico.view.mam.VocabularioMam;
 
 /**
  * @author Bryan
@@ -87,8 +89,14 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
         @Override
         public void onClick(View v) {
             boolean condicion = (pregunta + 1) == 18;
+            Class<?> clase = null;
             if(condicion){
-                setNextContext(Precision.this, Vocabulario.class);
+                switch (idioma){
+                    case 0: clase = VocabularioKiche.class;break;
+                    case 1: clase = VocabularioMam.class;break;
+                    case 2: clase = Vocabulario.class;break;
+                }
+                setNextContext(Precision.this, clase);
             }else{
                 pregunta ++;
                 //setOnInit(imagenes);

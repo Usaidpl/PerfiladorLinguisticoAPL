@@ -1,10 +1,14 @@
 package gt.lea.usaid.perfiladorlinguistico.controller.evaluacion;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -23,12 +27,12 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
  */
 public class Interaccion
         extends Activity
-        implements OnStartNextContext,OnInitializeComponent,OnInitializeText, View.OnClickListener  {
+        implements OnStartNextContext, OnInitializeComponent, OnInitializeText, View.OnClickListener {
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
-    private TextView intruduccion,  tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
+    private TextView intruduccion, tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
     private static final String NOMBRE_TABLA = "interaccion";
-    public  static final String KEY_RESULTADO = "resultado";
+    public static final String KEY_RESULTADO = "resultado";
 
     private int serie = 0;
     private int evalua = 1;
@@ -41,15 +45,31 @@ public class Interaccion
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interaccion);
         Bundle b = getIntent().getExtras();
-        try{
+        try {
             serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
-        }catch (Exception e){
+            onPermission();
+        } catch (Exception e) {
             serie = 0;
             String s = e.getMessage() + " Bundle";
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
         msg(getMsg());
         setOnInit(null);
+    }
+
+    private void onPermission() throws Exception{
+        LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, ubicacion);
     }
 
     public void msg(String s){
@@ -84,7 +104,6 @@ public class Interaccion
     }
 
     private void textos(){
-
         //método encargado de agregar los textos a los componentes correspondientes
         setTextCompoent(ArregloMultiDimensional.ArregloInteraccion.TEXTOS);
     }
@@ -125,16 +144,12 @@ public class Interaccion
                      s += resultado;
                     msg(s);
             }
-            //lanzamiento a la siguiente actividad
-
             setNextContext(Interaccion.this, Comprension.class);
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
     }
-
-
 
     @Override
     protected void onPause() {
@@ -150,12 +165,9 @@ public class Interaccion
         i.putExtras(b);
         startActivity(i);
     }
-
-
     public int getEvalua() {
         return evalua;
     }
-
     public String getMsg() {
         return msg;
     }
@@ -163,4 +175,16 @@ public class Interaccion
     public void setMsg(String msg) {
         this.msg = msg;
     }
+
+    private Ubicacion ubicacion = new Ubicacion(this) {
+        @Override
+        public void onProviderEnabled(String provider) {
+            msg("GPS ACTIVADO");
+        }
+
+        @Override
+        public void onProviderDisabled(String provider) {
+            msg("GPS DESACTIVADO");
+        }
+    };
 }

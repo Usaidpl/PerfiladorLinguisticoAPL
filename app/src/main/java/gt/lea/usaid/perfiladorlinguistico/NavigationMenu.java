@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import gt.lea.usaid.perfiladorlinguistico.controller.GuiaEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.ResultadosAula;
+import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 import gt.lea.usaid.perfiladorlinguistico.utils.Localizacion;
 import gt.lea.usaid.perfiladorlinguistico.view.Creditos;
 import gt.lea.usaid.perfiladorlinguistico.view.Email;

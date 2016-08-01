@@ -1,5 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.MotionEvent;
@@ -11,6 +12,7 @@ import android.widget.ViewFlipper;
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
+import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
@@ -62,7 +64,12 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
 
     private void descition(float resultado) {
         if (resultado >= (100 / 40) + 1) {
-            setNextContext(ExpresionOralKiche.this, NavigationMenu.class);
+            //setNextContext(ExpresionOralKiche.this, NavigationMenu.class);
+            Bundle b = new Bundle();
+            b.putInt(IniciarEvaluacion.KEY_EVALUACION, 2);
+            Intent i = new Intent(ExpresionOralKiche.this, Interaccion.class);
+            i.putExtras(b);
+            startActivity(i);
         } else {
             setNextContext(this, Interaccion.class);
         }

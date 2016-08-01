@@ -14,6 +14,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,13 +24,15 @@ import java.util.List;
 import java.util.Locale;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 
 public class Localizacion extends Activity {
 
     private TextView tv;
+    private String direccion_final;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.localiza);
         LocationManager milocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -73,12 +76,19 @@ public class Localizacion extends Activity {
         public void setLocation(Location loc) {
             //Obtener la direcci—n de la calle a partir de la latitud y la longitud
             if (loc.getLatitude() != 0.0 && loc.getLongitude() != 0.0) {
+                String SALTO_LINE = "\n", ESPACIO = "  ", COMA = ",";
+
                 try {
                     Geocoder geocoder = new Geocoder(Localizacion.this, Locale.getDefault());
                     List<Address> list = geocoder.getFromLocation(loc.getLatitude(), loc.getLongitude(), 1);
                     if (!list.isEmpty()) {
                         Address address = list.get(0);
-                        tv.setText("Mi direccion es: \n" + address.getAddressLine(0));
+                        String direccion =  "Mi direccion es: \n" + address.getAddressLine(0) +
+                                COMA + address.getAddressLine(1) + SALTO_LINE +
+                                address.getSubAdminArea() +  "," + address.getSubLocality() + COMA +
+                                address.getSubThoroughfare();
+                        tv.setText(direccion);
+                        direccion_final = direccion;
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -87,6 +97,7 @@ public class Localizacion extends Activity {
         }
     }
 
-
-
+    public String getDireccion(){
+        return direccion_final;
+    }
 }

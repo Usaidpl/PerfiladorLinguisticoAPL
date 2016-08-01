@@ -13,6 +13,7 @@ public class ArregloMultiDimensional {
                 public static int[][][] IMAGENES = {
                         //imagenes kiche
                         {
+
                                 {R.mipmap.nino, R.mipmap.senior, R.mipmap.abuelita},//1
                                 {R.mipmap.seniora, R.mipmap.nina, R.mipmap.senior},//2
                                 {R.mipmap.abuelita, R.mipmap.nina, R.mipmap.nino},//3

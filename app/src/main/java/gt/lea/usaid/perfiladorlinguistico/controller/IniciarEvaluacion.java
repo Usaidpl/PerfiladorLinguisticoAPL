@@ -54,25 +54,23 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
 
     @Override
     public void onClick(View v) {
-        Intent intent = null;
+        //Intent intent = null;
         Bundle b = new Bundle();
+        Class<?> clase = null;
         int evalua = 0;
         switch (v.getId()) {
             case R.id.ivMamEva:
-                intent = new Intent(getActivity(), Interaccion.class);
-               //b.putInt(KEY_EVALUACION, 0);
-                intent.putExtras(envia(0));
-                getActivity().startActivity(intent);
+                evalua = 0;
                 break;
             case R.id.ivKicheEva:
-                intent = new Intent(getActivity(), Interaccion.class);
-                intent.putExtras(envia(1));
-                getActivity().startActivity(intent);
+                evalua = 1;
                 break;
-
         }
-        //select * from entrevista join interaccion join .... where id = 002;
-        //Inte
+        Intent i = new Intent(getActivity(), Interaccion.class);
+        b.putInt(IniciarEvaluacion.KEY_EVALUACION, evalua);
+        i.putExtras(b);
+        startActivity(i);
+
     }
 
     private Bundle envia(int cantidad){

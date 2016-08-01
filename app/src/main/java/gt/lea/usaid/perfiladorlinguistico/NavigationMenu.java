@@ -96,6 +96,7 @@ public class NavigationMenu
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
+        Class<?> clas = null;
 
         boolean FragmentTransaction = false;
         Fragment fragment = null;
@@ -106,15 +107,15 @@ public class NavigationMenu
         } else if (id == R.id.nav_guia_evaluador) {
             fragment = new GuiaEvaluacion();
             FragmentTransaction = true;
-
         } else if (id == R.id.nav_resultados_por_aula) {
             fragment = new ResultadosAula();
             FragmentTransaction = true;
 
         }else if (id ==  R.id.nav_entrevista) {
-            Intent entrevistas = new Intent(NavigationMenu.this, Entrevistas.class);
-            getApplication().startActivity(entrevistas);
+            clas = Entrevistas.class;
         }
+        Intent i = new Intent(NavigationMenu.this, clas);
+        startActivity(i);
 
         if (FragmentTransaction) {
             getSupportFragmentManager().beginTransaction()

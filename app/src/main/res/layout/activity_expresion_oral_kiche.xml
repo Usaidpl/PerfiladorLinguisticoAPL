@@ -99,7 +99,7 @@
                             android:layout_x="120dp"
                             android:layout_y="-20dp"
                             android:padding="20dp"
-                            android:text="@string/pronuncia_correctamente_las_palabras_que_utiliza"
+                            android:text="@string/pronuncia_correctamente_las_palabras_que_utiliza_kiche"
                             android:textSize="20dp"
                             android:textStyle="bold" />
 
@@ -172,7 +172,7 @@
                             android:layout_x="120dp"
                             android:layout_y="-20dp"
                             android:padding="20dp"
-                            android:text="@string/se_mantiene_en_el_tema_de_conversaci_n"
+                            android:text="@string/se_mantiene_en_el_tema_conversacion_kiche"
                             android:textSize="20dp"
                             android:textStyle="bold" />
 
@@ -229,7 +229,7 @@
                             android:layout_x="120dp"
                             android:layout_y="-20dp"
                             android:padding="20dp"
-                            android:text="@string/organiza_secuencialmente_sus_ideas_al_expresarse"
+                            android:text="@string/organiza_secuencialmente_sus_idea_al_expresarse_kiche"
                             android:textSize="20dp"
                             android:textStyle="bold" />
 
@@ -286,7 +286,7 @@
                             android:layout_x="120dp"
                             android:layout_y="-20dp"
                             android:padding="20dp"
-                            android:text="@string/se_expresa_con_claridad_en_la_conversaci_n"
+                            android:text="@string/se_expresa_con_claridad_en_la_conversacion_kiche"
                             android:textSize="20dp"
                             android:textStyle="bold" />
 

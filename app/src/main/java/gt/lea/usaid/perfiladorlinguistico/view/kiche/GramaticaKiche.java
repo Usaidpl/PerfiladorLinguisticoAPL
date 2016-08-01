@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
-import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class  GramaticaKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -62,7 +61,7 @@ public class  GramaticaKiche extends Activity implements OnInitializeComponent, 
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, Interaccion.class);
+            setNextContext(this, ExpresionOralKiche.class);
         } else {
         pregunta ++;
         setOnInit(null);

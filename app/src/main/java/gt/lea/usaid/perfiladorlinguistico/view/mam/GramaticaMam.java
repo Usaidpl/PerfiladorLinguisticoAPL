@@ -15,7 +15,6 @@ import android.widget.TextView;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 
 public class GramaticaMam extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private int pregunta = 0;
@@ -63,7 +62,7 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, Interaccion.class);
+            setNextContext(this, ExpresionOralMam.class);
         } else {
             pregunta ++;
             setOnInit(null);

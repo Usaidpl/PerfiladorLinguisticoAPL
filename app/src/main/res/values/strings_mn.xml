@@ -71,9 +71,11 @@
     <string name="vi_ttxuek">ttxu ek´ / ttxu ik´</string>
     <string name="vi_ttxurit">ttxu rit / kne´l</string>
     <string name="vi_txubaj">txub´aj</string>
-    <string name="titulo_gramatica_mam">VI. Gramática Mam</string>
-    <string name="titulo_sonidos_especificos_mam">V. Sonidos Específicos Mam</string>
-    <string name="titulo_vocabulario_produccion_mam">IV. Vocabulario Producción Mam</string>
-    <string name="titulo_expresion_oral_mam">VII. Expresión Oral Mam</string>
+    <string name="titulo_gramatica_mam">VI. K’LOJ, TXOLIL QYOL MAM  / GRAMÁTICA</string>
+    <string name="titulo_sonidos_especificos_mam">V. K\'LOJ. TQ\'OJQ\'OJAL QYOL MAM / SONIDOS ESPECÍFICOS DEL MAM</string>
+    <string name="titulo_vocabulario_produccion_mam">IV. K’LOJ, K’LOJYOL MAM / VOCABULARIO (PRODUCCIÓN)</string>
+    <string name="titulo_expresion_oral_mam">VII. K’LOJ. YOLB’ENTE QYOL MAM / EXPRESIÓN ORAL  </string>
+    <string name="mam_si">Tzun / Si</string>
+    <string name="mam_no">Miti’ / No</string>
 
 </resources>

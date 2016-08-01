@@ -16,6 +16,7 @@ import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 
 public class ExpresionOralKiche extends FlipperActivity implements OnInitializeComponent, View.OnClickListener {
     private RadioButton RespNoPregunta1, RespSiPregunta1, RespNoPregunta2, RespSiPregunta2, RespNoPregunta3, RespSiPregunta3, RespNoPregunta4, RespSiPregunta4;
@@ -25,7 +26,7 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expresion_oral);
+        setContentView(R.layout.activity_expresion_oral_kiche);
         vfEvaExpresionOral = (ViewFlipper) findViewById(R.id.vfEvaExpresionOral);
         setOnInit(null);
 
@@ -55,7 +56,7 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
         try {
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
             descition(resultado);
-            setNextContext(ExpresionOralKiche.this, NavigationMenu.class);
+            setNextContext(ExpresionOralKiche.this, Vocabulario.class);
         } catch (Exception e) {
             //e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();

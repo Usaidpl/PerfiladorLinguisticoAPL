@@ -25,7 +25,7 @@ public class ExpresionOralMam extends FlipperActivity implements OnInitializeCom
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expresion_oral);
+        setContentView(R.layout.activity_expresion_oral_mam);
         vfEvaExpresionOral = (ViewFlipper) findViewById(R.id.vfEvaExpresionOral);
         setOnInit(null);
     }

@@ -2,7 +2,6 @@ package gt.lea.usaid.perfiladorlinguistico;
 
 
 import android.content.ContentValues;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -45,7 +44,7 @@ public class Entrevistas extends AppCompatActivity {
         bt_mostrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Entrevistas.this, Listado.class) );
+               // startActivity(new Intent(Entrevistas.this, Listado.class) );
             }
         });
 

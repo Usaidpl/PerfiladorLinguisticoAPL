@@ -71,8 +71,10 @@
     <string name="vi_tat">tat / achi</string>
     <string name="vi_mam">mam / tat</string>
     <string name="vi_pendiente">falta hoja pdf</string>
-    <string name="titulo_gramatica_kiche">VI. Gramática Kiche</string>
-    <string name="titulo_sonidos_especificos_kiche">V. Sonidos Específicos Kiche</string>
-    <string name="titulo_vocabulario_produccion_kiche">IV. Vocabulario Producción Kiche</string>
-    <string name="titulo_expresion_oral_kch">VII. Expresión Oral Kiche</string>
+    <string name="titulo_gramatica_kiche">VI. CHOLAJ, UTZALAJ UKOJIK CH’AB’AL / GRAMÁTICA</string>
+    <string name="titulo_sonidos_especificos_kiche">V. CHOLAJ. KICH’AB’AL LE TAQ TZIJ / SONIDOS ESPECÍFICOS</string>
+    <string name="titulo_vocabulario_produccion_kiche">IV. CHOLAJ. TAQ TZIJ (KUYA UB0IXIK) / VOCABULARIO (PRODUCCIÓN)</string>
+    <string name="titulo_expresion_oral_kch">VII. CHOLAJ. UCH’AB’EXIK / EXPRESIÓN ORAL</string>
+    <string name="kiche_si">Je’ / Sí</string>
+    <string name="kiche_no">Je’ taj /No</string>
 </resources>

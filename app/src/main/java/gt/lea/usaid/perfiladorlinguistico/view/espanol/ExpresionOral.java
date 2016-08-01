@@ -1,8 +1,5 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.MotionEvent;
@@ -13,11 +10,12 @@ import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
-public class ExpresionOral extends Activity implements OnInitializeComponent, View.OnClickListener {
+public class ExpresionOral extends FlipperActivity implements OnInitializeComponent, View.OnClickListener {
     private RadioButton RespNoPregunta1, RespSiPregunta1, RespNoPregunta2, RespSiPregunta2, RespNoPregunta3, RespSiPregunta3, RespNoPregunta4, RespSiPregunta4;
     private ViewFlipper vfEvaExpresionOral;
     private float lastX;
@@ -26,13 +24,17 @@ public class ExpresionOral extends Activity implements OnInitializeComponent, Vi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expresion_oral);
+        vfEvaExpresionOral = (ViewFlipper) findViewById(R.id.vfEvaExpresionOral);
+        setOnInit(null);
+
+
     }
 
     @Override
     public void onClick(View v) {
         boolean[][] radios_selected = {
-                {RespNoPregunta1.isChecked(),RespNoPregunta2.isChecked(), RespNoPregunta3.isChecked(), RespNoPregunta4.isChecked()},
-                {RespSiPregunta1.isChecked(),RespSiPregunta2.isChecked(), RespSiPregunta3.isChecked(), RespSiPregunta4.isChecked()}};
+                {RespNoPregunta1.isChecked(), RespNoPregunta2.isChecked(), RespNoPregunta3.isChecked(), RespNoPregunta4.isChecked()},
+                {RespSiPregunta1.isChecked(), RespSiPregunta2.isChecked(), RespSiPregunta3.isChecked(), RespSiPregunta4.isChecked()}};
         Verifica vr = new Verifica(radios_selected, null);
         try {
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
@@ -43,30 +45,22 @@ public class ExpresionOral extends Activity implements OnInitializeComponent, Vi
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-    private void descition(float resultado){
-        if(resultado >= (100/40) + 1) {
+
+    private void descition(float resultado) {
+        if (resultado >= (100 / 40) + 1) {
             setNextContext(ExpresionOral.this, NavigationMenu.class);
-        }
-        else{
+        } else {
             setNextContext(this, Interaccion.class);
         }
     }
 
 
-
     @Override
-    public void setOnInit(@IdRes int[][] matriz) {
-        RespNoPregunta1 =(RadioButton) findViewById(R.id.RespNoPregunta1);
-        RespSiPregunta1 = (RadioButton) findViewById(R.id.RespSiPregunta1);
-        RespNoPregunta2 =(RadioButton) findViewById(R.id.RespNoPregunta2);
-        RespSiPregunta2 = (RadioButton) findViewById(R.id.RespSiPregunta2);
-        RespNoPregunta3 =(RadioButton) findViewById(R.id.RespNoPregunta3);
-        RespSiPregunta3 = (RadioButton) findViewById(R.id.RespSiPregunta3);
-        RespNoPregunta4 =(RadioButton) findViewById(R.id.RespNoPregunta4);
-        RespSiPregunta4 = (RadioButton) findViewById(R.id.RespSiPregunta4);
-        RespNoPregunta4.setOnClickListener(this);
-        RespSiPregunta4.setOnClickListener(this);
+    protected void onPause() {
+        super.onPause();
+        finish();
     }
+
     public boolean onTouchEvent(MotionEvent touchevent) {
         switch (touchevent.getAction()) {
 
@@ -102,13 +96,19 @@ public class ExpresionOral extends Activity implements OnInitializeComponent, Vi
         }
         return false;
     }
+
+
     @Override
-    protected void onPause() {
-        super.onPause();
-        finish();
-    }
-    public void setNextContext(Context context, Class<?> next_context) {
-        Intent i = new Intent(context, next_context);
-        startActivity(i);
+    public void setOnInit(@IdRes int[][] matriz) {
+        RespNoPregunta1 = (RadioButton) findViewById(R.id.RespNoPregunta1);
+        RespSiPregunta1 = (RadioButton) findViewById(R.id.RespSiPregunta1);
+        RespNoPregunta2 = (RadioButton) findViewById(R.id.RespNoPregunta2);
+        RespSiPregunta2 = (RadioButton) findViewById(R.id.RespSiPregunta2);
+        RespNoPregunta3 = (RadioButton) findViewById(R.id.RespNoPregunta3);
+        RespSiPregunta3 = (RadioButton) findViewById(R.id.RespSiPregunta3);
+        RespNoPregunta4 = (RadioButton) findViewById(R.id.RespNoPregunta4);
+        RespSiPregunta4 = (RadioButton) findViewById(R.id.RespSiPregunta4);
+        RespNoPregunta4.setOnClickListener(this);
+        RespSiPregunta4.setOnClickListener(this);
     }
 }

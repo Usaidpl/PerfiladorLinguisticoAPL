@@ -60,9 +60,9 @@
         <activity
             android:name=".view.guias.GuiaSonidosEspecificos"
             android:screenOrientation="landscape" />
-
-        <activity android:name=".view.espanol.Vocabulario"
-            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".view.espanol.Vocabulario"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".view.guias.GuiaVocabulario"
             android:screenOrientation="landscape" />
@@ -73,8 +73,7 @@
         <activity android:name=".view.EnviarInformacion" />
         <activity android:name=".view.Email" />
         <activity android:name=".controller.evaluacion.Precision" />
-        <activity android:name=".utils.Localizacion"/>
-
+        <activity android:name=".utils.Localizacion" />
         <activity android:name=".view.mam.ExpresionOralMam" />
         <activity android:name=".view.mam.GramaticaMam" />
         <activity android:name=".view.mam.SonidosEspecificosMam" />
@@ -82,14 +81,16 @@
         <activity android:name=".view.kiche.ExpresionOralKiche" />
         <activity android:name=".view.kiche.GramaticaKiche" />
         <activity android:name=".view.kiche.SonidosEspecificosKiche" />
-        <activity android:name=".view.kiche.VocabularioKiche"></activity>
-<activity android:name=".view.espanol.SonidosEspecificos"
-    android:screenOrientation="landscape"/>
-        <activity android:name=".view.espanol.Gramatica"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".view.espanol.ExpresionOral"
-            android:screenOrientation="landscape"/>
-
+        <activity android:name=".view.kiche.VocabularioKiche" />
+        <activity
+            android:name=".view.espanol.SonidosEspecificos"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.espanol.Gramatica"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.espanol.ExpresionOral"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

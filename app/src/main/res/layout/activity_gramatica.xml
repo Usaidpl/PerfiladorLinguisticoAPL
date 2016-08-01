@@ -16,7 +16,7 @@
         android:layout_y="25dp"
         android:background="#B71C1C"
         android:gravity="center"
-        android:text="Titulo Nombre"
+        android:text="@string/titulo_gramatica_espanol"
         android:textColor="#ffffffff"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold" />
@@ -81,7 +81,8 @@
                 android:layout_marginTop="20dp"
                 android:textStyle="bold"
                 android:layout_x="25dp"
-                android:layout_y="250dp" />
+                android:layout_y="250dp"
+                android:background="#3f51b5" />
 
             <RadioGroup
                 android:id="@+id/rgGramatica"

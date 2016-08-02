@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
@@ -28,12 +29,15 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
     private String resultado ="";
     //private int pregunta = 0;
     private int serie = 0;
+    private String resultado_sonidos = "";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gramatica);
+        Bundle b = getIntent().getExtras();
+        resultado_sonidos = b.getString("evaluacion");
         setOnInit(null);
     }
 
@@ -62,7 +66,23 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, ExpresionOral.class);
+            //resultado_gramatica += resultado;
+            resultado_sonidos +=
+                    "&&" + resultado;
+            Toast mensaje_toast =
+                    Toast.makeText(getApplicationContext(),
+                            resultado_sonidos, Toast.LENGTH_SHORT);
+
+            mensaje_toast.show();
+           //###############################
+            Bundle b = new Bundle();
+            b.putString("evaluacion", resultado_sonidos);
+            Intent i = new Intent(this, ExpresionOral.class);
+            i.putExtras(b);
+            startActivity(i);
+            //#############################
+
+            //setNextContext(this, ExpresionOral.class);
         } else {
             pregunta ++;
             setOnInit(null);
@@ -73,7 +93,6 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
                 resultado += 1;
             }else
                 resultado += 0;
-
         }
     }
 

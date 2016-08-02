@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
@@ -29,6 +30,7 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
     private String resultado = "";
     private int pregunta = 0;
     private int serie = 0;
+    //private String valores_vocabulario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,26 +63,40 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
 
     @Override
     public void onClick(View v) {
-        //pregunta_toca ++;
-        /*
-       */
         if ((pregunta +1) == img.length){
-            setNextContext(this, SonidosEspecificos.class);
+            Bundle b = new Bundle();
+            b.putString("evaluacion", resultado);
+            Intent i = new Intent(this, SonidosEspecificos.class);
+            i.putExtras(b);
+            Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+            startActivity(i);
+            //setNextContext(this, SonidosEspecificos.class);
         } else {
+            if(rbSiVocabulario.isChecked()){
+                if(!rbNoVocabulario.isChecked()){
+                    resultado += "1";
+                }else
+                    resultado += "0";
+            }else{
+               if(rbNoVocabulario.isChecked()){
+                   resultado += "0";
+               }
+            }
+            Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
             pregunta ++;
             setOnInit(null);
             swVocabulario.setChecked(false);
             rbSiVocabulario.setChecked(false);
             rbNoVocabulario.setChecked(false);
-            if(rbSiVocabulario.isChecked()){
-                resultado += 1;
-            }else
-                resultado += 0;
+
+            //1011010010101
 
         }
 
-        //Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
     }
+
+
+
 
 
     @Override

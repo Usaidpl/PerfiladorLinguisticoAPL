@@ -19,7 +19,7 @@ public class  GramaticaKiche extends Activity implements OnInitializeComponent, 
     private int pregunta = 0;
     //private int strings[] = {R.string.titulo_GramaticaKiche_mam, R.string.inst_eva_expresion_oral},
 
-    private int img[] = {R.mipmap.sandalia, R.mipmap.logolea, R.mipmap.gato, R.mipmap.gatos, R.mipmap.senior, R.mipmap.seniora, R.mipmap.abuelo, R.mipmap.logolea};
+    private int img[] = {R.mipmap.sandalia, R.mipmap.logolea, R.mipmap.logolea, R.mipmap.logolea, R.mipmap.senior, R.mipmap.seniora, R.mipmap.abuelo, R.mipmap.logolea};
     private int string_muestra[] = {R.string.vi_xajab, R.string.vi_taqxajab, R.string.vi_mes, R.string.vi_taqmes, R.string.vi_ali, R.string.vi_tat, R.string.vi_mam, R.string.vi_pendiente};
     private TextView tvGramaticaKiche, tvRespuesta, nuPregunta;
     private ImageView ivGramaticaKiche;

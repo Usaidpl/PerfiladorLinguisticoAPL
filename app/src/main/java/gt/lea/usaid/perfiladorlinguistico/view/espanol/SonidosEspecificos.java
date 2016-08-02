@@ -28,11 +28,15 @@ public class  SonidosEspecificos extends Activity implements OnInitializeCompone
     private String resultado ="";
     //private int pregunta = 0;
     private int serie = 0;
+    private String resultado_vocabulario = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sonidos_especificos);
+        Bundle b = getIntent().getExtras();
+        resultado_vocabulario = b.getString("evaluacion");
+
         setOnInit(null);
     }
 
@@ -61,7 +65,16 @@ public class  SonidosEspecificos extends Activity implements OnInitializeCompone
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, Gramatica.class);
+            String resultado_sonido = "";
+            resultado_sonido += resultado;
+            resultado_vocabulario +=
+                    "&&" +resultado_sonido;
+            Bundle b = new Bundle();
+            b.putString("evaluacion", resultado_sonido);
+            Intent i = new Intent(this,Gramatica.class);
+            i.putExtras(b);
+            startActivity(i);
+            //setNextContext(this, Gramatica.class);
         } else {
             pregunta ++;
             setOnInit(null);

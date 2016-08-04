@@ -9,13 +9,14 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Gramatica;
 
 public class  SonidosEspecificosMam extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private int pregunta = 0;
@@ -30,6 +31,8 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
     private String resultado ="";
     //private int pregunta = 0;
     private int serie = 0;
+    private String resultado_vocabulario_mam = "";
+    private RadioGroup rgSonidosEspecificosMam;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,7 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
         tvRespuesta =(TextView) findViewById(R.id.tvSonidosEspecificosMamRespuestaSwitch);
         nuPregunta = (TextView) findViewById(R.id.tvSonidosEspecificosMamNumero);
         tvSonidosEspecificosMam = (TextView) findViewById(R.id.tvSonidosEspecificosMamTitulo);
+        rgSonidosEspecificosMam = (RadioGroup) findViewById(R.id.rgSonidosEspecificosMam);
         String guarda_numero = "";
         guarda_numero += pregunta+1;
         nuPregunta.setText(guarda_numero);
@@ -58,24 +62,38 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
         swSonidosEspecificosMam.setOnCheckedChangeListener(this);
         rbSiSonidosEspecificosMam.setOnClickListener(this);
         rbNoSonidosEspecificosMam.setOnClickListener(this);
+        rgSonidosEspecificosMam.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, Gramatica.class);
+            resultado_vocabulario_mam +=
+                    "&&" + resultado;
+            Toast mensaje_toast =
+                    Toast.makeText(getApplicationContext(),
+                            resultado_vocabulario_mam, Toast.LENGTH_SHORT);
+            mensaje_toast.show();
+
+            Bundle b = new Bundle();
+            b.putString("evaluacion", resultado_vocabulario_mam);
+            Intent i = new Intent(this,GramaticaMam.class);
+            i.putExtras(b);
+            startActivity(i);
         } else {
             pregunta ++;
             setOnInit(null);
-            swSonidosEspecificosMam.setChecked(false);
-            rbSiSonidosEspecificosMam.setChecked(false);
-            rbNoSonidosEspecificosMam.setChecked(false);
             if(rbSiSonidosEspecificosMam.isChecked()){
+                swSonidosEspecificosMam.setChecked(false);
+                rgSonidosEspecificosMam.clearCheck();
                 resultado += 1;
             }else
                 resultado += 0;
-
-        }}
+                rbSiSonidosEspecificosMam.setChecked(false);
+                rbNoSonidosEspecificosMam.setChecked(false);
+        }
+        Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+    }
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(swSonidosEspecificosMam.isChecked()){

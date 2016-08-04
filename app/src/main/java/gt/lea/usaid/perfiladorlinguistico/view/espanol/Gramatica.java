@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -9,6 +8,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +16,7 @@ import android.widget.Toast;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
-public class  Gramatica extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class Gramatica extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private int pregunta = 0;
     //private int strings[] = {R.string.titulo_Gramatica_mam, R.string.inst_eva_expresion_oral},
 
@@ -26,10 +26,11 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
     private ImageView ivGramatica;
     private RadioButton rbSiGramatica, rbNoGramatica;
     private Switch swGramatica;
-    private String resultado ="";
+    private String resultado = "";
     //private int pregunta = 0;
     private int serie = 0;
     private String resultado_sonidos = "";
+    private RadioGroup rgGramatica;
 
 
     @Override
@@ -47,11 +48,13 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
         rbNoGramatica = (RadioButton) findViewById(R.id.rbGramaticaNo);
         ivGramatica = (ImageView) findViewById(R.id.ivGramatica);
         swGramatica = (Switch) findViewById(R.id.swGramatica);
-        tvRespuesta =(TextView) findViewById(R.id.tvGramaticaRespuestaSwitch);
+        tvRespuesta = (TextView) findViewById(R.id.tvGramaticaRespuestaSwitch);
         nuPregunta = (TextView) findViewById(R.id.tvGramaticaNumero);
         tvGramatica = (TextView) findViewById(R.id.tvGramaticaTitulo);
+        rgGramatica = (RadioGroup) findViewById(R.id.rgGramatica);
+
         String guarda_numero = "";
-        guarda_numero += pregunta +1;
+        guarda_numero += pregunta + 1;
         nuPregunta.setText(guarda_numero);
         int i = string_muestra[pregunta],
                 imgs = img[pregunta];//respuesta correcta
@@ -61,20 +64,20 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
         swGramatica.setOnCheckedChangeListener(this);
         rbSiGramatica.setOnClickListener(this);
         rbNoGramatica.setOnClickListener(this);
+        rgGramatica.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if ((pregunta +1) == img.length){
+        if ((pregunta + 1) == img.length) {
             //resultado_gramatica += resultado;
             resultado_sonidos +=
                     "&&" + resultado;
             Toast mensaje_toast =
                     Toast.makeText(getApplicationContext(),
                             resultado_sonidos, Toast.LENGTH_SHORT);
-
             mensaje_toast.show();
-           //###############################
+            //###############################
             Bundle b = new Bundle();
             b.putString("evaluacion", resultado_sonidos);
             Intent i = new Intent(this, ExpresionOral.class);
@@ -83,27 +86,34 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
             //#############################
 
             //setNextContext(this, ExpresionOral.class);
+
         } else {
-            pregunta ++;
+            pregunta++;
             setOnInit(null);
             swGramatica.setChecked(false);
-            rbSiGramatica.setChecked(false);
-            rbNoGramatica.setChecked(false);
-            if(rbSiGramatica.isChecked()){
+            //rbSiGramatica.setChecked(false);
+            //rbNoGramatica.setChecked(false);
+            if (rbSiGramatica.isChecked()) {
+                rgGramatica.clearCheck();
                 resultado += 1;
-            }else
+            } else
+                rbSiGramatica.setChecked(false);
+                rbNoGramatica.setChecked(false);
                 resultado += 0;
         }
+        Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        if(swGramatica.isChecked()){
+        if (swGramatica.isChecked()) {
             int i = string_muestra[pregunta];
             tvRespuesta.setText(i);
-        }else
+        } else
             tvRespuesta.setText("");
+        Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
     }
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -111,9 +121,5 @@ public class  Gramatica extends Activity implements OnInitializeComponent, View.
     }
 
 
-    public void setNextContext(Context context, Class<?> next_context) {
-        Intent i = new Intent(context, next_context);
-        startActivity(i);
-    }
 }
 

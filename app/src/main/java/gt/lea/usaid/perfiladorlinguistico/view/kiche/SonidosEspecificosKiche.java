@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -9,11 +8,12 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class  SonidosEspecificosKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -29,11 +29,16 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
     private String resultado ="";
     private int pregunta = 0;
     private int serie = 0;
+    private String resultado_vocabulario_kiche = "";
+    private RadioGroup rgSonidosEspecificosKiche;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sonidos_especificos_kiche);
+        Bundle b = getIntent().getExtras();
+        resultado_vocabulario_kiche = b.getString("evaluacion");
         setOnInit(null);
     }
 
@@ -46,6 +51,7 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
         tvRespuesta =(TextView) findViewById(R.id.tvSonidosEspecificosKicheRespuestaSwitch);
         nuPregunta = (TextView) findViewById(R.id.tvSonidosEspecificosKicheNumero);
         tvSonidosEspecificosKiche = (TextView) findViewById(R.id.tvSonidosEspecificosKicheTitulo);
+        rgSonidosEspecificosKiche = (RadioGroup) findViewById(R.id.rgSonidosEspecificosKiche);
         String guarda_numero = "";
         guarda_numero += pregunta+1;
         nuPregunta.setText(guarda_numero);
@@ -57,24 +63,39 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
         swSonidosEspecificosKiche.setOnCheckedChangeListener(this);
         rbSiSonidosEspecificosKiche.setOnClickListener(this);
         rbNoSonidosEspecificosKiche.setOnClickListener(this);
+        rgSonidosEspecificosKiche.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, GramaticaKiche.class);
+            //String resultado_sonido = "";
+            resultado_vocabulario_kiche +=
+                    "&&" + resultado;
+            Toast mensaje_toast =
+                    Toast.makeText(getApplicationContext(),
+                            resultado_vocabulario_kiche, Toast.LENGTH_SHORT);
+            mensaje_toast.show();
+
+            Bundle b = new Bundle();
+            b.putString("evaluacion", resultado_vocabulario_kiche);
+            Intent i = new Intent(this,GramaticaKiche.class);
+            i.putExtras(b);
+            startActivity(i);
+
         } else {
             pregunta ++;
             setOnInit(null);
-            swSonidosEspecificosKiche.setChecked(false);
-            rbSiSonidosEspecificosKiche.setChecked(false);
-            rbSiSonidosEspecificosKiche.setChecked(false);
             if(rbSiSonidosEspecificosKiche.isChecked()){
+                swSonidosEspecificosKiche.setChecked(false);
+                rgSonidosEspecificosKiche.clearCheck();
                 resultado += 1;
             }else
                 resultado += 0;
-
+                rbSiSonidosEspecificosKiche.setChecked(false);
+                rbNoSonidosEspecificosKiche.setChecked(false);
         }
+        Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -90,12 +111,6 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
         super.onPause();
         finish();
     }
-    public void setNextContext(Context context, Class<?> next_context) {
-        Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
-        Intent i = new Intent(context, next_context);
-        i.putExtras(b);
-        startActivity(i);
-    }
+
 }
 

@@ -1,6 +1,5 @@
 package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -8,11 +7,12 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class  GramaticaKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -28,11 +28,15 @@ public class  GramaticaKiche extends Activity implements OnInitializeComponent, 
     private String resultado ="";
    // private int pregunta = 0;
     private int serie = 0;
+    private String resultado_sonidos_kiche = "";
+    private RadioGroup rgGramaticaKiche;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gramatica_kiche);
+        Bundle b = getIntent().getExtras();
+        resultado_sonidos_kiche = b.getString("evaluacion");
         setOnInit(null);
     }
 
@@ -45,6 +49,7 @@ public class  GramaticaKiche extends Activity implements OnInitializeComponent, 
         tvRespuesta =(TextView) findViewById(R.id.tvGramaticaKicheRespuestaSwitch);
         nuPregunta = (TextView) findViewById(R.id.tvGramaticaKicheNumero);
         tvGramaticaKiche = (TextView) findViewById(R.id.tvGramaticaKicheTitulo);
+        rgGramaticaKiche = (RadioGroup) findViewById(R.id.rgGramaticaKiche);
         String guarda_numero = "";
         guarda_numero += pregunta +1;
         nuPregunta.setText(guarda_numero);
@@ -56,24 +61,37 @@ public class  GramaticaKiche extends Activity implements OnInitializeComponent, 
         swGramaticaKiche.setOnCheckedChangeListener(this);
         rbSiGramaticaKiche.setOnClickListener(this);
         rbNoGramaticaKiche.setOnClickListener(this);
+        rgGramaticaKiche.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, ExpresionOralKiche.class);
+            resultado_sonidos_kiche +=
+                    "&&" + resultado;
+            Toast mensaje_toast =
+                    Toast.makeText(getApplicationContext(),
+                            resultado_sonidos_kiche, Toast.LENGTH_SHORT);
+            mensaje_toast.show();
+            Bundle b = new Bundle();
+            b.putString("evaluacion", resultado_sonidos_kiche);
+            Intent i = new Intent(this, ExpresionOralKiche.class);
+            i.putExtras(b);
+            startActivity(i);
         } else {
-        pregunta ++;
-        setOnInit(null);
-        swGramaticaKiche.setChecked(false);
-        rbSiGramaticaKiche.setChecked(false);
-        rbNoGramaticaKiche.setChecked(false);
-        if(rbSiGramaticaKiche.isChecked()){
-            resultado += 1;
-        }else
-            resultado += 0;
-
-    }}
+            pregunta ++;
+            setOnInit(null);
+            swGramaticaKiche.setChecked(false);
+            if(rbSiGramaticaKiche.isChecked()){
+                rgGramaticaKiche.clearCheck();
+                resultado += 1;
+            }else
+                rbSiGramaticaKiche.setChecked(false);
+                rbNoGramaticaKiche.setChecked(false);
+                resultado += 0;
+        }
+        Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+    }
 
 
     @Override
@@ -88,13 +106,6 @@ public class  GramaticaKiche extends Activity implements OnInitializeComponent, 
     protected void onPause() {
         super.onPause();
         finish();
-    }
-    public void setNextContext(Context context, Class<?> next_context) {
-        Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
-        Intent i = new Intent(context, next_context);
-        i.putExtras(b);
-        startActivity(i);
     }
 
 }

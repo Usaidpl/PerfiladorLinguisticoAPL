@@ -96,7 +96,7 @@
                     android:layout_width="81dp"
                     android:layout_height="wrap_content"
                     android:layout_column="31"
-                    android:text="SI"
+                    android:text="@string/kiche_si"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -104,7 +104,7 @@
                     android:layout_width="91dp"
                     android:layout_height="wrap_content"
                     android:layout_column="33"
-                    android:text="NO"
+                    android:text="@string/kiche_no"
                     android:textStyle="bold" />
 
             </RadioGroup>

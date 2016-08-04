@@ -80,9 +80,7 @@
                 android:layout_column="0"
                 android:layout_marginTop="20dp"
                 android:textStyle="bold"
-                android:layout_x="25dp"
-                android:layout_y="250dp"
-                android:background="#3f51b5" />
+                android:layout_x="25dp" />
 
             <RadioGroup
                 android:id="@+id/rgGramatica"

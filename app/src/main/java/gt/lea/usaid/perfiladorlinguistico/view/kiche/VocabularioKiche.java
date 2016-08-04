@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -9,11 +8,12 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class VocabularioKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -29,11 +29,15 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
     private String resultado = "";
     //rivate int pregunta = 0;
     private int serie = 0;
+    private String resultado_precisiona_kiche ="";
+    private RadioGroup rgVocabularioKiche;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulario_kiche);
+        Bundle b = getIntent().getExtras();
+        resultado_precisiona_kiche = b.getString("evaluacion");
         setOnInit(null);
     }
 
@@ -46,6 +50,7 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
         tvRespuesta = (TextView) findViewById(R.id.tvVocabularioKicheRespuestaSwitch);
         nuPregunta = (TextView) findViewById(R.id.tvVocabularioKicheNumero);
         tvVocabularioKiche = (TextView) findViewById(R.id.tvVocabularioKicheTitulo);
+        rgVocabularioKiche = (RadioGroup) findViewById(R.id.rgVocabularioKiche);
         String guarda_numero = "";
         guarda_numero += pregunta+1;
         nuPregunta.setText(guarda_numero);
@@ -57,23 +62,38 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
         swVocabularioKiche.setOnCheckedChangeListener(this);
         rbSiVocabularioKiche.setOnClickListener(this);
         rbNoVocabularioKiche.setOnClickListener(this);
+        rgVocabularioKiche.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, SonidosEspecificosKiche.class);
+
+            Bundle b = new Bundle();
+            b.putString("evaluacion", resultado);
+            Intent i = new Intent(this, SonidosEspecificosKiche.class);
+            i.putExtras(b);
+            Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+            startActivity(i);
+            //setNextContext(this, SonidosEspecificos.class);
+            //swVocabulario.setChecked(false);
+            //rbSiVocabulario.setChecked(false);
+            //rbNoVocabulario.setChecked(false);
+
         } else {
             pregunta ++;
             setOnInit(null);
-            swVocabularioKiche.setChecked(false);
-            rbSiVocabularioKiche.setChecked(false);
-            rbNoVocabularioKiche.setChecked(false);
             if(rbSiVocabularioKiche.isChecked()){
+                swVocabularioKiche.setChecked(false);
+                rgVocabularioKiche.clearCheck();
                 resultado += 1;
-            }else
+            }else{
+                rbSiVocabularioKiche.setChecked(false);
+                rbNoVocabularioKiche.setChecked(false);
                 resultado += 0;
-
+            }
+            Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+            //1010010101
         }
 
     }
@@ -95,13 +115,7 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
         finish();
     }
 
-    public void setNextContext(Context context, Class<?> next_context) {
-        Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
-        Intent i = new Intent(context, next_context);
-        i.putExtras(b);
-        startActivity(i);
-    }
+
 
 }
 

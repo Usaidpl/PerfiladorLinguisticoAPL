@@ -9,8 +9,10 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
@@ -29,11 +31,15 @@ public class  VocabularioMam extends Activity implements OnInitializeComponent, 
     private String resultado ="";
     //private int pregunta = 0;
     private int serie = 0;
+    private String resultado_precisiona_mam ="";
+    private RadioGroup rgVocabularioMam;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulario_mam);
+        Bundle b = getIntent().getExtras();
+        resultado_precisiona_mam = b.getString("evaluacion");
         setOnInit(null);
     }
 
@@ -46,6 +52,7 @@ public class  VocabularioMam extends Activity implements OnInitializeComponent, 
         tvRespuesta =(TextView) findViewById(R.id.tvVocabularioMamRespuestaSwitch);
         nuPregunta = (TextView) findViewById(R.id.tvVocabularioMamNumero);
         tvVocabularioMam = (TextView) findViewById(R.id.tvVocabularioMamTitulo);
+        rgVocabularioMam = (RadioGroup) findViewById(R.id.rgVocabularioMam);
         String guarda_numero = "";
         guarda_numero += pregunta+1;
         nuPregunta.setText(guarda_numero);
@@ -57,24 +64,36 @@ public class  VocabularioMam extends Activity implements OnInitializeComponent, 
         swVocabularioMam.setOnCheckedChangeListener(this);
         rbSiVocabularioMam.setOnClickListener(this);
         rbNoVocabularioMam.setOnClickListener(this);
+        rgVocabularioMam.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, SonidosEspecificosMam.class);
+
+            Bundle b = new Bundle();
+            b.putString("evaluacion", resultado);
+            Intent i = new Intent(this, SonidosEspecificosMam.class);
+            i.putExtras(b);
+            Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+            startActivity(i);
+
         } else {
             pregunta ++;
             setOnInit(null);
-            swVocabularioMam.setChecked(false);
-            rbSiVocabularioMam.setChecked(false);
-            rbNoVocabularioMam.setChecked(false);
             if(rbSiVocabularioMam.isChecked()){
+                swVocabularioMam.setChecked(false);
+                rgVocabularioMam.clearCheck();
                 resultado += 1;
-            }else
+            }else{
+                rbSiVocabularioMam.setChecked(false);
+                rbNoVocabularioMam.setChecked(false);
                 resultado += 0;
-
-        }}
+            }
+            Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+            //1010010101
+        }
+    }
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(swVocabularioMam.isChecked()){

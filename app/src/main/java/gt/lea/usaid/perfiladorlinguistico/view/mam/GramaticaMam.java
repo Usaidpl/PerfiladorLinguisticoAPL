@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.mam;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -9,11 +8,12 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class GramaticaMam extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -27,6 +27,8 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
     private RadioButton rbSiGramaticaMam, rbNoGramaticaMam;
     private Switch swGramaticaMam;
     private String resultado ="";
+    private String resultado_sonidos_mam = "";
+    private RadioGroup rgGramaticaMam;
 
    // private int pregunta = 0;
     private int serie = 0;
@@ -34,6 +36,8 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gramatica_mam);
+        Bundle b = getIntent().getExtras();
+        resultado_sonidos_mam = b.getString("evaluacion");
         setOnInit(null);
     }
 
@@ -46,6 +50,7 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
         tvRespuesta =(TextView) findViewById(R.id.tvGramaticaMamRespuestaSwitch);
         nuPregunta = (TextView) findViewById(R.id.tvGramaticaMamNumero);
         tvGramaticaMam = (TextView) findViewById(R.id.tvGramaticaMamTitulo);
+        rgGramaticaMam = (RadioGroup) findViewById(R.id.rgGramaticaMam);
         String guarda_numero = "";
         guarda_numero += pregunta+1;
         nuPregunta.setText(guarda_numero);
@@ -57,24 +62,37 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
         swGramaticaMam.setOnCheckedChangeListener(this);
         rbSiGramaticaMam.setOnClickListener(this);
         rbNoGramaticaMam.setOnClickListener(this);
+        rgGramaticaMam.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if ((pregunta +1) == img.length){
-            setNextContext(this, ExpresionOralMam.class);
+            resultado_sonidos_mam +=
+                    "&&" + resultado;
+            Toast mensaje_toast =
+                    Toast.makeText(getApplicationContext(),
+                            resultado_sonidos_mam, Toast.LENGTH_SHORT);
+            mensaje_toast.show();
+            Bundle b = new Bundle();
+            b.putString("evaluacion", resultado_sonidos_mam);
+            Intent i = new Intent(this, ExpresionOralMam.class);
+            i.putExtras(b);
+            startActivity(i);
         } else {
             pregunta ++;
             setOnInit(null);
             swGramaticaMam.setChecked(false);
-            rbSiGramaticaMam.setChecked(false);
-            rbNoGramaticaMam.setChecked(false);
             if(rbSiGramaticaMam.isChecked()){
+                rgGramaticaMam.clearCheck();
                 resultado += 1;
             }else
+                rbSiGramaticaMam.setChecked(false);
+                rbNoGramaticaMam.setChecked(false);
                 resultado += 0;
-
-        }}
+        }
+        Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+    }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -88,12 +106,6 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
     protected void onPause() {
         super.onPause();
         finish();
-    } public void setNextContext(Context context, Class<?> next_context) {
-        Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
-        Intent i = new Intent(context, next_context);
-        i.putExtras(b);
-        startActivity(i);
     }
 }
 

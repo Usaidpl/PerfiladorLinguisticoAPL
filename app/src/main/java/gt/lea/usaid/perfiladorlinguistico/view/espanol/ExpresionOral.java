@@ -19,12 +19,15 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
     private RadioButton RespNoPregunta1, RespSiPregunta1, RespNoPregunta2, RespSiPregunta2, RespNoPregunta3, RespSiPregunta3, RespNoPregunta4, RespSiPregunta4;
     private ViewFlipper vfEvaExpresionOral;
     private float lastX;
+    private String resultado_gramatica="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expresion_oral);
         vfEvaExpresionOral = (ViewFlipper) findViewById(R.id.vfEvaExpresionOral);
+        Bundle b = getIntent().getExtras();
+        resultado_gramatica = b.getString("evaluacion");
         setOnInit(null);
 
 
@@ -40,6 +43,10 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
             descition(resultado);
             setNextContext(ExpresionOral.this, NavigationMenu.class);
+            Toast mensaje_toast =
+                    Toast.makeText(getApplicationContext(),
+                            resultado_gramatica, Toast.LENGTH_SHORT);
+            mensaje_toast.show();
         } catch (Exception e) {
             //e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();

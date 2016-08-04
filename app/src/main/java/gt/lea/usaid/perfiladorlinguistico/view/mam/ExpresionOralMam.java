@@ -83,8 +83,20 @@ public class ExpresionOralMam extends FlipperActivity implements OnInitializeCom
             setNextContext(this, Interaccion.class);
         }*/
 
-        //String split = "0101010101&&101010101";
-        //String[] linea= split.split("&&");
+        String split = "roberto&&Karla", resultado1 = null;
+        String data_base = "";
+        String[] linea= split.split("&&");
+        /*
+        for(int ks = 0; ks < linea.length; ks++){
+
+             resultado1 = linea[ks];
+            msg(resultado1);
+        }
+        data_base = linea[0];//entrevista
+        data_base = linea[6];//sirie interaccion
+         */
+        msg(linea[0]);
+        msg(linea[1]);
 
     }
 

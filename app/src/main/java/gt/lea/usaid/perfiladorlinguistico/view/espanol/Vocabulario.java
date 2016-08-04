@@ -72,9 +72,8 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
 
     @Override
     public void onClick(View v) {
-
+        na();
         if ((pregunta +1) == img.length){
-
             Bundle b = new Bundle();
             b.putString("evaluacion", resultado);
             Intent i = new Intent(this, SonidosEspecificos.class);
@@ -89,19 +88,21 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
         } else {
             pregunta ++;
             setOnInit(null);
-            if(rbSiVocabulario.isChecked()){
-                swVocabulario.setChecked(false);
-                rgVocabulario.clearCheck();
-                resultado += 1;
-            }else{
-                rbSiVocabulario.setChecked(false);
-                rbNoVocabulario.setChecked(false);
-                resultado += 0;
-            }
             Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
             //1010010101
         }
 
+    }
+    private void na(){
+        if(rbSiVocabulario.isChecked()){
+            swVocabulario.setChecked(false);
+            rgVocabulario.clearCheck();
+            resultado += 1;
+        }else{
+            rbSiVocabulario.setChecked(false);
+            rbNoVocabulario.setChecked(false);
+            resultado += 0;
+        }
     }
 
 

@@ -69,6 +69,7 @@ public class Gramatica extends Activity implements OnInitializeComponent, View.O
 
     @Override
     public void onClick(View v) {
+        na();
         if ((pregunta + 1) == img.length) {
             //resultado_gramatica += resultado;
             resultado_sonidos +=
@@ -90,20 +91,22 @@ public class Gramatica extends Activity implements OnInitializeComponent, View.O
         } else {
             pregunta++;
             setOnInit(null);
-            swGramatica.setChecked(false);
             //rbSiGramatica.setChecked(false);
             //rbNoGramatica.setChecked(false);
-            if (rbSiGramatica.isChecked()) {
-                rgGramatica.clearCheck();
-                resultado += 1;
-            } else
-                rbSiGramatica.setChecked(false);
-                rbNoGramatica.setChecked(false);
-                resultado += 0;
         }
         Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
     }
+public void na(){
+    if (rbSiGramatica.isChecked()) {
 
+        swGramatica.setChecked(false);
+        rgGramatica.clearCheck();
+        resultado += 1;
+    } else
+        //rbSiGramatica.setChecked(false);
+        //rbNoGramatica.setChecked(false);
+        resultado += 0;
+}
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (swGramatica.isChecked()) {

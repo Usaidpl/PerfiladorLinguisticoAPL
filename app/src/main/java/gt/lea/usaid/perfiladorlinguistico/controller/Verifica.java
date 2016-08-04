@@ -72,15 +72,16 @@ public class Verifica {
             return false;
     }
 
-    private String concat(String dato)
+    public  String concat()
     {
-        for(int v = 0; v < dato.length(); v ++){
-            if((v + 1) != dato.length())
-                concatena += v + ",";
+        String r = "";
+        for(int v = 0; v < concatena.length(); v ++){
+            if((v + 1) != concatena.length())
+                r += concatena.charAt(v) + ",";
             else
-                concatena += v;
+                r += concatena.charAt(v);
         }
-        return concatena;
+        return r;
     }
 
     private boolean toCompara(int preguntas) {
@@ -104,14 +105,15 @@ public class Verifica {
             select = arreglo[s];
             if(select == true){
                 resultado ++;
-                dato += 1;
+                dato += "1";
             }
             else{
                 resultado += 0;
-                dato += 0;
+                dato += "0";
             }
         }
-        result = (dato);
+        concatena = dato;
+
         return resultado;
     }
 

@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.mam;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -15,7 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class  SonidosEspecificosMam extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -67,6 +65,7 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
 
     @Override
     public void onClick(View v) {
+        na();
         if ((pregunta +1) == img.length){
             resultado_vocabulario_mam +=
                     "&&" + resultado;
@@ -74,7 +73,6 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
                     Toast.makeText(getApplicationContext(),
                             resultado_vocabulario_mam, Toast.LENGTH_SHORT);
             mensaje_toast.show();
-
             Bundle b = new Bundle();
             b.putString("evaluacion", resultado_vocabulario_mam);
             Intent i = new Intent(this,GramaticaMam.class);
@@ -83,16 +81,19 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
         } else {
             pregunta ++;
             setOnInit(null);
-            if(rbSiSonidosEspecificosMam.isChecked()){
-                swSonidosEspecificosMam.setChecked(false);
-                rgSonidosEspecificosMam.clearCheck();
-                resultado += 1;
-            }else
-                resultado += 0;
-                rbSiSonidosEspecificosMam.setChecked(false);
-                rbNoSonidosEspecificosMam.setChecked(false);
+
         }
         Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+    }
+    public void na(){
+        if(rbSiSonidosEspecificosMam.isChecked()){
+            swSonidosEspecificosMam.setChecked(false);
+            rgSonidosEspecificosMam.clearCheck();
+            resultado += 1;
+        }else
+            resultado += 0;
+            rbSiSonidosEspecificosMam.setChecked(false);
+            rbNoSonidosEspecificosMam.setChecked(false);
     }
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -107,12 +108,6 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
         super.onPause();
         finish();
     }
-    public void setNextContext(Context context, Class<?> next_context) {
-        Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
-        Intent i = new Intent(context, next_context);
-        i.putExtras(b);
-        startActivity(i);
-    }
+
 }
 

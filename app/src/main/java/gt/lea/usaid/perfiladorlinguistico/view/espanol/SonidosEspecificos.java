@@ -68,6 +68,7 @@ public class SonidosEspecificos extends Activity implements OnInitializeComponen
 
     @Override
     public void onClick(View v) {
+        na();
         if ((pregunta + 1) == img.length) {
             //String resultado_sonido = "";
             resultado_vocabulario +=
@@ -89,19 +90,21 @@ public class SonidosEspecificos extends Activity implements OnInitializeComponen
         } else {
             pregunta++;
             setOnInit(null);
-
             //rbSiSonidosEspecificos.setChecked(false);
             //rbNoSonidosEspecificos.setChecked(false);
-            if (rbSiSonidosEspecificos.isChecked()) {
-                swSonidosEspecificos.setChecked(false);
-                rgSonidosEspecificos.clearCheck();
-                resultado += 1;
-            } else
-                resultado += 0;
-                rbSiSonidosEspecificos.setChecked(false);
-                rbNoSonidosEspecificos.setChecked(false);
+
         }
         Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
+    }
+    public void na(){
+        if (rbSiSonidosEspecificos.isChecked()) {
+            swSonidosEspecificos.setChecked(false);
+            rgSonidosEspecificos.clearCheck();
+            resultado += 1;
+        } else
+            resultado += 0;
+        rbSiSonidosEspecificos.setChecked(false);
+        rbNoSonidosEspecificos.setChecked(false);
     }
 
     @Override

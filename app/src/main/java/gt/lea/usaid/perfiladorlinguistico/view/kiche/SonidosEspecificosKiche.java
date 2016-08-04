@@ -68,6 +68,7 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
 
     @Override
     public void onClick(View v) {
+        na();
         if ((pregunta +1) == img.length){
             //String resultado_sonido = "";
             resultado_vocabulario_kiche +=
@@ -79,24 +80,26 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
 
             Bundle b = new Bundle();
             b.putString("evaluacion", resultado_vocabulario_kiche);
-            Intent i = new Intent(this,GramaticaKiche.class);
+            Intent i = new Intent(this, GramaticaKiche.class);
             i.putExtras(b);
             startActivity(i);
 
         } else {
             pregunta ++;
             setOnInit(null);
-            if(rbSiSonidosEspecificosKiche.isChecked()){
-                swSonidosEspecificosKiche.setChecked(false);
-                rgSonidosEspecificosKiche.clearCheck();
-                resultado += 1;
-            }else
-                resultado += 0;
-                rbSiSonidosEspecificosKiche.setChecked(false);
-                rbNoSonidosEspecificosKiche.setChecked(false);
         }
         Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
     }
+public void na (){
+    if(rbSiSonidosEspecificosKiche.isChecked()){
+        swSonidosEspecificosKiche.setChecked(false);
+        rgSonidosEspecificosKiche.clearCheck();
+        resultado += 1;
+    }else
+        resultado += 0;
+    rbSiSonidosEspecificosKiche.setChecked(false);
+    rbNoSonidosEspecificosKiche.setChecked(false);
+}
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

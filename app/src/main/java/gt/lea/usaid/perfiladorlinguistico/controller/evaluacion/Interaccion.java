@@ -142,7 +142,7 @@ public class Interaccion
                     b.putFloat(KEY_RESULTADO, resultado);
                 String s = "";
                      s += resultado;
-                    msg(s);
+                    msg(vr.concat());
             }
             setNextContext(Interaccion.this, Comprension.class);
         } catch (Exception e) {

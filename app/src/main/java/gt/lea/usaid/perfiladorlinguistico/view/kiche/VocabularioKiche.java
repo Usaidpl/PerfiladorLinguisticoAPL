@@ -67,8 +67,9 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
 
     @Override
     public void onClick(View v) {
+       na();
         if ((pregunta +1) == img.length){
-
+            //na();
             Bundle b = new Bundle();
             b.putString("evaluacion", resultado);
             Intent i = new Intent(this, SonidosEspecificosKiche.class);
@@ -78,24 +79,27 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
             //setNextContext(this, SonidosEspecificos.class);
             //swVocabulario.setChecked(false);
             //rbSiVocabulario.setChecked(false);
-            //rbNoVocabulario.setChecked(false);
+            //rbNoVocabulario.setChecked(false);//0
 
         } else {
             pregunta ++;
             setOnInit(null);
-            if(rbSiVocabularioKiche.isChecked()){
-                swVocabularioKiche.setChecked(false);
-                rgVocabularioKiche.clearCheck();
-                resultado += 1;
-            }else{
-                rbSiVocabularioKiche.setChecked(false);
-                rbNoVocabularioKiche.setChecked(false);
-                resultado += 0;
-            }
+            //na();
             Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
             //1010010101
         }
+    }
 
+    public void na(){
+        if(rbSiVocabularioKiche.isChecked()){
+            swVocabularioKiche.setChecked(false);
+            rgVocabularioKiche.clearCheck();
+            resultado += 1;
+        }else{
+            rbSiVocabularioKiche.setChecked(false);
+            rbNoVocabularioKiche.setChecked(false);
+            resultado += 0;//1010101
+        }
     }
 
 

@@ -67,6 +67,7 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
 
     @Override
     public void onClick(View v) {
+        na();
         if ((pregunta +1) == img.length){
             resultado_sonidos_mam +=
                     "&&" + resultado;
@@ -82,18 +83,19 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
         } else {
             pregunta ++;
             setOnInit(null);
-            swGramaticaMam.setChecked(false);
-            if(rbSiGramaticaMam.isChecked()){
-                rgGramaticaMam.clearCheck();
-                resultado += 1;
-            }else
-                rbSiGramaticaMam.setChecked(false);
-                rbNoGramaticaMam.setChecked(false);
-                resultado += 0;
         }
         Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
     }
-
+public void na(){
+    if(rbSiGramaticaMam.isChecked()){
+        swGramaticaMam.setChecked(false);
+        rgGramaticaMam.clearCheck();
+        resultado += 1;
+    }else
+        resultado += 0;
+        rbSiGramaticaMam.setChecked(false);
+        rbNoGramaticaMam.setChecked(false);
+}
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(swGramaticaMam.isChecked()){

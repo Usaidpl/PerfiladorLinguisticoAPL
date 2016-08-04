@@ -20,33 +20,33 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
     private ViewFlipper vfEvaExpresionOral;
     private float lastX;
     private String resultado_gramatica="";
+    private String recupera_gramatica;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expresion_oral);
         vfEvaExpresionOral = (ViewFlipper) findViewById(R.id.vfEvaExpresionOral);
-        Bundle b = getIntent().getExtras();
-        resultado_gramatica = b.getString("evaluacion");
+        recuperaIntento();
         setOnInit(null);
-
-
+    }
+    private void recuperaIntento(){
+        Bundle b = getIntent().getExtras();
+        recupera_gramatica = b.getString("evaluacion");
     }
 
     @Override
     public void onClick(View v) {
         boolean[][] radios_selected = {
-                {RespNoPregunta1.isChecked(), RespNoPregunta2.isChecked(), RespNoPregunta3.isChecked(), RespNoPregunta4.isChecked()},
-                {RespSiPregunta1.isChecked(), RespSiPregunta2.isChecked(), RespSiPregunta3.isChecked(), RespSiPregunta4.isChecked()}};
+                {RespSiPregunta1.isChecked(), RespSiPregunta2.isChecked(), RespSiPregunta3.isChecked(), RespSiPregunta4.isChecked()},
+                {RespNoPregunta1.isChecked(), RespNoPregunta2.isChecked(), RespNoPregunta3.isChecked(), RespNoPregunta4.isChecked()}};
         Verifica vr = new Verifica(radios_selected, null);
         try {
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
+            String datos = recupera_gramatica + "&&" +vr.concat();
+            msg(datos);
             descition(resultado);
-            setNextContext(ExpresionOral.this, NavigationMenu.class);
-            Toast mensaje_toast =
-                    Toast.makeText(getApplicationContext(),
-                            resultado_gramatica, Toast.LENGTH_SHORT);
-            mensaje_toast.show();
+            //setNextContext(ExpresionOralKiche.this, Vocabulario.class);
         } catch (Exception e) {
             //e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -60,7 +60,23 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
             setNextContext(this, Interaccion.class);
         }
     }
+    private void msg(String msg){
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
 
+    @Override
+    public void setOnInit(@IdRes int[][] matriz) {
+        RespNoPregunta1 = (RadioButton) findViewById(R.id.RespNoPregunta1);
+        RespSiPregunta1 = (RadioButton) findViewById(R.id.RespSiPregunta1);
+        RespNoPregunta2 = (RadioButton) findViewById(R.id.RespNoPregunta2);
+        RespSiPregunta2 = (RadioButton) findViewById(R.id.RespSiPregunta2);
+        RespNoPregunta3 = (RadioButton) findViewById(R.id.RespNoPregunta3);
+        RespSiPregunta3 = (RadioButton) findViewById(R.id.RespSiPregunta3);
+        RespNoPregunta4 = (RadioButton) findViewById(R.id.RespNoPregunta4);
+        RespSiPregunta4 = (RadioButton) findViewById(R.id.RespSiPregunta4);
+        RespNoPregunta4.setOnClickListener(this);
+        RespSiPregunta4.setOnClickListener(this);
+    }
 
     @Override
     protected void onPause() {
@@ -105,17 +121,4 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
     }
 
 
-    @Override
-    public void setOnInit(@IdRes int[][] matriz) {
-        RespNoPregunta1 = (RadioButton) findViewById(R.id.RespNoPregunta1);
-        RespSiPregunta1 = (RadioButton) findViewById(R.id.RespSiPregunta1);
-        RespNoPregunta2 = (RadioButton) findViewById(R.id.RespNoPregunta2);
-        RespSiPregunta2 = (RadioButton) findViewById(R.id.RespSiPregunta2);
-        RespNoPregunta3 = (RadioButton) findViewById(R.id.RespNoPregunta3);
-        RespSiPregunta3 = (RadioButton) findViewById(R.id.RespSiPregunta3);
-        RespNoPregunta4 = (RadioButton) findViewById(R.id.RespNoPregunta4);
-        RespSiPregunta4 = (RadioButton) findViewById(R.id.RespSiPregunta4);
-        RespNoPregunta4.setOnClickListener(this);
-        RespSiPregunta4.setOnClickListener(this);
-    }
 }

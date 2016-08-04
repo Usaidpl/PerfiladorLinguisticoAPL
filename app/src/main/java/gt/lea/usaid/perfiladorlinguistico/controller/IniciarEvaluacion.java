@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
+import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
 
 public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener  {
      private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
@@ -66,7 +66,7 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
                 evalua = 1;
                 break;
         }
-        Intent i = new Intent(getActivity(), Interaccion.class);
+        Intent i = new Intent(getActivity(), VocabularioKiche.class);
         b.putInt(IniciarEvaluacion.KEY_EVALUACION, evalua);
         i.putExtras(b);
         startActivity(i);

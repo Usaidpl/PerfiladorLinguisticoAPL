@@ -16,7 +16,6 @@
         android:theme="@style/Toolbar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-
     <TabHost
         android:id="@+id/tabHost"
         android:layout_width="match_parent"
@@ -300,7 +299,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/avion"
+                                    android:text="avión"
                                     android:textAlignment="center"
                                     android:textSize="@dimen/_13sdp" />
 

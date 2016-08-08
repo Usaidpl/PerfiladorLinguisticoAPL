@@ -93,6 +93,7 @@
             android:screenOrientation="landscape" />
         <activity android:name=".view.RegistroEvaluar"></activity>
         <activity android:name=".Entrevistas"></activity>
+        <activity android:name=".view.InitEvaluacion"/>
     </application>
 
 </manifest>

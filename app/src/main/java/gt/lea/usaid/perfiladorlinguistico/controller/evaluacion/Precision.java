@@ -16,7 +16,6 @@ import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Respuesta;
 import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
-import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
 import gt.lea.usaid.perfiladorlinguistico.view.mam.VocabularioMam;
@@ -24,7 +23,7 @@ import gt.lea.usaid.perfiladorlinguistico.view.mam.VocabularioMam;
 /**
  * @author Bryan
  */
-public class Precision extends Activity implements OnInitializeComponent, OnStartNextContext{
+public class Precision extends Activity implements OnInitializeComponent{
 
     //área de variables privadas
     private ImageView image, image2, image3;
@@ -96,7 +95,6 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
                     case 1: clase = VocabularioMam.class;break;
                     case 2: clase = Vocabulario.class;break;
                 }
-                setNextContext(Precision.this, clase);
             }else{
                 pregunta ++;
                 //setOnInit(imagenes);
@@ -105,15 +103,7 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
         }
     };
 
-    @Override
-    public void setNextContext(Context context, Class<?> next_context) {
-        Intent i = new Intent(context, next_context);
-        startActivity(i);
-        Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
-        i.putExtras(b);
-        startActivity(i);
-    }
+
 
     @Override
     protected void onPause() {
@@ -129,6 +119,6 @@ public class Precision extends Activity implements OnInitializeComponent, OnStar
     private void setIdioma()
     {
         Bundle b = getIntent().getExtras();
-        idioma = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
+        //idioma = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
     }
 }

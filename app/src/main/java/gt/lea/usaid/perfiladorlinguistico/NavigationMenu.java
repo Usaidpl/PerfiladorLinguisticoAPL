@@ -21,6 +21,7 @@ import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 import gt.lea.usaid.perfiladorlinguistico.utils.Localizacion;
 import gt.lea.usaid.perfiladorlinguistico.view.Creditos;
 import gt.lea.usaid.perfiladorlinguistico.view.Email;
+import gt.lea.usaid.perfiladorlinguistico.view.InitEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.view.RegistroEvaluar;
 
 public class NavigationMenu
@@ -96,14 +97,16 @@ public class NavigationMenu
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
+        Intent i = null;
         Class<?> clas = null;
 
         boolean FragmentTransaction = false;
         Fragment fragment = null;
 
         if (id == R.id.nav_iniciar_evaluacion) {
-            fragment = new IniciarEvaluacion();
-            FragmentTransaction = true;
+            //fragment = new IniciarEvaluacion();
+            clas = InitEvaluacion.class;
+            FragmentTransaction = false;
         } else if (id == R.id.nav_guia_evaluador) {
             fragment = new GuiaEvaluacion();
             FragmentTransaction = true;
@@ -113,17 +116,22 @@ public class NavigationMenu
 
         }else if (id ==  R.id.nav_entrevista) {
             clas = Entrevistas.class;
-            Intent i = new Intent(NavigationMenu.this, clas);
-            startActivity(i);
+            //Intent i = new Intent(NavigationMenu.this, clas);
+            //startActivity(i);
         }
 
 
-        if (FragmentTransaction) {
+        if (FragmentTransaction == true) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.content_navigation_menu, fragment)
                     .commit();
             item.setChecked(true);
             getSupportActionBar().setTitle(item.getTitle());
+        }else {
+            if(clas != null){
+                i = new Intent(NavigationMenu.this, clas);
+                startActivity(i);
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

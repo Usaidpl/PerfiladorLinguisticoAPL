@@ -18,43 +18,47 @@ import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
-import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 
 /**
  * Created by Bryan on 20/06/16.
  */
 public class Interaccion
         extends Activity
-        implements OnStartNextContext, OnInitializeComponent, OnInitializeText, View.OnClickListener {
+        implements OnInitializeComponent, OnInitializeText, View.OnClickListener {
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
     private TextView intruduccion, tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
     private static final String NOMBRE_TABLA = "interaccion";
     public static final String KEY_RESULTADO = "resultado";
 
+    private Lanzador l;
+
     private int serie = 0;
     private int evalua = 1;
     private int resultado_inter = 0;
-
     private String msg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interaccion);
-        Bundle b = getIntent().getExtras();
-        try {
-            serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
-            onPermission();
-        } catch (Exception e) {
-            serie = 0;
-            String s = e.getMessage() + " Bundle";
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-        msg(getMsg());
         setOnInit(null);
+    }
+
+    private void leeIdioma(){
+        l = new Lanzador(this, Comprension.class);
+
+        try{
+            serie = l.getBundleLanguage();
+            onPermission();
+        }catch (Exception e){
+            String err = e.getMessage() + "\n" + "Error al leer el idioma";
+            msg(err);
+        }
+
     }
 
     private void onPermission() throws Exception{
@@ -78,6 +82,7 @@ public class Interaccion
 
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
+        leeIdioma();
         respuesta1 = (RadioButton) findViewById(R.id.rbRespuesta1);
         respuesta2 = (RadioButton) findViewById(R.id.rbRespuesta2);
         respuesta3 = (RadioButton) findViewById(R.id.rbRespuesta3);
@@ -135,16 +140,11 @@ public class Interaccion
                 {respuesta2.isChecked(),respuesta4.isChecked(), respuesta6.isChecked(), respuesta8.isChecked(), respuesta10.isChecked()}};
         Verifica vr;
         try {
-            if(getEvalua() == 1){
-                vr = new Verifica(radios_selected, NOMBRE_TABLA);
-                float resultado = vr.getResultado();
-                    Bundle b = new Bundle();
-                    b.putFloat(KEY_RESULTADO, resultado);
-                String s = "";
-                     s += resultado;
-                    msg(vr.concat());
-            }
-            setNextContext(Interaccion.this, Comprension.class);
+            vr = new Verifica(radios_selected, NOMBRE_TABLA);
+            double resultado = vr.getResultado();
+            l.agregarValores(vr.concat(), resultado);
+            l.addLanguage(serie);
+            l.setLanza(true);
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
@@ -154,25 +154,6 @@ public class Interaccion
     protected void onPause() {
         super.onPause();
         finish();
-    }
-
-    @Override
-    public void setNextContext(Context context, Class<?> next_context) {
-        Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
-        Intent i = new Intent(context, next_context);
-        i.putExtras(b);
-        startActivity(i);
-    }
-    public int getEvalua() {
-        return evalua;
-    }
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
     }
 
     private Ubicacion ubicacion = new Ubicacion(this) {

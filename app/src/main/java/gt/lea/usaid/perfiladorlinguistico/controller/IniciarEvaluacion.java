@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.controller;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,12 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.view.mam.ExpresionOralMam;
 
 public class IniciarEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener  {
-     private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
+    public static String KEY_EVALUACION = "Evalua";
+    private ImageView ivEspanolEva, ivMamEva, ivKicheEva;
     private OnFragmentInteractionListener mListener;
-    public static final String KEY_EVALUACION = "Evaluacion";
 
     @Override
     public View onCreateView(LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
@@ -54,10 +52,7 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
 
     @Override
     public void onClick(View v) {
-        //Intent intent = null;
-        Bundle b = new Bundle();
-        Class<?> clase = null;
-        int evalua = 0;
+        int evalua = -9;
         switch (v.getId()) {
             case R.id.ivMamEva:
                 evalua = 0;
@@ -66,18 +61,8 @@ public class IniciarEvaluacion extends android.support.v4.app.Fragment implement
                 evalua = 1;
                 break;
         }
-        Intent i = new Intent(getActivity(), ExpresionOralMam.class);
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, evalua);
-        i.putExtras(b);
-        startActivity(i);
-
     }
 
-    private Bundle envia(int cantidad){
-        Bundle b= new Bundle();
-        b.putInt(KEY_EVALUACION , cantidad);
-        return b;
-    }
 
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);

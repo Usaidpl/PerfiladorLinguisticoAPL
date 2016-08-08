@@ -15,6 +15,7 @@ import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
@@ -24,36 +25,41 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
  */
 public class Comprension
         extends Activity
-        implements OnStartNextContext,OnInitializeComponent,OnInitializeText, View.OnClickListener  {
+        implements OnInitializeComponent,OnInitializeText, View.OnClickListener  {
 
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
     private TextView intruduccion,  tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
     private static final String NOMBRE_TABLA = "interaccion";
 
+    private Lanzador l;
     private int serie = 0;
-    private int evalua = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interaccion);
-        Bundle b = getIntent().getExtras();
-        try{
-            serie = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
-        }catch (Exception e){
-            serie = 0;
-            String s = e.getMessage() + " Bundle Exception";
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
         setOnInit(null);
+    }
+
+    private void leeIdioma(){
+        l = new Lanzador(this, Precision.class);
+        try{
+            serie = l.getBundleLanguage();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     protected void msg(String s){
         Toast.makeText(this, s ,Toast.LENGTH_SHORT).show();
     }
 
+    protected void msgL(String msg){
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+    }
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
+        leeIdioma();
         respuesta1 = (RadioButton) findViewById(R.id.rbRespuesta1);
         respuesta2 = (RadioButton) findViewById(R.id.rbRespuesta2);
         respuesta3 = (RadioButton) findViewById(R.id.rbRespuesta3);
@@ -113,36 +119,32 @@ public class Comprension
         try {
             vr = new Verifica(radios_selected, NOMBRE_TABLA);
             float resultado = vr.getResultado();
-            //msg(resultado);
-            descition(resultado);
-            //lanzamiento a la siguiente actividad
-
+            descition(resultado, vr);
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void descition(float resultado){
-        Bundle b = getIntent().getExtras();
-        float resutaldo_interaccion = b.getFloat(Interaccion.KEY_RESULTADO), total;
-        total = (resultado + resutaldo_interaccion);
-        msg(total);
-        //total /= 2;
+    private void descition(float resultado, Verifica verifica){
+        double total = (l.getTotal() + resultado) / 2;
         boolean negativo = (total <= 50);
-        if((total > 50) && (serie == 0 || serie == 1 || serie == 2))
-            setNextContext(Comprension.this, Precision.class);
-        else if((total <= 50) && (serie == 0 || serie == 1)){
-            serie = 2;
-            b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
-            Intent i = new Intent(Comprension.this , Interaccion.class);
-            i.putExtras(b);
-            startActivity(i);
-        }else if(negativo && (serie == 2)){
-            setNextContext(Comprension.this, NavigationMenu.class);
-            msg("Evaluacion finalizada");
+        String interaccion = "";
+        if((total > 50) && (serie == 0 || serie == 1 || serie == 2)){
+            interaccion = l.getBundleStringDouble() + verifica.concat();
+            l.agregarValores(interaccion, resultado);
+            l.addLanguage(serie);
+            l.setLanza(true);
         }
-
-
+        else if(negativo && (serie == 0 || serie == 1)){
+            serie = 2;
+            l = new Lanzador(this, Interaccion.class);
+            l.addLanguage(serie);
+        }else if(negativo && (serie == 2)){
+            l = new Lanzador(this, NavigationMenu.class);
+            l.setLanza(true);
+        }
+        interaccion = l.getBundleStringDouble();
+        msgL(interaccion);
     }
 
     @Override
@@ -151,22 +153,10 @@ public class Comprension
         finish();
     }
 
-    @Override
-    public void setNextContext(Context context, Class<?> next_context) {
-        Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, serie);
-        Intent i = new Intent(context, next_context);
-        i.putExtras(b);
-        startActivity(i);
-    }
-
     private void msg(float f){
         String s = "";
         s += f;
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();}
 
 
-    public int getEvalua() {
-        return evalua;
-    }
 }

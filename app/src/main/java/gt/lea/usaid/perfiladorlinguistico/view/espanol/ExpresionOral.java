@@ -12,7 +12,7 @@ import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
-import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class ExpresionOral extends FlipperActivity implements OnInitializeComponent, View.OnClickListener {
@@ -21,6 +21,7 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
     private float lastX;
     private String resultado_gramatica="";
     private String recupera_gramatica;
+    private Lanzador l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +32,8 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
         setOnInit(null);
     }
     private void recuperaIntento(){
-        Bundle b = getIntent().getExtras();
-        recupera_gramatica = b.getString("evaluacion");
+        l = new Lanzador(this);
+        recupera_gramatica = l.getBundleStringDouble();
     }
 
     @Override
@@ -45,7 +46,8 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
             String datos = recupera_gramatica + "&&" +vr.concat();
             msg(datos);
-            descition(resultado);
+            descition(resultado, vr);
+
             //setNextContext(ExpresionOralKiche.this, Vocabulario.class);
         } catch (Exception e) {
             //e.printStackTrace();
@@ -53,12 +55,15 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
         }
     }
 
-    private void descition(float resultado) {
-        if (resultado >= (100 / 40) + 1) {
-            setNextContext(ExpresionOral.this, NavigationMenu.class);
-        } else {
-            setNextContext(this, Interaccion.class);
-        }
+    private void descition(float resultado, Verifica v) {
+        l.agregarValores(v.concat(), resultado);
+        resultado_gramatica += l.getBundleStringDouble();
+        l = new Lanzador(this, NavigationMenu.class);
+        /*l.agragarValor("");
+        l.addLanguage(1);
+        l.setLanza(true);
+        */
+        l.setLanza(true);
     }
     private void msg(String msg){
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();

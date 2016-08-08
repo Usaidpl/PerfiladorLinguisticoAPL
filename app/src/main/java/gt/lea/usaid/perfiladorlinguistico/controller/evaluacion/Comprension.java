@@ -1,8 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.controller.evaluacion;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -12,13 +10,12 @@ import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
 import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
-import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
+import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 
 /**
  * Created by Bryan on 20/06/16.
@@ -42,7 +39,7 @@ public class Comprension
     }
 
     private void leeIdioma(){
-        l = new Lanzador(this, Precision.class);
+        l = new Lanzador(this, Vocabulario.class);
         try{
             serie = l.getBundleLanguage();
         }catch (Exception e){
@@ -151,6 +148,9 @@ public class Comprension
     protected void onPause() {
         super.onPause();
         finish();
+        //01010 56
+
+        //01010101010 | 20 && 1010101 | 50
     }
 
     private void msg(float f){

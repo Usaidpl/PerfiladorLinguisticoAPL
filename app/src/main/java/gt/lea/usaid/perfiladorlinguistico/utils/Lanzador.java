@@ -19,7 +19,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
  * fecha_creacion 05/08/2016 02:16:46 PM
  * ultima_modificacion 05/08/2016 11:15:13 PM
  */
-public class Lanzador
+public class Lanzador extends Activity
         implements OnStartNextContext {
 
     //Const
@@ -121,7 +121,6 @@ public class Lanzador
                 newLazamiento();
             }
         }
-
     }
 
    

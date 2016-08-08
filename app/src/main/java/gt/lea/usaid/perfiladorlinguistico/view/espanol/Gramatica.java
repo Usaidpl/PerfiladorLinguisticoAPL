@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class Gramatica extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -31,14 +31,15 @@ public class Gramatica extends Activity implements OnInitializeComponent, View.O
     private int serie = 0;
     private String resultado_sonidos = "";
     private RadioGroup rgGramatica;
-
+    private String recupera_sonidos ="";
+    private Lanzador l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gramatica);
-        Bundle b = getIntent().getExtras();
-        resultado_sonidos = b.getString("evaluacion");
+        l = new Lanzador(this, ExpresionOral.class);
+        recupera_sonidos = l.getBundleStringDouble();
         setOnInit(null);
     }
 
@@ -71,6 +72,7 @@ public class Gramatica extends Activity implements OnInitializeComponent, View.O
     public void onClick(View v) {
         na();
         if ((pregunta + 1) == img.length) {
+            /*
             //resultado_gramatica += resultado;
             resultado_sonidos +=
                     "&&" + resultado;
@@ -86,7 +88,10 @@ public class Gramatica extends Activity implements OnInitializeComponent, View.O
             startActivity(i);
             //#############################
 
-            //setNextContext(this, ExpresionOral.class);
+            //setNextContext(this, ExpresionOral.class);*/
+            recupera_sonidos += resultado;
+            l.agregarValores(recupera_sonidos, 100.0);
+
 
         } else {
             pregunta++;

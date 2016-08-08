@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class SonidosEspecificos extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -29,16 +29,19 @@ public class SonidosEspecificos extends Activity implements OnInitializeComponen
     private String resultado = "";
     //private int pregunta = 0;
     private int serie = 0;
-    private String resultado_vocabulario = "";
-    private RadioGroup rgSonidosEspecificos;
 
+    //private String resultado_vocabulario = "";
+    private RadioGroup rgSonidosEspecificos;
+    private String recupera_vocabulario ="";
+    private Lanzador l;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sonidos_especificos);
-        Bundle b = getIntent().getExtras();
-        resultado_vocabulario = b.getString("evaluacion");
-
+        /* Bundle b = getIntent().getExtras();
+        resultado_vocabulario = b.getString("evaluacion"); */
+        l = new Lanzador(this, Gramatica.class);
+        recupera_vocabulario = l.getBundleStringDouble();
         setOnInit(null);
     }
 
@@ -70,7 +73,7 @@ public class SonidosEspecificos extends Activity implements OnInitializeComponen
     public void onClick(View v) {
         na();
         if ((pregunta + 1) == img.length) {
-            //String resultado_sonido = "";
+            /*//String resultado_sonido = "";
             resultado_vocabulario +=
                     "&&" + resultado;
             //resultado_vocabulario +=
@@ -86,7 +89,9 @@ public class SonidosEspecificos extends Activity implements OnInitializeComponen
             i.putExtras(b);
             startActivity(i);
             //setNextContext(this, Gramatica.class);
-
+            */
+            recupera_vocabulario += resultado;
+            l.agregarValores(recupera_vocabulario, 50.0);
         } else {
             pregunta++;
             setOnInit(null);

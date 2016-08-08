@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class Vocabulario extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -31,17 +31,38 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
     private String resultado = "";
     private int pregunta = 0;
     private int serie = 0;
+    private String recupera_comprension = "";
+    private Lanzador l;
+    /*
     private String resultado_precisiona ="";
     //private String valores_vocabulario;
-
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulario);
+        l = new Lanzador(this, SonidosEspecificos.class);
+        recupera_comprension = l.getBundleStringDouble();
+        /*
         Bundle b = getIntent().getExtras();
         resultado_precisiona = b.getString("evaluacion");
         setOnInit(null);
+        */
+        setOnInit(null);
     }
+/*
+    public void agregar(RadioButton rb, Switch sw){
+        rbSiVocabulario = rb;
+        swVocabulario = sw;
+        //sw = swVocabulario;
+
+    }
+
+    public RadioButton getrb(int id){
+        rbNoVocabulario = (RadioButton) findViewById(id);
+        return rbNoVocabulario;
+    }
+  */
 
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
@@ -74,16 +95,29 @@ public class Vocabulario extends Activity implements OnInitializeComponent, View
     public void onClick(View v) {
         na();
         if ((pregunta +1) == img.length){
+            /*
             Bundle b = new Bundle();
             b.putString("evaluacion", resultado);
             Intent i = new Intent(this, SonidosEspecificos.class);
             i.putExtras(b);
             Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
-            startActivity(i);
+            startActivity(i);*/
             //setNextContext(this, SonidosEspecificos.class);
             //swVocabulario.setChecked(false);
             //rbSiVocabulario.setChecked(false);
             //rbNoVocabulario.setChecked(false);
+
+            recupera_comprension += resultado;
+            l.agregarValores(recupera_comprension, 50.0);
+            /*
+            recupera_comprension = l.getBundleStringDouble();
+            String[] linea = recupera_comprension.split(" | ");
+            for(int l = 0; l <linea.length; l++){
+                String r = linea[l];
+                Toast.makeText(this, r, Toast.LENGTH_SHORT).show();
+            }
+            */
+            //Toast.makeText(this, recupera_comprension, Toast.LENGTH_LONG).show();
 
         } else {
             pregunta ++;

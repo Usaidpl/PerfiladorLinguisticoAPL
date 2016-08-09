@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.mam;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class  SonidosEspecificosMam extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -29,13 +29,20 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
     private String resultado ="";
     //private int pregunta = 0;
     private int serie = 0;
-    private String resultado_vocabulario_mam = "";
+    //private String resultado_vocabulario_mam = "";
     private RadioGroup rgSonidosEspecificosMam;
+
+    private String recupera_vocabulario_mam ="";
+    private Lanzador l;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sonidos_especificos_mam);
+        l = new Lanzador(this, GramaticaMam.class);
+        recupera_vocabulario_mam = l.getBundleStringDouble();
+
         setOnInit(null);
     }
 
@@ -67,17 +74,8 @@ public class  SonidosEspecificosMam extends Activity implements OnInitializeComp
     public void onClick(View v) {
         na();
         if ((pregunta +1) == img.length){
-            resultado_vocabulario_mam +=
-                    "&&" + resultado;
-            Toast mensaje_toast =
-                    Toast.makeText(getApplicationContext(),
-                            resultado_vocabulario_mam, Toast.LENGTH_SHORT);
-            mensaje_toast.show();
-            Bundle b = new Bundle();
-            b.putString("evaluacion", resultado_vocabulario_mam);
-            Intent i = new Intent(this,GramaticaMam.class);
-            i.putExtras(b);
-            startActivity(i);
+            recupera_vocabulario_mam += resultado;
+            l.agregarValores(recupera_vocabulario_mam, 50.0);
         } else {
             pregunta ++;
             setOnInit(null);

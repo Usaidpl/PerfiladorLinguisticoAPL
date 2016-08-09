@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class VocabularioMam extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -31,15 +32,17 @@ public class VocabularioMam extends Activity implements OnInitializeComponent, V
     private String resultado = "";
     //private int pregunta = 0;
     private int serie = 0;
-    private String resultado_precisiona_mam = "";
+    //private String resultado_precisiona_mam = "";
     private RadioGroup rgVocabularioMam;
+    private String recupera_comprension_mam = "";
+    private Lanzador l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulario_mam);
-        Bundle b = getIntent().getExtras();
-        resultado_precisiona_mam = b.getString("evaluacion");
+        l = new Lanzador(this, SonidosEspecificosMam.class);
+        recupera_comprension_mam = l.getBundleStringDouble();
         setOnInit(null);
     }
 
@@ -69,15 +72,10 @@ public class VocabularioMam extends Activity implements OnInitializeComponent, V
 
     @Override
     public void onClick(View v) {
+        na();
         if ((pregunta + 1) == img.length) {
-            na();
-            Bundle b = new Bundle();
-            b.putString("evaluacion", resultado);
-            Intent i = new Intent(this, SonidosEspecificosMam.class);
-            i.putExtras(b);
-            Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
-            startActivity(i);
-
+            recupera_comprension_mam += resultado;
+            l.agregarValores(recupera_comprension_mam, 50.0);
         } else {
             pregunta++;
             setOnInit(null);

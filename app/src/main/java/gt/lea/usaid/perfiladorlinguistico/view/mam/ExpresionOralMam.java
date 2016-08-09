@@ -1,6 +1,5 @@
 package gt.lea.usaid.perfiladorlinguistico.view.mam;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.MotionEvent;
@@ -9,18 +8,21 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
-import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
-import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class ExpresionOralMam extends FlipperActivity implements OnInitializeComponent, View.OnClickListener {
     private RadioButton RespNoPregunta1, RespSiPregunta1, RespNoPregunta2, RespSiPregunta2, RespNoPregunta3, RespSiPregunta3, RespNoPregunta4, RespSiPregunta4;
     private ViewFlipper vfEvaExpresionOral;
     private float lastX;
+
+    private String resultado_gramatica_mam ="";
     private String recupera_gramatica_mam;
+    private Lanzador l;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +33,8 @@ public class ExpresionOralMam extends FlipperActivity implements OnInitializeCom
     }
 
     private void recuperaIntento(){
-        Bundle b = getIntent().getExtras();
-        recupera_gramatica_mam = b.getString("evaluacion");
+        l = new Lanzador(this);
+        recupera_gramatica_mam = l.getBundleStringDouble();
     }
 
     @Override
@@ -59,44 +61,24 @@ public class ExpresionOralMam extends FlipperActivity implements OnInitializeCom
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
             String datos = recupera_gramatica_mam + "&&" +vr.concat();
             msg(datos);
-            descition(resultado);
-            //setNextContext(ExpresionOralKiche.this, Vocabulario.class);
+            descition(resultado, vr);
+
         } catch (Exception e) {
             //e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
     private void msg(String msg){
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
-    private void descition(float resultado) {
-        Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, 2);
-        Intent i = new Intent(ExpresionOralMam.this, Interaccion.class);
-        i.putExtras(b);
-        startActivity(i);
-        /*if (resultado >= (100 / 40) + 1) {
+    private void descition(float resultado, Verifica v) {
+        l.agregarValores(v.concat(), resultado);
+        resultado_gramatica_mam += l.getBundleStringDouble();
+        l = new Lanzador(this, NavigationMenu.class);
 
-
-        } else {
-            setNextContext(this, Interaccion.class);
-        }*/
-
-        String split = "roberto&&Karla", resultado1 = null;
-        String data_base = "";
-        String[] linea= split.split("&&");
-        /*
-        for(int ks = 0; ks < linea.length; ks++){
-
-             resultado1 = linea[ks];
-            msg(resultado1);
-        }
-        data_base = linea[0];//entrevista
-        data_base = linea[6];//sirie interaccion
-         */
-        msg(linea[0]);
-        msg(linea[1]);
+        l.setLanza(true);
 
     }
 

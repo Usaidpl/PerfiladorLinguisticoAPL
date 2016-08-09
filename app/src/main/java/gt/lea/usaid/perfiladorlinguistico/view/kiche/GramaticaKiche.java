@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class GramaticaKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -31,13 +31,15 @@ public class GramaticaKiche extends Activity implements OnInitializeComponent, V
     private int serie = 0;
     private String resultado_sonidos_kiche = "";
     private RadioGroup rgGramaticaKiche;
+    private String recupera_sonidos_kiche ="";
+    private Lanzador l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gramatica_kiche);
-        Bundle b = getIntent().getExtras();
-        resultado_sonidos_kiche = b.getString("evaluacion");
+        l = new Lanzador(this, ExpresionOralKiche.class);
+        recupera_sonidos_kiche = l.getBundleStringDouble();
         setOnInit(null);
     }
 
@@ -69,17 +71,8 @@ public class GramaticaKiche extends Activity implements OnInitializeComponent, V
     public void onClick(View v) {
         na();
         if ((pregunta + 1) == img.length) {
-            resultado_sonidos_kiche +=
-                    "&&" + resultado;
-            Toast mensaje_toast =
-                    Toast.makeText(getApplicationContext(),
-                            resultado_sonidos_kiche, Toast.LENGTH_SHORT);
-            mensaje_toast.show();
-            Bundle b = new Bundle();
-            b.putString("evaluacion", resultado_sonidos_kiche);
-            Intent i = new Intent(this, ExpresionOralKiche.class);
-            i.putExtras(b);
-            startActivity(i);
+            recupera_sonidos_kiche += resultado;
+            l.agregarValores(recupera_sonidos_kiche, 100.0);
         } else {
             pregunta++;
             setOnInit(null);

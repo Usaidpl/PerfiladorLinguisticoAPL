@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.mam;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class GramaticaMam extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -29,6 +29,8 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
     private String resultado ="";
     private String resultado_sonidos_mam = "";
     private RadioGroup rgGramaticaMam;
+    private String recupera_sonidos_mam ="";
+    private Lanzador l;
 
    // private int pregunta = 0;
     private int serie = 0;
@@ -36,8 +38,8 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gramatica_mam);
-        Bundle b = getIntent().getExtras();
-        resultado_sonidos_mam = b.getString("evaluacion");
+        l = new Lanzador(this, ExpresionOralMam.class);
+        recupera_sonidos_mam = l.getBundleStringDouble();
         setOnInit(null);
     }
 
@@ -69,17 +71,8 @@ public class GramaticaMam extends Activity implements OnInitializeComponent, Vie
     public void onClick(View v) {
         na();
         if ((pregunta +1) == img.length){
-            resultado_sonidos_mam +=
-                    "&&" + resultado;
-            Toast mensaje_toast =
-                    Toast.makeText(getApplicationContext(),
-                            resultado_sonidos_mam, Toast.LENGTH_SHORT);
-            mensaje_toast.show();
-            Bundle b = new Bundle();
-            b.putString("evaluacion", resultado_sonidos_mam);
-            Intent i = new Intent(this, ExpresionOralMam.class);
-            i.putExtras(b);
-            startActivity(i);
+            recupera_sonidos_mam += resultado;
+            l.agregarValores(recupera_sonidos_mam, 100.0);
         } else {
             pregunta ++;
             setOnInit(null);

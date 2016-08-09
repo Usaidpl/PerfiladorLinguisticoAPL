@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class VocabularioKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -29,15 +29,16 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
     private String resultado = "";
     //rivate int pregunta = 0;
     private int serie = 0;
-    private String resultado_precisiona_kiche ="";
     private RadioGroup rgVocabularioKiche;
+    private String recupera_comprension_kiche = "";
+    private Lanzador l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulario_kiche);
-        Bundle b = getIntent().getExtras();
-        resultado_precisiona_kiche = b.getString("evaluacion");
+        l = new Lanzador(this, SonidosEspecificosKiche.class);
+        recupera_comprension_kiche = l.getBundleStringDouble();
         setOnInit(null);
     }
 
@@ -52,7 +53,7 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
         tvVocabularioKiche = (TextView) findViewById(R.id.tvVocabularioKicheTitulo);
         rgVocabularioKiche = (RadioGroup) findViewById(R.id.rgVocabularioKiche);
         String guarda_numero = "";
-        guarda_numero += pregunta+1;
+        guarda_numero += pregunta + 1;
         nuPregunta.setText(guarda_numero);
         int i = string_muestra[pregunta],
                 imgs = img[pregunta];//respuesta correcta
@@ -67,22 +68,14 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
 
     @Override
     public void onClick(View v) {
-       na();
-        if ((pregunta +1) == img.length){
-            //na();
-            Bundle b = new Bundle();
-            b.putString("evaluacion", resultado);
-            Intent i = new Intent(this, SonidosEspecificosKiche.class);
-            i.putExtras(b);
-            Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
-            startActivity(i);
-            //setNextContext(this, SonidosEspecificos.class);
-            //swVocabulario.setChecked(false);
-            //rbSiVocabulario.setChecked(false);
-            //rbNoVocabulario.setChecked(false);//0
+        na();
+        if ((pregunta + 1) == img.length) {
+
+            recupera_comprension_kiche += resultado;
+            l.agregarValores(recupera_comprension_kiche, 50.0);
 
         } else {
-            pregunta ++;
+            pregunta++;
             setOnInit(null);
             //na();
             Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show();
@@ -90,12 +83,12 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
         }
     }
 
-    public void na(){
-        if(rbSiVocabularioKiche.isChecked()){
+    public void na() {
+        if (rbSiVocabularioKiche.isChecked()) {
             swVocabularioKiche.setChecked(false);
             rgVocabularioKiche.clearCheck();
             resultado += 1;
-        }else{
+        } else {
             rbSiVocabularioKiche.setChecked(false);
             rbNoVocabularioKiche.setChecked(false);
             resultado += 0;//1010101
@@ -118,7 +111,6 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
         super.onPause();
         finish();
     }
-
 
 
 }

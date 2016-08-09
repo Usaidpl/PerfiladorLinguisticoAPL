@@ -1,7 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class  SonidosEspecificosKiche extends Activity implements OnInitializeComponent, View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -29,16 +29,18 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
     private String resultado ="";
     private int pregunta = 0;
     private int serie = 0;
-    private String resultado_vocabulario_kiche = "";
+    //private String resultado_vocabulario_kiche = "";
     private RadioGroup rgSonidosEspecificosKiche;
+    private String recupera_vocabulario_kiche ="";
+    private Lanzador l;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sonidos_especificos_kiche);
-        Bundle b = getIntent().getExtras();
-        resultado_vocabulario_kiche = b.getString("evaluacion");
+        l = new Lanzador(this, GramaticaKiche.class);
+        recupera_vocabulario_kiche = l.getBundleStringDouble();
         setOnInit(null);
     }
 
@@ -70,19 +72,8 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
     public void onClick(View v) {
         na();
         if ((pregunta +1) == img.length){
-            //String resultado_sonido = "";
-            resultado_vocabulario_kiche +=
-                    "&&" + resultado;
-            Toast mensaje_toast =
-                    Toast.makeText(getApplicationContext(),
-                            resultado_vocabulario_kiche, Toast.LENGTH_SHORT);
-            mensaje_toast.show();
-
-            Bundle b = new Bundle();
-            b.putString("evaluacion", resultado_vocabulario_kiche);
-            Intent i = new Intent(this, GramaticaKiche.class);
-            i.putExtras(b);
-            startActivity(i);
+            recupera_vocabulario_kiche += resultado;
+            l.agregarValores(recupera_vocabulario_kiche, 50.0);
 
         } else {
             pregunta ++;

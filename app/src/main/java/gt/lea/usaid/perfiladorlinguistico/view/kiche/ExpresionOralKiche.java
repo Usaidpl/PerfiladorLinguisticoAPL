@@ -1,6 +1,5 @@
 package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.MotionEvent;
@@ -9,11 +8,11 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
-import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
 import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
-import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
 public class ExpresionOralKiche extends FlipperActivity implements OnInitializeComponent, View.OnClickListener {
@@ -21,7 +20,9 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
     private ViewFlipper vfEvaExpresionOral;
     private float lastX;
 
-    private String recupera;
+    private String resultado_gramatica_kiche="";
+    private String recupera_gramatica_kiche;
+    private Lanzador l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +35,8 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
 
 
     private void recuperaIntento(){
-        Bundle b = getIntent().getExtras();
-        recupera = b.getString("evaluacion");
+        l = new Lanzador(this);
+        recupera_gramatica_kiche = l.getBundleStringDouble();
     }
 
     @Override
@@ -60,22 +61,22 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
         Verifica vr = new Verifica(radios_selected, null);
         try {
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
-            String datos = recupera + "&&" +vr.concat();
+            String datos = recupera_gramatica_kiche + "&&" +vr.concat();
             msg(datos);
-            descition(resultado);
-            //setNextContext(ExpresionOralKiche.this, Vocabulario.class);
+            descition(resultado, vr);
+
         } catch (Exception e) {
             //e.printStackTrace();
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void descition(float resultado) {
-        Bundle b = new Bundle();
-        b.putInt(IniciarEvaluacion.KEY_EVALUACION, 2);
-        Intent i = new Intent(ExpresionOralKiche.this, Interaccion.class);
-        i.putExtras(b);
-        startActivity(i);
+    private void descition(float resultado,  Verifica v) {
+        l.agregarValores(v.concat(), resultado);
+        resultado_gramatica_kiche += l.getBundleStringDouble();
+        l = new Lanzador(this, NavigationMenu.class);
+
+        l.setLanza(true);
 
     }
 

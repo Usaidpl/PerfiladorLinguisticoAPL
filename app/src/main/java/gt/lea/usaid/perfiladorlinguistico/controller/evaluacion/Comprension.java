@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
+import gt.lea.usaid.perfiladorlinguistico.controller.control_vista.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
 import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
@@ -39,7 +39,7 @@ public class Comprension
     }
 
     private void leeIdioma(){
-        l = new Lanzador(this, Vocabulario.class);
+        l = new Lanzador(this, Precision.class);
         try{
             serie = l.getBundleLanguage();
         }catch (Exception e){

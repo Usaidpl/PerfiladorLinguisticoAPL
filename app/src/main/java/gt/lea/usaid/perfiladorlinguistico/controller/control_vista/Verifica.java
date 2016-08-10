@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.controller;
+package gt.lea.usaid.perfiladorlinguistico.controller.control_vista;
 
 /**
  * Created by Bryan on 14/06/16.
@@ -82,6 +82,17 @@ public class Verifica {
                 r += concatena.charAt(v);
         }
         return r;
+    }
+
+    public static String concat(String valor){
+        String res = "";
+        for(int v = 0; v < valor.length(); v ++){
+            if((v +1) != valor.length()){
+                res += valor.charAt(v) + ",";
+            }else
+                res += valor.charAt(v);
+        }
+        return res;
     }
 
     private boolean toCompara(int preguntas) {

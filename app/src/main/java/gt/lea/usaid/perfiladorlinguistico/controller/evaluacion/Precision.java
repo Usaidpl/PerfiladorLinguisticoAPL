@@ -11,10 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.IniciarEvaluacion;
-
-import gt.lea.usaid.perfiladorlinguistico.controller.Respuesta;
+import gt.lea.usaid.perfiladorlinguistico.controller.control_vista.Respuesta;
 import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
+import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
 import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
@@ -29,6 +28,8 @@ public class Precision extends Activity implements OnInitializeComponent{
     private ImageView image, image2, image3;
     private TextView tv;
     private int idioma = 0, pregunta = 0, imagenes[][];
+    private Lanzador l;
+    private Class<?> clase;
 
     //área declaraciones de matricez
     private int serie = 0;
@@ -40,17 +41,22 @@ public class Precision extends Activity implements OnInitializeComponent{
     }
 
     private void opcionIdioma(){
-        setIdioma();
         switch (idioma){
             case 0: imagenes = ArregloMultiDimensional.ArregloPrecision.IMAGENES[0];break;
             case 1: imagenes = ArregloMultiDimensional.ArregloPrecision.IMAGENES[1];break;
             case 2: imagenes = ArregloMultiDimensional.ArregloPrecision.IMAGENES[2];break;
+        }
+        switch (idioma){
+            case 0: clase = VocabularioKiche.class;break;
+            case 1: clase = VocabularioMam.class;break;
+            case 2: clase = Vocabulario.class;break;
         }
         setOnInit(imagenes);
     }
 
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
+        recuperaIdioma();
         try{
             int vector[] = matriz[pregunta];
             int i = optineImage()[pregunta];
@@ -73,7 +79,7 @@ public class Precision extends Activity implements OnInitializeComponent{
 
     private int[] optineImage(){
         int vector[] = null;
-        setIdioma();
+        recuperaIdioma();
         switch (idioma){
             case 0: vector = ArregloMultiDimensional.ArregloPrecision.TEXTOS[0];break;
             case 1: vector = ArregloMultiDimensional.ArregloPrecision.TEXTOS[1];break;
@@ -82,28 +88,42 @@ public class Precision extends Activity implements OnInitializeComponent{
         return vector;
     }
 
-    //private View.OnClickListener click = new View.OnClickListener() {
-    //};
-    private Respuesta click = new Respuesta() {
+    private void recuperaIdioma(){
+        l = new Lanzador(this, clase);
+        serie = l.getBundleLanguage();
+    }
+
+    private Respuesta click = new Respuesta(idioma) {
+
         @Override
         public void onClick(View v) {
-            boolean condicion = (pregunta + 1) == 18;
-            Class<?> clase = null;
+           // this.addClass(Precision.this, clase);
+                    boolean condicion = pregunta + 1 == 17;
+            String valor_final = "";
+            int sf = 0;
+            msg(this.result(pregunta, v));
             if(condicion){
-                switch (idioma){
-                    case 0: clase = VocabularioKiche.class;break;
-                    case 1: clase = VocabularioMam.class;break;
-                    case 2: clase = Vocabulario.class;break;
-                }
+                valor_final = l.getBundleStringDouble() + getString();
+                l.agregarValores(valor_final, getDouble());
+                valor_final = l.getBundleStringDouble();
+                msg(valor_final);
             }else{
                 pregunta ++;
-                //setOnInit(imagenes);
                 opcionIdioma();
             }
         }
+
+
     };
 
+    private void msg(String s){
+        Toast.makeText(Precision.this, s, Toast.LENGTH_SHORT).show();
+    }
 
+    private void msg(double d){
+        String s = String.valueOf(d);
+        Toast.makeText(Precision.this, s, Toast.LENGTH_SHORT).show();
+    }
 
     @Override
     protected void onPause() {
@@ -116,9 +136,5 @@ public class Precision extends Activity implements OnInitializeComponent{
         super.onDestroy();
     }
 
-    private void setIdioma()
-    {
-        Bundle b = getIntent().getExtras();
-        //idioma = b.getInt(IniciarEvaluacion.KEY_EVALUACION);
-    }
+
 }

@@ -1,5 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.MotionEvent;
@@ -8,14 +9,13 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
-import gt.lea.usaid.perfiladorlinguistico.controller.FlipperActivity;
-import gt.lea.usaid.perfiladorlinguistico.controller.Verifica;
-import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
+import gt.lea.usaid.perfiladorlinguistico.controller.control_vista.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
-public class ExpresionOralKiche extends FlipperActivity implements OnInitializeComponent, View.OnClickListener {
+public class ExpresionOralKiche extends Activity implements OnInitializeComponent, View.OnClickListener {
     private RadioButton RespNoPregunta1, RespSiPregunta1, RespNoPregunta2, RespSiPregunta2, RespNoPregunta3, RespSiPregunta3, RespNoPregunta4, RespSiPregunta4;
     private ViewFlipper vfEvaExpresionOral;
     private float lastX;
@@ -74,8 +74,9 @@ public class ExpresionOralKiche extends FlipperActivity implements OnInitializeC
     private void descition(float resultado,  Verifica v) {
         l.agregarValores(v.concat(), resultado);
         resultado_gramatica_kiche += l.getBundleStringDouble();
-        l = new Lanzador(this, Interaccion.class);
-        l.addLanguage(2);
+        l = new Lanzador(this, NavigationMenu.class);
+
+        l.setLanza(true);
 
     }
 

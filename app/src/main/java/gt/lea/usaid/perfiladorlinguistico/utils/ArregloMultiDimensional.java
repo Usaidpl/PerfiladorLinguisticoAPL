@@ -22,7 +22,7 @@ public class ArregloMultiDimensional {
                                 {R.mipmap.gato, R.mipmap.conejo, R.mipmap.perro},//7
                                 {R.mipmap.vaca, R.mipmap.oveja, R.mipmap.caballlo},//8
                                 {R.mipmap.tomate, R.mipmap.naranja, R.mipmap.pera},//9
-                                {R.mipmap.elote, R.mipmap.elote, R.mipmap.ayote},//10
+                                {R.mipmap.ejote, R.mipmap.elote, R.mipmap.ayote},//10
                                 {R.mipmap.fresa, R.mipmap.pera, R.mipmap.aguacate},//11
                                 {R.mipmap.lapicero, R.mipmap.regla, R.mipmap.cuaderno},//12
                                 {R.mipmap.casa, R.mipmap.escuala, R.mipmap.iglesia},//13
@@ -53,6 +53,7 @@ public class ArregloMultiDimensional {
                                 {R.mipmap.comal, R.mipmap.olla, R.mipmap.vaso},//17
                                 {R.mipmap.canasto, R.mipmap.palangana, R.mipmap.soplador}//18
                         },
+                        //español
                         {
                                 {R.mipmap.pollito, R.mipmap.pato, R.mipmap.pavo},
                                 {R.mipmap.conejo, R.mipmap.perro, R.mipmap.gato},

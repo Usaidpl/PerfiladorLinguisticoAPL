@@ -98,6 +98,7 @@ public abstract class Respuesta implements View.OnClickListener{
                     case 15: dev_val = FIRTS_IMAGE;break;
                     case 16: dev_val = THRERE_IMAGE;break;
                     case 17: dev_val = FIRTS_IMAGE;break;
+
                 }
                 break;
         }

@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.controller.control_vista.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
@@ -70,9 +71,10 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
     public void onClick(View v) {
         na();
         if ((pregunta + 1) == img.length) {
-
-            recupera_comprension_kiche += resultado;
-            l.agregarValores(recupera_comprension_kiche, 50.0);
+            String rs = "";
+            rs = Verifica.concat(resultado);
+            recupera_comprension_kiche += rs;
+            l.agregarValores(rs, resultado);
 
         } else {
             pregunta++;

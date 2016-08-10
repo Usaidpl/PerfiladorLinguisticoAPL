@@ -84,6 +84,17 @@ public class Verifica {
         return r;
     }
 
+    public static String concat(String valor){
+        String res = "";
+        for(int v = 0; v < valor.length(); v ++){
+            if((v +1) != valor.length()){
+                res += valor.charAt(v) + ",";
+            }else
+                res += valor.charAt(v);
+        }
+        return res;
+    }
+
     private boolean toCompara(int preguntas) {
         int resultado = 0, respuesta1, respuesta2;
         respuesta1 = resultado(array_true);

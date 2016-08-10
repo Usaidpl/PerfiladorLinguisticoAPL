@@ -59,6 +59,7 @@ public class ExpresionOral extends FlipperActivity implements OnInitializeCompon
         l.agregarValores(v.concat(), resultado);
         resultado_gramatica += l.getBundleStringDouble();
         l = new Lanzador(this, NavigationMenu.class);
+
         /*l.agragarValor("");
         l.addLanguage(1);
         l.setLanza(true);

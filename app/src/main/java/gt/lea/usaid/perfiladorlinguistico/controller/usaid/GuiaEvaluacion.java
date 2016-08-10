@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.controller;
+package gt.lea.usaid.perfiladorlinguistico.controller.usaid;
 
 import android.content.Context;
 import android.content.Intent;

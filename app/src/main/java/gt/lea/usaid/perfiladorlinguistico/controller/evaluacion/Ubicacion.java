@@ -18,9 +18,9 @@ public abstract class Ubicacion implements LocationListener{
     private android.content.Context context;
     private static final double  LOCALIZACION_NULL = 0.0;
 
-    protected  android.content.Context getActividad(){
-        return context;
-    }
+    //protected  android.content.Context getActividad(){
+      //  return context;
+    //}
 
     public Ubicacion(android.app.Activity activity)
     {
@@ -29,6 +29,9 @@ public abstract class Ubicacion implements LocationListener{
 
     @Override
     public void onLocationChanged(Location location) {
+        location.getLongitude();
+        location.getLatitude();
+
         locality(location);
     }
 

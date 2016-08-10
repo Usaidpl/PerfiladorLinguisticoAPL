@@ -1,4 +1,4 @@
-package gt.lea.usaid.perfiladorlinguistico.controller;
+package gt.lea.usaid.perfiladorlinguistico.controller.control_vista;
 
 /**
  * Created by Bryan on 14/06/16.

@@ -23,11 +23,10 @@ public class GuiaPruebas extends Activity implements OnInitializeComponent{
             R.mipmap.logolea, R.mipmap.aguacate, R.mipmap.logolea,
             R.mipmap.barrilete, R.mipmap.avion};
 
-    private int cuenta = 1;
+    private int cuenta = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guia_pruebas);
         setOnInit(null);
@@ -36,7 +35,6 @@ public class GuiaPruebas extends Activity implements OnInitializeComponent{
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
-        setOnInit(null);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 initialXPoint = event.getX();
@@ -46,17 +44,18 @@ public class GuiaPruebas extends Activity implements OnInitializeComponent{
                 if (initialXPoint > finalx) {
                     if (myViewFlipper.getDisplayedChild() == image.length)
                         break;
-
-
+                    cuenta ++;
                     myViewFlipper.showNext();
                 } else {
                     if (myViewFlipper.getDisplayedChild() == 0)
                         break;
+                    //cuenta --;
                     myViewFlipper.showPrevious();
                 }
                 break;
         }
-        //if
+        setOnInit(null);
+
         return false;
     }
 
@@ -65,7 +64,12 @@ public class GuiaPruebas extends Activity implements OnInitializeComponent{
     public void setOnInit(@IdRes int[][] matriz) {
         myViewFlipper = (ViewFlipper) findViewById(R.id.vfGuiaPrecisionOral001);
         ImageView imageView = (ImageView) findViewById(R.id.practica);
-        imageView.setImageResource(image[cuenta]);
+        if (cuenta ==9)
+            imageView.setImageResource(image[cuenta]);
+
+
+        //
+
         //for (int i = 0; i < image.length; i++) {
          //ImageView imageView = new ImageView(GuiaPruebas.this);
         //myViewFlipper.addView(imageView);

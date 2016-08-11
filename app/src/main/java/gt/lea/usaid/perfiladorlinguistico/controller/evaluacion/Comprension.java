@@ -16,6 +16,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
+import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
 
 /**
  * Created by Bryan on 20/06/16.
@@ -141,7 +142,7 @@ public class Comprension
             l.setLanza(true);
         }
         interaccion = l.getBundleStringDouble();
-        msgL(interaccion);
+        //msgL(interaccion);
     }
 
     @Override

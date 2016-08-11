@@ -61,7 +61,7 @@ public class ExpresionOralKiche extends Activity implements OnInitializeComponen
         Verifica vr = new Verifica(radios_selected, null);
         try {
             float resultado = vr.getResultado(Verifica.Pregunta.Expresa.PREGUNTA);
-            String datos = recupera_gramatica_kiche + "&&" +vr.concat();
+            String datos = recupera_gramatica_kiche + vr.concat();
             msg(datos);
             descition(resultado, vr);
 

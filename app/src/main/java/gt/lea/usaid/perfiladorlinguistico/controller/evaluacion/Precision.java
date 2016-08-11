@@ -112,8 +112,6 @@ public class Precision extends Activity implements OnInitializeComponent{
                 opcionIdioma();
             }
         }
-
-
     };
 
     private void msg(String s){

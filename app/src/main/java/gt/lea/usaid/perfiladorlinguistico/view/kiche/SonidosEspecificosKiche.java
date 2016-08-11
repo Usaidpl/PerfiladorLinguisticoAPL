@@ -74,7 +74,9 @@ public class  SonidosEspecificosKiche extends Activity implements OnInitializeCo
         if ((pregunta +1) == img.length){
             recupera_vocabulario_kiche += resultado;
             l.agregarValores(recupera_vocabulario_kiche, 50.0);
-
+            String s = l.getBundleStringDouble();
+   //         Toast.makeText(SonidosEspecificosKiche.this, GramaticaKiche);
+            Toast.makeText(this, s, Toast.LENGTH_LONG).show();
         } else {
             pregunta ++;
             setOnInit(null);

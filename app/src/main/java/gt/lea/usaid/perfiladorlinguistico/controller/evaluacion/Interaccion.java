@@ -53,8 +53,7 @@ public class Interaccion
             serie = l.getBundleLanguage();
             onPermission();
         }catch (Exception e){
-            String err = e.getMessage() + "\n" + "Error al leer el idioma";
-            msg(err);
+            e.printStackTrace();
         }
 
     }
@@ -72,10 +71,6 @@ public class Interaccion
             return;
         }
         lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, ubicacion);
-    }
-
-    public void msg(String s){
-        Toast.makeText(this, s ,Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -155,6 +150,11 @@ public class Interaccion
     }
 
     private Ubicacion ubicacion = new Ubicacion(this) {
+
+        private void msg(String s){
+            Toast.makeText(getActivityGPS(), s, Toast.LENGTH_SHORT).show();
+        }
+
         @Override
         public void onProviderEnabled(String provider) {
             msg("GPS ACTIVADO");

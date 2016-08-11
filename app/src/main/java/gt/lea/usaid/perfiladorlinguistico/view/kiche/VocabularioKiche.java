@@ -28,9 +28,9 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
     private RadioButton rbSiVocabularioKiche, rbNoVocabularioKiche;
     private Switch swVocabularioKiche;
     private String resultado = "";
-    //rivate int pregunta = 0;
     private int serie = 0;
     private RadioGroup rgVocabularioKiche;
+
     private String recupera_comprension_kiche = "";
     private Lanzador l;
 
@@ -40,6 +40,7 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
         setContentView(R.layout.activity_vocabulario_kiche);
         l = new Lanzador(this, SonidosEspecificosKiche.class);
         recupera_comprension_kiche = l.getBundleStringDouble();
+        Toast.makeText(this, recupera_comprension_kiche, Toast.LENGTH_LONG).show();
         setOnInit(null);
     }
 
@@ -74,7 +75,9 @@ public class VocabularioKiche extends Activity implements OnInitializeComponent,
             String rs = "";
             rs = Verifica.concat(resultado);
             recupera_comprension_kiche += rs;
-            l.agregarValores(rs, resultado);
+            l.agregarValores(recupera_comprension_kiche, 50.0);
+            String s = l.getBundleStringDouble();
+            Toast.makeText(this, s, Toast.LENGTH_LONG).show();
 
         } else {
             pregunta++;

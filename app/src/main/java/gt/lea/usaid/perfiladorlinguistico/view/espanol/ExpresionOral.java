@@ -20,6 +20,7 @@ public class ExpresionOral extends Activity implements OnInitializeComponent, Vi
     private ViewFlipper vfEvaExpresionOral;
     private float lastX;
     private String resultado_gramatica="";
+
     private String recupera_gramatica;
     private Lanzador l;
 

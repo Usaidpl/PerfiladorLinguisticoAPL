@@ -1,5 +1,7 @@
 package gt.lea.usaid.perfiladorlinguistico.controller.evaluacion;
 
+import android.app.Activity;
+import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -25,6 +27,10 @@ public abstract class Ubicacion implements LocationListener{
     public Ubicacion(android.app.Activity activity)
     {
         context = activity;
+    }
+
+    public Context getActivityGPS(){
+        return context;
     }
 
     @Override

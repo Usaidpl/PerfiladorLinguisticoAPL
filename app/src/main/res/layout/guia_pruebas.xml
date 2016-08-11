@@ -48,7 +48,6 @@
                                 android:id="@+id/practica"
                                 android:layout_width="600dp"
                                 android:layout_height="400dp"
-                                android:src="@mipmap/logolea"
                                 android:layout_centerVertical="true"
                                 android:layout_centerHorizontal="true" />
                             </RelativeLayout>

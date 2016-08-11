@@ -37,7 +37,6 @@ public class GuiaPruebas extends Activity implements OnInitializeComponent{
     public boolean onTouchEvent(MotionEvent event) {
 
         setOnInit(null);
-
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 initialXPoint = event.getX();
@@ -47,6 +46,7 @@ public class GuiaPruebas extends Activity implements OnInitializeComponent{
                 if (initialXPoint > finalx) {
                     if (myViewFlipper.getDisplayedChild() == image.length)
                         break;
+
 
                     myViewFlipper.showNext();
                 } else {
@@ -64,11 +64,10 @@ public class GuiaPruebas extends Activity implements OnInitializeComponent{
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
         myViewFlipper = (ViewFlipper) findViewById(R.id.vfGuiaPrecisionOral001);
-
-        //for (int i = 0; i < image.length; i++) {
-         //ImageView imageView = new ImageView(GuiaPruebas.this);
         ImageView imageView = (ImageView) findViewById(R.id.practica);
         imageView.setImageResource(image[cuenta]);
+        //for (int i = 0; i < image.length; i++) {
+         //ImageView imageView = new ImageView(GuiaPruebas.this);
         //myViewFlipper.addView(imageView);
         //}
     }

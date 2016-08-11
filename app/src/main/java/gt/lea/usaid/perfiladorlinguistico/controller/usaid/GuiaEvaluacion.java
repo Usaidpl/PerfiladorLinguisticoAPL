@@ -15,12 +15,13 @@ import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaExpresionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaGramatica;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaInteraccionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaPrecisionOral;
+import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaPruebas;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaSonidosEspecificos;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaVocabulario;
 
 
 public class GuiaEvaluacion extends android.support.v4.app.Fragment implements View.OnClickListener {
-    private ImageView comprencionoral, expresionral, gramatica, interpretacionoral, precicionoral,sonidosespecificos, vocabulario;
+    private ImageView comprencionoral, expresionral, gramatica, interpretacionoral, precicionoral,sonidosespecificos, vocabulario, guia;
     private OnFragmentInteractionListener mListener;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
@@ -32,6 +33,8 @@ public class GuiaEvaluacion extends android.support.v4.app.Fragment implements V
         precicionoral =(ImageView) vista.findViewById(R.id.guia_sonidos_especificos);
         sonidosespecificos =(ImageView) vista.findViewById(R.id.guia_gramatica);
         vocabulario =(ImageView) vista.findViewById(R.id.guia_expresion_oral);
+        guia = (ImageView) vista.findViewById(R.id.guia_navegacion2);
+
 
 
         comprencionoral.setOnClickListener(this);
@@ -41,6 +44,7 @@ public class GuiaEvaluacion extends android.support.v4.app.Fragment implements V
         precicionoral.setOnClickListener(this);
         sonidosespecificos.setOnClickListener(this);
         vocabulario.setOnClickListener(this);
+        guia.setOnClickListener(this);
 
         return vista;
     }
@@ -97,6 +101,10 @@ public class GuiaEvaluacion extends android.support.v4.app.Fragment implements V
                 break;
             case R.id.guia_expresion_oral:
                 intent = new Intent(getActivity(), GuiaExpresionOral.class);
+                startActivity(intent);
+                break;
+            case R.id.guia_navegacion2:
+                intent = new Intent(getActivity(), GuiaPruebas.class);
                 startActivity(intent);
                 break;
         }

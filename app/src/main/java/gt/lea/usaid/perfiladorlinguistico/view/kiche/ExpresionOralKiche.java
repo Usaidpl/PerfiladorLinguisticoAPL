@@ -2,7 +2,6 @@ package gt.lea.usaid.perfiladorlinguistico.view.kiche;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -90,42 +89,4 @@ public class ExpresionOralKiche extends TouchFlipper implements OnInitializeComp
         super.onPause();
         finish();
     }
-
-    public boolean onTouchEvent(MotionEvent touchevent) {
-        switch (touchevent.getAction()) {
-
-            case MotionEvent.ACTION_DOWN:
-                lastX = touchevent.getX();
-                break;
-            case MotionEvent.ACTION_UP:
-                float currentX = touchevent.getX();
-
-                if (lastX < currentX) {
-
-                    if (vfEvaExpresionOral.getDisplayedChild() == 0)
-                        break;
-
-                    vfEvaExpresionOral.setInAnimation(this, R.anim.slide_in_from_left);
-
-                    vfEvaExpresionOral.setOutAnimation(this, R.anim.slide_out_to_right);
-
-                    vfEvaExpresionOral.showNext();
-                }
-
-                if (lastX > currentX) {
-
-                    if (vfEvaExpresionOral.getDisplayedChild() == 1)
-                        break;
-
-                    vfEvaExpresionOral.setInAnimation(this, R.anim.slide_in_from_right);
-                    vfEvaExpresionOral.setOutAnimation(this, R.anim.slide_out_to_left);
-
-                    vfEvaExpresionOral.showPrevious();
-                }
-                break;
-        }
-        return false;
-    }
-
-
 }

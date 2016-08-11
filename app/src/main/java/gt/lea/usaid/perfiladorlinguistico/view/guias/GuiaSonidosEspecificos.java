@@ -53,8 +53,6 @@ public class GuiaSonidosEspecificos extends TouchFlipper {
     private void initToolBar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.guia_sonidos_especificos);
-        //setSupportActionBar(toolbar);
-
         toolbar.setNavigationIcon(R.drawable.btn_back);
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {

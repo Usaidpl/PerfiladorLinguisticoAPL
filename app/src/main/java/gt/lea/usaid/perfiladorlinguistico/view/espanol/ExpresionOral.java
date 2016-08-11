@@ -59,11 +59,6 @@ public class ExpresionOral extends TouchFlipper implements OnInitializeComponent
         l.agregarValores(v.concat(), resultado);
         resultado_gramatica += l.getBundleStringDouble();
         l = new Lanzador(this, NavigationMenu.class);
-
-        /*l.agragarValor("");
-        l.addLanguage(1);
-        l.setLanza(true);
-        */
         l.setLanza(true);
     }
     private void msg(String msg){

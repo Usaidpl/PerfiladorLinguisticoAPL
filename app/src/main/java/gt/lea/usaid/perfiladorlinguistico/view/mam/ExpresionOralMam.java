@@ -1,6 +1,5 @@
 package gt.lea.usaid.perfiladorlinguistico.view.mam;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.MotionEvent;
@@ -10,12 +9,13 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.controller.control_vista.TouchFlipper;
 import gt.lea.usaid.perfiladorlinguistico.controller.control_vista.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.controller.evaluacion.Interaccion;
 import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
-public class ExpresionOralMam extends Activity implements OnInitializeComponent, View.OnClickListener {
+public class ExpresionOralMam extends TouchFlipper implements OnInitializeComponent, View.OnClickListener {
     private RadioButton RespNoPregunta1, RespSiPregunta1, RespNoPregunta2, RespSiPregunta2, RespNoPregunta3, RespSiPregunta3, RespNoPregunta4, RespSiPregunta4;
     private ViewFlipper vfEvaExpresionOral;
     private float lastX;

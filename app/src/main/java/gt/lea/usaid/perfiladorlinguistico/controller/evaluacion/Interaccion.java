@@ -19,6 +19,7 @@ import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
 import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
+import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
 
 /**
  * Created by Bryan on 20/06/16.
@@ -47,7 +48,7 @@ public class Interaccion
     }
 
     private void leeIdioma(){
-        l = new Lanzador(this, Comprension.class);
+        l = new Lanzador(this, VocabularioKiche.class);
 
         try{
             serie = l.getBundleLanguage();

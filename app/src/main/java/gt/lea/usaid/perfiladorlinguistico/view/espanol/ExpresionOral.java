@@ -1,9 +1,7 @@
 package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -11,11 +9,12 @@ import android.widget.ViewFlipper;
 
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
+import gt.lea.usaid.perfiladorlinguistico.controller.control_vista.TouchFlipper;
 import gt.lea.usaid.perfiladorlinguistico.controller.control_vista.Verifica;
 import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 
-public class ExpresionOral extends Activity implements OnInitializeComponent, View.OnClickListener {
+public class ExpresionOral extends TouchFlipper implements OnInitializeComponent, View.OnClickListener {
     private RadioButton RespNoPregunta1, RespSiPregunta1, RespNoPregunta2, RespSiPregunta2, RespNoPregunta3, RespSiPregunta3, RespNoPregunta4, RespSiPregunta4;
     private ViewFlipper vfEvaExpresionOral;
     private float lastX;
@@ -90,42 +89,4 @@ public class ExpresionOral extends Activity implements OnInitializeComponent, Vi
         super.onPause();
         finish();
     }
-
-    public boolean onTouchEvent(MotionEvent touchevent) {
-        switch (touchevent.getAction()) {
-
-            case MotionEvent.ACTION_DOWN:
-                lastX = touchevent.getX();
-                break;
-            case MotionEvent.ACTION_UP:
-                float currentX = touchevent.getX();
-
-                if (lastX < currentX) {
-
-                    if (vfEvaExpresionOral.getDisplayedChild() == 0)
-                        break;
-
-                    vfEvaExpresionOral.setInAnimation(this, R.anim.slide_in_from_left);
-
-                    vfEvaExpresionOral.setOutAnimation(this, R.anim.slide_out_to_right);
-
-                    vfEvaExpresionOral.showNext();
-                }
-
-                if (lastX > currentX) {
-
-                    if (vfEvaExpresionOral.getDisplayedChild() == 1)
-                        break;
-
-                    vfEvaExpresionOral.setInAnimation(this, R.anim.slide_in_from_right);
-                    vfEvaExpresionOral.setOutAnimation(this, R.anim.slide_out_to_left);
-
-                    vfEvaExpresionOral.showPrevious();
-                }
-                break;
-        }
-        return false;
-    }
-
-
 }

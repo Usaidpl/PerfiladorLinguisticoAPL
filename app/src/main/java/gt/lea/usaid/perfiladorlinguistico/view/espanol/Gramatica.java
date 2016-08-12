@@ -72,23 +72,6 @@ public class Gramatica extends Activity implements OnInitializeComponent, View.O
     public void onClick(View v) {
         na();
         if ((pregunta + 1) == img.length) {
-            /*
-            //resultado_gramatica += resultado;
-            resultado_sonidos +=
-                    "&&" + resultado;
-            Toast mensaje_toast =
-                    Toast.makeText(getApplicationContext(),
-                            resultado_sonidos, Toast.LENGTH_SHORT);
-            mensaje_toast.show();
-            //###############################
-            Bundle b = new Bundle();
-            b.putString("evaluacion", resultado_sonidos);
-            Intent i = new Intent(this, ExpresionOral.class);
-            i.putExtras(b);
-            startActivity(i);
-            //#############################
-
-            //setNextContext(this, ExpresionOral.class);*/
             recupera_sonidos += resultado;
             l.agregarValores(recupera_sonidos, 100.0);
 

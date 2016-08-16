@@ -91,10 +91,11 @@
         <activity
             android:name=".view.espanol.ExpresionOral"
             android:screenOrientation="landscape" />
-        <activity android:name=".view.RegistroEvaluar"></activity>
-        <activity android:name=".Entrevistas"></activity>
-        <activity android:name=".view.InitEvaluacion"/>
-        <activity android:name=".view.guias.GuiaPruebas"/>
+        <activity android:name=".view.RegistroEvaluar" />
+        <activity android:name=".Entrevistas" />
+        <activity android:name=".view.InitEvaluacion" />
+        <activity android:name=".view.guias.GuiaPruebas" />
+        <activity android:name=".view.guias.GuiaPrecision"></activity>
     </application>
 
 </manifest>

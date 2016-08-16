@@ -40,8 +40,8 @@ public class Dos extends BaseAdapter{
             convertView = inflater.inflate(R.layout.guia_pruebas, parent, false);
         }
 
-        ImageView imageFlipper = (ImageView) convertView.findViewById(R.id.ivGuiaPrueba);
-        TextView textFlipper = (TextView) convertView.findViewById(R.id.tvGuiaPrueba);
+        ImageView imageFlipper = (ImageView) convertView.findViewById(R.id.ivGuiaNavegacion);
+        TextView textFlipper = (TextView) convertView.findViewById(R.id.tvGuiaNavegacion);
         final AdapterFlipper item = (AdapterFlipper) getItem(position);
         imageFlipper.setImageResource(item.getImageFlipper());
         textFlipper.setText(item.getTextFlipper());

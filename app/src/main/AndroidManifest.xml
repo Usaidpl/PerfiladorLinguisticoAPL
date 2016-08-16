@@ -94,7 +94,7 @@
         <activity android:name=".view.RegistroEvaluar" />
         <activity android:name=".Entrevistas" />
         <activity android:name=".view.InitEvaluacion" />
-        <activity android:name=".view.guias.GuiaPruebas" />
+        <activity android:name=".view.guias.GuiaNavecacionApp" />
         <activity android:name=".view.guias.GuiaPrecision"></activity>
     </application>
 

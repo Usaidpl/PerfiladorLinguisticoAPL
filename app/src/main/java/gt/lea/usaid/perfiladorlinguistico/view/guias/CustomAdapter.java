@@ -15,21 +15,21 @@ import gt.lea.usaid.perfiladorlinguistico.R;
  */
 public class CustomAdapter extends BaseAdapter {
     Context context;
-    int[] ivGuiaNavegacion;
-    String[] tvGuiaNavegacion;
+    int[] ivGuiaAdapter;
+    String[] tvGuiaAdapter;
     LayoutInflater inflter;
 
     public CustomAdapter(Context applicationContext, String[] Textos, int[] Images) {
         this.context = applicationContext;
-        this.ivGuiaNavegacion = Images;
-        this.tvGuiaNavegacion = Textos;
+        this.ivGuiaAdapter = Images;
+        this.tvGuiaAdapter = Textos;
         inflter = (LayoutInflater.from(applicationContext));
 
     }
 
     @Override
     public int getCount() {
-        return tvGuiaNavegacion.length;
+        return tvGuiaAdapter.length;
     }
 
     @Override
@@ -47,8 +47,8 @@ public class CustomAdapter extends BaseAdapter {
         view = inflter.inflate(R.layout.list_guia_navegacion, null);
         TextView textos_flipper = (TextView) view.findViewById(R.id.tvGuiaNavegacion);
         ImageView images_flipper = (ImageView) view.findViewById(R.id.ivGuiaNavegacion);
-        textos_flipper.setText(tvGuiaNavegacion[position]);
-        images_flipper.setImageResource(ivGuiaNavegacion[position]);
+        textos_flipper.setText(tvGuiaAdapter[position]);
+        images_flipper.setImageResource(ivGuiaAdapter[position]);
         return view;
     }
 }

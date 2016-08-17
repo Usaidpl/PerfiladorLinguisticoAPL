@@ -14,18 +14,18 @@ import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 
 /**
- * Created by Roberto on 11/08/16.
+ * Created by Roberto on 16/08/2016.
  */
-public class GuiaNavecacionApp extends Activity  {
+public class GuiaExpresion extends Activity {
     TabHost tabHost;
     Toolbar toolbar;
     private AdapterViewFlipper vfGuiaNavegacionEsp, vfGuiaNavegacionKiche, vfGuiaNavegacionMam;
-    int[] ivGuiaNavegacionEsp = {R.mipmap.logolea, R.mipmap.gallina, R.mipmap.fuego, R.mipmap.aguacate, R.mipmap.anciana};
-    String tvGuiaNavegacionEsp[] = {"Logo Lea", "Gallina", "Fuego", "Aguacate", "Anciana"};
-    int[] ivGuiaNavegacionKiche = {R.mipmap.logolea, R.mipmap.gallina, R.mipmap.fuego, R.mipmap.aguacate, R.mipmap.anciana};
-    String tvGuiaNavegacionKiche[] = {"Logo Lea", "Gallina", "Fuego", "Aguacate", "Anciana"};
-    int[] ivGuiaNavegacionMam = {R.mipmap.logolea, R.mipmap.gallina, R.mipmap.fuego, R.mipmap.aguacate, R.mipmap.anciana};
-    String tvGuiaNavegacionMam[] = {"Logo Lea", "Gallina", "Fuego", "Aguacate", "Anciana"};
+    int[] ivGuiaNavegacionEsp = {R.mipmap.pato, R.mipmap.gato, R.mipmap.vaca};
+    String tvGuiaNavegacionEsp[] = {"pato", "gato", "vaca"};
+    int[] ivGuiaNavegacionKiche = {R.mipmap.pato, R.mipmap.gato, R.mipmap.vaca};
+    String tvGuiaNavegacionKiche[] = {"pato", "gato", "vaca"};
+    int[] ivGuiaNavegacionMam = {R.mipmap.pato, R.mipmap.gato, R.mipmap.vaca};
+    String tvGuiaNavegacionMam[] = {"pato", "gato", "vaca"};
     private float lastX;
 
     @Override
@@ -56,7 +56,7 @@ public class GuiaNavecacionApp extends Activity  {
     }
     private void initToolBar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Guia Navegacion Aplicación");
+        toolbar.setTitle("Guia Expresión Oral");
         //setSupportActionBar(toolbar);
 
         toolbar.setNavigationIcon(R.drawable.btn_back);
@@ -64,7 +64,7 @@ public class GuiaNavecacionApp extends Activity  {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(GuiaNavecacionApp.this, "Regresando al Menu!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GuiaExpresion.this, "Regresando al Menu!", Toast.LENGTH_SHORT).show();
                         Intent navigation_menu = new Intent(getApplication(),NavigationMenu.class );
                         startActivity(navigation_menu);
                     }

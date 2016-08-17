@@ -14,8 +14,8 @@ import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaComprensionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaExpresionOral;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaGramatica;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaInteraccionOral;
+import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaNavegacionApp;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaPrecisionOral;
-import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaNavecacionApp;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaSonidosEspecificos;
 import gt.lea.usaid.perfiladorlinguistico.view.guias.GuiaVocabulario;
 
@@ -104,7 +104,7 @@ public class GuiaEvaluacion extends android.support.v4.app.Fragment implements V
                 startActivity(intent);
                 break;
             case R.id.guia_navegacion2:
-                intent = new Intent(getActivity(), GuiaNavecacionApp.class);
+                intent = new Intent(getActivity(), GuiaNavegacionApp.class);
                 startActivity(intent);
                 break;
         }

@@ -134,11 +134,15 @@ public class GuiaComprensionOral extends TouchFlipper {
         return false;
     }
 
+
     @Override
     protected void onPause() {
         super.onPause();
         finish();
     }
+
+
+
 }
 
 

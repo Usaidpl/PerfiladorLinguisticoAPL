@@ -74,4 +74,9 @@
     <string name="titulo_gramatica_espanol">VI. Gramática Español</string>
     <string name="titulo_vocabulario_produccion_esp">IV. Vocabulario Producción Español</string>
     <string name="titulo_expresion_oral_esp">VII. Expresión Oral Español</string>
+    <string name="patito">Pato</string>
+    <string name="arbol">árbol</string>
+    <string name="pantalon">pantalón</string>
+    <string name="vestido">vestido</string>
+    <string name="zapato">zapato</string>
 </resources>

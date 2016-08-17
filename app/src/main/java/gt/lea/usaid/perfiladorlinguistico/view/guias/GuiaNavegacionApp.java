@@ -13,16 +13,19 @@ import android.widget.Toast;
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 
-public class GuiaPrecisionOral extends Activity {
+/**
+ * Created by Roberto on 11/08/16.
+ */
+public class GuiaNavegacionApp extends Activity  {
     TabHost tabHost;
     Toolbar toolbar;
     private AdapterViewFlipper vfGuiaNavegacionEsp, vfGuiaNavegacionKiche, vfGuiaNavegacionMam;
-    int[] ivGuiaNavegacionEsp = {R.mipmap.pato, R.mipmap.gato, R.mipmap.vaca, R.mipmap.arbol, R.mipmap.elote, R.mipmap.banano, R.mipmap.camioneta, R.mipmap.carro, R.mipmap.pantalon, R.mipmap.vestido, R.mipmap.zapato, R.mipmap.sombrero, R.mipmap.mesa, R.mipmap.escalera, R.mipmap.canasto, R.mipmap.peine, R.mipmap.libro};
-    String tvGuiaNavegacionEsp[] = {"pato", "gato", "vaca", "arbol", "elote", "banano", "camioneta", "carro", "pantalon", "vestido", "zapato", "sombrero", "mesa", "escalera","canasto", "peine", "libro"};
-    int[] ivGuiaNavegacionKiche = {R.mipmap.pato, R.mipmap.gato, R.mipmap.vaca, R.mipmap.arbol, R.mipmap.elote, R.mipmap.banano, R.mipmap.camioneta, R.mipmap.carro, R.mipmap.pantalon, R.mipmap.vestido, R.mipmap.zapato, R.mipmap.sombrero, R.mipmap.mesa, R.mipmap.escalera, R.mipmap.canasto, R.mipmap.peine, R.mipmap.libro};
-    String tvGuiaNavegacionKiche[] = {"tat", "nan", "ali", "ti't", "mam", "aq", "imul", "chij", "pix", "aj", "oj", "wuj", "tijob'al", "tem","pas", "uq", "xot"};
-    int[] ivGuiaNavegacionMam = {R.mipmap.pato, R.mipmap.gato, R.mipmap.vaca, R.mipmap.arbol, R.mipmap.elote, R.mipmap.banano, R.mipmap.camioneta, R.mipmap.carro, R.mipmap.pantalon, R.mipmap.vestido, R.mipmap.zapato, R.mipmap.sombrero, R.mipmap.mesa, R.mipmap.escalera, R.mipmap.canasto, R.mipmap.peine, R.mipmap.libro};
-    String tvGuiaNavegacionMam[] = {"tat", "txin", "nan ya' / chmam", "tx'yan", "chmek' / choj", "ek' / ik'", "wix", "chej", "tze'", "ich", "kjo'n", "i'x", "b'ech", "wexj","xjab'", "xk'o'n", "k'il / k'wil / ok'il"};
+    int[] ivGuiaNavegacionEsp = {R.mipmap.logolea, R.mipmap.gallina, R.mipmap.fuego, R.mipmap.aguacate, R.mipmap.anciana};
+    String tvGuiaNavegacionEsp[] = {"Logo Lea", "Gallina", "Fuego", "Aguacate", "Anciana"};
+    int[] ivGuiaNavegacionKiche = {R.mipmap.logolea, R.mipmap.gallina, R.mipmap.fuego, R.mipmap.aguacate, R.mipmap.anciana};
+    String tvGuiaNavegacionKiche[] = {"Logo Lea", "Gallina", "Fuego", "Aguacate", "Anciana"};
+    int[] ivGuiaNavegacionMam = {R.mipmap.logolea, R.mipmap.gallina, R.mipmap.fuego, R.mipmap.aguacate, R.mipmap.anciana};
+    String tvGuiaNavegacionMam[] = {"Logo Lea", "Gallina", "Fuego", "Aguacate", "Anciana"};
     private float lastX;
 
     @Override
@@ -61,7 +64,7 @@ public class GuiaPrecisionOral extends Activity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(GuiaPrecisionOral.this, "Regresando al Menu!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GuiaNavegacionApp.this, "Regresando al Menu!", Toast.LENGTH_SHORT).show();
                         Intent navigation_menu = new Intent(getApplication(),NavigationMenu.class );
                         startActivity(navigation_menu);
                     }

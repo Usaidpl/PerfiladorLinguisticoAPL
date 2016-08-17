@@ -31,7 +31,7 @@ public class GuiaVocabulario extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.guia_pruebas);
+        setContentView(R.layout.guia_adapter_flipper);
         flipper_esp();
         flipper_kiche();
         flipper_mam();

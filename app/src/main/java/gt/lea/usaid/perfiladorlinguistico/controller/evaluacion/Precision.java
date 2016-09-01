@@ -1,8 +1,6 @@
 package gt.lea.usaid.perfiladorlinguistico.controller.evaluacion;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -101,27 +99,18 @@ public class Precision extends Activity implements OnInitializeComponent{
                     boolean condicion = pregunta + 1 == 17;
             String valor_final = "";
             int sf = 0;
-            msg(this.result(pregunta, v));
+            //msg(this.result(pregunta, v));
             if(condicion){
                 valor_final = l.getBundleStringDouble() + getString();
                 l.agregarValores(valor_final, getDouble());
                 valor_final = l.getBundleStringDouble();
-                msg(valor_final);
+                //msg(valor_final);
             }else{
                 pregunta ++;
                 opcionIdioma();
             }
         }
     };
-
-    private void msg(String s){
-        Toast.makeText(Precision.this, s, Toast.LENGTH_SHORT).show();
-    }
-
-    private void msg(double d){
-        String s = String.valueOf(d);
-        Toast.makeText(Precision.this, s, Toast.LENGTH_SHORT).show();
-    }
 
     @Override
     protected void onPause() {
@@ -132,6 +121,7 @@ public class Precision extends Activity implements OnInitializeComponent{
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        finish();
     }
 
 

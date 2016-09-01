@@ -37,7 +37,6 @@ public abstract class Ubicacion implements LocationListener{
     public void onLocationChanged(Location location) {
         location.getLongitude();
         location.getLatitude();
-
         locality(location);
     }
 

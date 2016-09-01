@@ -6,7 +6,6 @@ import android.support.annotation.IdRes;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
@@ -48,13 +47,7 @@ public class Comprension
         }
     }
 
-    protected void msg(String s){
-        Toast.makeText(this, s ,Toast.LENGTH_SHORT).show();
-    }
 
-    protected void msgL(String msg){
-        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
-    }
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
         leeIdioma();
@@ -119,7 +112,7 @@ public class Comprension
             float resultado = vr.getResultado();
             descition(resultado, vr);
         } catch (Exception e) {
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
         }
     }
 
@@ -149,15 +142,9 @@ public class Comprension
     protected void onPause() {
         super.onPause();
         finish();
-        //01010 56
-
-        //01010101010 | 20 && 1010101 | 50
     }
 
-    private void msg(float f){
-        String s = "";
-        s += f;
-        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();}
+
 
 
 }

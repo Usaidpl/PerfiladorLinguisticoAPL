@@ -2,6 +2,7 @@ package gt.lea.usaid.perfiladorlinguistico.view.espanol;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -83,5 +84,30 @@ public class ExpresionOral extends TouchFlipper implements OnInitializeComponent
     protected void onPause() {
         super.onPause();
         finish();
+    }
+    public boolean onTouchEvent(MotionEvent touchevent) {
+        switch (touchevent.getAction()) {
+
+            case MotionEvent.ACTION_DOWN:
+                lastX = touchevent.getX();
+                break;
+            case MotionEvent.ACTION_UP:
+                float currentX = touchevent.getX();
+
+                if (lastX < currentX) {
+                    vfEvaExpresionOral.showPrevious();
+                    vfEvaExpresionOral.showPrevious();
+                    vfEvaExpresionOral.showPrevious();
+                }
+
+                if (lastX > currentX) {
+
+                    vfEvaExpresionOral.showNext();
+                    vfEvaExpresionOral.showNext();
+                    vfEvaExpresionOral.showNext();
+                }
+                break;
+        }
+        return false;
     }
 }

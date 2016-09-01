@@ -48,7 +48,7 @@ public class Interaccion
     }
 
     private void leeIdioma(){
-        l = new Lanzador(this, VocabularioKiche.class);
+        l = new Lanzador(this, Comprension.class);
 
         try{
             serie = l.getBundleLanguage();

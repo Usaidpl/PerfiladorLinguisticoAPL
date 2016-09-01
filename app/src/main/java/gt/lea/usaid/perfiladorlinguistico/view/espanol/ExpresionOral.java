@@ -99,9 +99,7 @@ public class ExpresionOral extends TouchFlipper implements OnInitializeComponent
                     vfEvaExpresionOral.showPrevious();
                     vfEvaExpresionOral.showPrevious();
                 }
-
                 if (lastX > currentX) {
-
                     vfEvaExpresionOral.showNext();
                     vfEvaExpresionOral.showNext();
                     vfEvaExpresionOral.showNext();

@@ -47,7 +47,6 @@ public class Comprension
         }
     }
 
-
     @Override
     public void setOnInit(@IdRes int[][] matriz) {
         leeIdioma();

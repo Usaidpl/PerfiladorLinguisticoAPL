@@ -58,7 +58,7 @@ public class Localizacion extends Activity {
             loc.getLatitude();
             loc.getLongitude();
             String coordenadas = "Mis coordenadas son: " + "Latitud = " + loc.getLatitude() + "Longitud = " + loc.getLongitude();
-            //Toast.makeText(getApplicationContext(), coordenadas, Toast.LENGTH_LONG).show();
+
             setLocation(loc);
         }
 

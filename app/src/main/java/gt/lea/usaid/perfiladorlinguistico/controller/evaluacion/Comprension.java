@@ -60,17 +60,17 @@ public class Comprension
         respuesta8 = (RadioButton) findViewById(R.id.rbRespuesta8);
         respuesta9 = (RadioButton) findViewById(R.id.rbRespuesta9);
         respuesta10 = (RadioButton) findViewById(R.id.rbRespuesta10);
-        //Textos -- TextView
+
         intruduccion = (TextView) findViewById(R.id.tvInstrucionInteractua);
-        // respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaInteractua);
+
         tvPregunta1 = (TextView) findViewById(R.id.tvPreguntaUnoInteractua);
         tvPregunta2 = (TextView) findViewById(R.id.tvPreguntaDosInteractua);
         tvPregunta3 = (TextView) findViewById(R.id.tvPreguntaTresInteractua);
         tvPregunta4 = (TextView) findViewById(R.id.tvPreguntaCuatroInteractua);
         tvPregunta5 = (TextView) findViewById(R.id.tvPreguntaCincoInteractua);
-        //método encargado de agregar los textos correpondientes con base al idioma seleccionado
+
         texto();
-        //evento de click
+
         respuesta9.setOnClickListener(this);
         respuesta10.setOnClickListener(this);
     }
@@ -92,7 +92,7 @@ public class Comprension
         id_text4 = vector[5];
         id_text5 = vector[6];
         intruduccion.setText(id_intro);
-        //respuesta_correcta.setText(id_resp);
+
         tvPregunta1.setText(id_text1);
         tvPregunta2.setText(id_text2);
         tvPregunta3.setText(id_text3);
@@ -134,7 +134,7 @@ public class Comprension
             l.setLanza(true);
         }
         interaccion = l.getBundleStringDouble();
-        //msgL(interaccion);
+
     }
 
     @Override

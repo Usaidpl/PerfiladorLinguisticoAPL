@@ -81,10 +81,5 @@ public class ConectaInternet {
 
 
 
-    /*
-    getReason() // Reportara la razón de un intento de establecer la conectividad falló, si hay alguno disponible
-    getTypeName()//Devolver un nombre legible por humanos describir el tipo de la red, por ejemplo "WIFI" o "movil"
-    isAvailable()// Indica si la conectividad de red es posible
 
-     */
 }

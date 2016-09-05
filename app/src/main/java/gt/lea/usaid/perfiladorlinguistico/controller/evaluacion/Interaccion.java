@@ -31,14 +31,11 @@ public class Interaccion
     private RadioButton respuesta1, respuesta2, respuesta3, respuesta4, respuesta5, respuesta6, respuesta7, respuesta8, respuesta9, respuesta10;
     private TextView intruduccion, tvPregunta1, tvPregunta2, tvPregunta3, tvPregunta4, tvPregunta5;
     private static final String NOMBRE_TABLA = "interaccion";
-    public static final String KEY_RESULTADO = "resultado";
+    //public static final String KEY_RESULTADO = "resultado";
 
     private Lanzador l;
-
     private int serie = 0;
-    private int evalua = 1;
-    private int resultado_inter = 0;
-    private String msg;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,23 +84,21 @@ public class Interaccion
         respuesta8 = (RadioButton) findViewById(R.id.rbRespuesta8);
         respuesta9 = (RadioButton) findViewById(R.id.rbRespuesta9);
         respuesta10 = (RadioButton) findViewById(R.id.rbRespuesta10);
-        //Textos -- TextView
         intruduccion = (TextView) findViewById(R.id.tvInstrucionInteractua);
-       // respuesta_correcta = (TextView) findViewById(R.id.tvRespuestaInteractua);
         tvPregunta1 = (TextView) findViewById(R.id.tvPreguntaUnoInteractua);
         tvPregunta2 = (TextView) findViewById(R.id.tvPreguntaDosInteractua);
         tvPregunta3 = (TextView) findViewById(R.id.tvPreguntaTresInteractua);
         tvPregunta4 = (TextView) findViewById(R.id.tvPreguntaCuatroInteractua);
         tvPregunta5 = (TextView) findViewById(R.id.tvPreguntaCincoInteractua);
-        //método encargado de agregar los textos correpondientes con base al idioma seleccionado
+
         textos();
-        //evento de click
+
         respuesta9.setOnClickListener(this);
         respuesta10.setOnClickListener(this);
     }
 
     private void textos(){
-        //método encargado de agregar los textos a los componentes correspondientes
+
         setTextCompoent(ArregloMultiDimensional.ArregloInteraccion.TEXTOS);
     }
 
@@ -118,8 +113,8 @@ public class Interaccion
         id_text3 = vector[4];
         id_text4 = vector[5];
         id_text5 = vector[6];
+
         intruduccion.setText(id_intro);
-        //respuesta_correcta.setText(id_resp);
         tvPregunta1.setText(id_text1);
         tvPregunta2.setText(id_text2);
         tvPregunta3.setText(id_text3);

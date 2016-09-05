@@ -20,9 +20,6 @@ public abstract class Ubicacion implements LocationListener{
     private android.content.Context context;
     private static final double  LOCALIZACION_NULL = 0.0;
 
-    //protected  android.content.Context getActividad(){
-      //  return context;
-    //}
 
     public Ubicacion(android.app.Activity activity)
     {
@@ -47,16 +44,16 @@ public abstract class Ubicacion implements LocationListener{
 
     @Override
     public void onProviderEnabled(String provider) {
-        //GPS ACTIVADO
+
     }
 
     @Override
     public void onProviderDisabled(String provider) {
-        //GPS DESACTIVADO
+
     }
 
     private void locality(Location loc){
-        //Obtener la direcci—n de la calle a partir de la latitud y la longitud
+
         if (loc.getLatitude() != 0.0 && loc.getLongitude() != 0.0) {
             String SALTO_LINE = "\n", ESPACIO = "  ", COMA = ", ";
             try {

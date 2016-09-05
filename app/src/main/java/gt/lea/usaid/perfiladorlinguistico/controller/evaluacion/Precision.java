@@ -22,14 +22,14 @@ import gt.lea.usaid.perfiladorlinguistico.view.mam.VocabularioMam;
  */
 public class Precision extends Activity implements OnInitializeComponent{
 
-    //área de variables privadas
+
     private ImageView image, image2, image3;
     private TextView tv;
     private int idioma = 0, pregunta = 0, imagenes[][];
     private Lanzador l;
     private Class<?> clase;
 
-    //área declaraciones de matricez
+
     private int serie = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,16 +95,16 @@ public class Precision extends Activity implements OnInitializeComponent{
 
         @Override
         public void onClick(View v) {
-           // this.addClass(Precision.this, clase);
+
                     boolean condicion = pregunta + 1 == 17;
             String valor_final = "";
             int sf = 0;
-            //msg(this.result(pregunta, v));
+
             if(condicion){
                 valor_final = l.getBundleStringDouble() + getString();
                 l.agregarValores(valor_final, getDouble());
                 valor_final = l.getBundleStringDouble();
-                //msg(valor_final);
+
             }else{
                 pregunta ++;
                 opcionIdioma();

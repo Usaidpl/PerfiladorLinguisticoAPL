@@ -22,24 +22,24 @@ import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnStartNextContext;
 public class Lanzador
         implements OnStartNextContext {
 
-    //Const
+
     public static final String KEY_TRANSITION_DOUBLE_STRING = "doble-cadena";
     public static final String KEY_TRANSTION_STRING = "cadena";
     private static final String KEY_TRANSITION_LANGUAGE = "idioma";
-    //Const privados
+
     private static final String LINE_SEPARETOR = " | ";
     private static final String SEPARETOR_SERIE = " && ";
     private static final String LANGUAGE_SEPARETOR = " -- ";
     private static final String QUESTION_SEPARETOR = "//";
     private static final String KEY_TRANSITION_DOUBLE = "decimal";
-    //field class
+
     private Activity activity_;
     private Bundle bundle;
-    //field java
+
     private Class<?> next_context;
     private boolean lanza = false;
 
-    //constructores
+
     public Lanzador(Activity actividad) {
         next_context = null;
         confirmacion(actividad);
@@ -50,7 +50,7 @@ public class Lanzador
         next_context = siguiente_actividad;
     }
 
-    //SETTERS
+
     public void agregarValores(String resultado, String datos) {
         decitionActivity(converArrayString(resultado), datos);
     }
@@ -123,10 +123,6 @@ public class Lanzador
         }
     }
 
-   
-
-    //GETTERS
-    //##############################################################################################
     public String getBundleStringDouble() {
         String resultado = "";
         if (bundle != null) {
@@ -146,9 +142,6 @@ public class Lanzador
     public double getTotal(){
         return bundle.getDouble(KEY_TRANSITION_DOUBLE);
     }
-
-    //##############################################################################################
-    //PRIVATE
 
     private void addDecima(Object decimal){
         String s = String.valueOf(decimal);

@@ -24,7 +24,7 @@ public abstract class Respuesta implements View.OnClickListener{
         return resultado_final;
     }
 
-    //área estatica
+
     protected static final int FIRTS_IMAGE = 1;
     protected static final int SECUND_IMAGE = 2;
     protected static final int THRERE_IMAGE = 3;

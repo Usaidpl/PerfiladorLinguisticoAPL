@@ -10,14 +10,7 @@ public class Verifica {
     private String concatena = "";
     private String tabla = "";
 
-    /**
-     * Costructor en el cual se pide el un vector izquiero que da referencia al lado verdadero y otro al
-     * lado falso el cual debe contener la misma cantidad, a la misma vez se pide el nombre de la tabla
-     * a la cual se hara la insercion
-     * @param arreglo_verdadero
-     * @param arreglo_falso
-     * @param nombre_tabla
-     */
+
     public Verifica(boolean[] arreglo_verdadero, boolean[] arreglo_falso, String nombre_tabla){
         array_true = arreglo_verdadero;
         array_false = arreglo_falso;
@@ -30,13 +23,13 @@ public class Verifica {
         tabla = nombre_tabla;
     }
 
-    //Last method
+
     public float getResultado()throws Exception{
         float resultado = 0, sub_resultado = 0;
         if(toCompara() == false)
             throw  new Exception("Error: todo debe tener una respuesta.");
         else{
-            //replace PREGUNTA for address complet type Const.
+
             sub_resultado = TOTAL_SERIE / Pregunta.Interactua.PREGUNTA;
             sub_resultado *= toVerificaRespuesta();
         }
@@ -44,7 +37,7 @@ public class Verifica {
         return resultado;
     }
 
-    //New Method
+
     public float getResultado(int cantidad_pregunta)throws Exception{
         float resultado = 0, sub_resultado = 0;
         if(toCompara(cantidad_pregunta) == false)
@@ -110,7 +103,7 @@ public class Verifica {
         int resultado = 0 ;
         String dato = "", result;
 
-        //DataBase db = new DataBase(tabla);
+
         boolean select = false;
         for(int s = 0; s  < arreglo.length; s ++){
             select = arreglo[s];

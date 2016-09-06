@@ -10,12 +10,10 @@ import android.widget.TextView;
 import gt.lea.usaid.perfiladorlinguistico.NavigationMenu;
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.control_vista.Verifica;
-import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
+import gt.lea.usaid.perfiladorlinguistico.utils.Consts;
 import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
-import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
-import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
 
 /**
  * Created by Bryan on 20/06/16.
@@ -77,7 +75,7 @@ public class Comprension
 
     private void texto(){
 
-        setTextCompoent(ArregloMultiDimensional.ArregloComprension.TEXTOS);
+        setTextCompoent(Consts.ArregloComprension.TEXTOS);
     }
 
     @Override

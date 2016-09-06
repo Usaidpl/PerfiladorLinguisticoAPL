@@ -15,11 +15,10 @@ import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.control_vista.Verifica;
-import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
+import gt.lea.usaid.perfiladorlinguistico.utils.Consts;
 import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeText;
-import gt.lea.usaid.perfiladorlinguistico.view.kiche.VocabularioKiche;
 
 /**
  * Created by Bryan on 20/06/16.
@@ -99,7 +98,7 @@ public class Interaccion
 
     private void textos(){
 
-        setTextCompoent(ArregloMultiDimensional.ArregloInteraccion.TEXTOS);
+        setTextCompoent(Consts.ArregloInteraccion.TEXTOS);
     }
 
     @Override

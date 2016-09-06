@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import gt.lea.usaid.perfiladorlinguistico.R;
 import gt.lea.usaid.perfiladorlinguistico.controller.control_vista.Respuesta;
-import gt.lea.usaid.perfiladorlinguistico.utils.ArregloMultiDimensional;
+import gt.lea.usaid.perfiladorlinguistico.utils.Consts;
 import gt.lea.usaid.perfiladorlinguistico.utils.Lanzador;
 import gt.lea.usaid.perfiladorlinguistico.utils.interfaces.OnInitializeComponent;
 import gt.lea.usaid.perfiladorlinguistico.view.espanol.Vocabulario;
@@ -40,9 +40,9 @@ public class Precision extends Activity implements OnInitializeComponent{
 
     private void opcionIdioma(){
         switch (idioma){
-            case 0: imagenes = ArregloMultiDimensional.ArregloPrecision.IMAGENES[0];break;
-            case 1: imagenes = ArregloMultiDimensional.ArregloPrecision.IMAGENES[1];break;
-            case 2: imagenes = ArregloMultiDimensional.ArregloPrecision.IMAGENES[2];break;
+            case 0: imagenes = Consts.ArregloPrecision.IMAGENES[0];break;
+            case 1: imagenes = Consts.ArregloPrecision.IMAGENES[1];break;
+            case 2: imagenes = Consts.ArregloPrecision.IMAGENES[2];break;
         }
         switch (idioma){
             case 0: clase = VocabularioKiche.class;break;
@@ -79,9 +79,9 @@ public class Precision extends Activity implements OnInitializeComponent{
         int vector[] = null;
         recuperaIdioma();
         switch (idioma){
-            case 0: vector = ArregloMultiDimensional.ArregloPrecision.TEXTOS[0];break;
-            case 1: vector = ArregloMultiDimensional.ArregloPrecision.TEXTOS[1];break;
-            case 2: vector = ArregloMultiDimensional.ArregloPrecision.TEXTOS[2];break;
+            case 0: vector = Consts.ArregloPrecision.TEXTOS[0];break;
+            case 1: vector = Consts.ArregloPrecision.TEXTOS[1];break;
+            case 2: vector = Consts.ArregloPrecision.TEXTOS[2];break;
         }
         return vector;
     }

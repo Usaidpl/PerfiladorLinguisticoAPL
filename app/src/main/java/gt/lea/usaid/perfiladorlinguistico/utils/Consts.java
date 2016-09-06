@@ -6,7 +6,7 @@ import gt.lea.usaid.perfiladorlinguistico.R;
  * Created by BryanJuarez on 07-22-16.
  * @author Bryan
  */
-public class ArregloMultiDimensional {
+public class Consts {
 
         public static final class ArregloPrecision
         {
